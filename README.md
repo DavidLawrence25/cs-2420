@@ -1,6 +1,6 @@
-# CS 1410 - CE Adv. Programming
+# CS 2420 - CE Algorithms & Data Structures
 
-A collection of all assignments written by Rose Thorne for CS 1410, which is/was instructed by Kim Murphy.
+A collection of all assignments written by Rose Thorne for CS 2420, which is/was instructed by Kim Murphy.
 
 ## File Locations & Nomenclature
 
