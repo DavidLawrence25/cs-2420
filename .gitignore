@@ -1,0 +1,8 @@
+# vscode-specific directories
+
+.settings/
+.vscode/
+bin/
+.classpath
+.project
+*.code-workspace

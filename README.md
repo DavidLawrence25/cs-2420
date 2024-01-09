@@ -6,13 +6,12 @@ A collection of all assignments written by Rose Thorne for CS 2420, which is/was
 
 For clarity (and to keep Rose accountable), here are the rules she is meant to follow regarding naming files and stuff.
 
-- **Repo Header Files:** `custom_libraries/name_of_lib.h`
-- **Repo Library Implementation File:** `custom_libraries/name_of_lib.cc`
-- **Project Header Files:** `<no_brainers | labs>/XX_assignment_name/name_of_lib.h`
-- **Project Library Implementation Files:** `<no_brainers | labs>/XX_assignment_name/name_of_lib.cc`
-- **Main C++ Files:** `<no_brainers | labs>/XX_assignment_name/main.cc`
-- **Executables:** `<no_brainers | labs>/XX_assignment_name/main.exe`
-- **Markdown Files:** `read_and_report/XX_unit_name.md`
+-   **Repo Header Files:** `custom_libraries/name_of_lib.h`
+-   **Repo Library Implementation File:** `custom_libraries/name_of_lib.cc`
+-   **Project Header Files:** `<assignment_type>/XX_assignment_name/name_of_lib.h`
+-   **Project Library Implementation Files:** `<assignment_type>/XX_assignment_name/name_of_lib.cc`
+-   **Main C++ Files:** `<assignment_type>/XX_assignment_name/main.cc`
+-   **Executables:** `<assignment_type>/XX_assignment_name/main.exe`
 
 ###### note that `XX` refers to the unit the assignment was in, padded with a zero to keep it aligned to two digits
 
