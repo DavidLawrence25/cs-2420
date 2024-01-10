@@ -12,14 +12,14 @@ Date::Date(int year) noexcept {
 
 Date::Date(int year, int month) noexcept {
   year_ = year;
-  month_ = month % 13;
+  month_ = ((month - 1) % 12) + 1;  // Corrects `month`.
   day_ = 1;
 }
 
 Date::Date(int year, int month, int day) noexcept {
   year_ = year;
-  month_ = month % 13;
-  day_ = day % (DaysInMonth(year_, month_) + 1);
+  month_ = ((month - 1) % 12) + 1;                      // Corrects `month`.
+  day_ = ((day - 1) % DaysInMonth(year_, month_)) + 1;  // Corrects `day`.
 }
 
 Date::Date(const Date &other) noexcept {
@@ -33,12 +33,15 @@ int Date::hash() const noexcept { return (year_ << 9) | (month_ << 5) | day_; }
 void Date::AddMonths(int n) noexcept {
   auto [year, month] = div(month_ + n - 1, 12);
   year_ += year;
-  month_ = month + 1;
+  month_ = month + 1;  // `month` is on the interval [0, 11].
 }
 
 void Date::AddDays(int n) noexcept { *this = *this + n; }
 
 bool Date::IsLeapYear(int year) noexcept {
+  // Leap years must be...
+  // 1. Divisible by 4.
+  // 2. Not divisible by 100 UNLESS also divisible by 400.
   return !(year % 4 || (year % 100 == 0 && year % 400));
 }
 
@@ -66,8 +69,9 @@ int Date::DayOfYear() const noexcept {
   return days;
 }
 
-Date Date::operator+(int n) const noexcept {
-  int day = DayOfYear() + n;
+Date Date::operator+(int days) const noexcept {
+  int day = DayOfYear() + days;
+  // Corrects the value of `day` and adjusts `year` and `month` accordingly.
   int year = year_;
   int month = 1;
 

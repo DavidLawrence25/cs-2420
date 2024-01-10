@@ -1,76 +1,58 @@
 #include "test.h"
 
-#include <functional>
 #include <iostream>
-#include <sstream>
-
-using std::string;
+#include <unordered_map>
 
 namespace rose {
 
 TestResult TestCase::Run() { return result_; }
 
-void TestCase::RunTest(void (TestCase::*test_func)(), std::string test_name) {
-  test_name_ = test_name;
-  std::invoke(test_func, this);
-  test_name_ = "";
-  result_.IncrementTestCounter();
+void TestCase::AssertTrue(bool expression, std::string repr) noexcept {
+  if (!expression) result_.AddFail(kTrue, test_name_, "false", "", repr, "");
 }
 
-void TestCase::AssertTrue(bool expression, std::string repr) {
-  if (!expression) result_.AddFailure(kTrue, test_name_, "false", "", repr, "");
+void TestCase::AssertFalse(bool expression, std::string repr) noexcept {
+  if (expression) result_.AddFail(kFalse, test_name_, "true", "", repr, "");
 }
 
-void TestCase::AssertFalse(bool expression, std::string repr) {
-  if (expression) result_.AddFailure(kFalse, test_name_, "true", "", repr, "");
+size_t TestResult::tests_ran() const noexcept { return tests_ran_; }
+
+void TestResult::AddFail(AssertionType type, std::string test_name,
+                         std::string value_a, std::string value_b,
+                         std::string repr_a, std::string repr_b) noexcept {
+  fails_.push_back({type, test_name, value_a, value_b, repr_a, repr_b});
 }
 
-size_t TestResult::tests_ran() { return tests_ran_; }
+void TestResult::IncrementTestCounter() noexcept { ++tests_ran_; }
 
-bool TestResult::was_successful() { return was_successful_; }
+void TestResult::Report() const noexcept {
+  using std::cout, std::string, std::unordered_map;
 
-void TestResult::AddFailure(AssertionType type, string test_name,
-                            string value_a, string value_b, string repr_a,
-                            string repr_b) {
-  failures_.push_back({type, test_name, value_a, value_b, repr_a, repr_b});
-}
+  // Maps binary comparison operators to the string representation
+  // of their opposite operator flanked by spaces.
+  static const unordered_map<AssertionType, string> kOppositeOp = {
+      {kEqual, " != "},       {kNotEqual, " == "}, {kGreater, " <= "},
+      {kGreaterEqual, " < "}, {kLess, " >= "},     {kLessEqual, " > "}};
+  // The number of fails.
+  const size_t kFails = fails_.size();
 
-void TestResult::IncrementTestCounter() { ++tests_ran_; }
+  cout << string(80, '-') << '\n';
+  // Slightly complex cout statements that handle pluralization.
+  cout << "Ran " << tests_ran_ << ((tests_ran_ != 1) ? " tests" : " test");
+  cout << " with " << kFails << ((kFails != 1) ? " fails.\n" : " fail.\n");
 
-void TestResult::Report() {
-  string test_text = (tests_ran_ != 1) ? " tests " : " test ";
-  string failure_text = (failures_.size() != 1) ? " failures" : " failure";
-  std::cout << string(80, '-') << '\n';
-  std::cout << "Ran " << tests_ran_ << test_text << "with " << failures_.size()
-            << failure_text << ".\n";
-  for (AssertionFail failure : failures_) {
-    std::cout << std::string(80, '=') << '\n';
-    std::cout << "FAIL: " << failure.test_name << '\n';
-    std::cout << failure.repr_a;
-    if (failure.type == kEqual) {
-      std::cout << " != " << failure.repr_b << '\n';
-      std::cout << failure.value_a << " != " << failure.value_b << '\n';
-    } else if (failure.type == kNotEqual) {
-      std::cout << " == " << failure.repr_b << '\n';
-      std::cout << failure.value_a << " == " << failure.value_b << '\n';
-    } else if (failure.type == kGreater) {
-      std::cout << " <= " << failure.repr_b << '\n';
-      std::cout << failure.value_a << " <= " << failure.value_b << '\n';
-    } else if (failure.type == kGreaterEqual) {
-      std::cout << " < " << failure.repr_b << '\n';
-      std::cout << failure.value_a << " < " << failure.value_b << '\n';
-    } else if (failure.type == kLess) {
-      std::cout << " >= " << failure.repr_b << '\n';
-      std::cout << failure.value_a << " >= " << failure.value_b << '\n';
-    } else if (failure.type == kLessEqual) {
-      std::cout << " > " << failure.repr_b << '\n';
-      std::cout << failure.value_a << " > " << failure.value_b << '\n';
-    } else if (failure.type == kTrue) {
-      std::cout << " == false\n";
-      std::cout << failure.value_a << " == false\n";
-    } else if (failure.type == kFalse) {
-      std::cout << " == true\n";
-      std::cout << failure.value_a << " == true\n";
+  for (AssertionFail fail : fails_) {
+    cout << string(80, '=') << '\n';
+    cout << "FAIL: " << fail.test_name << '\n';
+
+    cout << fail.repr_a;
+    if (fail.type == kTrue) {
+      cout << " == false\n";
+    } else if (fail.type == kFalse) {
+      cout << " == true\n";
+    } else {
+      cout << kOppositeOp.at(fail.type) << fail.repr_b << '\n';
+      cout << fail.value_a << kOppositeOp.at(fail.type) << fail.value_b << '\n';
     }
   }
 }

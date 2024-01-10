@@ -5,6 +5,7 @@
 
 namespace rose {
 
+// Represents a lattice point in a 2D Cartesian coordinate system.
 class Point {
  public:
   Point();

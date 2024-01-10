@@ -1,5 +1,4 @@
 #include <functional>
-#include <iostream>
 #include <sstream>
 #include <string>
 #include <vector>
@@ -20,108 +19,151 @@ enum AssertionType {
   kFalse
 };
 
+// Holds information about an assertion failure to be reported to the user.
 struct AssertionFail {
   AssertionType type;
+  // The name of the test function that failed.
   std::string test_name;
+  // A string representation of the first argument's value.
   std::string value_a;
+  // A string representation of the second argument's value.
   std::string value_b;
+  // A string representation of the first argument, usually as an expression.
   std::string repr_a;
+  // A string representation of the second argument, usually as an expression.
   std::string repr_b;
 };
 
+// Holds information about the results of a TestCase.
 class TestResult {
  public:
-  size_t tests_ran();
-  bool was_successful();
+  size_t tests_ran() const noexcept;
 
-  void AddFailure(AssertionType type, std::string test_name,
-                  std::string value_a, std::string value_b, std::string repr_a,
-                  std::string repr_b);
-  void IncrementTestCounter();
-  void Report();
+  // Adds an AssertionFail to the list of fails.
+  void AddFail(AssertionType type, std::string test_name, std::string value_a,
+               std::string value_b, std::string repr_a,
+               std::string repr_b) noexcept;
+  void IncrementTestCounter() noexcept;
+  // Prints data about the fails to the terminal.
+  void Report() const noexcept;
 
  private:
-  std::vector<AssertionFail> failures_;
+  std::vector<AssertionFail> fails_;
   size_t tests_ran_ = 0;
-  bool was_successful_ = true;
 };
 
+// Runs a series of related test functions defined by the user.
 class TestCase {
  public:
+  // Runs the tests given in its definition and returns the result.
+  // Default implementation simply returns the result.
+  // A derived definition may look like this:
+  // `TestResult Run() {`
+  // `  RunTest(foo, "foo");`
+  // `  RunTest(bar, "bar");`
+  // `  RunTest(baz, "baz");`
+  // `  return result_;`
+  // `}`
   TestResult Run();
-  void RunTest(void (TestCase::*test_func)(), std::string test_name);
 
+  // Runs a class method `test_func` and updates the results accordingly.
+  template <typename T>
+  void RunTest(void (T::*test_func)(), std::string test_name) {
+    test_name_ = test_name;
+    std::invoke(test_func, static_cast<T *>(this));
+    test_name_ = "";
+    result_.IncrementTestCounter();
+  }
+
+  // Resets member variables used across tests to their original values.
+  virtual void ResetGlobals() = 0;
+
+  // Asserts that `a == b`, adding a fail if `a != b`.
   template <typename T>
   void AssertEqual(T a, T b, std::string repr_a, std::string repr_b) {
     std::stringstream value_a;
     std::stringstream value_b;
     value_a << a;
     value_b << b;
-    if (a != b)
-      result_.AddFailure(kEqual, test_name_, value_a.str(), value_b.str(),
-                         repr_a, repr_b);
+    if (a != b) {
+      result_.AddFail(kEqual, test_name_, value_a.str(), value_b.str(), repr_a,
+                      repr_b);
+    }
   }
 
+  // Asserts that `a != b`, adding a fail if `a == b`.
   template <typename T>
   void AssertNotEqual(T a, T b, std::string repr_a, std::string repr_b) {
     std::stringstream value_a;
     std::stringstream value_b;
     value_a << a;
     value_b << b;
-    if (a == b)
-      result_.AddFailure(kNotEqual, test_name_, value_a.str(), value_b.str(),
-                         repr_a, repr_b);
+    if (a == b) {
+      result_.AddFail(kNotEqual, test_name_, value_a.str(), value_b.str(),
+                      repr_a, repr_b);
+    }
   }
 
+  // Asserts that `a > b`, adding a fail if `a <= b`.
   template <typename T>
   void AssertGreater(T a, T b, std::string repr_a, std::string repr_b) {
     std::stringstream value_a;
     std::stringstream value_b;
     value_a << a;
     value_b << b;
-    if (a <= b)
-      result_.AddFailure(kGreater, test_name_, value_a.str(), value_b.str(),
-                         repr_a, repr_b);
+    if (a <= b) {
+      result_.AddFail(kGreater, test_name_, value_a.str(), value_b.str(),
+                      repr_a, repr_b);
+    }
   }
 
+  // Asserts that `a >= b`, adding a fail if `a < b`.
   template <typename T>
   void AssertGreaterEqual(T a, T b, std::string repr_a, std::string repr_b) {
     std::stringstream value_a;
     std::stringstream value_b;
     value_a << a;
     value_b << b;
-    if (a < b)
-      result_.AddFailure(kGreaterEqual, test_name_, value_a.str(),
-                         value_b.str(), repr_a, repr_b);
+    if (a < b) {
+      result_.AddFail(kGreaterEqual, test_name_, value_a.str(), value_b.str(),
+                      repr_a, repr_b);
+    }
   }
 
+  // Asserts that `a < b`, adding a fail if `a >= b`.
   template <typename T>
   void AssertLess(T a, T b, std::string repr_a, std::string repr_b) {
     std::stringstream value_a;
     std::stringstream value_b;
     value_a << a;
     value_b << b;
-    if (a >= b)
-      result_.AddFailure(kLess, test_name_, value_a.str(), value_b.str(),
-                         repr_a, repr_b);
+    if (a >= b) {
+      result_.AddFail(kLess, test_name_, value_a.str(), value_b.str(), repr_a,
+                      repr_b);
+    }
   }
 
+  // Asserts that `a <= b`, adding a fail if `a > b`.
   template <typename T>
   void AssertLessEqual(T a, T b, std::string repr_a, std::string repr_b) {
     std::stringstream value_a;
     std::stringstream value_b;
     value_a << a;
     value_b << b;
-    if (a > b)
-      result_.AddFailure(kLessEqual, test_name_, value_a.str(), value_b.str(),
-                         repr_a, repr_b);
+    if (a > b) {
+      result_.AddFail(kLessEqual, test_name_, value_a.str(), value_b.str(),
+                      repr_a, repr_b);
+    }
   }
 
-  void AssertTrue(bool expression, std::string repr);
-  void AssertFalse(bool expression, std::string repr);
+  // Asserts that `expression` is truthy, adding a fail if it isn't.
+  void AssertTrue(bool expression, std::string repr) noexcept;
+  // Asserts that `expression` is falsy, adding a fail if it isn't.
+  void AssertFalse(bool expression, std::string repr) noexcept;
 
  protected:
-  std::string name_;
+  // The name of the test currently being ran.
+  // Handled automatically by implementation and should not be tampered with.
   std::string test_name_;
   TestResult result_;
 };
