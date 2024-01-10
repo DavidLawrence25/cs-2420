@@ -26,7 +26,9 @@ class Date {
   void AddMonths(int n) noexcept;
   void AddDays(int n) noexcept;
   static bool IsLeapYear(int year) noexcept;
-  // Returns a string representation in the format "Month Day, Year".
+  // Returns a string representation in the format "Mon Day, Year".
+  // Example: Date(2007, 2, 22).ToString()
+  //        = "Feb 22, 2007"
   std::string ToString() const noexcept;
   static int DaysInMonth(int year, int month) noexcept;
   // Returns the day number.

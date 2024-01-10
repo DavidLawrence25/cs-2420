@@ -34,64 +34,64 @@ class DateTest : public TestCase {
   }
 
   void ResetGlobals() override {
-    july10_ = Date(/*year=*/2018, /*month=*/7, /*day=*/10);
-    sept10_ = Date(/*year=*/2018, /*month=*/9, /*day=*/10);
+    jul10_ = Date(/*year=*/2018, /*month=*/7, /*day=*/10);
+    sep10_ = Date(/*year=*/2018, /*month=*/9, /*day=*/10);
   }
 
   void TestConstructor1() {
     auto date = Date(/*year=*/2018);
-    AssertEqual(date.hash(), 0xfc421, "Date(2018)", "January 1, 2018");
+    AssertEqual(date.hash(), 0xfc421, "Date(2018)", "Jan 1, 2018");
   }
 
   void TestConstructor2() {
     auto date = Date(/*year=*/2018, /*month=*/7);
-    AssertEqual(date.hash(), 0xfc4e1, "Date(2018, 7)", "July 1, 2018");
+    AssertEqual(date.hash(), 0xfc4e1, "Date(2018, 7)", "Jul 1, 2018");
   }
 
   void TestConstructor3() {
     auto date = Date(/*year=*/2018, /*month=*/7, /*day=*/10);
-    AssertEqual(date.hash(), 0xfc4ea, "Date(2018, 7, 10)", "July 10, 2018");
+    AssertEqual(date.hash(), 0xfc4ea, "Date(2018, 7, 10)", "Jul 10, 2018");
   }
 
   void TestAddMonths1() {
-    july10_.AddMonths(4);
-    AssertEqual(july10_.hash(), 0xfc56a, "Date(2018, 7, 10) + 4 Months",
-                "November 10, 2018");
+    jul10_.AddMonths(4);
+    AssertEqual(jul10_.hash(), 0xfc56a, "Date(2018, 7, 10) + 4 Months",
+                "Nov 10, 2018");
     ResetGlobals();
   }
 
   void TestAddMonths2() {
-    july10_.AddMonths(5);
-    AssertEqual(july10_.hash(), 0xfc58a, "Date(2018, 7, 10) + 5 Months",
-                "December 10, 2018");
+    jul10_.AddMonths(5);
+    AssertEqual(jul10_.hash(), 0xfc58a, "Date(2018, 7, 10) + 5 Months",
+                "Dec 10, 2018");
     ResetGlobals();
   }
 
   void TestAddMonths3() {
-    july10_.AddMonths(6);
-    AssertEqual(july10_.hash(), 0xfc62a, "Date(2018, 7, 10) + 6 Months",
-                "January 10, 2019");
+    jul10_.AddMonths(6);
+    AssertEqual(jul10_.hash(), 0xfc62a, "Date(2018, 7, 10) + 6 Months",
+                "Jan 10, 2019");
     ResetGlobals();
   }
 
   void TestAddDays1() {
-    july10_.AddDays(16);
-    AssertEqual(july10_.hash(), 0xfc4fa, "Date(2018, 7, 10) + 16 Days",
-                "July 26, 2018");
+    jul10_.AddDays(16);
+    AssertEqual(jul10_.hash(), 0xfc4fa, "Date(2018, 7, 10) + 16 Days",
+                "Jul 26, 2018");
     ResetGlobals();
   }
 
   void TestAddDays2() {
-    july10_.AddDays(21);
-    AssertEqual(july10_.hash(), 0xfc4ff, "Date(2018, 7, 10) + 21 Days",
-                "July 31, 2018");
+    jul10_.AddDays(21);
+    AssertEqual(jul10_.hash(), 0xfc4ff, "Date(2018, 7, 10) + 21 Days",
+                "Jul 31, 2018");
     ResetGlobals();
   }
 
   void TestAddDays3() {
-    july10_.AddDays(31);
-    AssertEqual(july10_.hash(), 0xfc50a, "Date(2018, 7, 10) + 31 Days",
-                "August 10, 2018");
+    jul10_.AddDays(31);
+    AssertEqual(jul10_.hash(), 0xfc50a, "Date(2018, 7, 10) + 31 Days",
+                "Aug 10, 2018");
     ResetGlobals();
   }
 
@@ -122,41 +122,41 @@ class DateTest : public TestCase {
   }
 
   void TestAddOperator1() {
-    AssertEqual((sept10_ + 23).hash(), 0xfc543, "Date(2018, 9, 10) + 23",
-                "October 3, 2018");
+    AssertEqual((sep10_ + 23).hash(), 0xfc543, "Date(2018, 9, 10) + 23",
+                "Oct 3, 2018");
   }
 
   void TestAddOperator2() {
-    AssertEqual((sept10_ + 38).hash(), 0xfc552, "Date(2018, 9, 10) + 38",
-                "October 18, 2018");
+    AssertEqual((sep10_ + 38).hash(), 0xfc552, "Date(2018, 9, 10) + 38",
+                "Oct 18, 2018");
   }
 
   void TestAddOperator3() {
-    AssertEqual((sept10_ + 56).hash(), 0xfc565, "Date(2018, 9, 10) + 56",
-                "November 5, 2018");
+    AssertEqual((sep10_ + 56).hash(), 0xfc565, "Date(2018, 9, 10) + 56",
+                "Nov 5, 2018");
   }
 
   void TestAddOperator4() {
-    AssertEqual((sept10_ + 91).hash(), 0xfc58a, "Date(2018, 9, 10) + 91",
-                "December 10, 2018");
+    AssertEqual((sep10_ + 91).hash(), 0xfc58a, "Date(2018, 9, 10) + 91",
+                "Dec 10, 2018");
   }
 
   void TestAddOperator5() {
-    AssertEqual((sept10_ + 134).hash(), 0xfc636, "Date(2018, 9, 10) + 134",
-                "January 22, 2019");
+    AssertEqual((sep10_ + 134).hash(), 0xfc636, "Date(2018, 9, 10) + 134",
+                "Jan 22, 2019");
   }
 
   void TestExtractionOperator() {
     std::stringstream sout;
-    sout << sept10_;
+    sout << sep10_;
 
-    AssertEqual(sout.str(), std::string("September 10, 2018"),
-                "Date(2018, 9, 10).ToString()", "September 10, 2018");
+    AssertEqual(sout.str(), std::string("Sep 10, 2018"),
+                "Date(2018, 9, 10).ToString()", "Sep 10, 2018");
   }
 
  private:
-  Date july10_ = Date(/*year=*/2018, /*month=*/7, /*day=*/10);
-  Date sept10_ = Date(/*year=*/2018, /*month=*/9, /*day=*/10);
+  Date jul10_ = Date(/*year=*/2018, /*month=*/7, /*day=*/10);
+  Date sep10_ = Date(/*year=*/2018, /*month=*/9, /*day=*/10);
 };
 
 int main() {

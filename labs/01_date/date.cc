@@ -46,9 +46,9 @@ bool Date::IsLeapYear(int year) noexcept {
 }
 
 std::string Date::ToString() const noexcept {
-  static const std::string kMonthNames[] = {
-      "January", "February", "March",     "April",   "May",      "June",
-      "July",    "August",   "September", "October", "November", "December"};
+  static const std::string kMonthNames[] = {"Jan", "Feb", "Mar", "Apr",
+                                            "May", "Jun", "Jul", "Aug",
+                                            "Sep", "Oct", "Nov", "Dec"};
   std::stringstream output;
   output << kMonthNames[month_ - 1] << ' ' << day_ << ", " << year_;
   return output.str();
