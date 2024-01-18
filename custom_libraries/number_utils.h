@@ -65,22 +65,40 @@ const std::unordered_set<std::string> kZeros = {
 };
 
 // Calculates the square root of `x`, rounded down to the nearest integer.
-int FloorSqrt(int x);
+int FloorSqrt(const int x) noexcept;
 
 // Returns an unordered set containing the factors of `x`.
-std::unordered_set<int> FactorsOf(int x);
+std::unordered_set<int> FactorsOf(const int x) noexcept;
 
 // Returns true when `x` is a prime number.
-bool IsPrime(int x);
+bool IsPrime(const int x) noexcept;
 
 // Returns true if `str` represents the number 0.
-bool IsZero(std::string str);
+inline bool IsZero(const std::string str) noexcept;
+
+// Returns true if `c` represents a digit from 0-9.
+inline bool IsDigit(const char c) noexcept;
+
+// Returns the numeric value of the given base-10 digit `digit`.
+inline int DigitToInt(const char digit) noexcept;
 
 // Returns the value of a string `str`, interpreted as an integer in base 10.
-int StringToInt(std::string str);
+int StringToInt(const std::string str) noexcept;
 
-// Returns the value of a string `str`, interpreted as an double in base 10.
-double StringToDouble(std::string str);
+// Returns the value of a string `str`, interpreted as a float in base 10.
+float StringToFloat(const std::string str) noexcept;
+
+// Returns the value of a string `str`, interpreted as a double in base 10.
+double StringToDouble(const std::string str) noexcept;
+
+// Returns true if `x == y`. (Please don't use unless absolutely necessary.)
+bool ApproxEqual(const int x, const int y) noexcept;
+
+// Returns true if `x` and `y` represent approximately the same value.
+bool ApproxEqual(const float x, const float y) noexcept;
+
+// Returns true if `x` and `y` represent approximately the same value.
+bool ApproxEqual(const double x, const double y) noexcept;
 
 }  // namespace rose
 

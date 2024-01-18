@@ -30,13 +30,6 @@ class Point {
 
  private:
   N x_, y_;
-
-  // Returns true if `n0 == n1`. Don't use.
-  static bool _ApproxEqual(const int n0, const int n1);
-  // Returns true if `f0` and `f1` are close enough to the same value.
-  static bool _ApproxEqual(const float f0, const float f1);
-  // Returns true if `f0` and `f1` are close enough to the same value.
-  static bool _ApproxEqual(const double f0, const double f1);
 };
 
 }  // namespace rose
