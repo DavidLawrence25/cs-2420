@@ -33,7 +33,7 @@ class Collection {
   friend std::ostream &operator<<(std::ostream &out,
                                   const Collection<_T> &collection);
 
- private:
+ protected:
   // Used to set `capacity_` if no capacity is given during construction.
   static const size_t kInitialCapacity = 8;
   // Represents how many elements could fit in the collection.
