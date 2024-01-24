@@ -23,11 +23,11 @@ class Collection {
   size_t length() const;
 
   // Returns the element at index `i`.
-  T ItemAt(int i) const;
+  virtual T ItemAt(int i) const;
   // Appends `item` to the collection.
-  void Add(T item);
+  virtual void Add(T item);
   // Removes the last element in the collection.
-  void RemoveEnd();
+  virtual void RemoveEnd();
 
   template <typename _T>
   friend std::ostream &operator<<(std::ostream &out,
