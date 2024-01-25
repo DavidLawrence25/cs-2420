@@ -59,7 +59,7 @@ class RangeTest : public TestCase {
   }
 
   void TestLength3() {
-    AssertEqual(r3_.length(), size_t{6}, "Range(7.5, 20.3, 2.5).length", "2.5");
+    AssertEqual(r3_.length(), size_t{6}, "Range(7.5, 20.3, 2.5).length", "6");
   }
 
   void TestLength4() {
@@ -78,9 +78,7 @@ class RangeTest : public TestCase {
     AssertEqual(r3_.sum(), 82.5, "Range(7.5, 20.3, 2.5).sum", "82.5");
   }
 
-  void TestSum4() {
-    AssertEqual(r4_.sum(), 40, "Range(12, 3, -2).sum", "40");  // ? why?
-  }
+  void TestSum4() { AssertEqual(r4_.sum(), 40, "Range(12, 3, -2).sum", "40"); }
 
   void TestSum5() {
     AssertEqual(r5_.sum(), 87.5, "Range(20, 4, -2.5).sum", "87.5");
