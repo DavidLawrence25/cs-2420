@@ -1,5 +1,5 @@
-#ifndef CS1410_CUSTOMLIBRARIES_CYCLICINT_H_
-#define CS1410_CUSTOMLIBRARIES_CYCLICINT_H_
+#ifndef CS2420_CUSTOMLIBRARIES_CYCLICINT_H_
+#define CS2420_CUSTOMLIBRARIES_CYCLICINT_H_
 
 namespace rose {
 
@@ -27,9 +27,7 @@ class CyclicInt {
     value_ = other.value_;
   }
 
-  int get_value() {
-    return value_;
-  }
+  int get_value() { return value_; }
 
   // Increments `value_` by one, overflowing to the minimum value if necessary.
   CyclicInt &operator++() {
@@ -53,4 +51,4 @@ class CyclicInt {
 
 }  // namespace rose
 
-#endif  // CS1410_CUSTOMLIBRARIES_CYCLICINT_H_
+#endif  // CS2420_CUSTOMLIBRARIES_CYCLICINT_H_

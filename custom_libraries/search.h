@@ -1,7 +1,7 @@
 #include <vector>
 
-#ifndef CS1410_CUSTOMLIBRARIES_SEARCH_H_
-#define CS1410_CUSTOMLIBRARIES_SEARCH_H_
+#ifndef CS2420_CUSTOMLIBRARIES_SEARCH_H_
+#define CS2420_CUSTOMLIBRARIES_SEARCH_H_
 
 namespace rose {
 
@@ -29,4 +29,4 @@ int BinarySearch(std::vector<Number> numbers, Number value) {
 
 }  // namespace rose
 
-#endif  // CS1410_CUSTOMLIBRARIES_SEARCH_H_
+#endif  // CS2420_CUSTOMLIBRARIES_SEARCH_H_

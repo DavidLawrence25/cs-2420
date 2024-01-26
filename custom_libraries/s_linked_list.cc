@@ -1,6 +1,6 @@
-#include "s_linked_list.h"
-
 #include <stdlib.h>
+
+#include "s_linked_list.h"
 
 namespace rose {
 

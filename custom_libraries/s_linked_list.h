@@ -1,7 +1,7 @@
 #include <stdlib.h>
 
-#ifndef CS1410_CUSTOMLIBRARIES_SLINKEDLIST_H_
-#define CS1410_CUSTOMLIBRARIES_SLINKEDLIST_H_
+#ifndef CS2420_CUSTOMLIBRARIES_SLINKEDLIST_H_
+#define CS2420_CUSTOMLIBRARIES_SLINKEDLIST_H_
 
 namespace rose {
 
@@ -58,4 +58,4 @@ class SLinkedList {
 
 #include "s_linked_list.cc"
 
-#endif  // CS1410_CUSTOMLIBRARIES_LINKEDLIST_H_
+#endif  // CS2420_CUSTOMLIBRARIES_LINKEDLIST_H_

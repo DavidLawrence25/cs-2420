@@ -3,8 +3,8 @@
 #include <string>
 #include <vector>
 
-#ifndef CS1410_CUSTOMLIBRARIES_TEST_H_
-#define CS1410_CUSTOMLIBRARIES_TEST_H_
+#ifndef CS2420_CUSTOMLIBRARIES_TEST_H_
+#define CS2420_CUSTOMLIBRARIES_TEST_H_
 
 namespace rose {
 
@@ -162,12 +162,13 @@ class TestCase {
   void AssertFalse(bool expression, std::string repr) noexcept;
 
  protected:
-  // The name of the test currently being ran.
-  // Handled automatically by implementation and should not be tampered with.
-  std::string test_name_;
   TestResult result_;
+
+ private:
+  // The name of the test currently being ran.
+  std::string test_name_;
 };
 
 }  // namespace rose
 
-#endif  // CS1410_CUSTOMLIBRARIES_TEST_H_
+#endif  // CS2420_CUSTOMLIBRARIES_TEST_H_

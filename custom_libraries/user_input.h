@@ -5,8 +5,8 @@
 
 #include "custom_libraries/number_utils.h"
 
-#ifndef CS1410_CUSTOMLIBRARIES_USERINPUT_H_
-#define CS1410_CUSTOMLIBRARIES_USERINPUT_H_
+#ifndef CS2420_CUSTOMLIBRARIES_USERINPUT_H_
+#define CS2420_CUSTOMLIBRARIES_USERINPUT_H_
 
 namespace rose {
 
@@ -106,4 +106,4 @@ double GetDouble(std::string prompt, bool (*validator)(double, ExtraArgs...),
 
 }  // namespace rose
 
-#endif  // CS1410_CUSTOMLIBRARIES_USERINPUT_H_
+#endif  // CS2420_CUSTOMLIBRARIES_USERINPUT_H_

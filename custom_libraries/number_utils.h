@@ -3,8 +3,8 @@
 #include <string>
 #include <unordered_set>
 
-#ifndef CS1410_CUSTOMLIBRARIES_NUMBERUTILS_H_
-#define CS1410_CUSTOMLIBRARIES_NUMBERUTILS_H_
+#ifndef CS2420_CUSTOMLIBRARIES_NUMBERUTILS_H_
+#define CS2420_CUSTOMLIBRARIES_NUMBERUTILS_H_
 
 namespace rose {
 
@@ -102,4 +102,4 @@ bool ApproxEqual(const double x, const double y) noexcept;
 
 }  // namespace rose
 
-#endif  // CS1410_CUSTOMLIBRARIES_NUMBERUTILS_H_
+#endif  // CS2420_CUSTOMLIBRARIES_NUMBERUTILS_H_
