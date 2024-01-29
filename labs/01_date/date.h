@@ -9,6 +9,8 @@ namespace rose {
 // Represents a calendar date.
 class Date {
  public:
+  // Initializes Date to Jan 1, 1970.
+  Date() noexcept;
   // Initializes Date with `year`, sets month and day to `1`.
   Date(int year) noexcept;
   // Initializes Date with `year` and `month`, sets day to `1`.

@@ -1,8 +1,14 @@
-#include "date.h"
-
 #include <sstream>
 
+#include "date.h"
+
 namespace rose {
+
+Date::Date() noexcept {
+  year_ = 1970;
+  month_ = 1;
+  day_ = 1;
+}
 
 Date::Date(int year) noexcept {
   year_ = year;

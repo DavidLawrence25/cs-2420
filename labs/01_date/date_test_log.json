@@ -1,0 +1,566 @@
+{
+  "meta": {
+    "tests_ran": 21,
+    "steps_taken": 42,
+    "fails": 0
+  },
+  "tests_failed": [],
+  "tests_passed": [
+    {
+      "name": "TestConstructor1",
+      "step": 3,
+      "step_type": "assert_equal",
+      "repr0": "date",
+      "repr1": "Jan 1, 2018",
+      "context": [
+        {
+          "name": "TestConstructor1",
+          "step": 2,
+          "step_type": "local_init",
+          "local_name": "date",
+          "value": "Date(2018)"
+        }
+      ]
+    },
+    {
+      "name": "TestConstructor2",
+      "step": 5,
+      "step_type": "assert_equal",
+      "repr0": "date",
+      "repr1": "Jul 1, 2018",
+      "context": [
+        {
+          "name": "TestConstructor2",
+          "step": 4,
+          "step_type": "local_init",
+          "local_name": "date",
+          "value": "Date(2018, 7)"
+        }
+      ]
+    },
+    {
+      "name": "TestConstructor3",
+      "step": 7,
+      "step_type": "assert_equal",
+      "repr0": "date",
+      "repr1": "Jul 10, 2018",
+      "context": [
+        {
+          "name": "TestConstructor3",
+          "step": 6,
+          "step_type": "local_init",
+          "local_name": "date",
+          "value": "Date(2018, 7, 10)"
+        }
+      ]
+    },
+    {
+      "name": "TestAddMonths1",
+      "step": 9,
+      "step_type": "assert_equal",
+      "repr0": "jul10",
+      "repr1": "Nov 10, 2018",
+      "context": []
+    },
+    {
+      "name": "TestAddMonths2",
+      "step": 12,
+      "step_type": "assert_equal",
+      "repr0": "jul10",
+      "repr1": "Dec 10, 2018",
+      "context": []
+    },
+    {
+      "name": "TestAddMonths3",
+      "step": 15,
+      "step_type": "assert_equal",
+      "repr0": "jul10",
+      "repr1": "Jan 10, 2019",
+      "context": []
+    },
+    {
+      "name": "TestAddDays1",
+      "step": 18,
+      "step_type": "assert_equal",
+      "repr0": "jul10",
+      "repr1": "Jul 26, 2018",
+      "context": []
+    },
+    {
+      "name": "TestAddDays2",
+      "step": 21,
+      "step_type": "assert_equal",
+      "repr0": "jul10",
+      "repr1": "Jul 31, 2018",
+      "context": []
+    },
+    {
+      "name": "TestAddDays3",
+      "step": 24,
+      "step_type": "assert_equal",
+      "repr0": "jul10",
+      "repr1": "Aug 10, 2018",
+      "context": []
+    },
+    {
+      "name": "TestIsLeapYear1",
+      "step": 26,
+      "step_type": "assert_false",
+      "expression": "IsLeapYear(1995)",
+      "context": []
+    },
+    {
+      "name": "TestIsLeapYear2",
+      "step": 27,
+      "step_type": "assert_true",
+      "expression": "IsLeapYear(1996)",
+      "context": []
+    },
+    {
+      "name": "TestIsLeapYear3",
+      "step": 28,
+      "step_type": "assert_true",
+      "expression": "IsLeapYear(2000)",
+      "context": []
+    },
+    {
+      "name": "TestIsLeapYear4",
+      "step": 29,
+      "step_type": "assert_false",
+      "expression": "IsLeapYear(1900)",
+      "context": []
+    },
+    {
+      "name": "TestDayOfYear1",
+      "step": 31,
+      "step_type": "assert_equal",
+      "repr0": "date.DayOfYear()",
+      "repr1": "1",
+      "context": [
+        {
+          "name": "TestDayOfYear1",
+          "step": 30,
+          "step_type": "local_init",
+          "local_name": "date",
+          "value": "Date(1970, 1, 1)"
+        }
+      ]
+    },
+    {
+      "name": "TestDayOfYear2",
+      "step": 33,
+      "step_type": "assert_equal",
+      "repr0": "date.DayOfYear()",
+      "repr1": "53",
+      "context": [
+        {
+          "name": "TestDayOfYear2",
+          "step": 32,
+          "step_type": "local_init",
+          "local_name": "date",
+          "value": "Date(2007, 2, 22)"
+        }
+      ]
+    },
+    {
+      "name": "TestAddOperator1",
+      "step": 34,
+      "step_type": "assert_equal",
+      "repr0": "sep10 + 23",
+      "repr1": "Oct 3, 2018",
+      "context": [
+        {
+          "name": "__TestCaseConstructor__",
+          "step": 1,
+          "step_type": "global_init",
+          "global_name": "sep10",
+          "value": "Date(2018, 9, 10)"
+        }
+      ]
+    },
+    {
+      "name": "TestAddOperator2",
+      "step": 35,
+      "step_type": "assert_equal",
+      "repr0": "sep10 + 38",
+      "repr1": "Oct 18, 2018",
+      "context": [
+        {
+          "name": "__TestCaseConstructor__",
+          "step": 1,
+          "step_type": "global_init",
+          "global_name": "sep10",
+          "value": "Date(2018, 9, 10)"
+        }
+      ]
+    },
+    {
+      "name": "TestAddOperator3",
+      "step": 36,
+      "step_type": "assert_equal",
+      "repr0": "sep10 + 56",
+      "repr1": "Nov 5, 2018",
+      "context": [
+        {
+          "name": "__TestCaseConstructor__",
+          "step": 1,
+          "step_type": "global_init",
+          "global_name": "sep10",
+          "value": "Date(2018, 9, 10)"
+        }
+      ]
+    },
+    {
+      "name": "TestAddOperator4",
+      "step": 37,
+      "step_type": "assert_equal",
+      "repr0": "sep10 + 91",
+      "repr1": "Dec 10, 2018",
+      "context": [
+        {
+          "name": "__TestCaseConstructor__",
+          "step": 1,
+          "step_type": "global_init",
+          "global_name": "sep10",
+          "value": "Date(2018, 9, 10)"
+        }
+      ]
+    },
+    {
+      "name": "TestAddOperator5",
+      "step": 38,
+      "step_type": "assert_equal",
+      "repr0": "sep10 + 134",
+      "repr1": "Jan 22, 2019",
+      "context": [
+        {
+          "name": "__TestCaseConstructor__",
+          "step": 1,
+          "step_type": "global_init",
+          "global_name": "sep10",
+          "value": "Date(2018, 9, 10)"
+        }
+      ]
+    },
+    {
+      "name": "TestExtractionOperator",
+      "step": 41,
+      "step_type": "assert_equal",
+      "repr0": "sout.str()",
+      "repr1": "Sep 10, 2018",
+      "context": [
+        {
+          "name": "__TestCaseConstructor__",
+          "step": 1,
+          "step_type": "global_init",
+          "global_name": "sep10",
+          "value": "Date(2018, 9, 10)"
+        },
+        {
+          "name": "TestExtractionOperator",
+          "step": 39,
+          "step_type": "local_init",
+          "local_name": "sout",
+          "value": "std::stringstream()"
+        },
+        {
+          "name": "TestExtractionOperator",
+          "step": 40,
+          "step_type": "function_call",
+          "repr": "operator<<(sout, sep10)",
+          "relevant_locals": [
+            "sout"
+          ],
+          "relevant_globals": [
+            "sep10"
+          ]
+        },
+        {
+          "name": "TestExtractionOperator",
+          "step": 40,
+          "step_type": "function_call",
+          "repr": "operator<<(sout, sep10)",
+          "relevant_locals": [
+            "sout"
+          ],
+          "relevant_globals": [
+            "sep10"
+          ]
+        }
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "name": "__TestCaseConstructor__",
+      "step_type": "global_init",
+      "global_name": "jul10",
+      "value": "Date(2018, 7, 10)"
+    },
+    {
+      "name": "__TestCaseConstructor__",
+      "step_type": "global_init",
+      "global_name": "sep10",
+      "value": "Date(2018, 9, 10)"
+    },
+    {
+      "name": "TestConstructor1",
+      "step_type": "local_init",
+      "local_name": "date",
+      "value": "Date(2018)"
+    },
+    {
+      "name": "TestConstructor1",
+      "step_type": "assert_equal",
+      "repr0": "date",
+      "repr1": "Jan 1, 2018"
+    },
+    {
+      "name": "TestConstructor2",
+      "step_type": "local_init",
+      "local_name": "date",
+      "value": "Date(2018, 7)"
+    },
+    {
+      "name": "TestConstructor2",
+      "step_type": "assert_equal",
+      "repr0": "date",
+      "repr1": "Jul 1, 2018"
+    },
+    {
+      "name": "TestConstructor3",
+      "step_type": "local_init",
+      "local_name": "date",
+      "value": "Date(2018, 7, 10)"
+    },
+    {
+      "name": "TestConstructor3",
+      "step_type": "assert_equal",
+      "repr0": "date",
+      "repr1": "Jul 10, 2018"
+    },
+    {
+      "name": "TestAddMonths1",
+      "step_type": "function_call",
+      "repr": "jul10.AddMonths(4)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "jul10"
+      ]
+    },
+    {
+      "name": "TestAddMonths1",
+      "step_type": "assert_equal",
+      "repr0": "jul10",
+      "repr1": "Nov 10, 2018"
+    },
+    {
+      "name": "TestAddMonths1",
+      "step_type": "global_set",
+      "global_name": "jul10",
+      "value": "Date(2018, 7, 10)"
+    },
+    {
+      "name": "TestAddMonths2",
+      "step_type": "function_call",
+      "repr": "jul10.AddMonths(5)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "jul10"
+      ]
+    },
+    {
+      "name": "TestAddMonths2",
+      "step_type": "assert_equal",
+      "repr0": "jul10",
+      "repr1": "Dec 10, 2018"
+    },
+    {
+      "name": "TestAddMonths2",
+      "step_type": "global_set",
+      "global_name": "jul10",
+      "value": "Date(2018, 7, 10)"
+    },
+    {
+      "name": "TestAddMonths3",
+      "step_type": "function_call",
+      "repr": "jul10.AddMonths(6)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "jul10"
+      ]
+    },
+    {
+      "name": "TestAddMonths3",
+      "step_type": "assert_equal",
+      "repr0": "jul10",
+      "repr1": "Jan 10, 2019"
+    },
+    {
+      "name": "TestAddMonths3",
+      "step_type": "global_set",
+      "global_name": "jul10",
+      "value": "Date(2018, 7, 10)"
+    },
+    {
+      "name": "TestAddDays1",
+      "step_type": "function_call",
+      "repr": "jul10.AddDays(16)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "jul10"
+      ]
+    },
+    {
+      "name": "TestAddDays1",
+      "step_type": "assert_equal",
+      "repr0": "jul10",
+      "repr1": "Jul 26, 2018"
+    },
+    {
+      "name": "TestAddDays1",
+      "step_type": "global_set",
+      "global_name": "jul10",
+      "value": "Date(2018, 7, 10)"
+    },
+    {
+      "name": "TestAddDays2",
+      "step_type": "function_call",
+      "repr": "jul10.AddDays(21)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "jul10"
+      ]
+    },
+    {
+      "name": "TestAddDays2",
+      "step_type": "assert_equal",
+      "repr0": "jul10",
+      "repr1": "Jul 31, 2018"
+    },
+    {
+      "name": "TestAddDays2",
+      "step_type": "global_set",
+      "global_name": "jul10",
+      "value": "Date(2018, 7, 10)"
+    },
+    {
+      "name": "TestAddDays3",
+      "step_type": "function_call",
+      "repr": "jul10.AddDays(31)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "jul10"
+      ]
+    },
+    {
+      "name": "TestAddDays3",
+      "step_type": "assert_equal",
+      "repr0": "jul10",
+      "repr1": "Aug 10, 2018"
+    },
+    {
+      "name": "TestAddDays3",
+      "step_type": "global_set",
+      "global_name": "jul10",
+      "value": "Date(2018, 7, 10)"
+    },
+    {
+      "name": "TestIsLeapYear1",
+      "step_type": "assert_false",
+      "expression": "IsLeapYear(1995)"
+    },
+    {
+      "name": "TestIsLeapYear2",
+      "step_type": "assert_true",
+      "expression": "IsLeapYear(1996)"
+    },
+    {
+      "name": "TestIsLeapYear3",
+      "step_type": "assert_true",
+      "expression": "IsLeapYear(2000)"
+    },
+    {
+      "name": "TestIsLeapYear4",
+      "step_type": "assert_false",
+      "expression": "IsLeapYear(1900)"
+    },
+    {
+      "name": "TestDayOfYear1",
+      "step_type": "local_init",
+      "local_name": "date",
+      "value": "Date(1970, 1, 1)"
+    },
+    {
+      "name": "TestDayOfYear1",
+      "step_type": "assert_equal",
+      "repr0": "date.DayOfYear()",
+      "repr1": "1"
+    },
+    {
+      "name": "TestDayOfYear2",
+      "step_type": "local_init",
+      "local_name": "date",
+      "value": "Date(2007, 2, 22)"
+    },
+    {
+      "name": "TestDayOfYear2",
+      "step_type": "assert_equal",
+      "repr0": "date.DayOfYear()",
+      "repr1": "53"
+    },
+    {
+      "name": "TestAddOperator1",
+      "step_type": "assert_equal",
+      "repr0": "sep10 + 23",
+      "repr1": "Oct 3, 2018"
+    },
+    {
+      "name": "TestAddOperator2",
+      "step_type": "assert_equal",
+      "repr0": "sep10 + 38",
+      "repr1": "Oct 18, 2018"
+    },
+    {
+      "name": "TestAddOperator3",
+      "step_type": "assert_equal",
+      "repr0": "sep10 + 56",
+      "repr1": "Nov 5, 2018"
+    },
+    {
+      "name": "TestAddOperator4",
+      "step_type": "assert_equal",
+      "repr0": "sep10 + 91",
+      "repr1": "Dec 10, 2018"
+    },
+    {
+      "name": "TestAddOperator5",
+      "step_type": "assert_equal",
+      "repr0": "sep10 + 134",
+      "repr1": "Jan 22, 2019"
+    },
+    {
+      "name": "TestExtractionOperator",
+      "step_type": "local_init",
+      "local_name": "sout",
+      "value": "std::stringstream()"
+    },
+    {
+      "name": "TestExtractionOperator",
+      "step_type": "function_call",
+      "repr": "operator<<(sout, sep10)",
+      "relevant_locals": [
+        "sout"
+      ],
+      "relevant_globals": [
+        "sep10"
+      ]
+    },
+    {
+      "name": "TestExtractionOperator",
+      "step_type": "assert_equal",
+      "repr0": "sout.str()",
+      "repr1": "Sep 10, 2018"
+    }
+  ]
+}
