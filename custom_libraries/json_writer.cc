@@ -48,27 +48,33 @@ void JsonWriter::CreateDouble(const std::string &name, double value) {
 }
 
 void JsonWriter::CreateString(const std::string &value) {
-  // Having unescaped quotation marks inside a string messes up the formatting,
-  // so this is a required work-around until std::format wants to play nice.
-  if (value.contains('"')) {
-    CreateItem(value);
-    return;
-  }
   std::stringstream sout;
-  sout << '"' << value << '"';
+  sout << '"';
+  for (char c : value) {
+    if (c == '\0') break;
+    if (c == '"') {
+      sout << "\\\"";
+    } else {
+      sout << c;
+    }
+  }
+  sout << '"';
   CreateItem(sout.str());
 }
 
 void JsonWriter::CreateString(const std::string &name,
                               const std::string &value) {
-  // Having unescaped quotation marks inside a string messes up the formatting,
-  // so this is a required work-around until std::format wants to play nice.
-  if (value.contains('"')) {
-    CreateProperty(name, value);
-    return;
-  }
   std::stringstream sout;
-  sout << '"' << value << '"';
+  sout << '"';
+  for (char c : value) {
+    if (c == '\0') break;
+    if (c == '"') {
+      sout << "\\\"";
+    } else {
+      sout << c;
+    }
+  }
+  sout << '"';
   CreateProperty(name, sout.str());
 }
 
