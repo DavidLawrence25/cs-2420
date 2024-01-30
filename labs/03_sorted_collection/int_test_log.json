@@ -1,0 +1,3470 @@
+{
+  "meta": {
+    "tests_ran": 10,
+    "steps_taken": 154,
+    "fails": 0
+  },
+  "tests_failed": [],
+  "tests_passed": [
+    {
+      "name": "TestAdd1",
+      "step": 2,
+      "step_type": "assert_equal",
+      "repr0": "nums.length",
+      "repr1": "1",
+      "context": [
+        {
+          "name": "__TestCaseConstructor__",
+          "step": 0,
+          "step_type": "global_init",
+          "global_name": "nums",
+          "value": "SortedCollection<int>()"
+        },
+        {
+          "name": "TestAdd1",
+          "step": 1,
+          "step_type": "function_call",
+          "repr": "nums.Add(69)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TestAdd2",
+      "step": 6,
+      "step_type": "assert_equal",
+      "repr0": "nums.length",
+      "repr1": "4",
+      "context": [
+        {
+          "name": "__TestCaseConstructor__",
+          "step": 0,
+          "step_type": "global_init",
+          "global_name": "nums",
+          "value": "SortedCollection<int>()"
+        },
+        {
+          "name": "TestAdd1",
+          "step": 1,
+          "step_type": "function_call",
+          "repr": "nums.Add(69)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestAdd2",
+          "step": 3,
+          "step_type": "function_call",
+          "repr": "nums.Add(42)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestAdd2",
+          "step": 4,
+          "step_type": "function_call",
+          "repr": "nums.Add(17)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestAdd2",
+          "step": 5,
+          "step_type": "function_call",
+          "repr": "nums.Add(21)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TestItemAt1",
+      "step": 7,
+      "step_type": "assert_equal",
+      "repr0": "nums.ItemAt(0)",
+      "repr1": "17",
+      "context": [
+        {
+          "name": "__TestCaseConstructor__",
+          "step": 0,
+          "step_type": "global_init",
+          "global_name": "nums",
+          "value": "SortedCollection<int>()"
+        },
+        {
+          "name": "TestAdd1",
+          "step": 1,
+          "step_type": "function_call",
+          "repr": "nums.Add(69)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestAdd2",
+          "step": 3,
+          "step_type": "function_call",
+          "repr": "nums.Add(42)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestAdd2",
+          "step": 4,
+          "step_type": "function_call",
+          "repr": "nums.Add(17)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestAdd2",
+          "step": 5,
+          "step_type": "function_call",
+          "repr": "nums.Add(21)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TestItemAt2",
+      "step": 8,
+      "step_type": "assert_equal",
+      "repr0": "nums.ItemAt(-2)",
+      "repr1": "42",
+      "context": [
+        {
+          "name": "__TestCaseConstructor__",
+          "step": 0,
+          "step_type": "global_init",
+          "global_name": "nums",
+          "value": "SortedCollection<int>()"
+        },
+        {
+          "name": "TestAdd1",
+          "step": 1,
+          "step_type": "function_call",
+          "repr": "nums.Add(69)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestAdd2",
+          "step": 3,
+          "step_type": "function_call",
+          "repr": "nums.Add(42)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestAdd2",
+          "step": 4,
+          "step_type": "function_call",
+          "repr": "nums.Add(17)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestAdd2",
+          "step": 5,
+          "step_type": "function_call",
+          "repr": "nums.Add(21)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TestRemoveEnd1",
+      "step": 10,
+      "step_type": "assert_equal",
+      "repr0": "nums.length",
+      "repr1": "3",
+      "context": [
+        {
+          "name": "__TestCaseConstructor__",
+          "step": 0,
+          "step_type": "global_init",
+          "global_name": "nums",
+          "value": "SortedCollection<int>()"
+        },
+        {
+          "name": "TestAdd1",
+          "step": 1,
+          "step_type": "function_call",
+          "repr": "nums.Add(69)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestAdd2",
+          "step": 3,
+          "step_type": "function_call",
+          "repr": "nums.Add(42)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestAdd2",
+          "step": 4,
+          "step_type": "function_call",
+          "repr": "nums.Add(17)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestAdd2",
+          "step": 5,
+          "step_type": "function_call",
+          "repr": "nums.Add(21)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestRemoveEnd1",
+          "step": 9,
+          "step_type": "function_call",
+          "repr": "nums.RemoveEnd()",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TestRemoveEnd2",
+      "step": 14,
+      "step_type": "assert_equal",
+      "repr0": "nums.length",
+      "repr1": "0",
+      "context": [
+        {
+          "name": "__TestCaseConstructor__",
+          "step": 0,
+          "step_type": "global_init",
+          "global_name": "nums",
+          "value": "SortedCollection<int>()"
+        },
+        {
+          "name": "TestAdd1",
+          "step": 1,
+          "step_type": "function_call",
+          "repr": "nums.Add(69)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestAdd2",
+          "step": 3,
+          "step_type": "function_call",
+          "repr": "nums.Add(42)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestAdd2",
+          "step": 4,
+          "step_type": "function_call",
+          "repr": "nums.Add(17)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestAdd2",
+          "step": 5,
+          "step_type": "function_call",
+          "repr": "nums.Add(21)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestRemoveEnd1",
+          "step": 9,
+          "step_type": "function_call",
+          "repr": "nums.RemoveEnd()",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestRemoveEnd2",
+          "step": 11,
+          "step_type": "function_call",
+          "repr": "nums.RemoveEnd()",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestRemoveEnd2",
+          "step": 12,
+          "step_type": "function_call",
+          "repr": "nums.RemoveEnd()",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestRemoveEnd2",
+          "step": 13,
+          "step_type": "function_call",
+          "repr": "nums.RemoveEnd()",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TestRemoveEnd3",
+      "step": 16,
+      "step_type": "assert_equal",
+      "repr0": "nums.length",
+      "repr1": "0",
+      "context": [
+        {
+          "name": "__TestCaseConstructor__",
+          "step": 0,
+          "step_type": "global_init",
+          "global_name": "nums",
+          "value": "SortedCollection<int>()"
+        },
+        {
+          "name": "TestAdd1",
+          "step": 1,
+          "step_type": "function_call",
+          "repr": "nums.Add(69)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestAdd2",
+          "step": 3,
+          "step_type": "function_call",
+          "repr": "nums.Add(42)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestAdd2",
+          "step": 4,
+          "step_type": "function_call",
+          "repr": "nums.Add(17)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestAdd2",
+          "step": 5,
+          "step_type": "function_call",
+          "repr": "nums.Add(21)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestRemoveEnd1",
+          "step": 9,
+          "step_type": "function_call",
+          "repr": "nums.RemoveEnd()",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestRemoveEnd2",
+          "step": 11,
+          "step_type": "function_call",
+          "repr": "nums.RemoveEnd()",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestRemoveEnd2",
+          "step": 12,
+          "step_type": "function_call",
+          "repr": "nums.RemoveEnd()",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestRemoveEnd2",
+          "step": 13,
+          "step_type": "function_call",
+          "repr": "nums.RemoveEnd()",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestRemoveEnd3",
+          "step": 15,
+          "step_type": "function_call",
+          "repr": "nums.RemoveEnd()",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TestExpand1",
+      "step": 26,
+      "step_type": "assert_equal",
+      "repr0": "nums.capacity",
+      "repr1": "16",
+      "context": [
+        {
+          "name": "__TestCaseConstructor__",
+          "step": 0,
+          "step_type": "global_init",
+          "global_name": "nums",
+          "value": "SortedCollection<int>()"
+        },
+        {
+          "name": "TestAdd1",
+          "step": 1,
+          "step_type": "function_call",
+          "repr": "nums.Add(69)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestAdd2",
+          "step": 3,
+          "step_type": "function_call",
+          "repr": "nums.Add(42)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestAdd2",
+          "step": 4,
+          "step_type": "function_call",
+          "repr": "nums.Add(17)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestAdd2",
+          "step": 5,
+          "step_type": "function_call",
+          "repr": "nums.Add(21)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestRemoveEnd1",
+          "step": 9,
+          "step_type": "function_call",
+          "repr": "nums.RemoveEnd()",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestRemoveEnd2",
+          "step": 11,
+          "step_type": "function_call",
+          "repr": "nums.RemoveEnd()",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestRemoveEnd2",
+          "step": 12,
+          "step_type": "function_call",
+          "repr": "nums.RemoveEnd()",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestRemoveEnd2",
+          "step": 13,
+          "step_type": "function_call",
+          "repr": "nums.RemoveEnd()",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestRemoveEnd3",
+          "step": 15,
+          "step_type": "function_call",
+          "repr": "nums.RemoveEnd()",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand1",
+          "step": 17,
+          "step_type": "function_call",
+          "repr": "nums.Add(0)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand1",
+          "step": 18,
+          "step_type": "function_call",
+          "repr": "nums.Add(1)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand1",
+          "step": 19,
+          "step_type": "function_call",
+          "repr": "nums.Add(2)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand1",
+          "step": 20,
+          "step_type": "function_call",
+          "repr": "nums.Add(3)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand1",
+          "step": 21,
+          "step_type": "function_call",
+          "repr": "nums.Add(4)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand1",
+          "step": 22,
+          "step_type": "function_call",
+          "repr": "nums.Add(5)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand1",
+          "step": 23,
+          "step_type": "function_call",
+          "repr": "nums.Add(6)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand1",
+          "step": 24,
+          "step_type": "function_call",
+          "repr": "nums.Add(7)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand1",
+          "step": 25,
+          "step_type": "function_call",
+          "repr": "nums.Add(8)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step": 83,
+      "step_type": "assert_equal",
+      "repr0": "nums.capacity",
+      "repr1": "128",
+      "context": [
+        {
+          "name": "__TestCaseConstructor__",
+          "step": 0,
+          "step_type": "global_init",
+          "global_name": "nums",
+          "value": "SortedCollection<int>()"
+        },
+        {
+          "name": "TestAdd1",
+          "step": 1,
+          "step_type": "function_call",
+          "repr": "nums.Add(69)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestAdd2",
+          "step": 3,
+          "step_type": "function_call",
+          "repr": "nums.Add(42)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestAdd2",
+          "step": 4,
+          "step_type": "function_call",
+          "repr": "nums.Add(17)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestAdd2",
+          "step": 5,
+          "step_type": "function_call",
+          "repr": "nums.Add(21)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestRemoveEnd1",
+          "step": 9,
+          "step_type": "function_call",
+          "repr": "nums.RemoveEnd()",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestRemoveEnd2",
+          "step": 11,
+          "step_type": "function_call",
+          "repr": "nums.RemoveEnd()",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestRemoveEnd2",
+          "step": 12,
+          "step_type": "function_call",
+          "repr": "nums.RemoveEnd()",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestRemoveEnd2",
+          "step": 13,
+          "step_type": "function_call",
+          "repr": "nums.RemoveEnd()",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestRemoveEnd3",
+          "step": 15,
+          "step_type": "function_call",
+          "repr": "nums.RemoveEnd()",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand1",
+          "step": 17,
+          "step_type": "function_call",
+          "repr": "nums.Add(0)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand1",
+          "step": 18,
+          "step_type": "function_call",
+          "repr": "nums.Add(1)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand1",
+          "step": 19,
+          "step_type": "function_call",
+          "repr": "nums.Add(2)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand1",
+          "step": 20,
+          "step_type": "function_call",
+          "repr": "nums.Add(3)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand1",
+          "step": 21,
+          "step_type": "function_call",
+          "repr": "nums.Add(4)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand1",
+          "step": 22,
+          "step_type": "function_call",
+          "repr": "nums.Add(5)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand1",
+          "step": 23,
+          "step_type": "function_call",
+          "repr": "nums.Add(6)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand1",
+          "step": 24,
+          "step_type": "function_call",
+          "repr": "nums.Add(7)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand1",
+          "step": 25,
+          "step_type": "function_call",
+          "repr": "nums.Add(8)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 27,
+          "step_type": "function_call",
+          "repr": "nums.Add(9)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 28,
+          "step_type": "function_call",
+          "repr": "nums.Add(10)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 29,
+          "step_type": "function_call",
+          "repr": "nums.Add(11)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 30,
+          "step_type": "function_call",
+          "repr": "nums.Add(12)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 31,
+          "step_type": "function_call",
+          "repr": "nums.Add(13)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 32,
+          "step_type": "function_call",
+          "repr": "nums.Add(14)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 33,
+          "step_type": "function_call",
+          "repr": "nums.Add(15)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 34,
+          "step_type": "function_call",
+          "repr": "nums.Add(16)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 35,
+          "step_type": "function_call",
+          "repr": "nums.Add(17)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 36,
+          "step_type": "function_call",
+          "repr": "nums.Add(18)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 37,
+          "step_type": "function_call",
+          "repr": "nums.Add(19)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 38,
+          "step_type": "function_call",
+          "repr": "nums.Add(20)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 39,
+          "step_type": "function_call",
+          "repr": "nums.Add(21)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 40,
+          "step_type": "function_call",
+          "repr": "nums.Add(22)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 41,
+          "step_type": "function_call",
+          "repr": "nums.Add(23)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 42,
+          "step_type": "function_call",
+          "repr": "nums.Add(24)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 43,
+          "step_type": "function_call",
+          "repr": "nums.Add(25)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 44,
+          "step_type": "function_call",
+          "repr": "nums.Add(26)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 45,
+          "step_type": "function_call",
+          "repr": "nums.Add(27)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 46,
+          "step_type": "function_call",
+          "repr": "nums.Add(28)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 47,
+          "step_type": "function_call",
+          "repr": "nums.Add(29)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 48,
+          "step_type": "function_call",
+          "repr": "nums.Add(30)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 49,
+          "step_type": "function_call",
+          "repr": "nums.Add(31)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 50,
+          "step_type": "function_call",
+          "repr": "nums.Add(32)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 51,
+          "step_type": "function_call",
+          "repr": "nums.Add(33)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 52,
+          "step_type": "function_call",
+          "repr": "nums.Add(34)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 53,
+          "step_type": "function_call",
+          "repr": "nums.Add(35)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 54,
+          "step_type": "function_call",
+          "repr": "nums.Add(36)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 55,
+          "step_type": "function_call",
+          "repr": "nums.Add(37)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 56,
+          "step_type": "function_call",
+          "repr": "nums.Add(38)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 57,
+          "step_type": "function_call",
+          "repr": "nums.Add(39)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 58,
+          "step_type": "function_call",
+          "repr": "nums.Add(40)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 59,
+          "step_type": "function_call",
+          "repr": "nums.Add(41)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 60,
+          "step_type": "function_call",
+          "repr": "nums.Add(42)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 61,
+          "step_type": "function_call",
+          "repr": "nums.Add(43)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 62,
+          "step_type": "function_call",
+          "repr": "nums.Add(44)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 63,
+          "step_type": "function_call",
+          "repr": "nums.Add(45)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 64,
+          "step_type": "function_call",
+          "repr": "nums.Add(46)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 65,
+          "step_type": "function_call",
+          "repr": "nums.Add(47)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 66,
+          "step_type": "function_call",
+          "repr": "nums.Add(48)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 67,
+          "step_type": "function_call",
+          "repr": "nums.Add(49)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 68,
+          "step_type": "function_call",
+          "repr": "nums.Add(50)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 69,
+          "step_type": "function_call",
+          "repr": "nums.Add(51)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 70,
+          "step_type": "function_call",
+          "repr": "nums.Add(52)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 71,
+          "step_type": "function_call",
+          "repr": "nums.Add(53)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 72,
+          "step_type": "function_call",
+          "repr": "nums.Add(54)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 73,
+          "step_type": "function_call",
+          "repr": "nums.Add(55)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 74,
+          "step_type": "function_call",
+          "repr": "nums.Add(56)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 75,
+          "step_type": "function_call",
+          "repr": "nums.Add(57)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 76,
+          "step_type": "function_call",
+          "repr": "nums.Add(58)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 77,
+          "step_type": "function_call",
+          "repr": "nums.Add(59)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 78,
+          "step_type": "function_call",
+          "repr": "nums.Add(60)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 79,
+          "step_type": "function_call",
+          "repr": "nums.Add(61)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 80,
+          "step_type": "function_call",
+          "repr": "nums.Add(62)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 81,
+          "step_type": "function_call",
+          "repr": "nums.Add(63)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        },
+        {
+          "name": "TestExpand2",
+          "step": 82,
+          "step_type": "function_call",
+          "repr": "nums.Add(64)",
+          "relevant_locals": [],
+          "relevant_globals": [
+            "nums"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TestExtract",
+      "step": 153,
+      "step_type": "assert_equal",
+      "repr0": "sout.str()",
+      "repr1": "expected.str()",
+      "context": [
+        {
+          "name": "TestExtract",
+          "step": 84,
+          "step_type": "local_init",
+          "local_name": "expected",
+          "value": "std::stringstream()"
+        },
+        {
+          "name": "TestExtract",
+          "step": 85,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, '[')",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 86,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"0, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 87,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"1, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 88,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"2, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 89,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"3, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 90,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"4, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 91,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"5, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 92,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"6, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 93,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"7, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 94,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"8, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 95,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"9, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 96,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"10, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 97,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"11, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 98,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"12, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 99,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"13, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 100,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"14, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 101,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"15, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 102,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"16, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 103,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"17, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 104,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"18, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 105,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"19, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 106,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"20, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 107,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"21, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 108,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"22, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 109,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"23, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 110,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"24, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 111,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"25, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 112,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"26, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 113,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"27, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 114,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"28, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 115,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"29, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 116,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"30, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 117,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"31, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 118,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"32, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 119,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"33, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 120,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"34, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 121,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"35, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 122,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"36, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 123,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"37, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 124,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"38, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 125,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"39, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 126,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"40, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 127,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"41, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 128,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"42, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 129,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"43, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 130,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"44, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 131,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"45, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 132,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"46, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 133,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"47, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 134,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"48, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 135,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"49, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 136,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"50, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 137,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"51, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 138,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"52, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 139,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"53, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 140,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"54, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 141,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"55, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 142,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"56, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 143,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"57, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 144,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"58, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 145,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"59, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 146,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"60, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 147,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"61, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 148,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"62, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 149,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"63, \")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 150,
+          "step_type": "function_call",
+          "repr": "operator<<(expected, \"64]\")",
+          "relevant_locals": [
+            "expected"
+          ],
+          "relevant_globals": []
+        },
+        {
+          "name": "TestExtract",
+          "step": 151,
+          "step_type": "local_init",
+          "local_name": "sout",
+          "value": "std::stringstream()"
+        },
+        {
+          "name": "TestExtract",
+          "step": 152,
+          "step_type": "function_call",
+          "repr": "operator<<(sout, nums)",
+          "relevant_locals": [
+            "sout"
+          ],
+          "relevant_globals": [
+            "nums"
+          ]
+        }
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "name": "__TestCaseConstructor__",
+      "step_type": "global_init",
+      "global_name": "nums",
+      "value": "SortedCollection<int>()"
+    },
+    {
+      "name": "TestAdd1",
+      "step_type": "function_call",
+      "repr": "nums.Add(69)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestAdd1",
+      "step_type": "assert_equal",
+      "repr0": "nums.length",
+      "repr1": "1"
+    },
+    {
+      "name": "TestAdd2",
+      "step_type": "function_call",
+      "repr": "nums.Add(42)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestAdd2",
+      "step_type": "function_call",
+      "repr": "nums.Add(17)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestAdd2",
+      "step_type": "function_call",
+      "repr": "nums.Add(21)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestAdd2",
+      "step_type": "assert_equal",
+      "repr0": "nums.length",
+      "repr1": "4"
+    },
+    {
+      "name": "TestItemAt1",
+      "step_type": "assert_equal",
+      "repr0": "nums.ItemAt(0)",
+      "repr1": "17"
+    },
+    {
+      "name": "TestItemAt2",
+      "step_type": "assert_equal",
+      "repr0": "nums.ItemAt(-2)",
+      "repr1": "42"
+    },
+    {
+      "name": "TestRemoveEnd1",
+      "step_type": "function_call",
+      "repr": "nums.RemoveEnd()",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestRemoveEnd1",
+      "step_type": "assert_equal",
+      "repr0": "nums.length",
+      "repr1": "3"
+    },
+    {
+      "name": "TestRemoveEnd2",
+      "step_type": "function_call",
+      "repr": "nums.RemoveEnd()",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestRemoveEnd2",
+      "step_type": "function_call",
+      "repr": "nums.RemoveEnd()",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestRemoveEnd2",
+      "step_type": "function_call",
+      "repr": "nums.RemoveEnd()",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestRemoveEnd2",
+      "step_type": "assert_equal",
+      "repr0": "nums.length",
+      "repr1": "0"
+    },
+    {
+      "name": "TestRemoveEnd3",
+      "step_type": "function_call",
+      "repr": "nums.RemoveEnd()",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestRemoveEnd3",
+      "step_type": "assert_equal",
+      "repr0": "nums.length",
+      "repr1": "0"
+    },
+    {
+      "name": "TestExpand1",
+      "step_type": "function_call",
+      "repr": "nums.Add(0)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand1",
+      "step_type": "function_call",
+      "repr": "nums.Add(1)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand1",
+      "step_type": "function_call",
+      "repr": "nums.Add(2)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand1",
+      "step_type": "function_call",
+      "repr": "nums.Add(3)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand1",
+      "step_type": "function_call",
+      "repr": "nums.Add(4)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand1",
+      "step_type": "function_call",
+      "repr": "nums.Add(5)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand1",
+      "step_type": "function_call",
+      "repr": "nums.Add(6)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand1",
+      "step_type": "function_call",
+      "repr": "nums.Add(7)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand1",
+      "step_type": "function_call",
+      "repr": "nums.Add(8)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand1",
+      "step_type": "assert_equal",
+      "repr0": "nums.capacity",
+      "repr1": "16"
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(9)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(10)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(11)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(12)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(13)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(14)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(15)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(16)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(17)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(18)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(19)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(20)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(21)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(22)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(23)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(24)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(25)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(26)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(27)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(28)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(29)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(30)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(31)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(32)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(33)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(34)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(35)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(36)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(37)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(38)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(39)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(40)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(41)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(42)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(43)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(44)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(45)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(46)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(47)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(48)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(49)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(50)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(51)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(52)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(53)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(54)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(55)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(56)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(57)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(58)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(59)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(60)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(61)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(62)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(63)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "function_call",
+      "repr": "nums.Add(64)",
+      "relevant_locals": [],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExpand2",
+      "step_type": "assert_equal",
+      "repr0": "nums.capacity",
+      "repr1": "128"
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "local_init",
+      "local_name": "expected",
+      "value": "std::stringstream()"
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, '[')",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"0, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"1, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"2, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"3, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"4, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"5, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"6, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"7, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"8, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"9, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"10, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"11, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"12, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"13, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"14, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"15, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"16, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"17, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"18, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"19, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"20, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"21, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"22, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"23, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"24, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"25, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"26, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"27, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"28, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"29, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"30, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"31, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"32, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"33, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"34, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"35, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"36, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"37, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"38, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"39, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"40, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"41, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"42, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"43, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"44, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"45, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"46, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"47, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"48, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"49, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"50, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"51, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"52, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"53, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"54, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"55, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"56, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"57, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"58, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"59, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"60, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"61, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"62, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"63, \")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(expected, \"64]\")",
+      "relevant_locals": [
+        "expected"
+      ],
+      "relevant_globals": []
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "local_init",
+      "local_name": "sout",
+      "value": "std::stringstream()"
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "function_call",
+      "repr": "operator<<(sout, nums)",
+      "relevant_locals": [
+        "sout"
+      ],
+      "relevant_globals": [
+        "nums"
+      ]
+    },
+    {
+      "name": "TestExtract",
+      "step_type": "assert_equal",
+      "repr0": "sout.str()",
+      "repr1": "expected.str()"
+    }
+  ]
+}

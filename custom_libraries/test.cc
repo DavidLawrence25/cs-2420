@@ -1,3 +1,5 @@
+#include "test.h"
+
 #include <fstream>
 #include <functional>
 #include <iostream>
@@ -5,7 +7,6 @@
 #include <unordered_map>
 
 #include "json_writer.h"
-#include "test.h"
 
 namespace rose {
 

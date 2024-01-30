@@ -40,7 +40,7 @@ class Collection {
   size_t capacity_;
   // Represents how many elements are currently in the collection.
   size_t length_;
-  std::unique_ptr<T[]> elements_;
+  std::shared_ptr<T[]> elements_;
 
   // Scales `capacity_` by a constant factor.
   void Expand();

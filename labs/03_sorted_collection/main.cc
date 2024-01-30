@@ -2,14 +2,14 @@
 #include <iostream>
 
 #include "../../custom_libraries/test.h"
-#include "collection.h"
+#include "sorted_collection.h"
 
-using rose::Collection, rose::TestCase, rose::TestResult;
+using rose::SortedCollection, rose::TestCase, rose::TestResult;
 
-class CollectionIntTest : public rose::TestCase<Collection<int>> {
+class CollectionIntTest : public rose::TestCase<SortedCollection<int>> {
  public:
   CollectionIntTest() {
-    AddGlobal("nums", {&nums_, nums_, "Collection<int>()"});
+    AddGlobal("nums", {&nums_, nums_, "SortedCollection<int>()"});
   }
 
   TestResult Run() {
@@ -50,14 +50,14 @@ class CollectionIntTest : public rose::TestCase<Collection<int>> {
   }
 
   void TestItemAt1() {
-    AssertEqual(nums_.ItemAt(0), 69, /*repr0=*/"nums.ItemAt(0)",
-                /*repr1=*/"69", /*relevant_locals=*/{},
+    AssertEqual(nums_.ItemAt(0), 17, /*repr0=*/"nums.ItemAt(0)",
+                /*repr1=*/"17", /*relevant_locals=*/{},
                 /*relevant_globals=*/{"nums"});
   }
 
   void TestItemAt2() {
-    AssertEqual(nums_.ItemAt(-2), 17, /*repr0=*/"nums.ItemAt(-2)",
-                /*repr1=*/"17", /*relevant_locals=*/{},
+    AssertEqual(nums_.ItemAt(-2), 42, /*repr0=*/"nums.ItemAt(-2)",
+                /*repr1=*/"42", /*relevant_locals=*/{},
                 /*relevant_globals=*/{"nums"});
   }
 
@@ -142,13 +142,13 @@ class CollectionIntTest : public rose::TestCase<Collection<int>> {
   }
 
  private:
-  Collection<int> nums_;
+  SortedCollection<int> nums_;
 };
 
-class CollectionCharTest : public TestCase<Collection<char>> {
+class CollectionCharTest : public TestCase<SortedCollection<char>> {
  public:
   CollectionCharTest() {
-    AddGlobal("str", {&str_, str_, "Collection<char>()"});
+    AddGlobal("str", {&str_, str_, "SortedCollection<char>()"});
   }
 
   TestResult Run() {
@@ -176,7 +176,7 @@ class CollectionCharTest : public TestCase<Collection<char>> {
   }
 
   void TestItemAt() {
-    AssertEqual(str_.ItemAt(4), 'e', /*repr0=*/"str.ItemAt(4)", /*repr1=*/"e",
+    AssertEqual(str_.ItemAt(4), 'p', /*repr0=*/"str.ItemAt(4)", /*repr1=*/"p",
                 /*relevant_locals=*/{}, /*relevant_globals=*/{"str"});
   }
 
@@ -189,7 +189,7 @@ class CollectionCharTest : public TestCase<Collection<char>> {
   }
 
   void TestExpand() {
-    for (char c : "es taste pretty good") {
+    for (char c : "ps taste pretty good") {
       if (c == '\0') break;
       str_.Add(c);
       AddFuncCall(/*relevant_locals=*/{}, /*relevant_globals=*/{"str"},
@@ -208,13 +208,14 @@ class CollectionCharTest : public TestCase<Collection<char>> {
     expected << '[';
     AddFuncCall(/*relevant_locals=*/{"expected"}, /*relevant_globals=*/{},
                 /*repr=*/"operator<<(expected, '[')");
-    for (char c : "apples taste pretty goo") {
+    // apples taste pretty good
+    for (char c : "   aadeeeglooppprsstttt") {
       if (c == '\0') break;
       expected << c << ", ";
       AddFuncCall(/*relevant_locals=*/{"expected"}, /*relevant_globals=*/{},
                   /*repr=*/std::format("operator<<(expected, \"{}, \")", c));
     }
-    expected << "d]";
+    expected << "y]";
     AddFuncCall(/*relevant_locals=*/{"expected"}, /*relevant_globals=*/{},
                 /*repr=*/"operator<<(expected, \"y]\")");
     std::stringstream sout;
@@ -253,7 +254,7 @@ class CollectionCharTest : public TestCase<Collection<char>> {
   }
 
  private:
-  Collection<char> str_;
+  SortedCollection<char> str_;
 };
 
 int main() {

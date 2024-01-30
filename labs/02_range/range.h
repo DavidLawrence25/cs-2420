@@ -13,12 +13,12 @@ namespace rose {
 template <typename Num>
 class Range {
  public:
-  // Constructs a range from 0 to `stop` with a step size of 1.
-  Range(Num stop);
-  // Constructs a range from `start` to `stop` with a step size of 1.
-  Range(Num start, Num stop);
-  // Constructs a range from `start` to `stop` with a step size of `step`.
-  Range(Num start, Num stop, Num step);
+  Range() : start_(0), stop_(0), step_(1), n_(0) {}
+  Range(Num stop) : start_(0), stop_(stop), step_(1), n_(0) {}
+  Range(Num start, Num stop)
+      : start_(start), stop_(stop), step_(1), n_(start) {}
+  Range(Num start, Num stop, Num step)
+      : start_(start), stop_(stop), step_(step), n_(start) {}
 
   // Returns the number of elements within the range.
   size_t length() const;

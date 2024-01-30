@@ -8,30 +8,6 @@
 namespace rose {
 
 template <typename Num>
-Range<Num>::Range(Num stop) {
-  start_ = 0;
-  stop_ = stop;
-  step_ = 1;
-  n_ = 0;
-}
-
-template <typename Num>
-Range<Num>::Range(Num start, Num stop) {
-  start_ = start;
-  stop_ = stop;
-  step_ = 1;
-  n_ = start;
-}
-
-template <typename Num>
-Range<Num>::Range(Num start, Num stop, Num step) {
-  start_ = start;
-  stop_ = stop;
-  step_ = step;
-  n_ = start;
-}
-
-template <typename Num>
 size_t Range<Num>::length() const {
   return 1 + floor((stop_ - start_) / step_);
 }

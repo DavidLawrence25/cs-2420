@@ -1,8 +1,8 @@
+#include "json_writer.h"
+
 #include <ostream>
 #include <sstream>
 #include <string>
-
-#include "json_writer.h"
 
 namespace rose {
 

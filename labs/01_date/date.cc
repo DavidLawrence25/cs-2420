@@ -1,6 +1,6 @@
-#include <sstream>
-
 #include "date.h"
+
+#include <sstream>
 
 namespace rose {
 

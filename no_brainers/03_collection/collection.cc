@@ -1,6 +1,6 @@
-#include <iostream>
-
 #include "collection.h"
+
+#include <iostream>
 
 namespace rose {
 
@@ -8,21 +8,21 @@ template <typename T>
 Collection<T>::Collection() {
   capacity_ = kInitialCapacity;
   length_ = 0;
-  elements_ = std::make_unique<T[]>(capacity_);
+  elements_ = std::make_shared<T[]>(capacity_);
 }
 
 template <typename T>
 Collection<T>::Collection(size_t capacity) {
   capacity_ = capacity;
   length_ = 0;
-  elements_ = std::make_unique<T[]>(capacity_);
+  elements_ = std::make_shared<T[]>(capacity_);
 }
 
 template <typename T>
 Collection<T>::Collection(const Collection<T> &other) {
   capacity_ = other.capacity_;
   length_ = other.length_;
-  elements_ = std::make_unique<T[]>(capacity_);
+  elements_ = std::make_shared<T[]>(capacity_);
   for (size_t i = 0; i < length_; ++i) elements_[i] = other.elements_[i];
 }
 
@@ -62,7 +62,7 @@ void Collection<T>::Expand() {
   capacity_ *= kScaleFactor;
   // `elements_` must be copied to a new area in memory to accomodate for a
   // larger capacity.
-  auto new_elements = std::make_unique<T[]>(capacity_);
+  auto new_elements = std::make_shared<T[]>(capacity_);
   for (size_t i = 0; i < length_; ++i) new_elements[i] = elements_[i];
   elements_ = std::move(new_elements);
 }
