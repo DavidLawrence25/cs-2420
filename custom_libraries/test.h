@@ -1,4 +1,5 @@
 #include <optional>
+#include <set>
 #include <string>
 #include <unordered_map>
 #include <vector>
@@ -39,6 +40,9 @@ enum AssertionType {
 };
 
 struct IndexedStep;  // Forward declaration to inform Step types of existence.
+
+// Used to store Step information relevant to a particular Step.
+using Context = std::set<IndexedStep>;
 
 // Represents an abstract timestep in a TestResult.
 class Step {
@@ -93,8 +97,7 @@ class Assertion : public Step {
   // Has an empty definition because it should never be called.
   void WriteTo(JsonWriter &writer, size_t index) const override {}
   // Writes Assertion data (including its index and context) to a JSON object.
-  void WriteTo(JsonWriter &writer, size_t index,
-               const std::vector<IndexedStep> &context) const;
+  void WriteTo(JsonWriter &writer, size_t index, const Context &context) const;
 
  private:
   AssertionType type_;
@@ -108,8 +111,6 @@ class Assertion : public Step {
 
 // Represents a timestep in which an impure function was called, causing some
 // relevant variable to change its state.
-// BUG: FuncCalls are not considered when determining when a "global" was most
-// recently modified.
 class FuncCall : public Step {
  public:
   FuncCall(std::string parent_func, std::vector<LocalTag> relevant_locals,
@@ -166,11 +167,11 @@ class ValueSet : public Step {
 struct IndexedStep {
   size_t index;
   Step *step;
-};
 
-// Compares two IndexedStep objects, returning true if `a` has a lower index
-// than `b` (i.e., `a` happened before `b`).
-bool __cmp__(const IndexedStep &a, const IndexedStep &b);
+  bool operator<(const IndexedStep other) const {
+    return (index < other.index);
+  }
+};
 
 struct IndexedAssertion {
   size_t index;
@@ -183,9 +184,9 @@ class TestResult {
   size_t tests_ran() const;
   size_t tests_failed() const;
   // Returns a list of timesteps involving the local `tag` before `before`.
-  std::vector<IndexedStep> GetLocalSteps(LocalTag tag, size_t before);
+  Context GetLocalSteps(LocalTag tag, size_t before);
   // Returns a list of timesteps involving the global `tag` before `before`.
-  std::vector<IndexedStep> GetGlobalSteps(GlobalTag tag, size_t before);
+  Context GetGlobalSteps(GlobalTag tag, size_t before);
 
   // Adds a Step to the timeline.
   void AddStep(Step *step);
@@ -193,7 +194,7 @@ class TestResult {
   // Also adds the Assertion to the corresponding IndexedAssertion vector.
   void AddStep(Assertion *step);
   // Adds a ValueSet to the timeline.
-  // Also updates `most_recent_global_set_` if the variable is global.
+  // Also updates `global_set_indices_` if the variable is global.
   void AddStep(ValueSet *step);
   // Adds one to the internal test counter.
   void IncrementTestCounter();
@@ -221,8 +222,8 @@ class TestResult {
   std::vector<IndexedAssertion> failed_;
   // All the assertions that passed.
   std::vector<IndexedAssertion> passed_;
-  // A mapping of GlobalTags to the highest indices at which they were set.
-  std::unordered_map<GlobalTag, size_t> most_recent_global_set_;
+  // A mapping of GlobalTags to the indices at which they were set.
+  std::unordered_map<GlobalTag, size_t> global_set_indices_;
 };
 
 // Runs a series of related test functions defined by the user.

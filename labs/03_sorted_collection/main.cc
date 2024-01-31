@@ -169,7 +169,7 @@ class CollectionCharTest : public TestCase<SortedCollection<char>> {
       if (c == '\0') break;
       str_.Add(c);
       AddFuncCall(/*relevant_locals=*/{}, /*relevant_globals=*/{"str"},
-                  /*repr=*/std::format("str.Add({})", c));
+                  /*repr=*/std::format("str.Add('{}')", c));
     }
     AssertEqual(str_.length(), size_t{5}, /*repr0=*/"str.length", /*repr1=*/"5",
                 /*relevant_locals=*/{}, /*relevant_globals=*/{"str"});
@@ -193,7 +193,7 @@ class CollectionCharTest : public TestCase<SortedCollection<char>> {
       if (c == '\0') break;
       str_.Add(c);
       AddFuncCall(/*relevant_locals=*/{}, /*relevant_globals=*/{"str"},
-                  /*repr=*/std::format("str.Add({})", c));
+                  /*repr=*/std::format("str.Add('{}')", c));
     }
     AssertEqual(str_.capacity(), size_t{32}, /*repr0=*/"str.capacity",
                 /*repr1=*/"32", /*relevant_locals=*/{},

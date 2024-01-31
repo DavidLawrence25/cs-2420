@@ -63,7 +63,7 @@ void Assertion::WriteTo(JsonWriter &writer) const {
 }
 
 void Assertion::WriteTo(JsonWriter &writer, size_t index,
-                        const std::vector<IndexedStep> &context) const {
+                        const Context &context) const {
   writer.BeginObject();
 
   writer.CreateString("name", parent_func_);
@@ -95,14 +95,6 @@ void FuncCall::WriteTo(JsonWriter &writer) const {
   writer.CreateString("step_type", step_type());
   writer.CreateString("repr", repr_);
 
-  writer.BeginArray("relevant_locals");
-  for (LocalTag tag : relevant_locals_) writer.CreateString(tag);
-  writer.EndArray();
-
-  writer.BeginArray("relevant_globals");
-  for (GlobalTag tag : relevant_globals_) writer.CreateString(tag);
-  writer.EndArray();
-
   writer.EndObject();
 }
 
@@ -113,14 +105,6 @@ void FuncCall::WriteTo(JsonWriter &writer, size_t index) const {
   writer.CreateInt("step", index);
   writer.CreateString("step_type", step_type());
   writer.CreateString("repr", repr_);
-
-  writer.BeginArray("relevant_locals");
-  for (LocalTag tag : relevant_locals_) writer.CreateString(tag);
-  writer.EndArray();
-
-  writer.BeginArray("relevant_globals");
-  for (GlobalTag tag : relevant_globals_) writer.CreateString(tag);
-  writer.EndArray();
 
   writer.EndObject();
 }
@@ -176,36 +160,43 @@ size_t TestResult::tests_ran() const { return tests_ran_; }
 
 size_t TestResult::tests_failed() const { return tests_failed_; }
 
-std::vector<IndexedStep> TestResult::GetLocalSteps(LocalTag tag,
-                                                   size_t before) {
+Context TestResult::GetLocalSteps(LocalTag tag, size_t before) {
   std::string func = timeline_.at(before)->parent_func();
-  std::vector<IndexedStep> steps;
+  Context steps;
   for (size_t i = 0; i < before; ++i) {
     Step *step = timeline_.at(i);
     if (step->parent_func() != func) continue;  // Must be the same exact local.
     const std::vector<LocalTag> &locals = step->relevant_locals();
 
     if (std::find(locals.begin(), locals.end(), tag) != locals.end()) {
-      steps.push_back({i, step});
+      steps.insert({i, step});
     }
   }
 
   return steps;
 }
 
-std::vector<IndexedStep> TestResult::GetGlobalSteps(GlobalTag tag,
-                                                    size_t before) {
-  std::vector<IndexedStep> steps;
+size_t __max_under__(std::vector<size_t> nums, size_t upper_bound) {
+  size_t max = 0;
+  for (size_t n : nums) {
+    if (n >= upper_bound) continue;
+    if (n > max) max = n;
+  }
+  return max;
+}
+
+Context TestResult::GetGlobalSteps(GlobalTag tag, size_t before) {
+  Context steps;
   size_t start = 0;
-  if (most_recent_global_set_.contains(tag)) {
-    start = most_recent_global_set_.at(tag);
+  if (global_set_indices_.contains(tag)) {
+    start = global_set_indices_.at(tag);
   }
   for (size_t i = start; i < before; ++i) {
     Step *step = timeline_.at(i);
     const std::vector<LocalTag> &globals = step->relevant_globals();
 
     if (std::find(globals.begin(), globals.end(), tag) != globals.end()) {
-      steps.push_back({i, step});
+      steps.insert({i, step});
     }
   }
 
@@ -226,7 +217,7 @@ void TestResult::AddStep(Assertion *step) {
 
 void TestResult::AddStep(ValueSet *step) {
   if (step->is_global()) {
-    most_recent_global_set_[step->value_name()] = timeline_.size();
+    global_set_indices_[step->value_name()] = timeline_.size();
   }
 
   timeline_.push_back(step);
@@ -237,8 +228,6 @@ void TestResult::IncrementTestCounter() { ++tests_ran_; }
 void TestResult::IncrementFailCounter() { ++tests_failed_; }
 
 void TestResult::LogJson(const std::string &file_path) {
-  using Context = std::vector<IndexedStep>;
-
   std::stringstream path;
   path << file_path;
   if (!file_path.ends_with(".json")) path << ".json";
@@ -253,24 +242,17 @@ void TestResult::LogJson(const std::string &file_path) {
   writer.CreateInt("fails", tests_failed_);
   writer.EndObject();
 
-  // BUG: If an assertion involves multiple variables, this context-collection
-  // process may grab multiple copies of the same Step. Fixing this would
-  // require changing the Context type to a set of some sort.
-
   writer.BeginArray("tests_failed");
   for (IndexedAssertion fail : failed_) {
     Context full_context;
     for (LocalTag tag : fail.assertion->relevant_locals()) {
       Context partial_context = GetLocalSteps(tag, fail.index);
-      full_context.insert(full_context.end(), partial_context.begin(),
-                          partial_context.end());
+      for (const auto &step : partial_context) full_context.insert(step);
     }
     for (GlobalTag tag : fail.assertion->relevant_globals()) {
       Context partial_context = GetGlobalSteps(tag, fail.index);
-      full_context.insert(full_context.end(), partial_context.begin(),
-                          partial_context.end());
+      for (const auto &step : partial_context) full_context.insert(step);
     }
-    std::sort(full_context.begin(), full_context.end(), __cmp__);
     fail.assertion->WriteTo(writer, fail.index, full_context);
   }
   writer.EndArray();
@@ -280,15 +262,12 @@ void TestResult::LogJson(const std::string &file_path) {
     Context full_context;
     for (LocalTag tag : pass.assertion->relevant_locals()) {
       Context partial_context = GetLocalSteps(tag, pass.index);
-      full_context.insert(full_context.end(), partial_context.begin(),
-                          partial_context.end());
+      for (const auto &step : partial_context) full_context.insert(step);
     }
     for (GlobalTag tag : pass.assertion->relevant_globals()) {
       Context partial_context = GetGlobalSteps(tag, pass.index);
-      full_context.insert(full_context.end(), partial_context.begin(),
-                          partial_context.end());
+      for (const auto &step : partial_context) full_context.insert(step);
     }
-    std::sort(full_context.begin(), full_context.end(), __cmp__);
     pass.assertion->WriteTo(writer, pass.index, full_context);
   }
   writer.EndArray();
