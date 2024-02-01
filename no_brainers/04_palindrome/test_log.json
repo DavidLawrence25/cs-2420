@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "tests_ran": 5,
+    "steps_taken": 10,
+    "fails": 0
+  },
+  "tests_failed": [],
+  "tests_passed": [
+    {
+      "name": "TestEasy",
+      "step": 1,
+      "step_type": "assert_true",
+      "expression": "palindrome.is_palindrome()",
+      "context": [
+        {
+          "name": "TestEasy",
+          "step": 0,
+          "step_type": "local_init",
+          "local_name": "palindrome",
+          "value": "Palindrome(\"mom\")"
+        }
+      ]
+    },
+    {
+      "name": "TestSpaces",
+      "step": 3,
+      "step_type": "assert_true",
+      "expression": "palindrome.is_palindrome()",
+      "context": [
+        {
+          "name": "TestSpaces",
+          "step": 2,
+          "step_type": "local_init",
+          "local_name": "palindrome",
+          "value": "Palindrome(\"taco cat\")"
+        }
+      ]
+    },
+    {
+      "name": "TestMixedCase",
+      "step": 5,
+      "step_type": "assert_true",
+      "expression": "palindrome.is_palindrome()",
+      "context": [
+        {
+          "name": "TestMixedCase",
+          "step": 4,
+          "step_type": "local_init",
+          "local_name": "palindrome",
+          "value": "Palindrome(\"A man a plan a canal Panama\")"
+        }
+      ]
+    },
+    {
+      "name": "TestPunctuation",
+      "step": 7,
+      "step_type": "assert_true",
+      "expression": "palindrome.is_palindrome()",
+      "context": [
+        {
+          "name": "TestPunctuation",
+          "step": 6,
+          "step_type": "local_init",
+          "local_name": "palindrome",
+          "value": "Palindrome(\"Don't nod.\")"
+        }
+      ]
+    },
+    {
+      "name": "TestNotPalindrome",
+      "step": 9,
+      "step_type": "assert_false",
+      "expression": "not_palindrome.is_palindrome()",
+      "context": [
+        {
+          "name": "TestNotPalindrome",
+          "step": 8,
+          "step_type": "local_init",
+          "local_name": "not_palindrome",
+          "value": "Palindrome(\"madams\")"
+        }
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "name": "TestEasy",
+      "step_type": "local_init",
+      "local_name": "palindrome",
+      "value": "Palindrome(\"mom\")"
+    },
+    {
+      "name": "TestEasy",
+      "step_type": "assert_true",
+      "expression": "palindrome.is_palindrome()"
+    },
+    {
+      "name": "TestSpaces",
+      "step_type": "local_init",
+      "local_name": "palindrome",
+      "value": "Palindrome(\"taco cat\")"
+    },
+    {
+      "name": "TestSpaces",
+      "step_type": "assert_true",
+      "expression": "palindrome.is_palindrome()"
+    },
+    {
+      "name": "TestMixedCase",
+      "step_type": "local_init",
+      "local_name": "palindrome",
+      "value": "Palindrome(\"A man a plan a canal Panama\")"
+    },
+    {
+      "name": "TestMixedCase",
+      "step_type": "assert_true",
+      "expression": "palindrome.is_palindrome()"
+    },
+    {
+      "name": "TestPunctuation",
+      "step_type": "local_init",
+      "local_name": "palindrome",
+      "value": "Palindrome(\"Don't nod.\")"
+    },
+    {
+      "name": "TestPunctuation",
+      "step_type": "assert_true",
+      "expression": "palindrome.is_palindrome()"
+    },
+    {
+      "name": "TestNotPalindrome",
+      "step_type": "local_init",
+      "local_name": "not_palindrome",
+      "value": "Palindrome(\"madams\")"
+    },
+    {
+      "name": "TestNotPalindrome",
+      "step_type": "assert_false",
+      "expression": "not_palindrome.is_palindrome()"
+    }
+  ]
+}
