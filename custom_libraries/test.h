@@ -226,6 +226,9 @@ class TestResult {
   std::unordered_map<GlobalTag, size_t> global_set_indices_;
 };
 
+// Completely empty data structure that allows for a TestCase without globals.
+struct NoGlobals {};
+
 // Runs a series of related test functions defined by the user.
 // All "global" variables must be of type `GlobalType`.
 // "Globals" are defined as member variables of a class derived from TestCase
