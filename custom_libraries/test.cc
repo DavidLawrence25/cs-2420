@@ -1,4 +1,4 @@
-#include "test.h"
+#include "custom_libraries/test.h"
 
 #include <fstream>
 #include <functional>
@@ -6,7 +6,7 @@
 #include <sstream>
 #include <unordered_map>
 
-#include "json_writer.h"
+#include "custom_libraries/json_writer.h"
 
 namespace rose {
 
@@ -152,10 +152,6 @@ void ValueSet::WriteTo(JsonWriter &writer, size_t index) const {
   writer.EndObject();
 }
 
-bool __cmp__(const IndexedStep &a, const IndexedStep &b) {
-  return (a.index < b.index);
-}
-
 size_t TestResult::tests_ran() const { return tests_ran_; }
 
 size_t TestResult::tests_failed() const { return tests_failed_; }
@@ -176,7 +172,7 @@ Context TestResult::GetLocalSteps(LocalTag tag, size_t before) {
   return steps;
 }
 
-size_t __max_under__(std::vector<size_t> nums, size_t upper_bound) {
+size_t __max_under__(const std::vector<size_t> &nums, size_t upper_bound) {
   size_t max = 0;
   for (size_t n : nums) {
     if (n >= upper_bound) continue;
@@ -189,11 +185,11 @@ Context TestResult::GetGlobalSteps(GlobalTag tag, size_t before) {
   Context steps;
   size_t start = 0;
   if (global_set_indices_.contains(tag)) {
-    start = global_set_indices_.at(tag);
+    start = __max_under__(global_set_indices_.at(tag), before);
   }
   for (size_t i = start; i < before; ++i) {
     Step *step = timeline_.at(i);
-    const std::vector<LocalTag> &globals = step->relevant_globals();
+    const std::vector<GlobalTag> &globals = step->relevant_globals();
 
     if (std::find(globals.begin(), globals.end(), tag) != globals.end()) {
       steps.insert({i, step});
@@ -217,7 +213,7 @@ void TestResult::AddStep(Assertion *step) {
 
 void TestResult::AddStep(ValueSet *step) {
   if (step->is_global()) {
-    global_set_indices_[step->value_name()] = timeline_.size();
+    global_set_indices_[step->value_name()].push_back(timeline_.size());
   }
 
   timeline_.push_back(step);

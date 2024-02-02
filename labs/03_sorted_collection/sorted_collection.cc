@@ -1,5 +1,5 @@
-#include "../../no_brainers/03_collection/collection.h"
-#include "sorted_collection.h"
+#include "no_brainers/03_collection/collection.h"
+#include "labs/03_sorted_collection/sorted_collection.h"
 
 namespace rose {
 

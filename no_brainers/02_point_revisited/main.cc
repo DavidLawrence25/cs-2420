@@ -1,7 +1,7 @@
 #include <sstream>
 
-#include "../../custom_libraries/test.h"
-#include "point.h"
+#include "custom_libraries/test.h"
+#include "no_brainers/02_point_revisited/point.h"
 
 using rose::Point, rose::TestCase, rose::TestResult;
 

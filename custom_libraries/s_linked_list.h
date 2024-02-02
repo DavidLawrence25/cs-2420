@@ -56,6 +56,6 @@ class SLinkedList {
 
 }  // namespace rose
 
-#include "s_linked_list.cc"
+#include "custom_libraries/s_linked_list.cc"
 
 #endif  // CS2420_CUSTOMLIBRARIES_LINKEDLIST_H_

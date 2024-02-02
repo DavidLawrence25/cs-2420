@@ -15,6 +15,13 @@
       "context": [
         {
           "name": "__TestCaseConstructor__",
+          "step": 0,
+          "step_type": "global_init",
+          "global_name": "idk0",
+          "value": "Point<double>(-4.59643, 1.58321)"
+        },
+        {
+          "name": "__TestCaseConstructor__",
           "step": 1,
           "step_type": "global_init",
           "global_name": "idk1",
@@ -28,7 +35,21 @@
       "step_type": "assert_equal",
       "repr0": "idk0",
       "repr1": "(7.89939, -58.37057)",
-      "context": []
+      "context": [
+        {
+          "name": "__TestCaseConstructor__",
+          "step": 0,
+          "step_type": "global_init",
+          "global_name": "idk0",
+          "value": "Point<double>(-4.59643, 1.58321)"
+        },
+        {
+          "name": "TestInPlaceAdd",
+          "step": 3,
+          "step_type": "function_call",
+          "repr": "idk0.operator+=(idk1)"
+        }
+      ]
     },
     {
       "name": "TestSubtraction",
@@ -48,12 +69,14 @@
           "name": "TestInPlaceAdd",
           "step": 3,
           "step_type": "function_call",
-          "repr": "idk0.operator+=(idk1)",
-          "relevant_locals": [],
-          "relevant_globals": [
-            "idk0",
-            "idk1"
-          ]
+          "repr": "idk0.operator+=(idk1)"
+        },
+        {
+          "name": "TestInPlaceAdd",
+          "step": 5,
+          "step_type": "global_set",
+          "global_name": "idk0",
+          "value": "Point<double>(-4.59643, 1.58321)"
         }
       ]
     },
@@ -63,7 +86,21 @@
       "step_type": "assert_equal",
       "repr0": "idk0",
       "repr1": "(-17.09225, 61.53699)",
-      "context": []
+      "context": [
+        {
+          "name": "TestInPlaceAdd",
+          "step": 5,
+          "step_type": "global_set",
+          "global_name": "idk0",
+          "value": "Point<double>(-4.59643, 1.58321)"
+        },
+        {
+          "name": "TestInPlaceSub",
+          "step": 7,
+          "step_type": "function_call",
+          "repr": "idk0.operator-=(idk1)"
+        }
+      ]
     }
   ],
   "timeline": [
@@ -88,12 +125,7 @@
     {
       "name": "TestInPlaceAdd",
       "step_type": "function_call",
-      "repr": "idk0.operator+=(idk1)",
-      "relevant_locals": [],
-      "relevant_globals": [
-        "idk0",
-        "idk1"
-      ]
+      "repr": "idk0.operator+=(idk1)"
     },
     {
       "name": "TestInPlaceAdd",
@@ -116,12 +148,7 @@
     {
       "name": "TestInPlaceSub",
       "step_type": "function_call",
-      "repr": "idk0.operator-=(idk1)",
-      "relevant_locals": [],
-      "relevant_globals": [
-        "idk0",
-        "idk1"
-      ]
+      "repr": "idk0.operator-=(idk1)"
     },
     {
       "name": "TestInPlaceSub",

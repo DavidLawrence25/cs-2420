@@ -1,4 +1,4 @@
-#include "s_linked_list.h"
+#include "custom_libraries/s_linked_list.h"
 
 #include <stdlib.h>
 

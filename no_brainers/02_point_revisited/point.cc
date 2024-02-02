@@ -1,8 +1,8 @@
-#include "point.h"
+#include "no_brainers/02_point_revisited/point.h"
 
 #include <math.h>
 
-#include "../../custom_libraries/number_utils.h"
+#include "custom_libraries/number_utils.h"
 
 namespace rose {
 

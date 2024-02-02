@@ -1,8 +1,8 @@
 #include <format>
 #include <iostream>
 
-#include "../../custom_libraries/test.h"
-#include "sorted_collection.h"
+#include "custom_libraries/test.h"
+#include "labs/03_sorted_collection/sorted_collection.h"
 
 using rose::SortedCollection, rose::TestCase, rose::TestResult;
 

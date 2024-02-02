@@ -15,6 +15,13 @@
       "context": [
         {
           "name": "__TestCaseConstructor__",
+          "step": 0,
+          "step_type": "global_init",
+          "global_name": "one_one",
+          "value": "Point<int>(1, 1)"
+        },
+        {
+          "name": "__TestCaseConstructor__",
           "step": 1,
           "step_type": "global_init",
           "global_name": "three_four",
@@ -28,7 +35,21 @@
       "step_type": "assert_equal",
       "repr0": "one_one",
       "repr1": "(4, 5)",
-      "context": []
+      "context": [
+        {
+          "name": "__TestCaseConstructor__",
+          "step": 0,
+          "step_type": "global_init",
+          "global_name": "one_one",
+          "value": "Point<int>(1, 1)"
+        },
+        {
+          "name": "TestInPlaceAdd",
+          "step": 3,
+          "step_type": "function_call",
+          "repr": "one_one.operator+=(three_four)"
+        }
+      ]
     },
     {
       "name": "TestSubtraction",
@@ -48,12 +69,14 @@
           "name": "TestInPlaceAdd",
           "step": 3,
           "step_type": "function_call",
-          "repr": "one_one.operator+=(three_four)",
-          "relevant_locals": [],
-          "relevant_globals": [
-            "one_one",
-            "three_four"
-          ]
+          "repr": "one_one.operator+=(three_four)"
+        },
+        {
+          "name": "TestInPlaceAdd",
+          "step": 5,
+          "step_type": "global_set",
+          "global_name": "one_one",
+          "value": "Point<int>(1, 1)"
         }
       ]
     },
@@ -63,7 +86,21 @@
       "step_type": "assert_equal",
       "repr0": "one_one",
       "repr1": "(-2, -3)",
-      "context": []
+      "context": [
+        {
+          "name": "TestInPlaceAdd",
+          "step": 5,
+          "step_type": "global_set",
+          "global_name": "one_one",
+          "value": "Point<int>(1, 1)"
+        },
+        {
+          "name": "TestInPlaceSub",
+          "step": 7,
+          "step_type": "function_call",
+          "repr": "one_one.operator-=(three_four)"
+        }
+      ]
     },
     {
       "name": "TestInsertion",
@@ -83,12 +120,7 @@
           "name": "TestInsertion",
           "step": 13,
           "step_type": "function_call",
-          "repr": "operator>>(sin, p)",
-          "relevant_locals": [
-            "sin",
-            "p"
-          ],
-          "relevant_globals": []
+          "repr": "operator>>(sin, p)"
         }
       ]
     },
@@ -110,13 +142,7 @@
           "name": "TestExtraction",
           "step": 16,
           "step_type": "function_call",
-          "repr": "operator<<(sout, one_one)",
-          "relevant_locals": [
-            "sout"
-          ],
-          "relevant_globals": [
-            "one_one"
-          ]
+          "repr": "operator<<(sout, one_one)"
         }
       ]
     }
@@ -143,12 +169,7 @@
     {
       "name": "TestInPlaceAdd",
       "step_type": "function_call",
-      "repr": "one_one.operator+=(three_four)",
-      "relevant_locals": [],
-      "relevant_globals": [
-        "one_one",
-        "three_four"
-      ]
+      "repr": "one_one.operator+=(three_four)"
     },
     {
       "name": "TestInPlaceAdd",
@@ -171,12 +192,7 @@
     {
       "name": "TestInPlaceSub",
       "step_type": "function_call",
-      "repr": "one_one.operator-=(three_four)",
-      "relevant_locals": [],
-      "relevant_globals": [
-        "one_one",
-        "three_four"
-      ]
+      "repr": "one_one.operator-=(three_four)"
     },
     {
       "name": "TestInPlaceSub",
@@ -205,21 +221,12 @@
     {
       "name": "TestInsertion",
       "step_type": "function_call",
-      "repr": "operator<<(sin, \"3 4\")",
-      "relevant_locals": [
-        "sin"
-      ],
-      "relevant_globals": []
+      "repr": "operator<<(sin, \"3 4\")"
     },
     {
       "name": "TestInsertion",
       "step_type": "function_call",
-      "repr": "operator>>(sin, p)",
-      "relevant_locals": [
-        "sin",
-        "p"
-      ],
-      "relevant_globals": []
+      "repr": "operator>>(sin, p)"
     },
     {
       "name": "TestInsertion",
@@ -236,13 +243,7 @@
     {
       "name": "TestExtraction",
       "step_type": "function_call",
-      "repr": "operator<<(sout, one_one)",
-      "relevant_locals": [
-        "sout"
-      ],
-      "relevant_globals": [
-        "one_one"
-      ]
+      "repr": "operator<<(sout, one_one)"
     },
     {
       "name": "TestExtraction",

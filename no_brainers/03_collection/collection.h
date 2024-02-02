@@ -48,6 +48,6 @@ class Collection {
 
 }  // namespace rose
 
-#include "collection.cc"
+#include "no_brainers/03_collection/collection.cc"
 
 #endif  // CS2420_NOBRAINERS_03COLLECTION_COLLECTION_H_

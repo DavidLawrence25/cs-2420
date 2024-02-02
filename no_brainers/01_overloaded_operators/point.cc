@@ -1,4 +1,4 @@
-#include "point.h"
+#include "no_brainers/01_overloaded_operators/point.h"
 
 namespace rose {
 

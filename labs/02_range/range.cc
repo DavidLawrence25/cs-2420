@@ -1,4 +1,4 @@
-#include "range.h"
+#include "labs/02_range/range.h"
 
 #include <math.h>
 #include <stdlib.h>

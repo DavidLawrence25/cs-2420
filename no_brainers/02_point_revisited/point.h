@@ -34,6 +34,6 @@ class Point {
 
 }  // namespace rose
 
-#include "point.cc"
+#include "no_brainers/02_point_revisited/point.cc"
 
 #endif  // CS2420_NOBRAINERS_02POINTREVISITED_POINT_H_

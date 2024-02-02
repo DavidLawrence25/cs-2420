@@ -4,7 +4,7 @@
 #include <unordered_map>
 #include <vector>
 
-#include "json_writer.h"
+#include "custom_libraries/json_writer.h"
 
 #ifndef CS2420_CUSTOMLIBRARIES_TEST_H_
 #define CS2420_CUSTOMLIBRARIES_TEST_H_
@@ -223,7 +223,7 @@ class TestResult {
   // All the assertions that passed.
   std::vector<IndexedAssertion> passed_;
   // A mapping of GlobalTags to the indices at which they were set.
-  std::unordered_map<GlobalTag, size_t> global_set_indices_;
+  std::unordered_map<GlobalTag, std::vector<size_t>> global_set_indices_;
 };
 
 // Completely empty data structure that allows for a TestCase without globals.
@@ -324,6 +324,6 @@ class TestCase {
 
 }  // namespace rose
 
-#include "test.cc"
+#include "custom_libraries/test.cc"
 
 #endif  // CS2420_CUSTOMLIBRARIES_TEST_H_

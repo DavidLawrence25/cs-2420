@@ -57,6 +57,6 @@ class Range {
 
 }  // namespace rose
 
-#include "range.cc"
+#include "labs/02_range/range.cc"
 
 #endif  // CS2420_LABS_02RANGE_RANGE_H_

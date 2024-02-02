@@ -1,4 +1,4 @@
-#include "palindrome.h"
+#include "no_brainers/04_palindrome/palindrome.h"
 
 #include <ostream>
 #include <queue>

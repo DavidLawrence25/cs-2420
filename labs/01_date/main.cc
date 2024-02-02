@@ -1,8 +1,8 @@
 #include <functional>
 #include <sstream>
 
-#include "../../custom_libraries/test.h"
-#include "date.h"
+#include "custom_libraries/test.h"
+#include "labs/01_date/date.h"
 
 using rose::Date, rose::TestCase, rose::TestResult;
 using rose::GlobalTag, rose::Global;

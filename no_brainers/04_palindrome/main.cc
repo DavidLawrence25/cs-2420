@@ -1,5 +1,5 @@
-#include "../../custom_libraries/test.h"
-#include "palindrome.h"
+#include "custom_libraries/test.h"
+#include "no_brainers/04_palindrome/palindrome.h"
 
 using rose::NoGlobals, rose::Palindrome, rose::TestCase, rose::TestResult;
 

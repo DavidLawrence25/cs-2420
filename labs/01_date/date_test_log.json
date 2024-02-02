@@ -60,7 +60,21 @@
       "step_type": "assert_equal",
       "repr0": "jul10",
       "repr1": "Nov 10, 2018",
-      "context": []
+      "context": [
+        {
+          "name": "__TestCaseConstructor__",
+          "step": 0,
+          "step_type": "global_init",
+          "global_name": "jul10",
+          "value": "Date(2018, 7, 10)"
+        },
+        {
+          "name": "TestAddMonths1",
+          "step": 8,
+          "step_type": "function_call",
+          "repr": "jul10.AddMonths(4)"
+        }
+      ]
     },
     {
       "name": "TestAddMonths2",
@@ -68,7 +82,21 @@
       "step_type": "assert_equal",
       "repr0": "jul10",
       "repr1": "Dec 10, 2018",
-      "context": []
+      "context": [
+        {
+          "name": "TestAddMonths1",
+          "step": 10,
+          "step_type": "global_set",
+          "global_name": "jul10",
+          "value": "Date(2018, 7, 10)"
+        },
+        {
+          "name": "TestAddMonths2",
+          "step": 11,
+          "step_type": "function_call",
+          "repr": "jul10.AddMonths(5)"
+        }
+      ]
     },
     {
       "name": "TestAddMonths3",
@@ -76,7 +104,21 @@
       "step_type": "assert_equal",
       "repr0": "jul10",
       "repr1": "Jan 10, 2019",
-      "context": []
+      "context": [
+        {
+          "name": "TestAddMonths2",
+          "step": 13,
+          "step_type": "global_set",
+          "global_name": "jul10",
+          "value": "Date(2018, 7, 10)"
+        },
+        {
+          "name": "TestAddMonths3",
+          "step": 14,
+          "step_type": "function_call",
+          "repr": "jul10.AddMonths(6)"
+        }
+      ]
     },
     {
       "name": "TestAddDays1",
@@ -84,7 +126,21 @@
       "step_type": "assert_equal",
       "repr0": "jul10",
       "repr1": "Jul 26, 2018",
-      "context": []
+      "context": [
+        {
+          "name": "TestAddMonths3",
+          "step": 16,
+          "step_type": "global_set",
+          "global_name": "jul10",
+          "value": "Date(2018, 7, 10)"
+        },
+        {
+          "name": "TestAddDays1",
+          "step": 17,
+          "step_type": "function_call",
+          "repr": "jul10.AddDays(16)"
+        }
+      ]
     },
     {
       "name": "TestAddDays2",
@@ -92,7 +148,21 @@
       "step_type": "assert_equal",
       "repr0": "jul10",
       "repr1": "Jul 31, 2018",
-      "context": []
+      "context": [
+        {
+          "name": "TestAddDays1",
+          "step": 19,
+          "step_type": "global_set",
+          "global_name": "jul10",
+          "value": "Date(2018, 7, 10)"
+        },
+        {
+          "name": "TestAddDays2",
+          "step": 20,
+          "step_type": "function_call",
+          "repr": "jul10.AddDays(21)"
+        }
+      ]
     },
     {
       "name": "TestAddDays3",
@@ -100,7 +170,21 @@
       "step_type": "assert_equal",
       "repr0": "jul10",
       "repr1": "Aug 10, 2018",
-      "context": []
+      "context": [
+        {
+          "name": "TestAddDays2",
+          "step": 22,
+          "step_type": "global_set",
+          "global_name": "jul10",
+          "value": "Date(2018, 7, 10)"
+        },
+        {
+          "name": "TestAddDays3",
+          "step": 23,
+          "step_type": "function_call",
+          "repr": "jul10.AddDays(31)"
+        }
+      ]
     },
     {
       "name": "TestIsLeapYear1",
@@ -247,7 +331,7 @@
       "step": 41,
       "step_type": "assert_equal",
       "repr0": "sout.str()",
-      "repr1": "Sep 10, 2018",
+      "repr1": "\"Sep 10, 2018\"",
       "context": [
         {
           "name": "__TestCaseConstructor__",
@@ -267,25 +351,7 @@
           "name": "TestExtractionOperator",
           "step": 40,
           "step_type": "function_call",
-          "repr": "operator<<(sout, sep10)",
-          "relevant_locals": [
-            "sout"
-          ],
-          "relevant_globals": [
-            "sep10"
-          ]
-        },
-        {
-          "name": "TestExtractionOperator",
-          "step": 40,
-          "step_type": "function_call",
-          "repr": "operator<<(sout, sep10)",
-          "relevant_locals": [
-            "sout"
-          ],
-          "relevant_globals": [
-            "sep10"
-          ]
+          "repr": "operator<<(sout, sep10)"
         }
       ]
     }
@@ -342,11 +408,7 @@
     {
       "name": "TestAddMonths1",
       "step_type": "function_call",
-      "repr": "jul10.AddMonths(4)",
-      "relevant_locals": [],
-      "relevant_globals": [
-        "jul10"
-      ]
+      "repr": "jul10.AddMonths(4)"
     },
     {
       "name": "TestAddMonths1",
@@ -363,11 +425,7 @@
     {
       "name": "TestAddMonths2",
       "step_type": "function_call",
-      "repr": "jul10.AddMonths(5)",
-      "relevant_locals": [],
-      "relevant_globals": [
-        "jul10"
-      ]
+      "repr": "jul10.AddMonths(5)"
     },
     {
       "name": "TestAddMonths2",
@@ -384,11 +442,7 @@
     {
       "name": "TestAddMonths3",
       "step_type": "function_call",
-      "repr": "jul10.AddMonths(6)",
-      "relevant_locals": [],
-      "relevant_globals": [
-        "jul10"
-      ]
+      "repr": "jul10.AddMonths(6)"
     },
     {
       "name": "TestAddMonths3",
@@ -405,11 +459,7 @@
     {
       "name": "TestAddDays1",
       "step_type": "function_call",
-      "repr": "jul10.AddDays(16)",
-      "relevant_locals": [],
-      "relevant_globals": [
-        "jul10"
-      ]
+      "repr": "jul10.AddDays(16)"
     },
     {
       "name": "TestAddDays1",
@@ -426,11 +476,7 @@
     {
       "name": "TestAddDays2",
       "step_type": "function_call",
-      "repr": "jul10.AddDays(21)",
-      "relevant_locals": [],
-      "relevant_globals": [
-        "jul10"
-      ]
+      "repr": "jul10.AddDays(21)"
     },
     {
       "name": "TestAddDays2",
@@ -447,11 +493,7 @@
     {
       "name": "TestAddDays3",
       "step_type": "function_call",
-      "repr": "jul10.AddDays(31)",
-      "relevant_locals": [],
-      "relevant_globals": [
-        "jul10"
-      ]
+      "repr": "jul10.AddDays(31)"
     },
     {
       "name": "TestAddDays3",
@@ -548,19 +590,13 @@
     {
       "name": "TestExtractionOperator",
       "step_type": "function_call",
-      "repr": "operator<<(sout, sep10)",
-      "relevant_locals": [
-        "sout"
-      ],
-      "relevant_globals": [
-        "sep10"
-      ]
+      "repr": "operator<<(sout, sep10)"
     },
     {
       "name": "TestExtractionOperator",
       "step_type": "assert_equal",
       "repr0": "sout.str()",
-      "repr1": "Sep 10, 2018"
+      "repr1": "\"Sep 10, 2018\""
     }
   ]
 }

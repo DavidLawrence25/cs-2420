@@ -1,7 +1,7 @@
 #include <sstream>
 
-#include "../../custom_libraries/test.h"
-#include "range.h"
+#include "custom_libraries/test.h"
+#include "labs/02_range/range.h"
 
 using rose::Range, rose::TestCase, rose::TestResult;
 

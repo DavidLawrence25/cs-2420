@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-#include "../../no_brainers/03_collection/collection.h"
+#include "no_brainers/03_collection/collection.h"
 
 #ifndef CS2420_LABS_03SORTEDCOLLECTION_SORTEDCOLLECTION_H_
 #define CS2420_LABS_03SORTEDCOLLECTION_SORTEDCOLLECTION_H_

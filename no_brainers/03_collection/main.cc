@@ -1,8 +1,8 @@
 #include <format>
 #include <iostream>
 
-#include "../../custom_libraries/test.h"
-#include "collection.h"
+#include "custom_libraries/test.h"
+#include "no_brainers/03_collection/collection.h"
 
 using rose::Collection, rose::TestCase, rose::TestResult;
 
