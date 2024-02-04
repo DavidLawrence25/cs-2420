@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "cases": 1,
+    "tests": 14,
+    "fails": 0
+  },
+  "test_cases": {
+    "BracketTest": [
+      {
+        "name": "Test1Pair",
+        "line": 34,
+        "assertion_type": "true",
+        "passed": true,
+        "expression": "check.is_balanced()",
+        "value": "true"
+      },
+      {
+        "name": "TestMismatchedPair",
+        "line": 39,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "check.is_balanced()",
+        "value": "false"
+      },
+      {
+        "name": "TestBackwards",
+        "line": 44,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "check.is_balanced()",
+        "value": "false"
+      },
+      {
+        "name": "TestValidMix",
+        "line": 49,
+        "assertion_type": "true",
+        "passed": true,
+        "expression": "check.is_balanced()",
+        "value": "true"
+      },
+      {
+        "name": "TestExtraClosing",
+        "line": 54,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "check.is_balanced()",
+        "value": "false"
+      },
+      {
+        "name": "TestPulledApart",
+        "line": 59,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "check.is_balanced()",
+        "value": "false"
+      },
+      {
+        "name": "TestExtraOpening",
+        "line": 64,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "check.is_balanced()",
+        "value": "false"
+      },
+      {
+        "name": "TestValidCode",
+        "line": 69,
+        "assertion_type": "true",
+        "passed": true,
+        "expression": "check.is_balanced()",
+        "value": "true"
+      },
+      {
+        "name": "TestInvalidCode",
+        "line": 74,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "check.is_balanced()",
+        "value": "false"
+      },
+      {
+        "name": "TestHugeYetValidMess",
+        "line": 79,
+        "assertion_type": "true",
+        "passed": true,
+        "expression": "check.is_balanced()",
+        "value": "true"
+      },
+      {
+        "name": "TestCount3IndependentPairs",
+        "line": 84,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "check.pairs().value()",
+          "value": "3"
+        },
+        "arg1": {
+          "repr": "3",
+          "value": "3"
+        }
+      },
+      {
+        "name": "TestCount4NestedPairs",
+        "line": 89,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "check.pairs().value()",
+          "value": "4"
+        },
+        "arg1": {
+          "repr": "4",
+          "value": "4"
+        }
+      },
+      {
+        "name": "TestValidStreamExtraction",
+        "line": 96,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "Balanced"
+        },
+        "arg1": {
+          "repr": "std::string(\"Balanced\")",
+          "value": "Balanced"
+        }
+      },
+      {
+        "name": "TestInvalidStreamExtraction",
+        "line": 103,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "Not Balanced"
+        },
+        "arg1": {
+          "repr": "std::string(\"Not Balanced\")",
+          "value": "Not Balanced"
+        }
+      }
+    ]
+  }
+}
