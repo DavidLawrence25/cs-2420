@@ -69,4 +69,6 @@ class JsonWriter {
 
 }  // namespace rose
 
+#include "custom_libraries/json_writer.cc"
+
 #endif  // CS2420_CUSTOMLIBRARIES_JSONWRITER_H_

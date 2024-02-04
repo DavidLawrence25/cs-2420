@@ -74,7 +74,7 @@ std::unordered_set<int> FactorsOf(const int x) noexcept;
 bool IsPrime(const int x) noexcept;
 
 // Returns true if `str` represents the number 0.
-inline bool IsZero(const std::string str) noexcept;
+inline bool IsZero(const std::string &str) noexcept;
 
 // Returns true if `c` represents a digit from 0-9.
 inline bool IsDigit(const char c) noexcept;
@@ -83,13 +83,13 @@ inline bool IsDigit(const char c) noexcept;
 inline int DigitToInt(const char digit) noexcept;
 
 // Returns the value of a string `str`, interpreted as an integer in base 10.
-int StringToInt(const std::string str) noexcept;
+int StringToInt(const std::string &str) noexcept;
 
 // Returns the value of a string `str`, interpreted as a float in base 10.
-float StringToFloat(const std::string str) noexcept;
+float StringToFloat(const std::string &str) noexcept;
 
 // Returns the value of a string `str`, interpreted as a double in base 10.
-double StringToDouble(const std::string str) noexcept;
+double StringToDouble(const std::string &str) noexcept;
 
 // Returns true if `x == y`. (Please don't use unless absolutely necessary.)
 bool ApproxEqual(const int x, const int y) noexcept;
@@ -101,5 +101,7 @@ bool ApproxEqual(const float x, const float y) noexcept;
 bool ApproxEqual(const double x, const double y) noexcept;
 
 }  // namespace rose
+
+#include "custom_libraries/number_utils.cc"
 
 #endif  // CS2420_CUSTOMLIBRARIES_NUMBERUTILS_H_
