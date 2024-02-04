@@ -12,10 +12,15 @@ class Point {
   Point(int x, int y);
   Point(const Point &other);
 
-  Point operator+(const Point &other);
-  void operator+=(const Point &other);
-  Point operator-(const Point &other);
-  void operator-=(const Point &other);
+  int x() const;
+  int y() const;
+
+  Point operator+(const Point &other) const;
+  Point &operator+=(const Point &other);
+  Point operator-(const Point &other) const;
+  Point &operator-=(const Point &other);
+  bool operator==(const Point &other) const;
+  bool operator!=(const Point &other) const;
   friend std::istream &operator>>(std::istream &in, Point &point);
   friend std::ostream &operator<<(std::ostream &out, const Point &point);
 

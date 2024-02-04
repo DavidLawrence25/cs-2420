@@ -39,6 +39,8 @@ class Date {
   int DayOfYear() const noexcept;
 
   Date operator+(int days) const noexcept;
+  bool operator==(const Date &other) const noexcept;
+  bool operator!=(const Date &other) const noexcept;
   friend std::ostream &operator<<(std::ostream &out, const Date &date) noexcept;
 
  private:

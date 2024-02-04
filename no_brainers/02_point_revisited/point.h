@@ -11,17 +11,18 @@ class Point {
  public:
   // Constructs a point at the origin (0, 0).
   Point();
-  // Constructs a point at (x, y).
   Point(N x, N y);
-  // Constructs a point identical to `other`.
   Point(const Point &other);
 
-  Point operator+(const Point &other);
-  void operator+=(const Point &other);
-  Point operator-(const Point &other);
-  void operator-=(const Point &other);
-  bool operator==(const Point &other);
-  bool operator!=(const Point &other);
+  N x() const;
+  N y() const;
+
+  Point operator+(const Point &other) const;
+  Point &operator+=(const Point &other);
+  Point operator-(const Point &other) const;
+  Point &operator-=(const Point &other);
+  bool operator==(const Point &other) const;
+  bool operator!=(const Point &other) const;
 
   template <typename _N>
   friend std::istream &operator>>(std::istream &in, Point<_N> &point);

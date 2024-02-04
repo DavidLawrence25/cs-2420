@@ -1,0 +1,267 @@
+{
+  "meta": {
+    "cases": 3,
+    "tests": 18,
+    "fails": 0
+  },
+  "test_cases": {
+    "PointDoubleTest": [
+      {
+        "name": "TestAdd",
+        "line": 123,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "point_ + Point(-7.62866, 7.13692)",
+          "value": "(-8.22329, 4.19757)"
+        },
+        "arg1": {
+          "repr": "Point(-8.22329, 4.19757)",
+          "value": "(-8.22329, 4.19757)"
+        }
+      },
+      {
+        "name": "TestIAdd",
+        "line": 128,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "point_",
+          "value": "(3.58799, -7.14145)"
+        },
+        "arg1": {
+          "repr": "Point(3.58799, -7.14145)",
+          "value": "(3.58799, -7.14145)"
+        }
+      },
+      {
+        "name": "TestSub",
+        "line": 133,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "point_ - Point(4.26669, 9.23233)",
+          "value": "(-4.86132, -12.1717)"
+        },
+        "arg1": {
+          "repr": "Point(-4.86132, -12.17168)",
+          "value": "(-4.86132, -12.1717)"
+        }
+      },
+      {
+        "name": "TestISub",
+        "line": 138,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "point_",
+          "value": "(8.39881, -9.30592)"
+        },
+        "arg1": {
+          "repr": "Point(8.39881, -9.30592)",
+          "value": "(8.39881, -9.30592)"
+        }
+      },
+      {
+        "name": "TestStreamInsertion",
+        "line": 147,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "temp",
+          "value": "(6.75038, -6.85373)"
+        },
+        "arg1": {
+          "repr": "Point(6.75038, -6.85373)",
+          "value": "(6.75038, -6.85373)"
+        }
+      },
+      {
+        "name": "TestStreamExtraction",
+        "line": 153,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "(-0.59463, -2.93935)"
+        },
+        "arg1": {
+          "repr": "std::string(\"(-0.59463, -2.93935)\")",
+          "value": "(-0.59463, -2.93935)"
+        }
+      }
+    ],
+    "PointFloatTest": [
+      {
+        "name": "TestAdd",
+        "line": 71,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "point_ + Point(-7.39939f, -9.96624f)",
+          "value": "(-3.11067, -12.8253)"
+        },
+        "arg1": {
+          "repr": "Point(-3.11067f, -12.82526f)",
+          "value": "(-3.11067, -12.8253)"
+        }
+      },
+      {
+        "name": "TestIAdd",
+        "line": 77,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "point_",
+          "value": "(3.14272, 5.38867)"
+        },
+        "arg1": {
+          "repr": "Point(3.14272f, 5.38867f)",
+          "value": "(3.14272, 5.38867)"
+        }
+      },
+      {
+        "name": "TestSub",
+        "line": 82,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "point_ - Point(-2.11476f, 4.44554f)",
+          "value": "(6.40348, -7.30456)"
+        },
+        "arg1": {
+          "repr": "Point(6.40348f, -7.30456f)",
+          "value": "(6.40348, -7.30456)"
+        }
+      },
+      {
+        "name": "TestISub",
+        "line": 88,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "point_",
+          "value": "(-2.28465, -2.98265)"
+        },
+        "arg1": {
+          "repr": "Point(-2.28465f, -2.98265f)",
+          "value": "(-2.28465, -2.98265)"
+        }
+      },
+      {
+        "name": "TestStreamInsertion",
+        "line": 97,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "temp",
+          "value": "(6.87687, -2.87384)"
+        },
+        "arg1": {
+          "repr": "Point(6.87687f, -2.87384f)",
+          "value": "(6.87687, -2.87384)"
+        }
+      },
+      {
+        "name": "TestStreamExtraction",
+        "line": 103,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "(4.28872, -2.85902)"
+        },
+        "arg1": {
+          "repr": "std::string(\"(4.28872, -2.85902)\")",
+          "value": "(4.28872, -2.85902)"
+        }
+      }
+    ],
+    "PointIntTest": [
+      {
+        "name": "TestAdd",
+        "line": 24,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "point_ + Point(-5, 2)",
+          "value": "(-15, 5)"
+        },
+        "arg1": {
+          "repr": "Point(-15, 5)",
+          "value": "(-15, 5)"
+        }
+      },
+      {
+        "name": "TestIAdd",
+        "line": 28,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "point_",
+          "value": "(-15, 4)"
+        },
+        "arg1": {
+          "repr": "Point(-15, 4)",
+          "value": "(-15, 4)"
+        }
+      },
+      {
+        "name": "TestSub",
+        "line": 32,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "point_ - Point(-9, -5)",
+          "value": "(-1, 8)"
+        },
+        "arg1": {
+          "repr": "Point(-1, 8)",
+          "value": "(-1, 8)"
+        }
+      },
+      {
+        "name": "TestISub",
+        "line": 36,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "point_",
+          "value": "(-17, 12)"
+        },
+        "arg1": {
+          "repr": "Point(-17, 12)",
+          "value": "(-17, 12)"
+        }
+      },
+      {
+        "name": "TestStreamInsertion",
+        "line": 45,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "temp",
+          "value": "(-3, 5)"
+        },
+        "arg1": {
+          "repr": "Point(-3, 5)",
+          "value": "(-3, 5)"
+        }
+      },
+      {
+        "name": "TestStreamExtraction",
+        "line": 51,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "(-10, 3)"
+        },
+        "arg1": {
+          "repr": "std::string(\"(-10, 3)\")",
+          "value": "(-10, 3)"
+        }
+      }
+    ]
+  }
+}

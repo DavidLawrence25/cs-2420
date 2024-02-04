@@ -1,79 +1,61 @@
-#include "custom_libraries/test.h"
+#include <iostream>
+#include <memory>
+#include <string>
+
+#include "custom_libraries/unit_test/unit_test.h"
 #include "no_brainers/04_palindrome/palindrome.h"
 
-using rose::NoGlobals, rose::Palindrome, rose::TestCase, rose::TestResult;
+using rose::CommandLineFlags;
+using rose::Palindrome, rose::TestCase, rose::TestResult, rose::TestSuite;
 
-class PalindromeTest : public TestCase<NoGlobals> {
+class PalindromeTest : public TestCase {
  public:
-  TestResult Run() {
-    RunTest(TestEasy, "TestEasy");
-    RunTest(TestSpaces, "TestSpaces");
-    RunTest(TestMixedCase, "TestMixedCase");
-    RunTest(TestPunctuation, "TestPunctuation");
-    RunTest(TestNotPalindrome, "TestNotPalindrome");
-    return result_;
+  void Repair() override {}
+  void Run() override {
+    TestEasy();
+    TestSpaces();
+    TestMixedCase();
+    TestPunctuation();
+    TestNotPalindrome();
   }
 
   void TestEasy() {
     Palindrome palindrome = {/*sentence=*/"mom"};
-    AddValueSet(/*relevant_locals=*/{"palindrome"}, /*relevant_globals=*/{},
-                /*is_init=*/true, /*is_global=*/false,
-                /*value_name=*/"palindrome", /*value=*/"Palindrome(\"mom\")");
-    AssertTrue(palindrome.is_palindrome(),
-               /*repr=*/"palindrome.is_palindrome()",
-               /*relevant_locals=*/{"palindrome"}, /*relevant_globals=*/{});
+    ASSERT_TRUE(palindrome.is_palindrome());
   }
 
   void TestSpaces() {
     Palindrome palindrome = {/*sentence=*/"taco cat"};
-    AddValueSet(/*relevant_locals=*/{"palindrome"}, /*relevant_globals=*/{},
-                /*is_init=*/true, /*is_global=*/false,
-                /*value_name=*/"palindrome",
-                /*value=*/"Palindrome(\"taco cat\")");
-    AssertTrue(palindrome.is_palindrome(),
-               /*repr=*/"palindrome.is_palindrome()",
-               /*relevant_locals=*/{"palindrome"}, /*relevant_globals=*/{});
+    ASSERT_TRUE(palindrome.is_palindrome());
   }
 
   void TestMixedCase() {
     Palindrome palindrome = {/*sentence=*/"A man a plan a canal Panama"};
-    AddValueSet(/*relevant_locals=*/{"palindrome"}, /*relevant_globals=*/{},
-                /*is_init=*/true, /*is_global=*/false,
-                /*value_name=*/"palindrome",
-                /*value=*/"Palindrome(\"A man a plan a canal Panama\")");
-    AssertTrue(palindrome.is_palindrome(),
-               /*repr=*/"palindrome.is_palindrome()",
-               /*relevant_locals=*/{"palindrome"}, /*relevant_globals=*/{});
+    ASSERT_TRUE(palindrome.is_palindrome());
   }
 
   void TestPunctuation() {
     Palindrome palindrome = {/*sentence=*/"Don't nod."};
-    AddValueSet(/*relevant_locals=*/{"palindrome"}, /*relevant_globals=*/{},
-                /*is_init=*/true, /*is_global=*/false,
-                /*value_name=*/"palindrome",
-                /*value=*/"Palindrome(\"Don't nod.\")");
-    AssertTrue(palindrome.is_palindrome(),
-               /*repr=*/"palindrome.is_palindrome()",
-               /*relevant_locals=*/{"palindrome"}, /*relevant_globals=*/{});
+    ASSERT_TRUE(palindrome.is_palindrome());
   }
 
   void TestNotPalindrome() {
     Palindrome not_palindrome = {/*sentence=*/"madams"};
-    AddValueSet(/*relevant_locals=*/{"not_palindrome"}, /*relevant_globals=*/{},
-                /*is_init=*/true, /*is_global=*/false,
-                /*value_name=*/"not_palindrome",
-                /*value=*/"Palindrome(\"madams\")");
-    AssertFalse(not_palindrome.is_palindrome(),
-                /*repr=*/"not_palindrome.is_palindrome()",
-                /*relevant_locals=*/{"not_palindrome"},
-                /*relevant_globals=*/{});
+    ASSERT_FALSE(not_palindrome.is_palindrome());
   }
 };
 
-int main() {
-  PalindromeTest test;
-  TestResult results = test.Run();
-  results.LogJson("test_log");
+int main(int argc, const char *argv[]) {
+  CommandLineFlags flags(argc, argv);
+
+  TestSuite suite;
+  suite.Add(std::make_unique<PalindromeTest>());
+
+  auto result = std::make_shared<TestResult>();
+  suite.Run(result);
+  result->Log(std::cout, flags.verbose);
+  if (flags.log_txt) result->LogTxt("log.txt");
+  if (flags.log_json) result->LogJson("log.json");
 
   return 0;
 }

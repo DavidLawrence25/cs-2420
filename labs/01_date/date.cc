@@ -93,6 +93,14 @@ Date Date::operator+(int days) const noexcept {
   return {year, month, day};
 }
 
+bool Date::operator==(const Date &date) const noexcept {
+  return hash() == date.hash();
+}
+
+bool Date::operator!=(const Date &date) const noexcept {
+  return hash() != date.hash();
+}
+
 std::ostream &operator<<(std::ostream &out, const Date &date) noexcept {
   out << date.ToString();
   return out;

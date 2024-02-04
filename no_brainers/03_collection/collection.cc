@@ -1,6 +1,9 @@
 #include "no_brainers/03_collection/collection.h"
 
-#include <iostream>
+#include <stdlib.h>
+
+#include <ostream>
+#include <memory>
 
 namespace rose {
 

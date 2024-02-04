@@ -1,0 +1,467 @@
+{
+  "meta": {
+    "cases": 3,
+    "tests": 34,
+    "fails": 0
+  },
+  "test_cases": {
+    "Sep10Test": [
+      {
+        "name": "TestIAdd2Months",
+        "line": 142,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "date_",
+          "value": "Nov 10, 2018"
+        },
+        "arg1": {
+          "repr": "Date(2018, 11, 10)",
+          "value": "Nov 10, 2018"
+        }
+      },
+      {
+        "name": "TestIAdd3Months",
+        "line": 148,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "date_",
+          "value": "Dec 10, 2018"
+        },
+        "arg1": {
+          "repr": "Date(2018, 12, 10)",
+          "value": "Dec 10, 2018"
+        }
+      },
+      {
+        "name": "TestIAdd4Months",
+        "line": 154,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "date_",
+          "value": "Jan 10, 2019"
+        },
+        "arg1": {
+          "repr": "Date(2019, 1, 10)",
+          "value": "Jan 10, 2019"
+        }
+      },
+      {
+        "name": "TestIAdd16Days",
+        "line": 160,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "date_",
+          "value": "Sep 26, 2018"
+        },
+        "arg1": {
+          "repr": "Date(2018, 9, 26)",
+          "value": "Sep 26, 2018"
+        }
+      },
+      {
+        "name": "TestIAdd20Days",
+        "line": 166,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "date_",
+          "value": "Sep 30, 2018"
+        },
+        "arg1": {
+          "repr": "Date(2018, 9, 30)",
+          "value": "Sep 30, 2018"
+        }
+      },
+      {
+        "name": "TestIAdd30Days",
+        "line": 172,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "date_",
+          "value": "Oct 10, 2018"
+        },
+        "arg1": {
+          "repr": "Date(2018, 10, 10)",
+          "value": "Oct 10, 2018"
+        }
+      },
+      {
+        "name": "TestDayOfYear",
+        "line": 176,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "date_.DayOfYear()",
+          "value": "253"
+        },
+        "arg1": {
+          "repr": "253",
+          "value": "253"
+        }
+      },
+      {
+        "name": "TestAdd16Days",
+        "line": 177,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "date_ + 16",
+          "value": "Sep 26, 2018"
+        },
+        "arg1": {
+          "repr": "Date(2018, 9, 26)",
+          "value": "Sep 26, 2018"
+        }
+      },
+      {
+        "name": "TestAdd20Days",
+        "line": 178,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "date_ + 20",
+          "value": "Sep 30, 2018"
+        },
+        "arg1": {
+          "repr": "Date(2018, 9, 30)",
+          "value": "Sep 30, 2018"
+        }
+      },
+      {
+        "name": "TestAdd21Days",
+        "line": 179,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "date_ + 21",
+          "value": "Oct 1, 2018"
+        },
+        "arg1": {
+          "repr": "Date(2018, 10, 1)",
+          "value": "Oct 1, 2018"
+        }
+      },
+      {
+        "name": "TestAdd75Days",
+        "line": 180,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "date_ + 75",
+          "value": "Nov 24, 2018"
+        },
+        "arg1": {
+          "repr": "Date(2018, 11, 24)",
+          "value": "Nov 24, 2018"
+        }
+      },
+      {
+        "name": "TestAdd117Days",
+        "line": 181,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "date_ + 117",
+          "value": "Jan 5, 2019"
+        },
+        "arg1": {
+          "repr": "Date(2019, 1, 5)",
+          "value": "Jan 5, 2019"
+        }
+      },
+      {
+        "name": "TestStreamExtraction",
+        "line": 186,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "Sep 10, 2018"
+        },
+        "arg1": {
+          "repr": "std::string(\"Sep 10, 2018\")",
+          "value": "Sep 10, 2018"
+        }
+      }
+    ],
+    "Jul10Test": [
+      {
+        "name": "TestIAdd4Months",
+        "line": 67,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "date_",
+          "value": "Nov 10, 2018"
+        },
+        "arg1": {
+          "repr": "Date(2018, 11, 10)",
+          "value": "Nov 10, 2018"
+        }
+      },
+      {
+        "name": "TestIAdd5Months",
+        "line": 73,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "date_",
+          "value": "Dec 10, 2018"
+        },
+        "arg1": {
+          "repr": "Date(2018, 12, 10)",
+          "value": "Dec 10, 2018"
+        }
+      },
+      {
+        "name": "TestIAdd6Months",
+        "line": 79,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "date_",
+          "value": "Jan 10, 2019"
+        },
+        "arg1": {
+          "repr": "Date(2019, 1, 10)",
+          "value": "Jan 10, 2019"
+        }
+      },
+      {
+        "name": "TestIAdd16Days",
+        "line": 85,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "date_",
+          "value": "Jul 26, 2018"
+        },
+        "arg1": {
+          "repr": "Date(2018, 7, 26)",
+          "value": "Jul 26, 2018"
+        }
+      },
+      {
+        "name": "TestIAdd21Days",
+        "line": 91,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "date_",
+          "value": "Jul 31, 2018"
+        },
+        "arg1": {
+          "repr": "Date(2018, 7, 31)",
+          "value": "Jul 31, 2018"
+        }
+      },
+      {
+        "name": "TestIAdd31Days",
+        "line": 97,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "date_",
+          "value": "Aug 10, 2018"
+        },
+        "arg1": {
+          "repr": "Date(2018, 8, 10)",
+          "value": "Aug 10, 2018"
+        }
+      },
+      {
+        "name": "TestDayOfYear",
+        "line": 101,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "date_.DayOfYear()",
+          "value": "191"
+        },
+        "arg1": {
+          "repr": "191",
+          "value": "191"
+        }
+      },
+      {
+        "name": "TestAdd18Days",
+        "line": 102,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "date_ + 18",
+          "value": "Jul 28, 2018"
+        },
+        "arg1": {
+          "repr": "Date(2018, 7, 28)",
+          "value": "Jul 28, 2018"
+        }
+      },
+      {
+        "name": "TestAdd21Days",
+        "line": 103,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "date_ + 21",
+          "value": "Jul 31, 2018"
+        },
+        "arg1": {
+          "repr": "Date(2018, 7, 31)",
+          "value": "Jul 31, 2018"
+        }
+      },
+      {
+        "name": "TestAdd22Days",
+        "line": 104,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "date_ + 22",
+          "value": "Aug 1, 2018"
+        },
+        "arg1": {
+          "repr": "Date(2018, 8, 1)",
+          "value": "Aug 1, 2018"
+        }
+      },
+      {
+        "name": "TestAdd91Days",
+        "line": 105,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "date_ + 91",
+          "value": "Oct 9, 2018"
+        },
+        "arg1": {
+          "repr": "Date(2018, 10, 9)",
+          "value": "Oct 9, 2018"
+        }
+      },
+      {
+        "name": "TestAdd234Days",
+        "line": 106,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "date_ + 234",
+          "value": "Mar 1, 2019"
+        },
+        "arg1": {
+          "repr": "Date(2019, 3, 1)",
+          "value": "Mar 1, 2019"
+        }
+      },
+      {
+        "name": "TestStreamExtraction",
+        "line": 111,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "Jul 10, 2018"
+        },
+        "arg1": {
+          "repr": "std::string(\"Jul 10, 2018\")",
+          "value": "Jul 10, 2018"
+        }
+      }
+    ],
+    "DateTest": [
+      {
+        "name": "TestDefaultConstructor",
+        "line": 26,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "Date().hash()",
+          "value": "1008673"
+        },
+        "arg1": {
+          "repr": "0xf6421",
+          "value": "1008673"
+        }
+      },
+      {
+        "name": "TestYearConstructor",
+        "line": 27,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "Date(2018).hash()",
+          "value": "1033249"
+        },
+        "arg1": {
+          "repr": "0xfc421",
+          "value": "1033249"
+        }
+      },
+      {
+        "name": "TestYearMonthConstructor",
+        "line": 30,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "Date(2018, 7).hash()",
+          "value": "1033441"
+        },
+        "arg1": {
+          "repr": "0xfc4e1",
+          "value": "1033441"
+        }
+      },
+      {
+        "name": "TestFullConstructor",
+        "line": 34,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "Date(2018, 7, 10).hash()",
+          "value": "1033450"
+        },
+        "arg1": {
+          "repr": "0xfc4ea",
+          "value": "1033450"
+        }
+      },
+      {
+        "name": "TestIs1900LeapYear",
+        "line": 37,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "Date::IsLeapYear(1900)",
+        "value": "false"
+      },
+      {
+        "name": "TestIs1995LeapYear",
+        "line": 38,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "Date::IsLeapYear(1995)",
+        "value": "false"
+      },
+      {
+        "name": "TestIs1996LeapYear",
+        "line": 39,
+        "assertion_type": "true",
+        "passed": true,
+        "expression": "Date::IsLeapYear(1996)",
+        "value": "true"
+      },
+      {
+        "name": "TestIs2000LeapYear",
+        "line": 40,
+        "assertion_type": "true",
+        "passed": true,
+        "expression": "Date::IsLeapYear(2000)",
+        "value": "true"
+      }
+    ]
+  }
+}

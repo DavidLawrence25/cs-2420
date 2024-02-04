@@ -7,52 +7,55 @@
 namespace rose {
 
 template <typename N>
-Point<N>::Point() {
-  x_ = 0;
-  y_ = 0;
+Point<N>::Point() : x_(0), y_(0) {}
+
+template <typename N>
+Point<N>::Point(N x, N y) : x_(x), y_(y) {}
+
+template <typename N>
+Point<N>::Point(const Point &other) : x_(other.x_), y_(other.y_) {}
+
+template <typename N>
+N Point<N>::x() const {
+  return x_;
 }
 
 template <typename N>
-Point<N>::Point(N x, N y) {
-  x_ = x;
-  y_ = y;
+N Point<N>::y() const {
+  return y_;
 }
 
 template <typename N>
-Point<N>::Point(const Point &other) {
-  x_ = other.x_;
-  y_ = other.y_;
-}
-
-template <typename N>
-Point<N> Point<N>::operator+(const Point &other) {
+Point<N> Point<N>::operator+(const Point &other) const {
   return {x_ + other.x_, y_ + other.y_};
 }
 
 template <typename N>
-void Point<N>::operator+=(const Point &other) {
+Point<N> &Point<N>::operator+=(const Point &other) {
   x_ += other.x_;
   y_ += other.y_;
+  return *this;
 }
 
 template <typename N>
-Point<N> Point<N>::operator-(const Point &other) {
+Point<N> Point<N>::operator-(const Point &other) const {
   return {x_ - other.x_, y_ - other.y_};
 }
 
 template <typename N>
-void Point<N>::operator-=(const Point &other) {
+Point<N> &Point<N>::operator-=(const Point &other) {
   x_ -= other.x_;
   y_ -= other.y_;
+  return *this;
 }
 
 template <typename N>
-bool Point<N>::operator==(const Point &other) {
+bool Point<N>::operator==(const Point &other) const {
   return ApproxEqual(x_, other.x_) && ApproxEqual(y_, other.y_);
 }
 
 template <typename N>
-bool Point<N>::operator!=(const Point &other) {
+bool Point<N>::operator!=(const Point &other) const {
   return !ApproxEqual(x_, other.x_) || !ApproxEqual(y_, other.y_);
 }
 

@@ -21,6 +21,6 @@ class SortedCollection : public Collection<T> {
 
 }  // namespace rose
 
-#include "sorted_collection.cc"
+#include "labs/03_sorted_collection/sorted_collection.cc"
 
 #endif  // CS2420_LABS_03SORTEDCOLLECTION_SORTEDCOLLECTION_H_

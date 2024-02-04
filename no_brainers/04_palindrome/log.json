@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "cases": 1,
+    "tests": 5,
+    "fails": 0
+  },
+  "test_cases": {
+    "PalindromeTest": [
+      {
+        "name": "TestEasy",
+        "line": 24,
+        "assertion_type": "true",
+        "passed": true,
+        "expression": "palindrome.is_palindrome()",
+        "value": "true"
+      },
+      {
+        "name": "TestSpaces",
+        "line": 29,
+        "assertion_type": "true",
+        "passed": true,
+        "expression": "palindrome.is_palindrome()",
+        "value": "true"
+      },
+      {
+        "name": "TestMixedCase",
+        "line": 34,
+        "assertion_type": "true",
+        "passed": true,
+        "expression": "palindrome.is_palindrome()",
+        "value": "true"
+      },
+      {
+        "name": "TestPunctuation",
+        "line": 39,
+        "assertion_type": "true",
+        "passed": true,
+        "expression": "palindrome.is_palindrome()",
+        "value": "true"
+      },
+      {
+        "name": "TestNotPalindrome",
+        "line": 44,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "not_palindrome.is_palindrome()",
+        "value": "false"
+      }
+    ]
+  }
+}

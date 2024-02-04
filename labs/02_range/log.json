@@ -1,0 +1,439 @@
+{
+  "meta": {
+    "cases": 5,
+    "tests": 30,
+    "fails": 0
+  },
+  "test_cases": {
+    "BackwardsDoubleRangeTest": [
+      {
+        "name": "TestLength",
+        "line": 138,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.length()",
+          "value": "7"
+        },
+        "arg1": {
+          "repr": "size_t{7}",
+          "value": "7"
+        }
+      },
+      {
+        "name": "TestSum",
+        "line": 139,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.sum()",
+          "value": "87.5"
+        },
+        "arg1": {
+          "repr": "87.5",
+          "value": "87.5"
+        }
+      },
+      {
+        "name": "TestAverage",
+        "line": 140,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.average()",
+          "value": "12.5"
+        },
+        "arg1": {
+          "repr": "12.5",
+          "value": "12.5"
+        }
+      },
+      {
+        "name": "TestMin",
+        "line": 141,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.min()",
+          "value": "5"
+        },
+        "arg1": {
+          "repr": "5.0",
+          "value": "5"
+        }
+      },
+      {
+        "name": "TestMax",
+        "line": 142,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.max()",
+          "value": "20"
+        },
+        "arg1": {
+          "repr": "20.0",
+          "value": "20"
+        }
+      },
+      {
+        "name": "TestStreamExtraction",
+        "line": 147,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "20, 17.5, 15, 12.5, 10, 7.5, 5"
+        },
+        "arg1": {
+          "repr": "std::string(\"20, 17.5, 15, 12.5, 10, 7.5, 5\")",
+          "value": "20, 17.5, 15, 12.5, 10, 7.5, 5"
+        }
+      }
+    ],
+    "BackwardsIntRangeTest": [
+      {
+        "name": "TestLength",
+        "line": 110,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.length()",
+          "value": "5"
+        },
+        "arg1": {
+          "repr": "size_t{5}",
+          "value": "5"
+        }
+      },
+      {
+        "name": "TestSum",
+        "line": 111,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.sum()",
+          "value": "40"
+        },
+        "arg1": {
+          "repr": "40",
+          "value": "40"
+        }
+      },
+      {
+        "name": "TestAverage",
+        "line": 112,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.average()",
+          "value": "8"
+        },
+        "arg1": {
+          "repr": "8",
+          "value": "8"
+        }
+      },
+      {
+        "name": "TestMin",
+        "line": 113,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.min()",
+          "value": "4"
+        },
+        "arg1": {
+          "repr": "4",
+          "value": "4"
+        }
+      },
+      {
+        "name": "TestMax",
+        "line": 114,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.max()",
+          "value": "12"
+        },
+        "arg1": {
+          "repr": "12",
+          "value": "12"
+        }
+      },
+      {
+        "name": "TestStreamExtraction",
+        "line": 119,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "12, 10, 8, 6, 4"
+        },
+        "arg1": {
+          "repr": "std::string(\"12, 10, 8, 6, 4\")",
+          "value": "12, 10, 8, 6, 4"
+        }
+      }
+    ],
+    "DoubleRangeStepTest": [
+      {
+        "name": "TestLength",
+        "line": 82,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.length()",
+          "value": "6"
+        },
+        "arg1": {
+          "repr": "size_t{6}",
+          "value": "6"
+        }
+      },
+      {
+        "name": "TestSum",
+        "line": 83,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.sum()",
+          "value": "82.5"
+        },
+        "arg1": {
+          "repr": "82.5",
+          "value": "82.5"
+        }
+      },
+      {
+        "name": "TestAverage",
+        "line": 84,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.average()",
+          "value": "13.75"
+        },
+        "arg1": {
+          "repr": "13.75",
+          "value": "13.75"
+        }
+      },
+      {
+        "name": "TestMin",
+        "line": 85,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.min()",
+          "value": "7.5"
+        },
+        "arg1": {
+          "repr": "7.5",
+          "value": "7.5"
+        }
+      },
+      {
+        "name": "TestMax",
+        "line": 86,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.max()",
+          "value": "20"
+        },
+        "arg1": {
+          "repr": "20.0",
+          "value": "20"
+        }
+      },
+      {
+        "name": "TestStreamExtraction",
+        "line": 91,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "7.5, 10, 12.5, 15, 17.5, 20"
+        },
+        "arg1": {
+          "repr": "std::string(\"7.5, 10, 12.5, 15, 17.5, 20\")",
+          "value": "7.5, 10, 12.5, 15, 17.5, 20"
+        }
+      }
+    ],
+    "IntRangeStepTest": [
+      {
+        "name": "TestLength",
+        "line": 54,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.length()",
+          "value": "5"
+        },
+        "arg1": {
+          "repr": "size_t{5}",
+          "value": "5"
+        }
+      },
+      {
+        "name": "TestSum",
+        "line": 55,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.sum()",
+          "value": "35"
+        },
+        "arg1": {
+          "repr": "35",
+          "value": "35"
+        }
+      },
+      {
+        "name": "TestAverage",
+        "line": 56,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.average()",
+          "value": "7"
+        },
+        "arg1": {
+          "repr": "7",
+          "value": "7"
+        }
+      },
+      {
+        "name": "TestMin",
+        "line": 57,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.min()",
+          "value": "3"
+        },
+        "arg1": {
+          "repr": "3",
+          "value": "3"
+        }
+      },
+      {
+        "name": "TestMax",
+        "line": 58,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.max()",
+          "value": "11"
+        },
+        "arg1": {
+          "repr": "11",
+          "value": "11"
+        }
+      },
+      {
+        "name": "TestStreamExtraction",
+        "line": 63,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "3, 5, 7, 9, 11"
+        },
+        "arg1": {
+          "repr": "std::string(\"3, 5, 7, 9, 11\")",
+          "value": "3, 5, 7, 9, 11"
+        }
+      }
+    ],
+    "PlainIntRangeTest": [
+      {
+        "name": "TestLength",
+        "line": 26,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.length()",
+          "value": "9"
+        },
+        "arg1": {
+          "repr": "size_t{9}",
+          "value": "9"
+        }
+      },
+      {
+        "name": "TestSum",
+        "line": 27,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.sum()",
+          "value": "63"
+        },
+        "arg1": {
+          "repr": "63",
+          "value": "63"
+        }
+      },
+      {
+        "name": "TestAverage",
+        "line": 28,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.average()",
+          "value": "7"
+        },
+        "arg1": {
+          "repr": "7",
+          "value": "7"
+        }
+      },
+      {
+        "name": "TestMin",
+        "line": 29,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.min()",
+          "value": "3"
+        },
+        "arg1": {
+          "repr": "3",
+          "value": "3"
+        }
+      },
+      {
+        "name": "TestMax",
+        "line": 30,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "range_.max()",
+          "value": "11"
+        },
+        "arg1": {
+          "repr": "11",
+          "value": "11"
+        }
+      },
+      {
+        "name": "TestStreamExtraction",
+        "line": 35,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "3, 4, 5, 6, 7, 8, 9, 10, 11"
+        },
+        "arg1": {
+          "repr": "std::string(\"3, 4, 5, 6, 7, 8, 9, 10, 11\")",
+          "value": "3, 4, 5, 6, 7, 8, 9, 10, 11"
+        }
+      }
+    ]
+  }
+}
