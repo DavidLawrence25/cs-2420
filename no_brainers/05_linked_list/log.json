@@ -1,0 +1,601 @@
+{
+  "meta": {
+    "cases": 3,
+    "tests": 44,
+    "fails": 0
+  },
+  "test_cases": {
+    "StringLinkedListTest": [
+      {
+        "name": "TestPushFront1Item",
+        "line": 259,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "list.size()",
+          "value": "1"
+        },
+        "arg1": {
+          "repr": "size_t{1}",
+          "value": "1"
+        }
+      },
+      {
+        "name": "TestPushFront25Items",
+        "line": 292,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "list.size()",
+          "value": "25"
+        },
+        "arg1": {
+          "repr": "size_t{25}",
+          "value": "25"
+        }
+      },
+      {
+        "name": "TestPushBack1Item",
+        "line": 298,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "list.size()",
+          "value": "1"
+        },
+        "arg1": {
+          "repr": "size_t{1}",
+          "value": "1"
+        }
+      },
+      {
+        "name": "TestPushBack24Items",
+        "line": 330,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "list.size()",
+          "value": "24"
+        },
+        "arg1": {
+          "repr": "size_t{24}",
+          "value": "24"
+        }
+      },
+      {
+        "name": "TestPeekFront",
+        "line": 334,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sentence_.PeekFront().value()",
+          "value": "but"
+        },
+        "arg1": {
+          "repr": "std::string(\"but\")",
+          "value": "but"
+        }
+      },
+      {
+        "name": "TestPeekBack",
+        "line": 338,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sentence_.PeekBack().value()",
+          "value": "it"
+        },
+        "arg1": {
+          "repr": "std::string(\"it\")",
+          "value": "it"
+        }
+      },
+      {
+        "name": "TestPeekFrontAndBack",
+        "line": 344,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "list.PeekFront().value()",
+          "value": "mango"
+        },
+        "arg1": {
+          "repr": "list.PeekBack().value()",
+          "value": "mango"
+        }
+      },
+      {
+        "name": "TestPeek1stWord",
+        "line": 348,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sentence_.Peek(0).value()",
+          "value": "but"
+        },
+        "arg1": {
+          "repr": "std::string(\"but\")",
+          "value": "but"
+        }
+      },
+      {
+        "name": "TestPeek7thWord",
+        "line": 352,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sentence_.Peek(6).value()",
+          "value": "even"
+        },
+        "arg1": {
+          "repr": "std::string(\"even\")",
+          "value": "even"
+        }
+      },
+      {
+        "name": "TestPeek13thWord",
+        "line": 356,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sentence_.Peek(12).value()",
+          "value": "it"
+        },
+        "arg1": {
+          "repr": "std::string(\"it\")",
+          "value": "it"
+        }
+      },
+      {
+        "name": "TestInsertFront",
+        "line": 367,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "rick_roll.PeekFront().value()",
+          "value": "never"
+        },
+        "arg1": {
+          "repr": "std::string(\"never\")",
+          "value": "never"
+        }
+      },
+      {
+        "name": "TestInsertMiddle",
+        "line": 383,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "all_star.Peek(4).value()",
+          "value": "the"
+        },
+        "arg1": {
+          "repr": "std::string(\"the\")",
+          "value": "the"
+        }
+      },
+      {
+        "name": "TestPopFront",
+        "line": 399,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sentence_.PeekFront().value()",
+          "value": "i"
+        },
+        "arg1": {
+          "repr": "std::string(\"i\")",
+          "value": "i"
+        }
+      },
+      {
+        "name": "TestPopBack",
+        "line": 405,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sentence_.PeekBack().value()",
+          "value": "in"
+        },
+        "arg1": {
+          "repr": "std::string(\"in\")",
+          "value": "in"
+        }
+      },
+      {
+        "name": "TestEraseFront",
+        "line": 411,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sentence_.PeekFront().value()",
+          "value": "i"
+        },
+        "arg1": {
+          "repr": "std::string(\"i\")",
+          "value": "i"
+        }
+      },
+      {
+        "name": "TestEraseMiddle",
+        "line": 417,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sentence_.Peek(9).value()",
+          "value": "believe"
+        },
+        "arg1": {
+          "repr": "std::string(\"believe\")",
+          "value": "believe"
+        }
+      },
+      {
+        "name": "TestEraseBack",
+        "line": 423,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sentence_.PeekBack().value()",
+          "value": "in"
+        },
+        "arg1": {
+          "repr": "std::string(\"in\")",
+          "value": "in"
+        }
+      },
+      {
+        "name": "TestRemove",
+        "line": 429,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sentence_.Peek(9).value()",
+          "value": "believe"
+        },
+        "arg1": {
+          "repr": "std::string(\"believe\")",
+          "value": "believe"
+        }
+      },
+      {
+        "name": "TestStreamExtraction",
+        "line": 438,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "but i have heard it works even if you don't believe in it"
+        },
+        "arg1": {
+          "repr": "expected",
+          "value": "but i have heard it works even if you don't believe in it"
+        }
+      }
+    ],
+    "IntLinkedListTest": [
+      {
+        "name": "TestPushFront1Item",
+        "line": 76,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "list.size()",
+          "value": "1"
+        },
+        "arg1": {
+          "repr": "size_t{1}",
+          "value": "1"
+        }
+      },
+      {
+        "name": "TestPushFront20Items",
+        "line": 82,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "list.size()",
+          "value": "20"
+        },
+        "arg1": {
+          "repr": "size_t{20}",
+          "value": "20"
+        }
+      },
+      {
+        "name": "TestPushBack1Item",
+        "line": 88,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "list.size()",
+          "value": "1"
+        },
+        "arg1": {
+          "repr": "size_t{1}",
+          "value": "1"
+        }
+      },
+      {
+        "name": "TestPushBack20Items",
+        "line": 94,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "list.size()",
+          "value": "20"
+        },
+        "arg1": {
+          "repr": "size_t{20}",
+          "value": "20"
+        }
+      },
+      {
+        "name": "TestPeekFront",
+        "line": 100,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "list.PeekFront().value()",
+          "value": "3"
+        },
+        "arg1": {
+          "repr": "3",
+          "value": "3"
+        }
+      },
+      {
+        "name": "TestPeekBack",
+        "line": 106,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "list.PeekBack().value()",
+          "value": "0"
+        },
+        "arg1": {
+          "repr": "0",
+          "value": "0"
+        }
+      },
+      {
+        "name": "TestPeekFrontAndBack",
+        "line": 112,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "list.PeekFront().value()",
+          "value": "42"
+        },
+        "arg1": {
+          "repr": "list.PeekBack().value()",
+          "value": "42"
+        }
+      },
+      {
+        "name": "TestPeek1stDigitOfPi",
+        "line": 115,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "pi_.Peek(0).value()",
+          "value": "3"
+        },
+        "arg1": {
+          "repr": "3",
+          "value": "3"
+        }
+      },
+      {
+        "name": "TestPeek27thDigitOfPi",
+        "line": 116,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "pi_.Peek(26).value()",
+          "value": "8"
+        },
+        "arg1": {
+          "repr": "8",
+          "value": "8"
+        }
+      },
+      {
+        "name": "TestPeek100thDigitOfPi",
+        "line": 117,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "pi_.Peek(99).value()",
+          "value": "7"
+        },
+        "arg1": {
+          "repr": "7",
+          "value": "7"
+        }
+      },
+      {
+        "name": "TestInsertFront",
+        "line": 130,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "fibonacci.PeekFront().value()",
+          "value": "0"
+        },
+        "arg1": {
+          "repr": "0",
+          "value": "0"
+        }
+      },
+      {
+        "name": "TestInsertMiddle",
+        "line": 142,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "primes.Peek(2).value()",
+          "value": "5"
+        },
+        "arg1": {
+          "repr": "5",
+          "value": "5"
+        }
+      },
+      {
+        "name": "TestPopFront",
+        "line": 164,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "list.PeekFront().value()",
+          "value": "1"
+        },
+        "arg1": {
+          "repr": "1",
+          "value": "1"
+        }
+      },
+      {
+        "name": "TestPopBack",
+        "line": 171,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "list.PeekBack().value()",
+          "value": "6"
+        },
+        "arg1": {
+          "repr": "6",
+          "value": "6"
+        }
+      },
+      {
+        "name": "TestEraseFront",
+        "line": 178,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "list.PeekFront().value()",
+          "value": "-3"
+        },
+        "arg1": {
+          "repr": "-3",
+          "value": "-3"
+        }
+      },
+      {
+        "name": "TestEraseMiddle",
+        "line": 185,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "list.Peek(2).value()",
+          "value": "-1"
+        },
+        "arg1": {
+          "repr": "-1",
+          "value": "-1"
+        }
+      },
+      {
+        "name": "TestEraseBack",
+        "line": 192,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "list.PeekBack().value()",
+          "value": "2"
+        },
+        "arg1": {
+          "repr": "2",
+          "value": "2"
+        }
+      },
+      {
+        "name": "TestRemove",
+        "line": 199,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "list.Peek(6).value()",
+          "value": "3"
+        },
+        "arg1": {
+          "repr": "3",
+          "value": "3"
+        }
+      },
+      {
+        "name": "TestStreamExtraction",
+        "line": 211,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "3 1 4 1 5 9 2 6 5 3 5 8 9 7 9 3 2 3 8 4 6 2 6 4 3 3 8 3 2 7 9 5 0 2 8 8 4 1 9 7 1 6 9 3 9 9 3 7 5 1 0 5 8 2 0 9 7 4 9 4 4 5 9 2 3 0 7 8 1 6 4 0 6 2 8 6 2 0 8 9 9 8 6 2 8 0 3 4 8 2 5 3 4 2 1 1 7 0 6 7"
+        },
+        "arg1": {
+          "repr": "expected",
+          "value": "3 1 4 1 5 9 2 6 5 3 5 8 9 7 9 3 2 3 8 4 6 2 6 4 3 3 8 3 2 7 9 5 0 2 8 8 4 1 9 7 1 6 9 3 9 9 3 7 5 1 0 5 8 2 0 9 7 4 9 4 4 5 9 2 3 0 7 8 1 6 4 0 6 2 8 6 2 0 8 9 9 8 6 2 8 0 3 4 8 2 5 3 4 2 1 1 7 0 6 7"
+        }
+      }
+    ],
+    "EmptyLinkedListTest": [
+      {
+        "name": "TestIsEmpty",
+        "line": 25,
+        "assertion_type": "true",
+        "passed": true,
+        "expression": "list_.empty()",
+        "value": "true"
+      },
+      {
+        "name": "TestPeekFront",
+        "line": 26,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "list_.PeekFront().has_value()",
+        "value": "false"
+      },
+      {
+        "name": "TestPeekBack",
+        "line": 27,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "list_.PeekBack().has_value()",
+        "value": "false"
+      },
+      {
+        "name": "TestPeek3",
+        "line": 28,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "list_.Peek(3).has_value()",
+        "value": "false"
+      },
+      {
+        "name": "TestPeekNegative2",
+        "line": 29,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "list_.Peek(-2).has_value()",
+        "value": "false"
+      },
+      {
+        "name": "TestStreamExtraction",
+        "line": 34,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": ""
+        },
+        "arg1": {
+          "repr": "std::string()",
+          "value": ""
+        }
+      }
+    ]
+  }
+}
