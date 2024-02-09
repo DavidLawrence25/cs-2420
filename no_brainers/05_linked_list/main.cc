@@ -4,11 +4,11 @@
 #include <sstream>
 #include <string>
 
+#include "custom_libraries/d_linked_list.h"
 #include "custom_libraries/unit_test/unit_test.h"
-#include "no_brainers/05_linked_list/linked_list.h"
 
 using rose::CommandLineFlags;
-using rose::LinkedList, rose::TestCase, rose::TestResult, rose::TestSuite;
+using rose::DLinkedList, rose::TestCase, rose::TestResult, rose::TestSuite;
 
 class EmptyLinkedListTest : public TestCase {
  public:
@@ -35,7 +35,7 @@ class EmptyLinkedListTest : public TestCase {
   }
 
  private:
-  const LinkedList<int> list_;
+  const DLinkedList<int> list_;
 };
 
 class IntLinkedListTest : public TestCase {
@@ -43,7 +43,7 @@ class IntLinkedListTest : public TestCase {
   IntLinkedListTest() { Repair(); }
 
   void Repair() override {
-    pi_ = LinkedList<int>();
+    pi_ = DLinkedList<int>();
     for (int digit : kDigitsOfPi) pi_.PushBack(digit);
   }
 
@@ -71,43 +71,43 @@ class IntLinkedListTest : public TestCase {
   }
 
   void TestPushFront1Item() {
-    LinkedList<int> list;
+    DLinkedList<int> list;
     list.PushFront(5);
     ASSERT_EQUAL(list.size(), size_t{1});
   }
 
   void TestPushFront20Items() {
-    LinkedList<int> list;
+    DLinkedList<int> list;
     for (int x = 10; x > -10; --x) list.PushFront(x);
     ASSERT_EQUAL(list.size(), size_t{20});
   }
 
   void TestPushBack1Item() {
-    LinkedList<int> list;
+    DLinkedList<int> list;
     list.PushBack(5);
     ASSERT_EQUAL(list.size(), size_t{1});
   }
 
   void TestPushBack20Items() {
-    LinkedList<int> list;
+    DLinkedList<int> list;
     for (int x = 10; x > -10; --x) list.PushBack(x);
     ASSERT_EQUAL(list.size(), size_t{20});
   }
 
   void TestPeekFront() {
-    LinkedList<int> list;
+    DLinkedList<int> list;
     for (int x = 0; x < 4; ++x) list.PushFront(x);
     ASSERT_EQUAL(list.PeekFront().value(), 3);
   }
 
   void TestPeekBack() {
-    LinkedList<int> list;
+    DLinkedList<int> list;
     for (int x = 0; x < 4; ++x) list.PushFront(x);
     ASSERT_EQUAL(list.PeekBack().value(), 0);
   }
 
   void TestPeekFrontAndBack() {
-    LinkedList<int> list;
+    DLinkedList<int> list;
     list.PushBack(42);
     ASSERT_EQUAL(list.PeekFront().value(), list.PeekBack().value());
   }
@@ -117,7 +117,7 @@ class IntLinkedListTest : public TestCase {
   void TestPeek100thDigitOfPi() { ASSERT_EQUAL(pi_.Peek(99).value(), 7); }
 
   void TestInsertFront() {
-    LinkedList<int> fibonacci;
+    DLinkedList<int> fibonacci;
     fibonacci.PushBack(1);
     fibonacci.PushBack(1);
     fibonacci.PushBack(2);
@@ -131,7 +131,7 @@ class IntLinkedListTest : public TestCase {
   }
 
   void TestInsertMiddle() {
-    LinkedList<int> primes;
+    DLinkedList<int> primes;
     primes.PushBack(2);
     primes.PushBack(3);
     primes.PushBack(7);
@@ -143,7 +143,7 @@ class IntLinkedListTest : public TestCase {
   }
 
   void TestInsertBack() {
-    LinkedList<int> e;
+    DLinkedList<int> e;
     e.PushBack(2);
     e.PushBack(7);
     e.PushBack(1);
@@ -158,42 +158,42 @@ class IntLinkedListTest : public TestCase {
   }
 
   void TestPopFront() {
-    LinkedList<int> list;
+    DLinkedList<int> list;
     for (int x = 0; x < 16; ++x) list.PushBack(x);
     list.PopFront();
     ASSERT_EQUAL(list.PeekFront().value(), 1);
   }
 
   void TestPopBack() {
-    LinkedList<int> list;
+    DLinkedList<int> list;
     for (int x = -8; x < 8; ++x) list.PushBack(x);
     list.PopBack();
     ASSERT_EQUAL(list.PeekBack().value(), 6);
   }
 
   void TestEraseFront() {
-    LinkedList<int> list;
+    DLinkedList<int> list;
     for (int x = -4; x < 4; ++x) list.PushBack(x);
     list.Erase(0);
     ASSERT_EQUAL(list.PeekFront().value(), -3);
   }
 
   void TestEraseMiddle() {
-    LinkedList<int> list;
+    DLinkedList<int> list;
     for (int x = -4; x < 4; ++x) list.PushBack(x);
     list.Erase(2);
     ASSERT_EQUAL(list.Peek(2).value(), -1);
   }
 
   void TestEraseBack() {
-    LinkedList<int> list;
+    DLinkedList<int> list;
     for (int x = -4; x < 4; ++x) list.PushBack(x);
     list.Erase(7);
     ASSERT_EQUAL(list.PeekBack().value(), 2);
   }
 
   void TestRemove() {
-    LinkedList<int> list;
+    DLinkedList<int> list;
     for (int x = -4; x < 4; ++x) list.PushBack(x);
     list.Remove(2);
     ASSERT_EQUAL(list.Peek(6).value(), 3);
@@ -218,7 +218,7 @@ class IntLinkedListTest : public TestCase {
       1, 6, 9, 3, 9, 9, 3, 7, 5, 1, 0, 5, 8, 2, 0, 9, 7, 4, 9, 4,
       4, 5, 9, 2, 3, 0, 7, 8, 1, 6, 4, 0, 6, 2, 8, 6, 2, 0, 8, 9,
       9, 8, 6, 2, 8, 0, 3, 4, 8, 2, 5, 3, 4, 2, 1, 1, 7, 0, 6, 7};
-  LinkedList<int> pi_;
+  DLinkedList<int> pi_;
 };
 
 class StringLinkedListTest : public TestCase {
@@ -226,7 +226,7 @@ class StringLinkedListTest : public TestCase {
   StringLinkedListTest() { Repair(); }
 
   void Repair() override {
-    sentence_ = LinkedList<std::string>();
+    sentence_ = DLinkedList<std::string>();
     for (std::string word : kDefaultSentence) sentence_.PushBack(word);
   }
 
@@ -254,13 +254,13 @@ class StringLinkedListTest : public TestCase {
   }
 
   void TestPushFront1Item() {
-    LinkedList<std::string> list;
+    DLinkedList<std::string> list;
     list.PushFront("strawberry");
     ASSERT_EQUAL(list.size(), size_t{1});
   }
 
   void TestPushFront25Items() {
-    LinkedList<std::string> list;
+    DLinkedList<std::string> list;
     // if you think penguins are fat and waddle, you have never been attacked by
     // one running at you in excess of 100 miles per hour
     // - linus torvalds
@@ -293,13 +293,13 @@ class StringLinkedListTest : public TestCase {
   }
 
   void TestPushBack1Item() {
-    LinkedList<std::string> list;
+    DLinkedList<std::string> list;
     list.PushBack("pineapple");
     ASSERT_EQUAL(list.size(), size_t{1});
   }
 
   void TestPushBack24Items() {
-    LinkedList<std::string> list;
+    DLinkedList<std::string> list;
     // i never try to make any far-reaching predictions, so much can happen that
     // it simply only makes you look stupid a few years later
     // - linus torvalds
@@ -339,7 +339,7 @@ class StringLinkedListTest : public TestCase {
   }
 
   void TestPeekFrontAndBack() {
-    LinkedList<std::string> list;
+    DLinkedList<std::string> list;
     list.PushBack("mango");
     ASSERT_EQUAL(list.PeekFront().value(), list.PeekBack().value());
   }
@@ -357,7 +357,7 @@ class StringLinkedListTest : public TestCase {
   }
 
   void TestInsertFront() {
-    LinkedList<std::string> rick_roll;
+    DLinkedList<std::string> rick_roll;
     rick_roll.PushBack("gonna");
     rick_roll.PushBack("give");
     rick_roll.PushBack("you");
@@ -368,7 +368,7 @@ class StringLinkedListTest : public TestCase {
   }
 
   void TestInsertMiddle() {
-    LinkedList<std::string> all_star;
+    DLinkedList<std::string> all_star;
     all_star.PushBack("somebody");
     all_star.PushBack("once");
     all_star.PushBack("told");
@@ -384,7 +384,7 @@ class StringLinkedListTest : public TestCase {
   }
 
   void TestInsertBack() {
-    LinkedList<std::string> egg_quote;
+    DLinkedList<std::string> egg_quote;
     egg_quote.PushBack("what,");
     egg_quote.PushBack("you");
     egg_quote.PushBack("egg!");
@@ -442,7 +442,7 @@ class StringLinkedListTest : public TestCase {
   const std::string kDefaultSentence[13] = {
       "but", "i",   "have",  "heard",   "it", "works", "even",
       "if",  "you", "don't", "believe", "in", "it"};
-  LinkedList<std::string> sentence_;
+  DLinkedList<std::string> sentence_;
 };
 
 int main(int argc, const char *argv[]) {
