@@ -1,61 +1,107 @@
 #include <stdlib.h>
 
+#include <iterator>
+#include <memory>
+#include <optional>
+#include <ostream>
+
 #ifndef CS2420_CUSTOMLIBRARIES_SLINKEDLIST_H_
 #define CS2420_CUSTOMLIBRARIES_SLINKEDLIST_H_
 
 namespace rose {
 
-// Represents a node in a linked list containing data of type `T`.
+// Represents a node in a singly-linked list.
 template <typename T>
-struct Node {
+struct SNode {
   T data;
-  Node *next;
+  std::shared_ptr<SNode<T>> next;
 };
 
-// Represents a singly linked list containing data of type `T`.
+template <typename T>
+class SLinkedListIterator;
+
+// Represents a singly-linked list of nodes.
 template <typename T>
 class SLinkedList {
  public:
-  SLinkedList();
-  ~SLinkedList();
+  SLinkedList() : front_(nullptr), size_(0) {}
 
-  // Returns a pointer to the first element in the list.
-  Node<T> *head() const;
-  // Returns a pointer to the last element in the list.
-  Node<T> *tail() const;
-  // Returns how many elements are in the list.
-  size_t length() const;
+  bool empty() const;
+  size_t size() const;
+  SLinkedListIterator<T> begin() const;
+  SLinkedListIterator<T> end() const;
 
-  // Returns true if there are no elements in the list.
-  bool IsEmpty() const;
-  // Returns true if the list contains an element with the given value.
-  bool Contains(T element) const;
-  // Adds an element with the given value to the front (index 0) of the list.
-  void Push(T element);
-  // Inserts an element with the given value at the specified index `i`.
-  void Insert(T element, size_t i);
-  // Adds an element with the given value to the end of the list.
-  void Append(T element);
-  // Removes the first element in the list.
-  void Pop();
-  // Removes the first element with the given value.
-  void Remove(T element);
-  // Removes the element at the specified index `i`.
-  void Remove(size_t i);
-  // Returns the value of the first element in the list.
-  T PeekHead() const;
-  // Returns the value of the last element in the list.
-  T PeekTail() const;
-  // Reverses the order of elements in the list.
-  void Reverse();
+  // Returns the value stored at the front of the list.
+  // If the list is empty, returns std::nullopt.
+  std::optional<T> PeekFront() const;
+  // Returns the value stored at the back of the list.
+  // If the list is empty, returns std::nullopt.
+  std::optional<T> PeekBack() const;
+  // Returns the value stored at index `i`.
+  // If `i` is not on the interval `[0, size_)`, returns std::nullopt.
+  std::optional<T> Peek(int i) const;
+
+  // Pushes `data` to the front of the list.
+  void PushFront(T data);
+  // Pushes `data` to the back of the list.
+  void PushBack(T data);
+  // Inserts `data` at index `i`.
+  // If `i` is not on the interval `[0, size_]`, does nothing.
+  void Insert(int i, T data);
+  // Pops the front off the list.
+  // If the list is empty, does nothing.
+  void PopFront();
+  // Pops the back off the list.
+  // If the list is empty, does nothing.
+  void PopBack();
+  // Erases the node at index `i`.
+  // If `i` is not on the interval `[0, size_)`, does nothing.
+  void Erase(int i);
+  // Removes all nodes containing `data`.
+  void Remove(T data);
+
+  template <typename _T>
+  friend std::ostream &operator<<(std::ostream &out,
+                                  const SLinkedList<_T> &list);
+
+ protected:
+  // Returns a pointer to the node at index `i`.
+  // If `i` is not on the interval `[0, size_)`, returns nullptr.
+  std::shared_ptr<SNode<T>> GetNodePointer(int i) const;
+
+  std::shared_ptr<SNode<T>> front_;
+  size_t size_;
+};
+
+// Iterates over a singly-linked list.
+template <typename T>
+class SLinkedListIterator {
+ public:
+  using iterator_category = std::forward_iterator_tag;
+  using element_type = T;
+  using reference = T &;
+  using pointer = T *;
+  using difference_type = std::ptrdiff_t;
+
+  SLinkedListIterator() = default;
+  SLinkedListIterator(const SLinkedList<T> *list, std::shared_ptr<SNode<T>> ptr)
+      : list_(list), ptr_(ptr) {}
+
+  std::shared_ptr<SNode<T>> ptr() const;
+
+  reference operator*() const;
+  pointer operator->() const;
+  SLinkedListIterator &operator++();
+  SLinkedListIterator operator++(int);
+  bool operator==(const SLinkedListIterator &other) const;
 
  private:
-  Node<T> *head_;
-  size_t length_;
+  const SLinkedList<T> *list_;
+  std::shared_ptr<SNode<T>> ptr_;
 };
 
 }  // namespace rose
 
 #include "custom_libraries/s_linked_list.cc"
 
-#endif  // CS2420_CUSTOMLIBRARIES_LINKEDLIST_H_
+#endif  // CS2420_CUSTOMLIBRARIES_SLINKEDLIST_H_
