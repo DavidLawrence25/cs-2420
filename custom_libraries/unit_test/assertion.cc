@@ -2,6 +2,7 @@
 
 #include <stdlib.h>
 
+#include <optional>
 #include <ostream>
 #include <sstream>
 #include <string>
@@ -11,25 +12,33 @@
 
 namespace rose {
 
-Assertion::Assertion(AssertionType type, bool expression, bool passed,
+Assertion::Assertion(AssertionType type, bool expression,
                      const std::string &repr, const std::string &case_name,
                      const std::string &func_name, size_t line) {
   type_ = type;
-  passed_ = passed;
   arg0_ = expression ? "true" : "false";
   repr0_ = repr;
-  // If another unary AssertionType were to be made, the following switch block
-  // should be updated to include it.
-  switch (type) {
-    case kTrue:
-      arg1_ = repr1_ = "true";
-      break;
-    case kFalse:
-      arg1_ = repr1_ = "false";
-      break;
-    default:
-      break;
+  if (type == kTrue) {
+    passed_ = expression;
+    arg1_ = repr1_ = "true";
+  } else if (type == kFalse) {
+    passed_ = !expression;
+    arg1_ = repr1_ = "false";
   }
+  case_name_ = case_name;
+  func_name_ = func_name;
+  line_ = line;
+}
+
+Assertion::Assertion(const std::string &expression_repr,
+                     std::optional<std::string> exception_repr,
+                     const std::string &case_name, const std::string &func_name,
+                     size_t line) {
+  type_ = kThrows;
+  passed_ = exception_repr.has_value();
+  arg0_ = exception_repr.value_or("null");
+  repr0_ = expression_repr;
+  arg1_ = repr1_ = "std::exception";
   case_name_ = case_name;
   func_name_ = func_name;
   line_ = line;
@@ -74,7 +83,8 @@ void Assertion::WriteTo(JsonWriter &writer) const {
        {kNotEqual, "not_equal"}, {kNotAlmostEqual, "not_almost_equal"},
        {kGreater, "greater"},    {kGreaterEqual, "greater_equal"},
        {kLess, "less"},          {kLessEqual, "less_equal"},
-       {kTrue, "true"},          {kFalse, "false"}};
+       {kTrue, "true"},          {kFalse, "false"},
+       {kThrows, "throws"},      {kThrowsAs, "throws_as"}};
 
   writer.BeginObject();
 
@@ -116,12 +126,13 @@ std::ostream &operator<<(std::ostream &out, const Assertion &assertion) {
       {kNotEqual, " != "}, {kNotAlmostEqual, " !≈ "},
       {kGreater, " > "},   {kGreaterEqual, " >= "},
       {kLess, " < "},      {kLessEqual, " <= "},
-      {kTrue, " == "},     {kFalse, " == "}};
+      {kTrue, " == "},     {kFalse, " == "},
+      {kThrows, " → "},    {kThrowsAs, " → "}};
   static const std::unordered_map<AssertionType, std::string> kOppositeOps = {
       {kEqual, " != "},          {kAlmostEqual, " !≈ "}, {kNotEqual, " == "},
       {kNotAlmostEqual, " ≈≈ "}, {kGreater, " <= "},     {kGreaterEqual, " < "},
       {kLess, " >= "},           {kLessEqual, " > "},    {kTrue, " != "},
-      {kFalse, " != "}};
+      {kFalse, " != "},          {kThrows, " ↛ "},       {kThrowsAs, " ↛ "}};
 
   out << kDoubleLine;
   out << (assertion.passed() ? "PASS: " : "FAIL: ") << assertion.case_name()

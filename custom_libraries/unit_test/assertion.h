@@ -1,5 +1,6 @@
 #include <stdlib.h>
 
+#include <optional>
 #include <ostream>
 #include <string>
 
@@ -20,16 +21,23 @@ enum AssertionType {
   kLess,
   kLessEqual,
   kTrue,
-  kFalse
+  kFalse,
+  kThrows,
+  kThrowsAs
 };
 
 // Contains metadata about an assertion.
 class Assertion {
  public:
-  // Constructs a unary assertion (e.g., truthiness).
-  Assertion(AssertionType type, bool expression, bool passed,
-            const std::string &repr, const std::string &case_name,
-            const std::string &func_name, size_t line);
+  // Constructs a truthiness assertion.
+  Assertion(AssertionType type, bool expression, const std::string &repr,
+            const std::string &case_name, const std::string &func_name,
+            size_t line);
+  // Constructs an exception assertion of type kThrows.
+  Assertion(const std::string &expression_repr,
+            std::optional<std::string> exception_repr,
+            const std::string &case_name, const std::string &func_name,
+            size_t line);
   // Constructs a binary assertion (e.g., equality).
   template <typename T>
   Assertion(AssertionType type, T arg0, T arg1, bool passed,

@@ -13,6 +13,7 @@ class TestResult;  // Defined in "custom_libraries/unit_test/result.h"
 // Runs a series of related test functions defined by the user.
 class TestCase {
  public:
+  std::shared_ptr<TestResult> result() /*const*/;
   void set_result(std::shared_ptr<TestResult> result);
 
   // Resets any member variables to their default values.

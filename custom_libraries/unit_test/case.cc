@@ -2,12 +2,17 @@
 
 #include <math.h>
 
+#include <any>
 #include <memory>
+#include <optional>
 
+#include "case.h"
 #include "custom_libraries/unit_test/assertion.h"
 #include "custom_libraries/unit_test/result.h"
 
 namespace rose {
+
+std::shared_ptr<TestResult> TestCase::result() /*const*/ { return result_; }
 
 void TestCase::set_result(std::shared_ptr<TestResult> result) {
   result_ = result;
@@ -139,15 +144,15 @@ void TestCase::AssertLessEqual(T arg0, T arg1, const std::string &repr0,
 void TestCase::AssertTrue(bool expression, const std::string &repr,
                           const std::string &case_name,
                           const std::string &func_name, size_t line) {
-  result_->Add(Assertion(/*type=*/kTrue, expression, /*passed=*/expression,
-                         repr, case_name, func_name, line));
+  result_->Add(
+      Assertion(/*type=*/kTrue, expression, repr, case_name, func_name, line));
 }
 
 void TestCase::AssertFalse(bool expression, const std::string &repr,
                            const std::string &case_name,
                            const std::string &func_name, size_t line) {
-  result_->Add(Assertion(/*type=*/kFalse, expression, /*passed=*/!expression,
-                         repr, case_name, func_name, line));
+  result_->Add(
+      Assertion(/*type=*/kFalse, expression, repr, case_name, func_name, line));
 }
 
 }  // namespace rose
