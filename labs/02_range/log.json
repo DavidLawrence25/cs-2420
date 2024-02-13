@@ -8,7 +8,7 @@
     "BackwardsDoubleRangeTest": [
       {
         "name": "TestLength",
-        "line": 138,
+        "line": 135,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -22,7 +22,7 @@
       },
       {
         "name": "TestSum",
-        "line": 139,
+        "line": 136,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -36,7 +36,7 @@
       },
       {
         "name": "TestAverage",
-        "line": 140,
+        "line": 137,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -50,7 +50,7 @@
       },
       {
         "name": "TestMin",
-        "line": 141,
+        "line": 138,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -64,7 +64,7 @@
       },
       {
         "name": "TestMax",
-        "line": 142,
+        "line": 139,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -78,7 +78,7 @@
       },
       {
         "name": "TestStreamExtraction",
-        "line": 147,
+        "line": 144,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -94,7 +94,7 @@
     "BackwardsIntRangeTest": [
       {
         "name": "TestLength",
-        "line": 110,
+        "line": 107,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -108,7 +108,7 @@
       },
       {
         "name": "TestSum",
-        "line": 111,
+        "line": 108,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -122,7 +122,7 @@
       },
       {
         "name": "TestAverage",
-        "line": 112,
+        "line": 109,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -136,7 +136,7 @@
       },
       {
         "name": "TestMin",
-        "line": 113,
+        "line": 110,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -150,7 +150,7 @@
       },
       {
         "name": "TestMax",
-        "line": 114,
+        "line": 111,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -164,7 +164,7 @@
       },
       {
         "name": "TestStreamExtraction",
-        "line": 119,
+        "line": 116,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -180,7 +180,7 @@
     "DoubleRangeStepTest": [
       {
         "name": "TestLength",
-        "line": 82,
+        "line": 79,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -194,7 +194,7 @@
       },
       {
         "name": "TestSum",
-        "line": 83,
+        "line": 80,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -208,7 +208,7 @@
       },
       {
         "name": "TestAverage",
-        "line": 84,
+        "line": 81,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -222,7 +222,7 @@
       },
       {
         "name": "TestMin",
-        "line": 85,
+        "line": 82,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -236,7 +236,7 @@
       },
       {
         "name": "TestMax",
-        "line": 86,
+        "line": 83,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -250,7 +250,7 @@
       },
       {
         "name": "TestStreamExtraction",
-        "line": 91,
+        "line": 88,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -266,7 +266,7 @@
     "IntRangeStepTest": [
       {
         "name": "TestLength",
-        "line": 54,
+        "line": 51,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -280,7 +280,7 @@
       },
       {
         "name": "TestSum",
-        "line": 55,
+        "line": 52,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -294,7 +294,7 @@
       },
       {
         "name": "TestAverage",
-        "line": 56,
+        "line": 53,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -308,7 +308,7 @@
       },
       {
         "name": "TestMin",
-        "line": 57,
+        "line": 54,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -322,7 +322,7 @@
       },
       {
         "name": "TestMax",
-        "line": 58,
+        "line": 55,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -336,7 +336,7 @@
       },
       {
         "name": "TestStreamExtraction",
-        "line": 63,
+        "line": 60,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -352,7 +352,7 @@
     "PlainIntRangeTest": [
       {
         "name": "TestLength",
-        "line": 26,
+        "line": 23,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -366,7 +366,7 @@
       },
       {
         "name": "TestSum",
-        "line": 27,
+        "line": 24,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -380,7 +380,7 @@
       },
       {
         "name": "TestAverage",
-        "line": 28,
+        "line": 25,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -394,7 +394,7 @@
       },
       {
         "name": "TestMin",
-        "line": 29,
+        "line": 26,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -408,7 +408,7 @@
       },
       {
         "name": "TestMax",
-        "line": 30,
+        "line": 27,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -422,7 +422,7 @@
       },
       {
         "name": "TestStreamExtraction",
-        "line": 35,
+        "line": 32,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {

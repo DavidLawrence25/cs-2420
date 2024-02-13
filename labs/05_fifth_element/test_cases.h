@@ -1,3 +1,4 @@
+#include <sstream>
 #include <string>
 
 #include "custom_libraries/unit_test/unit_test.h"

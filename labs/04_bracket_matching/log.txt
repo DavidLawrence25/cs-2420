@@ -1,70 +1,70 @@
 ================================================================================
-PASS: BracketTest::Test1Pair (at line 34)
+PASS: BracketTest::Test1Pair (at line 31)
 --------------------------------------------------------------------------------
 	assert check.is_balanced() == true
 	==> true == true
 ================================================================================
-PASS: BracketTest::TestMismatchedPair (at line 39)
+PASS: BracketTest::TestMismatchedPair (at line 36)
 --------------------------------------------------------------------------------
 	assert check.is_balanced() == false
 	==> false == false
 ================================================================================
-PASS: BracketTest::TestBackwards (at line 44)
+PASS: BracketTest::TestBackwards (at line 41)
 --------------------------------------------------------------------------------
 	assert check.is_balanced() == false
 	==> false == false
 ================================================================================
-PASS: BracketTest::TestValidMix (at line 49)
+PASS: BracketTest::TestValidMix (at line 46)
 --------------------------------------------------------------------------------
 	assert check.is_balanced() == true
 	==> true == true
 ================================================================================
-PASS: BracketTest::TestExtraClosing (at line 54)
+PASS: BracketTest::TestExtraClosing (at line 51)
 --------------------------------------------------------------------------------
 	assert check.is_balanced() == false
 	==> false == false
 ================================================================================
-PASS: BracketTest::TestPulledApart (at line 59)
+PASS: BracketTest::TestPulledApart (at line 56)
 --------------------------------------------------------------------------------
 	assert check.is_balanced() == false
 	==> false == false
 ================================================================================
-PASS: BracketTest::TestExtraOpening (at line 64)
+PASS: BracketTest::TestExtraOpening (at line 61)
 --------------------------------------------------------------------------------
 	assert check.is_balanced() == false
 	==> false == false
 ================================================================================
-PASS: BracketTest::TestValidCode (at line 69)
+PASS: BracketTest::TestValidCode (at line 66)
 --------------------------------------------------------------------------------
 	assert check.is_balanced() == true
 	==> true == true
 ================================================================================
-PASS: BracketTest::TestInvalidCode (at line 74)
+PASS: BracketTest::TestInvalidCode (at line 71)
 --------------------------------------------------------------------------------
 	assert check.is_balanced() == false
 	==> false == false
 ================================================================================
-PASS: BracketTest::TestHugeYetValidMess (at line 79)
+PASS: BracketTest::TestHugeYetValidMess (at line 76)
 --------------------------------------------------------------------------------
 	assert check.is_balanced() == true
 	==> true == true
 ================================================================================
-PASS: BracketTest::TestCount3IndependentPairs (at line 84)
+PASS: BracketTest::TestCount3IndependentPairs (at line 81)
 --------------------------------------------------------------------------------
 	assert check.pairs().value() == 3
 	==> 3 == 3
 ================================================================================
-PASS: BracketTest::TestCount4NestedPairs (at line 89)
+PASS: BracketTest::TestCount4NestedPairs (at line 86)
 --------------------------------------------------------------------------------
 	assert check.pairs().value() == 4
 	==> 4 == 4
 ================================================================================
-PASS: BracketTest::TestValidStreamExtraction (at line 96)
+PASS: BracketTest::TestValidStreamExtraction (at line 93)
 --------------------------------------------------------------------------------
 	assert sout.str() == std::string("Balanced")
 	==> Balanced == Balanced
 ================================================================================
-PASS: BracketTest::TestInvalidStreamExtraction (at line 103)
+PASS: BracketTest::TestInvalidStreamExtraction (at line 100)
 --------------------------------------------------------------------------------
 	assert sout.str() == std::string("Not Balanced")
 	==> Not Balanced == Not Balanced

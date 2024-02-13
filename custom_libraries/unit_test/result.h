@@ -1,6 +1,6 @@
+#include <map>
 #include <ostream>
 #include <string>
-#include <unordered_map>
 #include <vector>
 
 #include "custom_libraries/json_writer.h"
@@ -22,8 +22,7 @@ class TestResult {
   void Add(Assertion assertion);
   void IncrementCaseCounter();
 
-  std::unordered_map<std::string, std::vector<Assertion>> TestCaseGroups()
-      const;
+  std::map<std::string, std::vector<Assertion>> TestCaseGroups() const;
 
   // Logs information to the stream `out`. If `verbose` is true, all assertions
   // are logged, regardless of whether or not they passed.

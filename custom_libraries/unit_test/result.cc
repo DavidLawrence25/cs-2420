@@ -1,6 +1,7 @@
 #include "custom_libraries/unit_test/result.h"
 
 #include <fstream>
+#include <map>
 #include <ostream>
 #include <string>
 
@@ -21,11 +22,11 @@ void TestResult::Add(Assertion assertion) {
 
 void TestResult::IncrementCaseCounter() { ++cases_; }
 
-std::unordered_map<std::string, std::vector<Assertion>>
-TestResult::TestCaseGroups() const {
+std::map<std::string, std::vector<Assertion>> TestResult::TestCaseGroups()
+    const {
   using TestCaseGroup = std::vector<Assertion>;
 
-  std::unordered_map<std::string, TestCaseGroup> groups;
+  std::map<std::string, TestCaseGroup> groups;
   for (Assertion assertion : assertions_) {
     groups[assertion.case_name()].push_back(assertion);
   }
@@ -64,7 +65,7 @@ void TestResult::LogJson(JsonWriter &writer) const {
 
   writer.BeginObject("test_cases");
 
-  std::unordered_map<std::string, TestCaseGroup> groups = TestCaseGroups();
+  std::map<std::string, TestCaseGroup> groups = TestCaseGroups();
   for (const auto &[case_name, group] : groups) {
     writer.BeginArray(case_name);
 
