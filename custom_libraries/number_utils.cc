@@ -59,7 +59,7 @@ bool IsPrime(const int x) noexcept {
 }
 
 // Returns true if `str` represents the number 0.
-bool IsZero(const std::string str) noexcept {
+bool IsZero(const std::string &str) noexcept {
   return kZeros.find(str) != kZeros.end();
 }
 
@@ -72,7 +72,7 @@ int DigitToInt(const char digit) noexcept { return digit - '0'; }
 
 // Returns the value of a string `str`, interpreted as an integer in base 10.
 // If no suitable conversion can be made, returns 0.
-int StringToInt(const std::string str) noexcept {
+int StringToInt(const std::string &str) noexcept {
   bool seen_sign = false;
   bool seen_digit = false;
   bool is_negative = false;
@@ -98,7 +98,7 @@ int StringToInt(const std::string str) noexcept {
 
 // Returns the value of a string `str`, interpreted as a float in base 10.
 // If no suitable conversion can be made, returns 0.0f.
-float StringToFloat(const std::string str) noexcept {
+float StringToFloat(const std::string &str) noexcept {
   bool seen_digit = false;
   bool seen_radix_point = false;
   bool seen_sign = false;
@@ -134,7 +134,7 @@ float StringToFloat(const std::string str) noexcept {
 
 // Returns the value of a string `str`, interpreted as a double in base 10.
 // If no suitable conversion can be made, returns 0.0.
-double StringToDouble(const std::string str) noexcept {
+double StringToDouble(const std::string &str) noexcept {
   bool seen_digit = false;
   bool seen_radix_point = false;
   bool seen_sign = false;

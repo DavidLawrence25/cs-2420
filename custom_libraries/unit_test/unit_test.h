@@ -94,17 +94,28 @@ inline std::string _Demangle(const std::string &mangled) {
   this->AssertTrue(expression, #expression, __CLASS__, __func__, __LINE__)
 #define ASSERT_FALSE(expression) \
   this->AssertFalse(expression, #expression, __CLASS__, __func__, __LINE__)
-#define ASSERT_THROWS(expression)                            \
-  std::optional<std::string> _exception_repr = std::nullopt; \
-  try {                                                      \
-    static_cast<void>(expression);                           \
-  } catch (const std::exception &e) {                        \
-    _exception_repr = __TYPE_NAME__(e);                      \
-  } catch (...) {                                            \
-    _exception_repr = "non-standard exception";              \
-  }                                                          \
-  result()->Add(                                             \
-      Assertion(#expression, _exception_repr, __CLASS__, __func__, __LINE__))
+#define ASSERT_THROWS(expression)                                    \
+  std::optional<std::string> _exception_repr = std::nullopt;         \
+  try {                                                              \
+    static_cast<void>(expression);                                   \
+  } catch (const std::exception &e) {                                \
+    _exception_repr = __TYPE_NAME__(e);                              \
+  } catch (...) {                                                    \
+    _exception_repr = "non-standard exception";                      \
+  }                                                                  \
+  result()->Add(Assertion(rose::AssertionType::kThrows, #expression, \
+                          _exception_repr, __CLASS__, __func__, __LINE__))
+#define ASSERT_DOESNT_THROW(expression)                                   \
+  std::optional<std::string> _exception_repr = std::nullopt;              \
+  try {                                                                   \
+    static_cast<void>(expression);                                        \
+  } catch (const std::exception &e) {                                     \
+    _exception_repr = __TYPE_NAME__(e);                                   \
+  } catch (...) {                                                         \
+    _exception_repr = "non-standard exception";                           \
+  }                                                                       \
+  result()->Add(Assertion(rose::AssertionType::kDoesntThrow, #expression, \
+                          _exception_repr, __CLASS__, __func__, __LINE__))
 #define ASSERT_THROWS_AS(exception_type, expression)                          \
   bool _passed = false;                                                       \
   std::optional<std::string> _exception_repr = std::nullopt;                  \
@@ -119,6 +130,23 @@ inline std::string _Demangle(const std::string &mangled) {
     _exception_repr = "non-standard exception";                               \
   }                                                                           \
   result()->Add(Assertion(rose::AssertionType::kThrowsAs,                     \
+                          _exception_repr.value_or("null"),                   \
+                          std::string(#exception_type), _passed, #expression, \
+                          #exception_type, __CLASS__, __func__, __LINE__))
+#define ASSERT_DOESNT_THROW_AS(exception_type, expression)                    \
+  bool _passed = true;                                                        \
+  std::optional<std::string> _exception_repr = std::nullopt;                  \
+  try {                                                                       \
+    static_cast<void>(expression);                                            \
+  } catch (const exception_type &e) {                                         \
+    _exception_repr = __TYPE_NAME__(e);                                       \
+    _passed = false;                                                          \
+  } catch (const std::exception &e) {                                         \
+    _exception_repr = __TYPE_NAME__(e);                                       \
+  } catch (...) {                                                             \
+    _exception_repr = "non-standard exception";                               \
+  }                                                                           \
+  result()->Add(Assertion(rose::AssertionType::kDoesntThrowAs,                \
                           _exception_repr.value_or("null"),                   \
                           std::string(#exception_type), _passed, #expression, \
                           #exception_type, __CLASS__, __func__, __LINE__))

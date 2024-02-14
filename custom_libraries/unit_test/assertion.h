@@ -11,7 +11,8 @@
 
 namespace rose {
 
-enum AssertionType {
+enum class AssertionType {
+  kNull,  // Used to keep the compiler from complaining in switch statements.
   kEqual,
   kAlmostEqual,
   kNotEqual,
@@ -23,7 +24,9 @@ enum AssertionType {
   kTrue,
   kFalse,
   kThrows,
-  kThrowsAs
+  kDoesntThrow,
+  kThrowsAs,
+  kDoesntThrowAs
 };
 
 // Contains metadata about an assertion.
@@ -33,8 +36,8 @@ class Assertion {
   Assertion(AssertionType type, bool expression, const std::string &repr,
             const std::string &case_name, const std::string &func_name,
             size_t line);
-  // Constructs an exception assertion of type kThrows.
-  Assertion(const std::string &expression_repr,
+  // Constructs a non-specific exception assertion.
+  Assertion(AssertionType type, const std::string &expression_repr,
             std::optional<std::string> exception_repr,
             const std::string &case_name, const std::string &func_name,
             size_t line);
@@ -58,6 +61,10 @@ class Assertion {
   std::string case_name() const;
   std::string func_name() const;
   size_t line() const;
+
+  static AssertionType GetOpposite(AssertionType type);
+  static std::string GetWordRepr(AssertionType type);
+  static std::string GetOperationRepr(AssertionType type);
 
   void WriteTo(JsonWriter &writer) const;
 
