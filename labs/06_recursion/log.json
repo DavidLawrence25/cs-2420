@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "cases": 3,
+    "tests": 10,
+    "fails": 0
+  },
+  "test_cases": {
+    "AbcdeSubsequenceTest": [
+      {
+        "name": "TestAce",
+        "line": 50,
+        "assertion_type": "true",
+        "passed": true,
+        "expression": "subsequence_.IsSubsequence(\"ace\")",
+        "value": "true"
+      },
+      {
+        "name": "TestBad",
+        "line": 51,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "subsequence_.IsSubsequence(\"bad\")",
+        "value": "false"
+      },
+      {
+        "name": "TestAxe",
+        "line": 52,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "subsequence_.IsSubsequence(\"axe\")",
+        "value": "false"
+      },
+      {
+        "name": "TestTooLong",
+        "line": 53,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "subsequence_.IsSubsequence(\"abcdef\")",
+        "value": "false"
+      }
+    ],
+    "EmptySubsequenceTest": [
+      {
+        "name": "TestEmpty",
+        "line": 16,
+        "assertion_type": "true",
+        "passed": true,
+        "expression": "subsequence_.IsSubsequence(\"\")",
+        "value": "true"
+      },
+      {
+        "name": "TestChar",
+        "line": 17,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "subsequence_.IsSubsequence(\"a\")",
+        "value": "false"
+      },
+      {
+        "name": "TestWord",
+        "line": 18,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "subsequence_.IsSubsequence(\"pineapple\")",
+        "value": "false"
+      },
+      {
+        "name": "TestSentence",
+        "line": 19,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "subsequence_.IsSubsequence(\"She died.\")",
+        "value": "false"
+      }
+    ],
+    "ProgrammingSubsequenceTest": [
+      {
+        "name": "TestUppercasePin",
+        "line": 33,
+        "assertion_type": "true",
+        "passed": true,
+        "expression": "subsequence_.IsSubsequence(\"Pin\")",
+        "value": "true"
+      },
+      {
+        "name": "TestLowercasePin",
+        "line": 34,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "subsequence_.IsSubsequence(\"pin\")",
+        "value": "false"
+      }
+    ]
+  }
+}
