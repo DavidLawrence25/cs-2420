@@ -1,0 +1,295 @@
+{
+  "meta": {
+    "cases": 5,
+    "tests": 27,
+    "fails": 0
+  },
+  "test_cases": {
+    "DonutMazeTest": [
+      {
+        "name": "TestStreamExtraction",
+        "line": 288,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "###\n# #\n###"
+        },
+        "arg1": {
+          "repr": "kMazeInitializer_",
+          "value": "###\n# #\n###"
+        }
+      },
+      {
+        "name": "TestSolve",
+        "line": 292,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "maze_.Solve()",
+        "value": "false"
+      },
+      {
+        "name": "TestPrintSuccess",
+        "line": 299,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "Could not be solved"
+        },
+        "arg1": {
+          "repr": "std::string(\"Could not be solved\")",
+          "value": "Could not be solved"
+        }
+      }
+    ],
+    "EasyMazeTest": [
+      {
+        "name": "TestShouldExploreOutOfBounds",
+        "line": 65,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "maze_.ShouldExplore(-1, 12)",
+        "value": "false"
+      },
+      {
+        "name": "TestShouldExploreEmpty",
+        "line": 68,
+        "assertion_type": "true",
+        "passed": true,
+        "expression": "maze_.ShouldExplore(3, 5)",
+        "value": "true"
+      },
+      {
+        "name": "TestShouldExplorePath",
+        "line": 72,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "maze_.ShouldExplore(1, 3)",
+        "value": "false"
+      },
+      {
+        "name": "TestShouldExploreWall",
+        "line": 76,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "maze_.ShouldExplore(0, 0)",
+        "value": "false"
+      },
+      {
+        "name": "TestStreamExtraction",
+        "line": 81,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "##### #####\n#     #   #\n# ### # # #\n# #     # #\n### ### # #\n#     # # #\n# ##### # #\n#   #   # #\n### # ### #\n#   # #   #\n##### #####"
+        },
+        "arg1": {
+          "repr": "kMazeInitializer_",
+          "value": "##### #####\n#     #   #\n# ### # # #\n# #     # #\n### ### # #\n#     # # #\n# ##### # #\n#   #   # #\n### # ### #\n#   # #   #\n##### #####"
+        }
+      },
+      {
+        "name": "TestSolve",
+        "line": 85,
+        "assertion_type": "true",
+        "passed": true,
+        "expression": "maze_.Solve()",
+        "value": "true"
+      },
+      {
+        "name": "TestPrintSuccess",
+        "line": 92,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "Success"
+        },
+        "arg1": {
+          "repr": "std::string(\"Success\")",
+          "value": "Success"
+        }
+      }
+    ],
+    "GivenMazeTest": [
+      {
+        "name": "TestShouldExploreOutOfBounds",
+        "line": 133,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "maze_.ShouldExplore(3, 12)",
+        "value": "false"
+      },
+      {
+        "name": "TestShouldExploreEmpty",
+        "line": 136,
+        "assertion_type": "true",
+        "passed": true,
+        "expression": "maze_.ShouldExplore(2, 1)",
+        "value": "true"
+      },
+      {
+        "name": "TestShouldExplorePath",
+        "line": 140,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "maze_.ShouldExplore(1, 10)",
+        "value": "false"
+      },
+      {
+        "name": "TestShouldExploreWall",
+        "line": 144,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "maze_.ShouldExplore(0, 0)",
+        "value": "false"
+      },
+      {
+        "name": "TestStreamExtraction",
+        "line": 149,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "############\n#   #      #\n  # # #### #\n### #    # #\n#    ### #  \n#### # # # #\n#  # # # # #\n## # # # # #\n#        # #\n###### ### #\n#      #   #\n############"
+        },
+        "arg1": {
+          "repr": "kMazeInitializer_",
+          "value": "############\n#   #      #\n  # # #### #\n### #    # #\n#    ### #  \n#### # # # #\n#  # # # # #\n## # # # # #\n#        # #\n###### ### #\n#      #   #\n############"
+        }
+      },
+      {
+        "name": "TestSolve",
+        "line": 153,
+        "assertion_type": "true",
+        "passed": true,
+        "expression": "maze_.Solve()",
+        "value": "true"
+      },
+      {
+        "name": "TestPrintSuccess",
+        "line": 160,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "Success"
+        },
+        "arg1": {
+          "repr": "std::string(\"Success\")",
+          "value": "Success"
+        }
+      }
+    ],
+    "HardMazeTest": [
+      {
+        "name": "TestShouldExploreOutOfBounds",
+        "line": 202,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "maze_.ShouldExplore(31, 0)",
+        "value": "false"
+      },
+      {
+        "name": "TestShouldExploreEmpty",
+        "line": 205,
+        "assertion_type": "true",
+        "passed": true,
+        "expression": "maze_.ShouldExplore(0, 1)",
+        "value": "true"
+      },
+      {
+        "name": "TestShouldExplorePath",
+        "line": 209,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "maze_.ShouldExplore(1, 29)",
+        "value": "false"
+      },
+      {
+        "name": "TestShouldExploreWall",
+        "line": 213,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "maze_.ShouldExplore(30, 30)",
+        "value": "false"
+      },
+      {
+        "name": "TestStreamExtraction",
+        "line": 218,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "###############################\n    #         #       #       #\n### # ####### # ####### ### ###\n#   # #     # #     #   #   # #\n# ######### # # # # ##### ### #\n#     #   #   # # #     # # # #\n### # # ##### # # ####### # # #\n#   #   #     # # #       # # #\n# # ### # # ### # # # ##### # #\n# # # # # #   # #   #     # # #\n# ### ####### # ### ####### # #\n#   #         # # #       #   #\n# ####### ##### # ### ####### #\n#   #     #         #   #   # #\n# # # ##### ### ########### # #\n# # # #       #     #     # # #\n# # # ####### ####### ##### # #\n# # #   # # # #       #   # # #\n# # # ### # # # ### ##### # # #\n# # #       #   # #           #\n### ##### ### # # # # ##### # #\n# #   # # #   # # # # #     # #\n# # ### # # ### # ##### ### # #\n#   # #   # # #   #     #   # #\n### # ### # # # ##### ##### # #\n#         #   #   # # #   # # #\n# # # ##### # ##### # ### # # #\n# # # # #   #     # #   #   # #\n### # # ### # ### # # ####### #\n#   #       #   # #         #  \n###############################"
+        },
+        "arg1": {
+          "repr": "kMazeInitializer_",
+          "value": "###############################\n    #         #       #       #\n### # ####### # ####### ### ###\n#   # #     # #     #   #   # #\n# ######### # # # # ##### ### #\n#     #   #   # # #     # # # #\n### # # ##### # # ####### # # #\n#   #   #     # # #       # # #\n# # ### # # ### # # # ##### # #\n# # # # # #   # #   #     # # #\n# ### ####### # ### ####### # #\n#   #         # # #       #   #\n# ####### ##### # ### ####### #\n#   #     #         #   #   # #\n# # # ##### ### ########### # #\n# # # #       #     #     # # #\n# # # ####### ####### ##### # #\n# # #   # # # #       #   # # #\n# # # ### # # # ### ##### # # #\n# # #       #   # #           #\n### ##### ### # # # # ##### # #\n# #   # # #   # # # # #     # #\n# # ### # # ### # ##### ### # #\n#   # #   # # #   #     #   # #\n### # ### # # # ##### ##### # #\n#         #   #   # # #   # # #\n# # # ##### # ##### # ### # # #\n# # # # #   #     # #   #   # #\n### # # ### # ### # # ####### #\n#   #       #   # #         #  \n###############################"
+        }
+      },
+      {
+        "name": "TestSolve",
+        "line": 222,
+        "assertion_type": "true",
+        "passed": true,
+        "expression": "maze_.Solve()",
+        "value": "true"
+      },
+      {
+        "name": "TestPrintSuccess",
+        "line": 229,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "Success"
+        },
+        "arg1": {
+          "repr": "std::string(\"Success\")",
+          "value": "Success"
+        }
+      }
+    ],
+    "TrivialMazeTest": [
+      {
+        "name": "TestStreamExtraction",
+        "line": 24,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": " "
+        },
+        "arg1": {
+          "repr": "kMazeInitializer_",
+          "value": " "
+        }
+      },
+      {
+        "name": "TestSolve",
+        "line": 28,
+        "assertion_type": "true",
+        "passed": true,
+        "expression": "maze_.Solve()",
+        "value": "true"
+      },
+      {
+        "name": "TestPrintSuccess",
+        "line": 35,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "Success"
+        },
+        "arg1": {
+          "repr": "std::string(\"Success\")",
+          "value": "Success"
+        }
+      }
+    ]
+  }
+}
