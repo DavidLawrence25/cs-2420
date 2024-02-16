@@ -54,6 +54,8 @@ void JsonWriter::CreateString(const std::string &value) {
     if (c == '\0') break;
     if (c == '"') {
       sout << "\\\"";
+    } else if (c == '\n') {
+      sout << "\\n";
     } else {
       sout << c;
     }
@@ -70,6 +72,8 @@ void JsonWriter::CreateString(const std::string &name,
     if (c == '\0') break;
     if (c == '"') {
       sout << "\\\"";
+    } else if (c == '\n') {
+      sout << "\\n";
     } else {
       sout << c;
     }
