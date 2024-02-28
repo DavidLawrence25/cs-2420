@@ -1,0 +1,197 @@
+{
+  "meta": {
+    "cases": 4,
+    "tests": 15,
+    "fails": 0
+  },
+  "test_cases": {
+    "BadStackUseTest": [
+      {
+        "name": "TestReadEmpty",
+        "line": 159,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "stack_.top().has_value()",
+        "value": "false"
+      }
+    ],
+    "BasicStackTest": [
+      {
+        "name": "TestPush1",
+        "line": 75,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "stack_.top().value_or(-1)",
+          "value": "1"
+        },
+        "arg1": {
+          "repr": "1",
+          "value": "1"
+        }
+      },
+      {
+        "name": "TestPush5",
+        "line": 81,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "stack_.top().value_or(-1)",
+          "value": "5"
+        },
+        "arg1": {
+          "repr": "5",
+          "value": "5"
+        }
+      },
+      {
+        "name": "TestPush16AndPop12",
+        "line": 88,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "stack_.top().value_or(-1)",
+          "value": "4"
+        },
+        "arg1": {
+          "repr": "4",
+          "value": "4"
+        }
+      },
+      {
+        "name": "TestStreamExtraction",
+        "line": 96,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1"
+        },
+        "arg1": {
+          "repr": "std::string(\"16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1\")",
+          "value": "16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1"
+        }
+      }
+    ],
+    "StackSizeTest": [
+      {
+        "name": "TestEmpty",
+        "line": 25,
+        "assertion_type": "true",
+        "passed": true,
+        "expression": "stack_.empty()",
+        "value": "true"
+      },
+      {
+        "name": "TestNotEmpty",
+        "line": 29,
+        "assertion_type": "false",
+        "passed": true,
+        "expression": "stack_.empty()",
+        "value": "false"
+      },
+      {
+        "name": "TestWasntEmptyBefore",
+        "line": 36,
+        "assertion_type": "true",
+        "passed": true,
+        "expression": "stack_.empty()",
+        "value": "true"
+      },
+      {
+        "name": "TestSizeOf0",
+        "line": 40,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "stack_.size()",
+          "value": "0"
+        },
+        "arg1": {
+          "repr": "size_t{0}",
+          "value": "0"
+        }
+      },
+      {
+        "name": "TestSizeOf2",
+        "line": 45,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "stack_.size()",
+          "value": "2"
+        },
+        "arg1": {
+          "repr": "size_t{2}",
+          "value": "2"
+        }
+      },
+      {
+        "name": "TestSizeOf5",
+        "line": 55,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "stack_.size()",
+          "value": "5"
+        },
+        "arg1": {
+          "repr": "size_t{5}",
+          "value": "5"
+        }
+      }
+    ],
+    "StringStackTest": [
+      {
+        "name": "TestSizeOf3",
+        "line": 123,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "stack_.size()",
+          "value": "3"
+        },
+        "arg1": {
+          "repr": "size_t{3}",
+          "value": "3"
+        }
+      },
+      {
+        "name": "TestPopPopReplace",
+        "line": 130,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "stack_.top().value_or(\"you messed up\")",
+          "value": "marker"
+        },
+        "arg1": {
+          "repr": "marker",
+          "value": "marker"
+        }
+      },
+      {
+        "name": "TestPopPopReplacePop",
+        "line": 140,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "stack_.top().value_or(\"you messed up\")",
+          "value": "pencil"
+        },
+        "arg1": {
+          "repr": "std::string(\"pencil\")",
+          "value": "pencil"
+        }
+      },
+      {
+        "name": "TestClear",
+        "line": 146,
+        "assertion_type": "true",
+        "passed": true,
+        "expression": "stack_.empty()",
+        "value": "true"
+      }
+    ]
+  }
+}
