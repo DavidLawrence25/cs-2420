@@ -11,6 +11,14 @@
 namespace rose {
 
 template <typename T>
+DLinkedList<T>::DLinkedList(const DLinkedList<T> &other) {
+  front_ = nullptr;
+  back_ = nullptr;
+  size_ = 0;
+  for (T data : other) PushBack(data);
+}
+
+template <typename T>
 bool DLinkedList<T>::empty() const {
   return size_ == 0;
 }
@@ -105,14 +113,13 @@ void DLinkedList<T>::PopBack() {
 
 template <typename T>
 void DLinkedList<T>::Erase(int i) {
-  std::shared_ptr<DNode<T>> to_erase = GetNodePointer(i);
-  if (to_erase == nullptr) return;
-
   if (i == 0) {
     PopFront();
   } else if (i == size_ - 1) {
     PopBack();
   } else {
+    std::shared_ptr<DNode<T>> to_erase = GetNodePointer(i);
+    if (to_erase == nullptr) return;
     to_erase->previous->next = to_erase->next;
     to_erase->next->previous = to_erase->previous;
     --size_;
@@ -122,7 +129,7 @@ void DLinkedList<T>::Erase(int i) {
 template <typename T>
 void DLinkedList<T>::Remove(T data) {
   std::vector<int> indices_to_delete;
-  for (auto const [i, x] : std::views::enumerate(*this)) {
+  for (const auto [i, x] : std::views::enumerate(*this)) {
     if (x == data) indices_to_delete.push_back(i);
   }
   for (int i : indices_to_delete) Erase(i);

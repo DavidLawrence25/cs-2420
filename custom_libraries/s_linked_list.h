@@ -25,6 +25,7 @@ template <typename T>
 class SLinkedList {
  public:
   SLinkedList() : front_(nullptr), size_(0) {}
+  SLinkedList(const SLinkedList &other);
 
   bool empty() const;
   size_t size() const;

@@ -26,6 +26,7 @@ template <typename T>
 class DLinkedList {
  public:
   DLinkedList() : front_(nullptr), back_(nullptr), size_(0) {}
+  DLinkedList(const DLinkedList &other);
 
   bool empty() const;
   size_t size() const;

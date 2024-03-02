@@ -11,6 +11,21 @@
 namespace rose {
 
 template <typename T>
+SLinkedList<T>::SLinkedList(const SLinkedList<T> &other) {
+  front_ = nullptr;
+  size_ = other.size();
+  if (other.empty()) return;
+
+  front_ = std::make_shared<SNode<T>>(other.PeekFront(), /*next=*/nullptr);
+  std::shared_ptr<SNode<T>> back = front_;
+  for (T data : other) {
+    auto new_back = std::make_shared<SNode<T>>(data, /*next=*/nullptr);
+    back->next = new_back;
+    back = new_back;
+  }
+}
+
+template <typename T>
 bool SLinkedList<T>::empty() const {
   return size_ == 0;
 }
@@ -122,7 +137,7 @@ void SLinkedList<T>::Erase(int i) {
 template <typename T>
 void SLinkedList<T>::Remove(T data) {
   std::vector<int> indices_to_delete;
-  for (auto const [i, x] : std::views::enumerate(*this)) {
+  for (const auto [i, x] : std::views::enumerate(*this)) {
     if (x == data) indices_to_delete.push_back(i);
   }
   for (int i : indices_to_delete) Erase(i);
