@@ -35,7 +35,7 @@ Assertion::Assertion(AssertionType type, const std::string &expression_repr,
                      const std::string &case_name, const std::string &func_name,
                      size_t line) {
   type_ = type;
-  passed_ = exception_repr.has_value() && type == AssertionType::kThrows;
+  passed_ = !(exception_repr.has_value() ^ (type == AssertionType::kThrows));
   arg0_ = exception_repr.value_or("null");
   repr0_ = expression_repr;
   arg1_ = repr1_ = "std::exception";
