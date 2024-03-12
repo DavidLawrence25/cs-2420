@@ -6,11 +6,6 @@
 
 namespace rose {
 
-JsonWriter::JsonWriter(std::ostream &out) : out_(out) {
-  level_ = 0;
-  level_empty_ = true;
-}
-
 void JsonWriter::BeginObject() { BeginLevel("{"); }
 
 void JsonWriter::BeginObject(const std::string &name) {
@@ -53,7 +48,7 @@ void JsonWriter::CreateString(const std::string &value) {
   for (char c : value) {
     if (c == '\0') break;
     if (c == '"') {
-      sout << "\\\"";
+      sout << R"(\")";
     } else if (c == '\n') {
       sout << "\\n";
     } else {
@@ -71,7 +66,7 @@ void JsonWriter::CreateString(const std::string &name,
   for (char c : value) {
     if (c == '\0') break;
     if (c == '"') {
-      sout << "\\\"";
+      sout << R"(\")";
     } else if (c == '\n') {
       sout << "\\n";
     } else {

@@ -21,13 +21,9 @@ class CyclicInt {
     value_ = min_;
   }
 
-  CyclicInt(CyclicInt &other) {
-    min_ = other.min_;
-    max_ = other.max_;
-    value_ = other.value_;
-  }
+  CyclicInt(const CyclicInt &other) = default;
 
-  int get_value() { return value_; }
+  int value() const { return value_; }
 
   // Increments `value_` by one, overflowing to the minimum value if necessary.
   CyclicInt &operator++() {

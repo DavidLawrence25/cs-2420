@@ -5,6 +5,7 @@
 #include <string>
 
 #include "custom_libraries/json_writer.h"
+#include "custom_libraries/unit_test/source_info.h"
 
 #ifndef CS2420_CUSTOMLIBRARIES_UNITTEST_ASSERTION_H_
 #define CS2420_CUSTOMLIBRARIES_UNITTEST_ASSERTION_H_
@@ -34,33 +35,31 @@ class Assertion {
  public:
   // Constructs a truthiness assertion.
   Assertion(AssertionType type, bool expression, const std::string &repr,
-            const std::string &case_name, const std::string &func_name,
-            size_t line);
+            const SourceInfo &info);
   // Constructs a non-specific exception assertion.
   Assertion(AssertionType type, const std::string &expression_repr,
-            std::optional<std::string> exception_repr,
-            const std::string &case_name, const std::string &func_name,
-            size_t line);
+            std::optional<std::string> exception_repr, const SourceInfo &info);
   // Constructs a binary assertion (e.g., equality).
   template <typename T>
   Assertion(AssertionType type, T arg0, T arg1, bool passed,
             const std::string &repr0, const std::string &repr1,
-            const std::string &case_name, const std::string &func_name,
-            size_t line);
+            const SourceInfo &info);
 
-  AssertionType type() const;
-  bool passed() const;
+  AssertionType type() const { return type_; }
+  bool passed() const { return passed_; }
   // Value of first argument converted to a string.
-  std::string arg0() const;
+  std::string arg0() const { return arg0_; }
   // Value of second argument converted to a string.
-  std::string arg1() const;
+  std::string arg1() const { return arg1_; }
   // Representation of first argument.
-  std::string repr0() const;
+  std::string repr0() const { return repr0_; }
   // Representation of second argument.
-  std::string repr1() const;
-  std::string case_name() const;
-  std::string func_name() const;
-  size_t line() const;
+  std::string repr1() const { return repr1_; }
+  std::string source_file_name() const { return info_.file_name; }
+  std::string case_name() const { return info_.class_name.value(); }
+  std::string func_name() const { return info_.func_name; }
+  size_t line() const { return info_.line; }
+  size_t column() const { return info_.column; }
 
   static AssertionType GetOpposite(AssertionType type);
   static std::string GetWordRepr(AssertionType type);
@@ -82,9 +81,8 @@ class Assertion {
   std::string repr0_;
   // Representation of second argument.
   std::string repr1_;
-  std::string case_name_;
-  std::string func_name_;
-  size_t line_;
+  // Information about the source code that made this assertion.
+  SourceInfo info_;
 };
 
 }  // namespace rose

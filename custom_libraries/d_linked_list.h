@@ -25,11 +25,13 @@ class DLinkedListIterator;
 template <typename T>
 class DLinkedList {
  public:
-  DLinkedList() : front_(nullptr), back_(nullptr), size_(0) {}
+  DLinkedList() = default;
   DLinkedList(const DLinkedList &other);
+  DLinkedList &operator=(const DLinkedList &other);
+  ~DLinkedList() = default;
 
-  bool empty() const;
-  size_t size() const;
+  bool empty() const { return size_ == 0; }
+  size_t size() const { return size_; }
   DLinkedListIterator<T> begin() const;
   DLinkedListIterator<T> end() const;
 
@@ -71,9 +73,9 @@ class DLinkedList {
   // If `i` is not on the interval `[0, size_)`, returns nullptr.
   std::shared_ptr<DNode<T>> GetNodePointer(int i) const;
 
-  std::shared_ptr<DNode<T>> front_;
-  std::shared_ptr<DNode<T>> back_;
-  size_t size_;
+  std::shared_ptr<DNode<T>> front_ = nullptr;
+  std::shared_ptr<DNode<T>> back_ = nullptr;
+  size_t size_ = 0;
 };
 
 // Iterates over a doubly-linked list.

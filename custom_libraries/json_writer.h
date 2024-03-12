@@ -9,7 +9,7 @@ namespace rose {
 // Provides a user-friendly interface to write JSON data to a std::ostream.
 class JsonWriter {
  public:
-  JsonWriter(std::ostream &out);
+  explicit JsonWriter(std::ostream &out) : out_(out) {}
 
   // Writes an opening curly bracket.
   void BeginObject();
@@ -63,8 +63,8 @@ class JsonWriter {
   // The output stream being written to.
   std::ostream &out_;
   // The indentation level.
-  int level_;
-  bool level_empty_;
+  int level_ = 0;
+  bool level_empty_ = true;
 };
 
 }  // namespace rose

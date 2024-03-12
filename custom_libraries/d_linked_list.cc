@@ -12,20 +12,16 @@ namespace rose {
 
 template <typename T>
 DLinkedList<T>::DLinkedList(const DLinkedList<T> &other) {
-  front_ = nullptr;
-  back_ = nullptr;
-  size_ = 0;
   for (T data : other) PushBack(data);
 }
 
 template <typename T>
-bool DLinkedList<T>::empty() const {
-  return size_ == 0;
-}
-
-template <typename T>
-size_t DLinkedList<T>::size() const {
-  return size_;
+DLinkedList<T> &DLinkedList<T>::operator=(const DLinkedList<T> &other) {
+  front_ = nullptr;
+  back_ = nullptr;
+  size_ = 0;
+  for (T data : other) PushBack(data);
+  return *this;
 }
 
 template <typename T>

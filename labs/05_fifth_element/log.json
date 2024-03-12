@@ -8,7 +8,9 @@
     "EmptyLinkedListTest": [
       {
         "name": "TestIsEmpty",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 24,
+        "column": 24,
         "assertion_type": "true",
         "passed": true,
         "expression": "list_.empty()",
@@ -16,7 +18,9 @@
       },
       {
         "name": "TestPeekFront",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 25,
+        "column": 26,
         "assertion_type": "false",
         "passed": true,
         "expression": "list_.PeekFront().has_value()",
@@ -24,7 +28,9 @@
       },
       {
         "name": "TestPeekBack",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 26,
+        "column": 25,
         "assertion_type": "false",
         "passed": true,
         "expression": "list_.PeekBack().has_value()",
@@ -32,7 +38,9 @@
       },
       {
         "name": "TestPeek3",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 27,
+        "column": 22,
         "assertion_type": "false",
         "passed": true,
         "expression": "list_.Peek(3).has_value()",
@@ -40,7 +48,9 @@
       },
       {
         "name": "TestPeekNegative2",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 28,
+        "column": 30,
         "assertion_type": "false",
         "passed": true,
         "expression": "list_.Peek(-2).has_value()",
@@ -48,7 +58,9 @@
       },
       {
         "name": "TestStreamExtraction",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 33,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -64,7 +76,9 @@
     "FifthElementTest": [
       {
         "name": "TestPeekFifthIntOf10",
+        "file": "./labs/05_fifth_element/test_cases.h",
         "line": 32,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -78,7 +92,9 @@
       },
       {
         "name": "TestPeekFifthIntOf5",
+        "file": "./labs/05_fifth_element/test_cases.h",
         "line": 38,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -92,7 +108,9 @@
       },
       {
         "name": "TestPeekFifthIntOf4",
+        "file": "./labs/05_fifth_element/test_cases.h",
         "line": 44,
+        "column": 5,
         "assertion_type": "throws_as",
         "passed": true,
         "arg0": {
@@ -106,7 +124,9 @@
       },
       {
         "name": "TestPeekFifthStringOf10",
+        "file": "./labs/05_fifth_element/test_cases.h",
         "line": 59,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -120,7 +140,9 @@
       },
       {
         "name": "TestInsertFifthIn10",
+        "file": "./labs/05_fifth_element/test_cases.h",
         "line": 66,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -134,7 +156,9 @@
       },
       {
         "name": "TestInsertFifthIn5",
+        "file": "./labs/05_fifth_element/test_cases.h",
         "line": 73,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -148,7 +172,9 @@
       },
       {
         "name": "TestInsertFifthIn4",
+        "file": "./labs/05_fifth_element/test_cases.h",
         "line": 80,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -162,7 +188,9 @@
       },
       {
         "name": "TestInsertFifthIn3",
+        "file": "./labs/05_fifth_element/test_cases.h",
         "line": 87,
+        "column": 5,
         "assertion_type": "false",
         "passed": true,
         "expression": "list.Peek(4).has_value()",
@@ -170,7 +198,9 @@
       },
       {
         "name": "TestEraseFifthOf10",
+        "file": "./labs/05_fifth_element/test_cases.h",
         "line": 94,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -184,7 +214,9 @@
       },
       {
         "name": "TestEraseFifthOf6",
+        "file": "./labs/05_fifth_element/test_cases.h",
         "line": 101,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -198,7 +230,9 @@
       },
       {
         "name": "TestEraseFifthOf5",
+        "file": "./labs/05_fifth_element/test_cases.h",
         "line": 108,
+        "column": 5,
         "assertion_type": "false",
         "passed": true,
         "expression": "list.Peek(4).has_value()",
@@ -206,7 +240,9 @@
       },
       {
         "name": "TestEraseFifthOf4",
+        "file": "./labs/05_fifth_element/test_cases.h",
         "line": 119,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -220,7 +256,9 @@
       },
       {
         "name": "TestSwapFourthAndFifth",
+        "file": "./labs/05_fifth_element/test_cases.h",
         "line": 128,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -236,7 +274,9 @@
     "IntLinkedListTest": [
       {
         "name": "TestPushFront1Item",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 75,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -250,7 +290,9 @@
       },
       {
         "name": "TestPushFront20Items",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 81,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -264,7 +306,9 @@
       },
       {
         "name": "TestPushBack1Item",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 87,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -278,7 +322,9 @@
       },
       {
         "name": "TestPushBack20Items",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 93,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -292,7 +338,9 @@
       },
       {
         "name": "TestPeekFront",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 99,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -306,7 +354,9 @@
       },
       {
         "name": "TestPeekBack",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 105,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -320,7 +370,9 @@
       },
       {
         "name": "TestPeekFrontAndBack",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 111,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -334,7 +386,9 @@
       },
       {
         "name": "TestPeek1stDigitOfPi",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 114,
+        "column": 33,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -348,7 +402,9 @@
       },
       {
         "name": "TestPeek27thDigitOfPi",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 115,
+        "column": 34,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -362,7 +418,9 @@
       },
       {
         "name": "TestPeek100thDigitOfPi",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 116,
+        "column": 35,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -376,7 +434,9 @@
       },
       {
         "name": "TestInsertFront",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 129,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -390,7 +450,9 @@
       },
       {
         "name": "TestInsertMiddle",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 141,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -404,7 +466,9 @@
       },
       {
         "name": "TestPopFront",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 163,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -418,7 +482,9 @@
       },
       {
         "name": "TestPopBack",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 170,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -432,7 +498,9 @@
       },
       {
         "name": "TestEraseFront",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 177,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -446,7 +514,9 @@
       },
       {
         "name": "TestEraseMiddle",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 184,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -460,7 +530,9 @@
       },
       {
         "name": "TestEraseBack",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 191,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -474,7 +546,9 @@
       },
       {
         "name": "TestRemove",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 198,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -488,7 +562,9 @@
       },
       {
         "name": "TestStreamExtraction",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 210,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -504,7 +580,9 @@
     "StringLinkedListTest": [
       {
         "name": "TestPushFront1Item",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 258,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -518,7 +596,9 @@
       },
       {
         "name": "TestPushFront25Items",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 291,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -532,7 +612,9 @@
       },
       {
         "name": "TestPushBack1Item",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 297,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -546,7 +628,9 @@
       },
       {
         "name": "TestPushBack24Items",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 329,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -560,7 +644,9 @@
       },
       {
         "name": "TestPeekFront",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 333,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -574,7 +660,9 @@
       },
       {
         "name": "TestPeekBack",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 337,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -588,7 +676,9 @@
       },
       {
         "name": "TestPeekFrontAndBack",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 343,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -602,7 +692,9 @@
       },
       {
         "name": "TestPeek1stWord",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 347,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -616,7 +708,9 @@
       },
       {
         "name": "TestPeek7thWord",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 351,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -630,7 +724,9 @@
       },
       {
         "name": "TestPeek13thWord",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 355,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -644,7 +740,9 @@
       },
       {
         "name": "TestInsertFront",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 366,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -658,7 +756,9 @@
       },
       {
         "name": "TestInsertMiddle",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 382,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -672,7 +772,9 @@
       },
       {
         "name": "TestPopFront",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 398,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -686,7 +788,9 @@
       },
       {
         "name": "TestPopBack",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 404,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -700,7 +804,9 @@
       },
       {
         "name": "TestEraseFront",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 410,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -714,7 +820,9 @@
       },
       {
         "name": "TestEraseMiddle",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 416,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -728,7 +836,9 @@
       },
       {
         "name": "TestEraseBack",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 422,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -742,7 +852,9 @@
       },
       {
         "name": "TestRemove",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 428,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -756,7 +868,9 @@
       },
       {
         "name": "TestStreamExtraction",
+        "file": "./no_brainers/05_linked_list/test_cases.h",
         "line": 437,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {

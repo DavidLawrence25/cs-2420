@@ -5,10 +5,208 @@
     "fails": 0
   },
   "test_cases": {
+    "PointTest1": [
+      {
+        "name": "TestAdd",
+        "file": "./no_brainers/01_overloaded_operators/test_cases.h",
+        "line": 21,
+        "column": 20,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "point_ + Point(-5, 2)",
+          "value": "(-2, 6)"
+        },
+        "arg1": {
+          "repr": "Point(-2, 6)",
+          "value": "(-2, 6)"
+        }
+      },
+      {
+        "name": "TestIAdd",
+        "file": "./no_brainers/01_overloaded_operators/test_cases.h",
+        "line": 25,
+        "column": 5,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "point_",
+          "value": "(-2, 5)"
+        },
+        "arg1": {
+          "repr": "Point(-2, 5)",
+          "value": "(-2, 5)"
+        }
+      },
+      {
+        "name": "TestSub",
+        "file": "./no_brainers/01_overloaded_operators/test_cases.h",
+        "line": 29,
+        "column": 20,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "point_ - Point(-9, -5)",
+          "value": "(12, 9)"
+        },
+        "arg1": {
+          "repr": "Point(12, 9)",
+          "value": "(12, 9)"
+        }
+      },
+      {
+        "name": "TestISub",
+        "file": "./no_brainers/01_overloaded_operators/test_cases.h",
+        "line": 33,
+        "column": 5,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "point_",
+          "value": "(-4, 13)"
+        },
+        "arg1": {
+          "repr": "Point(-4, 13)",
+          "value": "(-4, 13)"
+        }
+      },
+      {
+        "name": "TestStreamInsertion",
+        "file": "./no_brainers/01_overloaded_operators/test_cases.h",
+        "line": 42,
+        "column": 5,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "temp",
+          "value": "(1, 9)"
+        },
+        "arg1": {
+          "repr": "Point(1, 9)",
+          "value": "(1, 9)"
+        }
+      },
+      {
+        "name": "TestStreamExtraction",
+        "file": "./no_brainers/01_overloaded_operators/test_cases.h",
+        "line": 48,
+        "column": 5,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "(3, 4)"
+        },
+        "arg1": {
+          "repr": "std::string(\"(3, 4)\")",
+          "value": "(3, 4)"
+        }
+      }
+    ],
+    "PointTest2": [
+      {
+        "name": "TestAdd",
+        "file": "./no_brainers/01_overloaded_operators/test_cases.h",
+        "line": 67,
+        "column": 20,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "point_ + Point(-5, 2)",
+          "value": "(-15, 5)"
+        },
+        "arg1": {
+          "repr": "Point(-15, 5)",
+          "value": "(-15, 5)"
+        }
+      },
+      {
+        "name": "TestIAdd",
+        "file": "./no_brainers/01_overloaded_operators/test_cases.h",
+        "line": 71,
+        "column": 5,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "point_",
+          "value": "(-15, 4)"
+        },
+        "arg1": {
+          "repr": "Point(-15, 4)",
+          "value": "(-15, 4)"
+        }
+      },
+      {
+        "name": "TestSub",
+        "file": "./no_brainers/01_overloaded_operators/test_cases.h",
+        "line": 75,
+        "column": 20,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "point_ - Point(-9, -5)",
+          "value": "(-1, 8)"
+        },
+        "arg1": {
+          "repr": "Point(-1, 8)",
+          "value": "(-1, 8)"
+        }
+      },
+      {
+        "name": "TestISub",
+        "file": "./no_brainers/01_overloaded_operators/test_cases.h",
+        "line": 79,
+        "column": 5,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "point_",
+          "value": "(-17, 12)"
+        },
+        "arg1": {
+          "repr": "Point(-17, 12)",
+          "value": "(-17, 12)"
+        }
+      },
+      {
+        "name": "TestStreamInsertion",
+        "file": "./no_brainers/01_overloaded_operators/test_cases.h",
+        "line": 88,
+        "column": 5,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "temp",
+          "value": "(-3, 5)"
+        },
+        "arg1": {
+          "repr": "Point(-3, 5)",
+          "value": "(-3, 5)"
+        }
+      },
+      {
+        "name": "TestStreamExtraction",
+        "file": "./no_brainers/01_overloaded_operators/test_cases.h",
+        "line": 94,
+        "column": 5,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "(-10, 3)"
+        },
+        "arg1": {
+          "repr": "std::string(\"(-10, 3)\")",
+          "value": "(-10, 3)"
+        }
+      }
+    ],
     "PointTest3": [
       {
         "name": "TestAdd",
-        "line": 116,
+        "file": "./no_brainers/01_overloaded_operators/test_cases.h",
+        "line": 113,
+        "column": 20,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -22,7 +220,9 @@
       },
       {
         "name": "TestIAdd",
-        "line": 120,
+        "file": "./no_brainers/01_overloaded_operators/test_cases.h",
+        "line": 117,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -36,7 +236,9 @@
       },
       {
         "name": "TestSub",
-        "line": 124,
+        "file": "./no_brainers/01_overloaded_operators/test_cases.h",
+        "line": 121,
+        "column": 20,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -50,7 +252,9 @@
       },
       {
         "name": "TestISub",
-        "line": 128,
+        "file": "./no_brainers/01_overloaded_operators/test_cases.h",
+        "line": 125,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -64,7 +268,9 @@
       },
       {
         "name": "TestStreamInsertion",
-        "line": 137,
+        "file": "./no_brainers/01_overloaded_operators/test_cases.h",
+        "line": 134,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -78,7 +284,9 @@
       },
       {
         "name": "TestStreamExtraction",
-        "line": 143,
+        "file": "./no_brainers/01_overloaded_operators/test_cases.h",
+        "line": 140,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -94,7 +302,9 @@
     "PointTest4": [
       {
         "name": "TestAdd",
-        "line": 162,
+        "file": "./no_brainers/01_overloaded_operators/test_cases.h",
+        "line": 159,
+        "column": 20,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -108,7 +318,9 @@
       },
       {
         "name": "TestIAdd",
-        "line": 166,
+        "file": "./no_brainers/01_overloaded_operators/test_cases.h",
+        "line": 163,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -122,7 +334,9 @@
       },
       {
         "name": "TestSub",
-        "line": 170,
+        "file": "./no_brainers/01_overloaded_operators/test_cases.h",
+        "line": 167,
+        "column": 20,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -136,7 +350,9 @@
       },
       {
         "name": "TestISub",
-        "line": 174,
+        "file": "./no_brainers/01_overloaded_operators/test_cases.h",
+        "line": 171,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -150,7 +366,9 @@
       },
       {
         "name": "TestStreamInsertion",
-        "line": 183,
+        "file": "./no_brainers/01_overloaded_operators/test_cases.h",
+        "line": 180,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -164,7 +382,9 @@
       },
       {
         "name": "TestStreamExtraction",
-        "line": 189,
+        "file": "./no_brainers/01_overloaded_operators/test_cases.h",
+        "line": 186,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -174,178 +394,6 @@
         "arg1": {
           "repr": "std::string(\"(2, -4)\")",
           "value": "(2, -4)"
-        }
-      }
-    ],
-    "PointTest2": [
-      {
-        "name": "TestAdd",
-        "line": 70,
-        "assertion_type": "equal",
-        "passed": true,
-        "arg0": {
-          "repr": "point_ + Point(-5, 2)",
-          "value": "(-15, 5)"
-        },
-        "arg1": {
-          "repr": "Point(-15, 5)",
-          "value": "(-15, 5)"
-        }
-      },
-      {
-        "name": "TestIAdd",
-        "line": 74,
-        "assertion_type": "equal",
-        "passed": true,
-        "arg0": {
-          "repr": "point_",
-          "value": "(-15, 4)"
-        },
-        "arg1": {
-          "repr": "Point(-15, 4)",
-          "value": "(-15, 4)"
-        }
-      },
-      {
-        "name": "TestSub",
-        "line": 78,
-        "assertion_type": "equal",
-        "passed": true,
-        "arg0": {
-          "repr": "point_ - Point(-9, -5)",
-          "value": "(-1, 8)"
-        },
-        "arg1": {
-          "repr": "Point(-1, 8)",
-          "value": "(-1, 8)"
-        }
-      },
-      {
-        "name": "TestISub",
-        "line": 82,
-        "assertion_type": "equal",
-        "passed": true,
-        "arg0": {
-          "repr": "point_",
-          "value": "(-17, 12)"
-        },
-        "arg1": {
-          "repr": "Point(-17, 12)",
-          "value": "(-17, 12)"
-        }
-      },
-      {
-        "name": "TestStreamInsertion",
-        "line": 91,
-        "assertion_type": "equal",
-        "passed": true,
-        "arg0": {
-          "repr": "temp",
-          "value": "(-3, 5)"
-        },
-        "arg1": {
-          "repr": "Point(-3, 5)",
-          "value": "(-3, 5)"
-        }
-      },
-      {
-        "name": "TestStreamExtraction",
-        "line": 97,
-        "assertion_type": "equal",
-        "passed": true,
-        "arg0": {
-          "repr": "sout.str()",
-          "value": "(-10, 3)"
-        },
-        "arg1": {
-          "repr": "std::string(\"(-10, 3)\")",
-          "value": "(-10, 3)"
-        }
-      }
-    ],
-    "PointTest1": [
-      {
-        "name": "TestAdd",
-        "line": 24,
-        "assertion_type": "equal",
-        "passed": true,
-        "arg0": {
-          "repr": "point_ + Point(-5, 2)",
-          "value": "(-2, 6)"
-        },
-        "arg1": {
-          "repr": "Point(-2, 6)",
-          "value": "(-2, 6)"
-        }
-      },
-      {
-        "name": "TestIAdd",
-        "line": 28,
-        "assertion_type": "equal",
-        "passed": true,
-        "arg0": {
-          "repr": "point_",
-          "value": "(-2, 5)"
-        },
-        "arg1": {
-          "repr": "Point(-2, 5)",
-          "value": "(-2, 5)"
-        }
-      },
-      {
-        "name": "TestSub",
-        "line": 32,
-        "assertion_type": "equal",
-        "passed": true,
-        "arg0": {
-          "repr": "point_ - Point(-9, -5)",
-          "value": "(12, 9)"
-        },
-        "arg1": {
-          "repr": "Point(12, 9)",
-          "value": "(12, 9)"
-        }
-      },
-      {
-        "name": "TestISub",
-        "line": 36,
-        "assertion_type": "equal",
-        "passed": true,
-        "arg0": {
-          "repr": "point_",
-          "value": "(-4, 13)"
-        },
-        "arg1": {
-          "repr": "Point(-4, 13)",
-          "value": "(-4, 13)"
-        }
-      },
-      {
-        "name": "TestStreamInsertion",
-        "line": 45,
-        "assertion_type": "equal",
-        "passed": true,
-        "arg0": {
-          "repr": "temp",
-          "value": "(1, 9)"
-        },
-        "arg1": {
-          "repr": "Point(1, 9)",
-          "value": "(1, 9)"
-        }
-      },
-      {
-        "name": "TestStreamExtraction",
-        "line": 51,
-        "assertion_type": "equal",
-        "passed": true,
-        "arg0": {
-          "repr": "sout.str()",
-          "value": "(3, 4)"
-        },
-        "arg1": {
-          "repr": "std::string(\"(3, 4)\")",
-          "value": "(3, 4)"
         }
       }
     ]

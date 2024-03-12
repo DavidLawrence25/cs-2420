@@ -10,23 +10,17 @@
 
 namespace rose {
 
-int TestResult::cases() const { return cases_; }
-int TestResult::tests() const { return tests_; }
-int TestResult::fails() const { return fails_; }
-
 void TestResult::Add(Assertion assertion) {
   ++tests_;
   if (!assertion.passed()) ++fails_;
   assertions_.push_back(assertion);
 }
 
-void TestResult::IncrementCaseCounter() { ++cases_; }
-
-std::map<std::string, std::vector<Assertion>> TestResult::TestCaseGroups()
-    const {
+std::map<std::string, std::vector<Assertion>, std::less<>>
+TestResult::TestCaseGroups() const {
   using TestCaseGroup = std::vector<Assertion>;
 
-  std::map<std::string, TestCaseGroup> groups;
+  std::map<std::string, TestCaseGroup, std::less<>> groups;
   for (Assertion assertion : assertions_) {
     groups[assertion.case_name()].push_back(assertion);
   }
@@ -65,7 +59,7 @@ void TestResult::LogJson(JsonWriter &writer) const {
 
   writer.BeginObject("test_cases");
 
-  std::map<std::string, TestCaseGroup> groups = TestCaseGroups();
+  std::map<std::string, TestCaseGroup, std::less<>> groups = TestCaseGroups();
   for (const auto &[case_name, group] : groups) {
     writer.BeginArray(case_name);
 

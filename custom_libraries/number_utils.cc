@@ -1,6 +1,7 @@
 #include "custom_libraries/number_utils.h"
 
 #include <unordered_map>
+#include <unordered_set>
 
 namespace rose {
 
@@ -9,7 +10,8 @@ namespace rose {
 int FloorSqrt(const int x) noexcept {
   if (x == 0 || x == 1) return x;
 
-  int left_bound = 1, right_bound = x;
+  int left_bound = 1;
+  int right_bound = x;
   while (left_bound <= right_bound) {
     // This roundabout way of calculating the arithmetic mean
     // helps prevent an integer overflow.
@@ -59,15 +61,12 @@ bool IsPrime(const int x) noexcept {
 }
 
 // Returns true if `str` represents the number 0.
-bool IsZero(const std::string &str) noexcept {
-  return kZeros.find(str) != kZeros.end();
-}
+bool IsZero(const std::string &str) noexcept { return kZeros.contains(str); }
 
 // Returns true if `c` represents a digit from 0-9.
 bool IsDigit(const char c) noexcept { return (c >= '0') && (c <= '9'); }
 
 // Returns the numeric value of the given base-10 digit `digit`.
-// Assumes `digit` represents a base-10 digit.
 int DigitToInt(const char digit) noexcept { return digit - '0'; }
 
 // Returns the value of a string `str`, interpreted as an integer in base 10.
@@ -104,7 +103,7 @@ float StringToFloat(const std::string &str) noexcept {
   bool seen_sign = false;
   bool is_negative = false;
   float x = 0.0f;
-  int radix_point_index = str.length() - 1;
+  auto radix_point_index = static_cast<int>(str.length() - 1);
 
   // Note that the index is necessary to properly process the radix point.
   for (size_t i = 0; i < str.length(); ++i) {
@@ -118,16 +117,16 @@ float StringToFloat(const std::string &str) noexcept {
       seen_sign = true;
     } else if (c == '.') {
       if (seen_radix_point) return 0.0f;
-      radix_point_index = i;
+      radix_point_index = static_cast<int>(i);
       seen_radix_point = true;
     } else {
       if (seen_sign || !IsDigit(c)) return 0.0f;
-      x = 10.0f * x + DigitToInt(c);
+      x = 10.0f * x + static_cast<float>(DigitToInt(c));
       seen_digit = true;
     }
   }
 
-  x *= pow(10, 1 + radix_point_index - str.length());
+  x *= pow(10.0f, static_cast<float>(1 + radix_point_index - str.length()));
 
   return is_negative ? -x : x;
 }
@@ -140,7 +139,7 @@ double StringToDouble(const std::string &str) noexcept {
   bool seen_sign = false;
   bool is_negative = false;
   double x = 0.0;
-  int radix_point_index = str.length() - 1;
+  auto radix_point_index = static_cast<int>(str.length() - 1);
 
   // Note that the index is necessary to properly process the radix point.
   for (size_t i = 0; i < str.length(); ++i) {
@@ -154,7 +153,7 @@ double StringToDouble(const std::string &str) noexcept {
       seen_sign = true;
     } else if (c == '.') {
       if (seen_radix_point) return 0.0;
-      radix_point_index = i;
+      radix_point_index = static_cast<int>(i);
       seen_radix_point = true;
     } else {
       if (seen_sign || !IsDigit(c)) return 0.0;
@@ -163,7 +162,7 @@ double StringToDouble(const std::string &str) noexcept {
     }
   }
 
-  x *= pow(10, 1 + radix_point_index - str.length());
+  x *= pow(10.0, 1 + radix_point_index - str.length());
 
   return is_negative ? -x : x;
 }

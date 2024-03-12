@@ -14,6 +14,7 @@
 #include "custom_libraries/unit_test/assertion.h"
 #include "custom_libraries/unit_test/case.h"
 #include "custom_libraries/unit_test/result.h"
+#include "custom_libraries/unit_test/source_info.h"
 #include "custom_libraries/unit_test/suite.h"
 
 namespace rose {
@@ -38,17 +39,6 @@ struct CommandLineFlags {
   bool log_json = false;
 };
 
-// Modified from Andrew Prock's answer to the following question:
-// https://stackoverflow.com/questions/1666802/is-there-a-class-macro-in-c
-inline std::string _Class(const std::string &pretty_func) {
-  size_t colons = pretty_func.rfind("::");
-  if (colons == std::string::npos) return "";
-  size_t begin = pretty_func.substr(0, colons).rfind(' ') + 1;
-  size_t length = colons - begin;
-
-  return pretty_func.substr(begin, length);
-}
-
 // Modified from a deleted user's answer to the following question:
 // https://cplusplus.com/forum/beginner/273703/
 inline std::string _Demangle(const std::string &mangled) {
@@ -68,32 +58,28 @@ inline std::string _Demangle(const std::string &mangled) {
 
 // Forgive me for what I am about to do...
 
-#define __CLASS__ rose::_Class(__PRETTY_FUNCTION__)
 #define __TYPE_NAME__(arg) rose::_Demangle(typeid(arg).name())
 
 #define ASSERT_EQUAL(arg0, arg1) \
-  this->AssertEqual(arg0, arg1, #arg0, #arg1, __CLASS__, __func__, __LINE__)
-#define ASSERT_ALMOST_EQUAL(arg0, arg1)                                  \
-  this->AssertAlmostEqual(arg0, arg1, #arg0, #arg1, __CLASS__, __func__, \
-                          __LINE__)
+  this->AssertEqual(arg0, arg1, #arg0, #arg1, rose::SourceInfo())
+#define ASSERT_ALMOST_EQUAL(arg0, arg1) \
+  this->AssertAlmostEqual(arg0, arg1, #arg0, #arg1, rose::SourceInfo())
 #define ASSERT_NOT_EQUAL(arg0, arg1) \
-  this->AssertNotEqual(arg0, arg1, #arg0, #arg1, __CLASS__, __func__, __LINE__)
-#define ASSERT_NOT_ALMOST_EQUAL(arg0, arg1)                                 \
-  this->AssertNotAlmostEqual(arg0, arg1, #arg0, #arg1, __CLASS__, __func__, \
-                             __LINE__)
+  this->AssertNotEqual(arg0, arg1, #arg0, #arg1, rose::SourceInfo())
+#define ASSERT_NOT_ALMOST_EQUAL(arg0, arg1) \
+  this->AssertNotAlmostEqual(arg0, arg1, #arg0, #arg1, rose::SourceInfo())
 #define ASSERT_GREATER(arg0, arg1) \
-  this->AssertGreater(arg0, arg1, #arg0, #arg1, __CLASS__, __func__, __LINE__)
-#define ASSERT_GREATER_EQUAL(arg0, arg1)                                  \
-  this->AssertGreaterEqual(arg0, arg1, #arg0, #arg1, __CLASS__, __func__, \
-                           __LINE__)
+  this->AssertGreater(arg0, arg1, #arg0, #arg1, rose::SourceInfo())
+#define ASSERT_GREATER_EQUAL(arg0, arg1) \
+  this->AssertGreaterEqual(arg0, arg1, #arg0, #arg1, rose::SourceInfo())
 #define ASSERT_LESS(arg0, arg1) \
-  this->AssertLess(arg0, arg1, #arg0, #arg1, __CLASS__, __func__, __LINE__)
+  this->AssertLess(arg0, arg1, #arg0, #arg1, rose::SourceInfo())
 #define ASSERT_LESS_EQUAL(arg0, arg1) \
-  this->AssertLessEqual(arg0, arg1, #arg0, #arg1, __CLASS__, __func__, __LINE__)
+  this->AssertLessEqual(arg0, arg1, #arg0, #arg1, rose::SourceInfo())
 #define ASSERT_TRUE(expression) \
-  this->AssertTrue(expression, #expression, __CLASS__, __func__, __LINE__)
+  this->AssertTrue(expression, #expression, rose::SourceInfo())
 #define ASSERT_FALSE(expression) \
-  this->AssertFalse(expression, #expression, __CLASS__, __func__, __LINE__)
+  this->AssertFalse(expression, #expression, rose::SourceInfo())
 #define ASSERT_THROWS(expression)                                    \
   std::optional<std::string> _exception_repr = std::nullopt;         \
   try {                                                              \
@@ -104,7 +90,7 @@ inline std::string _Demangle(const std::string &mangled) {
     _exception_repr = "non-standard exception";                      \
   }                                                                  \
   result()->Add(Assertion(rose::AssertionType::kThrows, #expression, \
-                          _exception_repr, __CLASS__, __func__, __LINE__))
+                          _exception_repr, rose::SourceInfo()))
 #define ASSERT_DOESNT_THROW(expression)                                   \
   std::optional<std::string> _exception_repr = std::nullopt;              \
   try {                                                                   \
@@ -115,7 +101,7 @@ inline std::string _Demangle(const std::string &mangled) {
     _exception_repr = "non-standard exception";                           \
   }                                                                       \
   result()->Add(Assertion(rose::AssertionType::kDoesntThrow, #expression, \
-                          _exception_repr, __CLASS__, __func__, __LINE__))
+                          _exception_repr, rose::SourceInfo()))
 #define ASSERT_THROWS_AS(exception_type, expression)                          \
   bool _passed = false;                                                       \
   std::optional<std::string> _exception_repr = std::nullopt;                  \
@@ -132,7 +118,7 @@ inline std::string _Demangle(const std::string &mangled) {
   result()->Add(Assertion(rose::AssertionType::kThrowsAs,                     \
                           _exception_repr.value_or("null"),                   \
                           std::string(#exception_type), _passed, #expression, \
-                          #exception_type, __CLASS__, __func__, __LINE__))
+                          #exception_type, rose::SourceInfo()))
 #define ASSERT_DOESNT_THROW_AS(exception_type, expression)                    \
   bool _passed = true;                                                        \
   std::optional<std::string> _exception_repr = std::nullopt;                  \
@@ -149,7 +135,7 @@ inline std::string _Demangle(const std::string &mangled) {
   result()->Add(Assertion(rose::AssertionType::kDoesntThrowAs,                \
                           _exception_repr.value_or("null"),                   \
                           std::string(#exception_type), _passed, #expression, \
-                          #exception_type, __CLASS__, __func__, __LINE__))
+                          #exception_type, rose::SourceInfo()))
 
 }  // namespace rose
 

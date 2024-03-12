@@ -9,7 +9,8 @@ namespace rose {
 // If the value is not present, returns -1.
 template <typename Number>
 int BinarySearch(std::vector<Number> numbers, Number value) {
-  int left_bound = 0, right_bound = numbers.size() - 1;
+  int left_bound = 0;
+  auto right_bound = static_cast<int>(numbers.size() - 1);
 
   while (left_bound <= right_bound) {
     // This roundabout way of calculating the arithmetic mean

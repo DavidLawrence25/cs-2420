@@ -15,14 +15,15 @@ class Assertion;  // Defined in "custom_libraries/unit_test/assertion.h"
 // Contains metadata about the results of a TestSuite.
 class TestResult {
  public:
-  int cases() const;
-  int tests() const;
-  int fails() const;
+  int cases() const { return cases_; }
+  int tests() const { return tests_; }
+  int fails() const { return fails_; }
 
   void Add(Assertion assertion);
-  void IncrementCaseCounter();
+  void IncrementCaseCounter() { ++cases_; }
 
-  std::map<std::string, std::vector<Assertion>> TestCaseGroups() const;
+  std::map<std::string, std::vector<Assertion>, std::less<>> TestCaseGroups()
+      const;
 
   // Logs information to the stream `out`. If `verbose` is true, all assertions
   // are logged, regardless of whether or not they passed.

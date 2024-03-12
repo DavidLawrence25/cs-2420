@@ -8,7 +8,9 @@
     "PalindromeTest": [
       {
         "name": "TestEasy",
-        "line": 24,
+        "file": "./no_brainers/04_palindrome/test_cases.h",
+        "line": 21,
+        "column": 5,
         "assertion_type": "true",
         "passed": true,
         "expression": "palindrome.is_palindrome()",
@@ -16,7 +18,9 @@
       },
       {
         "name": "TestSpaces",
-        "line": 29,
+        "file": "./no_brainers/04_palindrome/test_cases.h",
+        "line": 26,
+        "column": 5,
         "assertion_type": "true",
         "passed": true,
         "expression": "palindrome.is_palindrome()",
@@ -24,7 +28,9 @@
       },
       {
         "name": "TestMixedCase",
-        "line": 34,
+        "file": "./no_brainers/04_palindrome/test_cases.h",
+        "line": 31,
+        "column": 5,
         "assertion_type": "true",
         "passed": true,
         "expression": "palindrome.is_palindrome()",
@@ -32,7 +38,9 @@
       },
       {
         "name": "TestPunctuation",
-        "line": 39,
+        "file": "./no_brainers/04_palindrome/test_cases.h",
+        "line": 36,
+        "column": 5,
         "assertion_type": "true",
         "passed": true,
         "expression": "palindrome.is_palindrome()",
@@ -40,7 +48,9 @@
       },
       {
         "name": "TestNotPalindrome",
-        "line": 44,
+        "file": "./no_brainers/04_palindrome/test_cases.h",
+        "line": 41,
+        "column": 5,
         "assertion_type": "false",
         "passed": true,
         "expression": "not_palindrome.is_palindrome()",

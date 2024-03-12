@@ -24,11 +24,13 @@ class SLinkedListIterator;
 template <typename T>
 class SLinkedList {
  public:
-  SLinkedList() : front_(nullptr), size_(0) {}
+  SLinkedList() = default;
   SLinkedList(const SLinkedList &other);
+  SLinkedList &operator=(const SLinkedList &other);
+  ~SLinkedList() = default;
 
-  bool empty() const;
-  size_t size() const;
+  bool empty() const { return size_ == 0; }
+  size_t size() const { return size_; }
   SLinkedListIterator<T> begin() const;
   SLinkedListIterator<T> end() const;
 
@@ -65,13 +67,13 @@ class SLinkedList {
   friend std::ostream &operator<<(std::ostream &out,
                                   const SLinkedList<_T> &list);
 
- protected:
+ private:
   // Returns a pointer to the node at index `i`.
   // If `i` is not on the interval `[0, size_)`, returns nullptr.
   std::shared_ptr<SNode<T>> GetNodePointer(int i) const;
 
-  std::shared_ptr<SNode<T>> front_;
-  size_t size_;
+  std::shared_ptr<SNode<T>> front_ = nullptr;
+  size_t size_ = 0;
 };
 
 // Iterates over a singly-linked list.

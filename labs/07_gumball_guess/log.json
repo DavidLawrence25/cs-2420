@@ -8,7 +8,9 @@
     "GumballGuessTest": [
       {
         "name": "TestRound1",
+        "file": "./labs/07_gumball_guess/test_cases.h",
         "line": 97,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -22,7 +24,9 @@
       },
       {
         "name": "TestRound2",
+        "file": "./labs/07_gumball_guess/test_cases.h",
         "line": 112,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -38,7 +42,9 @@
     "QueueTest": [
       {
         "name": "TestCopyConstructor",
+        "file": "./labs/07_gumball_guess/test_cases.h",
         "line": 31,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -52,7 +58,9 @@
       },
       {
         "name": "TestCopyConstructorIsDeep",
+        "file": "./labs/07_gumball_guess/test_cases.h",
         "line": 37,
+        "column": 5,
         "assertion_type": "not_equal",
         "passed": true,
         "arg0": {
@@ -66,7 +74,9 @@
       },
       {
         "name": "TestAssignOperatorIsDeep",
+        "file": "./labs/07_gumball_guess/test_cases.h",
         "line": 45,
+        "column": 5,
         "assertion_type": "not_equal",
         "passed": true,
         "arg0": {
@@ -80,7 +90,9 @@
       },
       {
         "name": "TestEnqueue",
+        "file": "./labs/07_gumball_guess/test_cases.h",
         "line": 51,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -94,7 +106,9 @@
       },
       {
         "name": "TestDequeue",
+        "file": "./labs/07_gumball_guess/test_cases.h",
         "line": 56,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -108,7 +122,9 @@
       },
       {
         "name": "TestClear",
+        "file": "./labs/07_gumball_guess/test_cases.h",
         "line": 62,
+        "column": 5,
         "assertion_type": "true",
         "passed": true,
         "expression": "nums_.empty()",
@@ -116,7 +132,9 @@
       },
       {
         "name": "TestRedundantDequeue",
+        "file": "./labs/07_gumball_guess/test_cases.h",
         "line": 70,
+        "column": 5,
         "assertion_type": "doesnt_throw",
         "passed": true,
         "arg0": {

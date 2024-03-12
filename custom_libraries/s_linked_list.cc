@@ -11,9 +11,7 @@
 namespace rose {
 
 template <typename T>
-SLinkedList<T>::SLinkedList(const SLinkedList<T> &other) {
-  front_ = nullptr;
-  size_ = other.size();
+SLinkedList<T>::SLinkedList(const SLinkedList<T> &other) : size_(other.size_) {
   if (other.empty()) return;
 
   front_ = std::make_shared<SNode<T>>(other.PeekFront(), /*next=*/nullptr);
@@ -26,13 +24,19 @@ SLinkedList<T>::SLinkedList(const SLinkedList<T> &other) {
 }
 
 template <typename T>
-bool SLinkedList<T>::empty() const {
-  return size_ == 0;
-}
+SLinkedList<T> &SLinkedList<T>::operator=(const SLinkedList<T> &other) {
+  front_ = nullptr;
+  size_ = other.size_;
+  if (other.empty()) return *this;
 
-template <typename T>
-size_t SLinkedList<T>::size() const {
-  return size_;
+  front_ = std::make_shared<SNode<T>>(other.PeekFront(), /*next=*/nullptr);
+  std::shared_ptr<SNode<T>> back = front_;
+  for (T data : other) {
+    auto new_back = std::make_shared<SNode<T>>(data, /*next=*/nullptr);
+    back->next = new_back;
+    back = new_back;
+  }
+  return *this;
 }
 
 template <typename T>

@@ -1,6 +1,8 @@
 #include <math.h>
+#include <stdlib.h>
 
 #include <string>
+#include <string_view>
 #include <unordered_set>
 
 #ifndef CS2420_CUSTOMLIBRARIES_NUMBERUTILS_H_
@@ -8,9 +10,20 @@
 
 namespace rose {
 
+// Transparent and heterogenous string hash functor.
+// Avoids copying strings when comparing them.
+struct StringHash {
+  using is_transparent = void;
+
+  size_t operator()(std::string_view str) const {
+    std::hash<std::string_view> hasher;
+    return hasher(str);
+  }
+};
+
 // A set of various string representations of the number 0.
 // Useful for checking whether or not a string conversion was successful.
-const std::unordered_set<std::string> kZeros = {
+const std::unordered_set<std::string, StringHash, std::equal_to<>> kZeros = {
     "0",
     "0.",
     "0.0",

@@ -8,7 +8,9 @@
     "BracketTest": [
       {
         "name": "Test1Pair",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 31,
+        "column": 5,
         "assertion_type": "true",
         "passed": true,
         "expression": "check.is_balanced()",
@@ -16,7 +18,9 @@
       },
       {
         "name": "TestMismatchedPair",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 36,
+        "column": 5,
         "assertion_type": "false",
         "passed": true,
         "expression": "check.is_balanced()",
@@ -24,7 +28,9 @@
       },
       {
         "name": "TestBackwards",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 41,
+        "column": 5,
         "assertion_type": "false",
         "passed": true,
         "expression": "check.is_balanced()",
@@ -32,7 +38,9 @@
       },
       {
         "name": "TestValidMix",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 46,
+        "column": 5,
         "assertion_type": "true",
         "passed": true,
         "expression": "check.is_balanced()",
@@ -40,7 +48,9 @@
       },
       {
         "name": "TestExtraClosing",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 51,
+        "column": 5,
         "assertion_type": "false",
         "passed": true,
         "expression": "check.is_balanced()",
@@ -48,7 +58,9 @@
       },
       {
         "name": "TestPulledApart",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 56,
+        "column": 5,
         "assertion_type": "false",
         "passed": true,
         "expression": "check.is_balanced()",
@@ -56,7 +68,9 @@
       },
       {
         "name": "TestExtraOpening",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 61,
+        "column": 5,
         "assertion_type": "false",
         "passed": true,
         "expression": "check.is_balanced()",
@@ -64,7 +78,9 @@
       },
       {
         "name": "TestValidCode",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 66,
+        "column": 5,
         "assertion_type": "true",
         "passed": true,
         "expression": "check.is_balanced()",
@@ -72,7 +88,9 @@
       },
       {
         "name": "TestInvalidCode",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 71,
+        "column": 5,
         "assertion_type": "false",
         "passed": true,
         "expression": "check.is_balanced()",
@@ -80,7 +98,9 @@
       },
       {
         "name": "TestHugeYetValidMess",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 76,
+        "column": 5,
         "assertion_type": "true",
         "passed": true,
         "expression": "check.is_balanced()",
@@ -88,7 +108,9 @@
       },
       {
         "name": "TestCount3IndependentPairs",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 81,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -102,7 +124,9 @@
       },
       {
         "name": "TestCount4NestedPairs",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 86,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -116,7 +140,9 @@
       },
       {
         "name": "TestValidStreamExtraction",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 93,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {
@@ -130,7 +156,9 @@
       },
       {
         "name": "TestInvalidStreamExtraction",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 100,
+        "column": 5,
         "assertion_type": "equal",
         "passed": true,
         "arg0": {

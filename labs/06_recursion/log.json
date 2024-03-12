@@ -8,7 +8,9 @@
     "AbcdeSubsequenceTest": [
       {
         "name": "TestAce",
+        "file": "./labs/06_recursion/test_cases.h",
         "line": 50,
+        "column": 20,
         "assertion_type": "true",
         "passed": true,
         "expression": "subsequence_.IsSubsequence(\"ace\")",
@@ -16,7 +18,9 @@
       },
       {
         "name": "TestBad",
+        "file": "./labs/06_recursion/test_cases.h",
         "line": 51,
+        "column": 20,
         "assertion_type": "false",
         "passed": true,
         "expression": "subsequence_.IsSubsequence(\"bad\")",
@@ -24,7 +28,9 @@
       },
       {
         "name": "TestAxe",
+        "file": "./labs/06_recursion/test_cases.h",
         "line": 52,
+        "column": 20,
         "assertion_type": "false",
         "passed": true,
         "expression": "subsequence_.IsSubsequence(\"axe\")",
@@ -32,7 +38,9 @@
       },
       {
         "name": "TestTooLong",
+        "file": "./labs/06_recursion/test_cases.h",
         "line": 53,
+        "column": 24,
         "assertion_type": "false",
         "passed": true,
         "expression": "subsequence_.IsSubsequence(\"abcdef\")",
@@ -42,7 +50,9 @@
     "EmptySubsequenceTest": [
       {
         "name": "TestEmpty",
+        "file": "./labs/06_recursion/test_cases.h",
         "line": 16,
+        "column": 22,
         "assertion_type": "true",
         "passed": true,
         "expression": "subsequence_.IsSubsequence(\"\")",
@@ -50,7 +60,9 @@
       },
       {
         "name": "TestChar",
+        "file": "./labs/06_recursion/test_cases.h",
         "line": 17,
+        "column": 21,
         "assertion_type": "false",
         "passed": true,
         "expression": "subsequence_.IsSubsequence(\"a\")",
@@ -58,7 +70,9 @@
       },
       {
         "name": "TestWord",
+        "file": "./labs/06_recursion/test_cases.h",
         "line": 18,
+        "column": 21,
         "assertion_type": "false",
         "passed": true,
         "expression": "subsequence_.IsSubsequence(\"pineapple\")",
@@ -66,7 +80,9 @@
       },
       {
         "name": "TestSentence",
+        "file": "./labs/06_recursion/test_cases.h",
         "line": 19,
+        "column": 25,
         "assertion_type": "false",
         "passed": true,
         "expression": "subsequence_.IsSubsequence(\"She died.\")",
@@ -76,7 +92,9 @@
     "ProgrammingSubsequenceTest": [
       {
         "name": "TestUppercasePin",
+        "file": "./labs/06_recursion/test_cases.h",
         "line": 33,
+        "column": 29,
         "assertion_type": "true",
         "passed": true,
         "expression": "subsequence_.IsSubsequence(\"Pin\")",
@@ -84,7 +102,9 @@
       },
       {
         "name": "TestLowercasePin",
+        "file": "./labs/06_recursion/test_cases.h",
         "line": 34,
+        "column": 29,
         "assertion_type": "false",
         "passed": true,
         "expression": "subsequence_.IsSubsequence(\"pin\")",
