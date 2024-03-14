@@ -1,5 +1,6 @@
 #include "no_brainers/08_lp_hash_table/hash_table.h"
 
+#include <math.h>
 #include <stdlib.h>
 
 #include <memory>

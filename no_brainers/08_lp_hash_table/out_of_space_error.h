@@ -5,6 +5,8 @@
 
 namespace rose {
 
+// The user attempted to add an element to a fixed-size container that had
+// reached its capacity.
 class OutOfSpaceError : public std::exception {
  public:
   explicit OutOfSpaceError(const char *message) : message_(message) {}
