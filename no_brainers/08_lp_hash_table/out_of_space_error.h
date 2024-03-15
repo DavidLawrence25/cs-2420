@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <string_view>
 
 #ifndef CS2420_NOBRAINERS_08LPHASHTABLE_OUTOFSPACEERROR_H_
 #define CS2420_NOBRAINERS_08LPHASHTABLE_OUTOFSPACEERROR_H_
