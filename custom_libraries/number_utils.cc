@@ -60,6 +60,18 @@ bool IsPrime(const int x) noexcept {
   return true;
 }
 
+// Returns the smallest prime number greater than or equal to `x`.
+int NextPrime(const int x) noexcept {
+  if (x <= 2) return 2;
+  if (IsPrime(x)) return x;
+  // Ensures `y` is always odd to avoid pointlessly searching even numbers.
+  int y = (x % 2) ? x + 2 : x + 1;
+  // Guaranteed to terminate within `ceil((x-3)/2)` iterations.
+  for (; !IsPrime(y); y += 2)
+    ;
+  return y;
+}
+
 // Returns true if `str` represents the number 0.
 bool IsZero(const std::string &str) noexcept { return kZeros.contains(str); }
 

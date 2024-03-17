@@ -86,6 +86,9 @@ std::unordered_set<int> FactorsOf(const int x) noexcept;
 // Returns true when `x` is a prime number.
 bool IsPrime(const int x) noexcept;
 
+// Returns the smallest prime number greater than or equal to `x`.
+int NextPrime(const int x) noexcept;
+
 // Returns true if `str` represents the number 0.
 inline bool IsZero(const std::string &str) noexcept;
 
