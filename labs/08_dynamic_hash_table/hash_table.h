@@ -2,6 +2,7 @@
 
 #include <memory>
 #include <optional>
+#include <ostream>
 
 #ifndef CS2420_LABS_08DYNAMICHASHTABLE_HASHTABLE_H_
 #define CS2420_LABS_08DYNAMICHASHTABLE_HASHTABLE_H_
@@ -22,6 +23,7 @@ struct Bucket {
   bool empty = true;
 };
 
+// Dynamically-sized hash table implemented via quadratic probing.
 template <Hashable T>
 class HashTable {
  public:
