@@ -2,31 +2,17 @@
 
 #include <stdlib.h>
 
-#include "no_brainers/03_collection/collection.h"
+#include "custom_libraries/collection.h"
 
 namespace rose {
 
 template <typename T>
-SortedCollection<T>::SortedCollection() : Collection<T>() {}
-
-template <typename T>
-SortedCollection<T>::SortedCollection(size_t capacity)
-    : Collection<T>(capacity) {}
-
-template <typename T>
-SortedCollection<T>::SortedCollection(const SortedCollection<T> &other)
-    : Collection<T>(other) {}
-
-template <typename T>
 void SortedCollection<T>::Add(T item) {
-  if (this->length_ == this->capacity_) this->Expand();
-  this->elements_[this->length_++] = item;  // Post-increment is intentional.
+  Collection<T>::Add(item);
 
-  for (int i = static_cast<int>(this->length_) - 2; i >= 0; --i) {
-    if (item >= this->elements_[i]) break;
-
-    this->elements_[i + 1] = this->elements_[i];
-    this->elements_[i] = item;
+  for (int i = static_cast<int>(Collection<T>::length()) - 2; i >= 0; --i) {
+    if (item >= (*this)[i]) break;
+    Collection<T>::Swap(i, i + 1);
   }
 }
 

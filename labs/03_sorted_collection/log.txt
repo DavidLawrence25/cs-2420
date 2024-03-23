@@ -1,80 +1,80 @@
 ====================================================================================================
-PASS: SortedCollectionIntTest::TestAdd1Time (in ./labs/03_sorted_collection/test_cases.h at 29:5)
+PASS: SortedCollectionIntTest::TestAdd1Time (in ../../labs/03_sorted_collection/test_cases.h at 29:5)
 ----------------------------------------------------------------------------------------------------
 	assert nums_.length() == size_t{1}
 	==> 1 == 1
 ====================================================================================================
-PASS: SortedCollectionIntTest::TestAdd4Times (in ./labs/03_sorted_collection/test_cases.h at 35:5)
+PASS: SortedCollectionIntTest::TestAdd4Times (in ../../labs/03_sorted_collection/test_cases.h at 35:5)
 ----------------------------------------------------------------------------------------------------
 	assert nums_.length() == size_t{4}
 	==> 4 == 4
 ====================================================================================================
-PASS: SortedCollectionIntTest::TestItemAt0 (in ./labs/03_sorted_collection/test_cases.h at 41:5)
+PASS: SortedCollectionIntTest::TestItemAt0 (in ../../labs/03_sorted_collection/test_cases.h at 41:5)
 ----------------------------------------------------------------------------------------------------
 	assert nums_.ItemAt(0) == 17
 	==> 17 == 17
 ====================================================================================================
-PASS: SortedCollectionIntTest::TestItemAtNegative1 (in ./labs/03_sorted_collection/test_cases.h at 47:5)
+PASS: SortedCollectionIntTest::TestItemAtNegative1 (in ../../labs/03_sorted_collection/test_cases.h at 47:5)
 ----------------------------------------------------------------------------------------------------
 	assert nums_.ItemAt(-1) == 69
 	==> 69 == 69
 ====================================================================================================
-PASS: SortedCollectionIntTest::TestRemoveEnd1Time (in ./labs/03_sorted_collection/test_cases.h at 54:5)
+PASS: SortedCollectionIntTest::TestRemoveEnd1Time (in ../../labs/03_sorted_collection/test_cases.h at 54:5)
 ----------------------------------------------------------------------------------------------------
 	assert nums_.length() == size_t{3}
 	==> 3 == 3
 ====================================================================================================
-PASS: SortedCollectionIntTest::TestRemoveEnd3Times (in ./labs/03_sorted_collection/test_cases.h at 61:5)
+PASS: SortedCollectionIntTest::TestRemoveEnd3Times (in ../../labs/03_sorted_collection/test_cases.h at 61:5)
 ----------------------------------------------------------------------------------------------------
 	assert nums_.length() == size_t{0}
 	==> 0 == 0
 ====================================================================================================
-PASS: SortedCollectionIntTest::TestRemoveEndOfEmpty (in ./labs/03_sorted_collection/test_cases.h at 67:5)
+PASS: SortedCollectionIntTest::TestRemoveEndOfEmpty (in ../../labs/03_sorted_collection/test_cases.h at 67:5)
 ----------------------------------------------------------------------------------------------------
 	assert nums_.length() == size_t{0}
 	==> 0 == 0
 ====================================================================================================
-PASS: SortedCollectionIntTest::TestExpand1Time (in ./labs/03_sorted_collection/test_cases.h at 73:5)
+PASS: SortedCollectionIntTest::TestExpand1Time (in ../../labs/03_sorted_collection/test_cases.h at 73:5)
 ----------------------------------------------------------------------------------------------------
 	assert nums_.capacity() == size_t{16}
 	==> 16 == 16
 ====================================================================================================
-PASS: SortedCollectionIntTest::TestExpand4Times (in ./labs/03_sorted_collection/test_cases.h at 79:5)
+PASS: SortedCollectionIntTest::TestExpand4Times (in ../../labs/03_sorted_collection/test_cases.h at 79:5)
 ----------------------------------------------------------------------------------------------------
 	assert nums_.capacity() == size_t{128}
 	==> 128 == 128
 ====================================================================================================
-PASS: SortedCollectionIntTest::TestStreamExtraction (in ./labs/03_sorted_collection/test_cases.h at 94:5)
+PASS: SortedCollectionIntTest::TestStreamExtraction (in ../../labs/03_sorted_collection/test_cases.h at 94:5)
 ----------------------------------------------------------------------------------------------------
 	assert sout.str() == expected.str()
 	==> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64] == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64]
 ====================================================================================================
-PASS: SortedCollectionCharTest::TestAdd5Times (in ./labs/03_sorted_collection/test_cases.h at 119:5)
+PASS: SortedCollectionCharTest::TestAdd5Times (in ../../labs/03_sorted_collection/test_cases.h at 119:5)
 ----------------------------------------------------------------------------------------------------
 	assert str_.length() == size_t{5}
 	==> 5 == 5
 ====================================================================================================
-PASS: SortedCollectionCharTest::TestItemAt4 (in ./labs/03_sorted_collection/test_cases.h at 128:5)
+PASS: SortedCollectionCharTest::TestItemAt4 (in ../../labs/03_sorted_collection/test_cases.h at 128:5)
 ----------------------------------------------------------------------------------------------------
 	assert str_.ItemAt(4) == 'p'
 	==> p == p
 ====================================================================================================
-PASS: SortedCollectionCharTest::TestRemoveEnd1Time (in ./labs/03_sorted_collection/test_cases.h at 138:5)
+PASS: SortedCollectionCharTest::TestRemoveEnd1Time (in ../../labs/03_sorted_collection/test_cases.h at 138:5)
 ----------------------------------------------------------------------------------------------------
 	assert str_.length() == size_t{4}
 	==> 4 == 4
 ====================================================================================================
-PASS: SortedCollectionCharTest::TestExpand2Times (in ./labs/03_sorted_collection/test_cases.h at 147:5)
+PASS: SortedCollectionCharTest::TestExpand2Times (in ../../labs/03_sorted_collection/test_cases.h at 147:5)
 ----------------------------------------------------------------------------------------------------
 	assert str_.capacity() == size_t{32}
 	==> 32 == 32
 ====================================================================================================
-PASS: SortedCollectionCharTest::TestStreamExtraction (in ./labs/03_sorted_collection/test_cases.h at 166:5)
+PASS: SortedCollectionCharTest::TestStreamExtraction (in ../../labs/03_sorted_collection/test_cases.h at 166:5)
 ----------------------------------------------------------------------------------------------------
 	assert sout.str() == expected.str()
 	==> [ ,  ,  , a, a, d, e, e, e, g, l, o, o, p, p, p, r, s, s, t, t, t, t, y] == [ ,  ,  , a, a, d, e, e, e, g, l, o, o, p, p, p, r, s, s, t, t, t, t, y]
 ====================================================================================================
-PASS: SortedCollectionCharTest::TestStreamExtractionOnEmpty (in ./labs/03_sorted_collection/test_cases.h at 173:5)
+PASS: SortedCollectionCharTest::TestStreamExtractionOnEmpty (in ../../labs/03_sorted_collection/test_cases.h at 173:5)
 ----------------------------------------------------------------------------------------------------
 	assert sout.str() == std::string("[]")
 	==> [] == []
