@@ -6,8 +6,8 @@
 #include "custom_libraries/d_linked_list.h"
 #include "custom_libraries/unit_test/unit_test.h"
 
-using /*rose::Assertion,*/ rose::TestCase, rose::TestResult, rose::TestSuite;
 using rose::DLinkedList, rose::DLinkedListIterator;
+using rose::TestCase, rose::TestResult, rose::TestSuite;
 
 class EmptyLinkedListTest : public TestCase {
  public:
@@ -154,6 +154,7 @@ class IntLinkedListTest : public TestCase {
     e.PushBack(2);
     // Eh, enough of not having to think about the index.
     e.Insert(9, 8);
+    ASSERT_EQUAL(e.PeekBack().value(), 8);
   }
 
   void TestPopFront() {
@@ -391,6 +392,7 @@ class StringLinkedListTest : public TestCase {
     egg_quote.PushBack("stabs");
     // Eh, enough of not having to think about the index.
     egg_quote.Insert(5, "him]");
+    ASSERT_EQUAL(egg_quote.PeekBack().value(), std::string("him]"));
   }
 
   void TestPopFront() {
