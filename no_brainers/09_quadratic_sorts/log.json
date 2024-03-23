@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "cases": 1,
+    "tests": 7,
+    "fails": 0
+  },
+  "test_cases": {
+    "QuadraticSortsTest": [
+      {
+        "name": "TestSimpleSwap",
+        "file": "../../no_brainers/09_quadratic_sorts/test_cases.h",
+        "line": 29,
+        "column": 5,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "[2, 4, 3, 5]"
+        },
+        "arg1": {
+          "repr": "std::string(\"[2, 4, 3, 5]\")",
+          "value": "[2, 4, 3, 5]"
+        }
+      },
+      {
+        "name": "TestInsertionSort",
+        "file": "../../no_brainers/09_quadratic_sorts/test_cases.h",
+        "line": 41,
+        "column": 5,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "[e, i, i, n, n, o, o, r, r, s, s, t, t]"
+        },
+        "arg1": {
+          "repr": "std::string(\"[e, i, i, n, n, o, o, r, r, s, s, t, t]\")",
+          "value": "[e, i, i, n, n, o, o, r, r, s, s, t, t]"
+        }
+      },
+      {
+        "name": "TestBubbleSort",
+        "file": "../../no_brainers/09_quadratic_sorts/test_cases.h",
+        "line": 54,
+        "column": 5,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "[b, b, b, e, l, o, r, s, t, u]"
+        },
+        "arg1": {
+          "repr": "std::string(\"[b, b, b, e, l, o, r, s, t, u]\")",
+          "value": "[b, b, b, e, l, o, r, s, t, u]"
+        }
+      },
+      {
+        "name": "TestSelectionSort",
+        "file": "../../no_brainers/09_quadratic_sorts/test_cases.h",
+        "line": 66,
+        "column": 5,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "[c, c, e, e, e, e, e, e, f, f, i, i, i, i, l, m, n, n, n, o, o, r, s, s, s, s, t, t, t]"
+        },
+        "arg1": {
+          "repr": "std::string(\"[c, c, e, e, e, e, e, e, f, f, i, i, i, i, l, m, \" \"n, n, n, o, o, r, s, s, s, s, t, t, t]\")",
+          "value": "[c, c, e, e, e, e, e, e, f, f, i, i, i, i, l, m, n, n, n, o, o, r, s, s, s, s, t, t, t]"
+        }
+      },
+      {
+        "name": "TestPivot",
+        "file": "../../no_brainers/09_quadratic_sorts/test_cases.h",
+        "line": 77,
+        "column": 5,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "nums[pivot_index]",
+          "value": "5"
+        },
+        "arg1": {
+          "repr": "5",
+          "value": "5"
+        }
+      },
+      {
+        "name": "TestPartition",
+        "file": "../../no_brainers/09_quadratic_sorts/test_cases.h",
+        "line": 88,
+        "column": 5,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "[99, 99, 4, 2, 3, 5, 7, 6, 90, 91]"
+        },
+        "arg1": {
+          "repr": "std::string(\"[99, 99, 4, 2, 3, 5, 7, 6, 90, 91]\")",
+          "value": "[99, 99, 4, 2, 3, 5, 7, 6, 90, 91]"
+        }
+      },
+      {
+        "name": "TestQuickSort",
+        "file": "../../no_brainers/09_quadratic_sorts/test_cases.h",
+        "line": 100,
+        "column": 5,
+        "assertion_type": "equal",
+        "passed": true,
+        "arg0": {
+          "repr": "sout.str()",
+          "value": "[c, c, e, e, e, f, f, g, i, i, i, i, k, l, m, n, n, n, o, o, o, q, r, r, s, s, t, t, u]"
+        },
+        "arg1": {
+          "repr": "std::string(\"[c, c, e, e, e, f, f, g, i, i, i, i, k, l, m, n, \" \"n, n, o, o, o, q, r, r, s, s, t, t, u]\")",
+          "value": "[c, c, e, e, e, f, f, g, i, i, i, i, k, l, m, n, n, n, o, o, o, q, r, r, s, s, t, t, u]"
+        }
+      }
+    ]
+  }
+}
