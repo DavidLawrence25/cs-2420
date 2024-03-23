@@ -52,7 +52,7 @@ class HashTable {
   // Removes `data` from the table. Does nothing if `data` is absent.
   // Note that the affected index is the one that minimizes `(index -
   // Hash(data)) % capacity`.
-  // Time Complexity: 0(1) - O(n)
+  // Time Complexity: O(1) - O(n)
   // Space Complexity: O(1)
   void Remove(T data);
   // Returns true if `data` is present in the table.
