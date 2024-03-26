@@ -1,0 +1,26 @@
+       Pa                   Pb
+                           
+N 1  4  5  6 N  N 0  2  3 N
+
+Pa->data <= Pb->data?                   ==> false
+// Extract Pb
+Pi = Pb
+Pb->previous->next = Pb->next        // skip when Pb->previous == nullptr
+Pb->next->previous = Pb->previous    // skip when Pb->next == nullptr
+Pb = Pb->next
+// Insert Pi before Pa
+Pi->previous = Pa->previous          // segfault if Pa == nullptr, but that's fine?
+Pi->next = Pa
+Pa->previous = Pi                    // equivalent to Pi->next->previous = Pi
+if Pi->previous == nullptr:
+  Fa = Pi
+else:
+  Pi->previous->next = Pi
+// Insert Pi after Pa
+Pi->previous = Pa
+Pi->next = Pa->next                  // also segfault if Pa == nullptr
+Pa->next = Pi                        // equivalent to Pi->previous->next = Pi
+if Pi->next == nullptr:
+  Ba = Pi
+else:
+  Pi->next->previous = Pi

@@ -131,6 +131,22 @@ void DLinkedList<T>::Remove(T data) {
   for (int i : indices_to_delete) Erase(i);
 }
 
+template <typename T>
+DLinkedList<T> DLinkedList<T>::Subdivide() {
+  if (size_ < 2) return DLinkedList<T>();
+  size_t half_size = size_ >> 1;
+  if (size_ & 1) ++half_size;
+  DLinkedList<T> b;
+  b.front_ = GetNodePointer(half_size);
+  b.back_ = back_;
+  back_ = b.front_->previous;
+  b.front_->previous = nullptr;
+  back_->next = nullptr;
+  b.size_ = size_ - half_size;
+  size_ = half_size;
+  return b;
+}
+
 template <typename _T>
 std::ostream &operator<<(std::ostream &out, const DLinkedList<_T> &list) {
   if (list.empty()) return out;

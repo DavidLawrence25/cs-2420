@@ -32,6 +32,8 @@ class DLinkedList {
 
   bool empty() const { return size_ == 0; }
   size_t size() const { return size_; }
+  std::shared_ptr<DNode<T>> front() const { return front_; }
+  std::shared_ptr<DNode<T>> back() const { return back_; }
   DLinkedListIterator<T> begin() const;
   DLinkedListIterator<T> end() const;
 
@@ -44,6 +46,10 @@ class DLinkedList {
   // Returns the value stored at index `i`.
   // If `i` is not on the interval `[0, size_)`, returns std::nullopt.
   std::optional<T> Peek(int i) const;
+
+  void set_size(size_t size) { size_ = size; }
+  void set_front(std::shared_ptr<DNode<T>> front) { front_ = front; }
+  void set_back(std::shared_ptr<DNode<T>> back) { back_ = back; }
 
   // Pushes `data` to the front of the list.
   void PushFront(T data);
@@ -63,6 +69,10 @@ class DLinkedList {
   void Erase(int i);
   // Removes all nodes containing `data`.
   void Remove(T data);
+
+  // Splits the list into two halves and returns the second half.
+  // Modifies list to be the first half.
+  DLinkedList<T> Subdivide();
 
   template <typename _T>
   friend std::ostream &operator<<(std::ostream &out,
