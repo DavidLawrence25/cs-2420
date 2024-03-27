@@ -21,6 +21,7 @@ class MergeSorter {
   template <Sortable T>
   static void Merge(DLinkedList<T> &a, DLinkedList<T> &&b);
 
+  // Uses merge sort to recursively sort `ls` in-place.
   template <Sortable T>
   static void Sort(DLinkedList<T> &ls);
 };

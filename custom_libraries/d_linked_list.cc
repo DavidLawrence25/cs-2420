@@ -90,6 +90,33 @@ void DLinkedList<T>::Insert(int i, T data) {
 }
 
 template <typename T>
+void DLinkedList<T>::Insert(std::shared_ptr<DNode<T>> node,
+                            std::shared_ptr<DNode<T>> before) {
+  if (before == nullptr) {
+    node->previous = back_;
+    node->next = nullptr;
+    if (empty()) {
+      front_ = node;
+    } else {
+      back_->next = node;
+    }
+    back_ = node;
+  } else {
+    node->previous = before->previous;
+    node->next = before;
+
+    if (before->previous == nullptr) {
+      before->previous = node;
+      front_ = node;
+    } else {
+      before->previous->next = node;
+      before->previous = node;
+    }
+  }
+  ++size_;
+}
+
+template <typename T>
 void DLinkedList<T>::PopFront() {
   if (empty()) return;
   front_ = front_->next;

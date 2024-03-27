@@ -47,10 +47,6 @@ class DLinkedList {
   // If `i` is not on the interval `[0, size_)`, returns std::nullopt.
   std::optional<T> Peek(int i) const;
 
-  void set_size(size_t size) { size_ = size; }
-  void set_front(std::shared_ptr<DNode<T>> front) { front_ = front; }
-  void set_back(std::shared_ptr<DNode<T>> back) { back_ = back; }
-
   // Pushes `data` to the front of the list.
   void PushFront(T data);
   // Pushes `data` to the back of the list.
@@ -58,6 +54,12 @@ class DLinkedList {
   // Inserts `data` at index `i`.
   // If `i` is not on the interval `[0, size_]`, does nothing.
   void Insert(int i, T data);
+  // Inserts `node` before `before`.
+  // Blindly trusts that `before` is in the list for efficiency, except for the
+  // case in which `before` is nullptr, which is treated as an analagous call to
+  // PushBack.
+  // Please use the other version unless you have a really good reason not to.
+  void Insert(std::shared_ptr<DNode<T>> node, std::shared_ptr<DNode<T>> before);
   // Pops the front off the list.
   // If the list is empty, does nothing.
   void PopFront();
