@@ -1,289 +1,289 @@
 ====================================================================================================
-PASS: HashTableConstructorTest::TestDefaultSize (in ../../no_brainers/08_lp_hash_table/test_cases.h at 27:28)
+PASS: HashTableConstructorTest::TestDefaultSize (in ./no_brainers/08_lp_hash_table/test_cases.h at 27:28)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.size() == size_t{0}
 	==> 0 == 0
 ====================================================================================================
-PASS: HashTableConstructorTest::TestDefaultCapacity (in ../../no_brainers/08_lp_hash_table/test_cases.h at 28:32)
+PASS: HashTableConstructorTest::TestDefaultCapacity (in ./no_brainers/08_lp_hash_table/test_cases.h at 28:32)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.capacity() == size_t{17}
 	==> 17 == 17
 ====================================================================================================
-PASS: HashTableConstructorTest::TestDefaultEmpty (in ../../no_brainers/08_lp_hash_table/test_cases.h at 29:29)
+PASS: HashTableConstructorTest::TestDefaultEmpty (in ./no_brainers/08_lp_hash_table/test_cases.h at 29:29)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.empty() == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableConstructorTest::TestExplicitCapacitySize (in ../../no_brainers/08_lp_hash_table/test_cases.h at 31:37)
+PASS: HashTableConstructorTest::TestExplicitCapacitySize (in ./no_brainers/08_lp_hash_table/test_cases.h at 31:37)
 ----------------------------------------------------------------------------------------------------
 	assert table1_.size() == size_t{0}
 	==> 0 == 0
 ====================================================================================================
-PASS: HashTableConstructorTest::TestExplicitCapacity (in ../../no_brainers/08_lp_hash_table/test_cases.h at 32:33)
+PASS: HashTableConstructorTest::TestExplicitCapacity (in ./no_brainers/08_lp_hash_table/test_cases.h at 32:33)
 ----------------------------------------------------------------------------------------------------
 	assert table1_.capacity() == size_t{13}
 	==> 13 == 13
 ====================================================================================================
-PASS: HashTableConstructorTest::TestExplicitCapacityEmpty (in ../../no_brainers/08_lp_hash_table/test_cases.h at 33:38)
+PASS: HashTableConstructorTest::TestExplicitCapacityEmpty (in ./no_brainers/08_lp_hash_table/test_cases.h at 33:38)
 ----------------------------------------------------------------------------------------------------
 	assert table1_.empty() == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage1Size (in ../../no_brainers/08_lp_hash_table/test_cases.h at 68:27)
+PASS: HashTableInsertTest::TestStage1Size (in ./no_brainers/08_lp_hash_table/test_cases.h at 68:27)
 ----------------------------------------------------------------------------------------------------
 	assert table_.size() == size_t{1}
 	==> 1 == 1
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage1Contains2 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 69:32)
+PASS: HashTableInsertTest::TestStage1Contains2 (in ./no_brainers/08_lp_hash_table/test_cases.h at 69:32)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(2) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage1DoesntContain12 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 70:38)
+PASS: HashTableInsertTest::TestStage1DoesntContain12 (in ./no_brainers/08_lp_hash_table/test_cases.h at 70:38)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(12) == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage1NotEmpty (in ../../no_brainers/08_lp_hash_table/test_cases.h at 71:31)
+PASS: HashTableInsertTest::TestStage1NotEmpty (in ./no_brainers/08_lp_hash_table/test_cases.h at 71:31)
 ----------------------------------------------------------------------------------------------------
 	assert table_.empty() == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage2Size (in ../../no_brainers/08_lp_hash_table/test_cases.h at 73:27)
+PASS: HashTableInsertTest::TestStage2Size (in ./no_brainers/08_lp_hash_table/test_cases.h at 73:27)
 ----------------------------------------------------------------------------------------------------
 	assert table_.size() == size_t{2}
 	==> 2 == 2
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage2Contains5 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 74:32)
+PASS: HashTableInsertTest::TestStage2Contains5 (in ./no_brainers/08_lp_hash_table/test_cases.h at 74:32)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(5) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage3Size (in ../../no_brainers/08_lp_hash_table/test_cases.h at 76:27)
+PASS: HashTableInsertTest::TestStage3Size (in ./no_brainers/08_lp_hash_table/test_cases.h at 76:27)
 ----------------------------------------------------------------------------------------------------
 	assert table_.size() == size_t{3}
 	==> 3 == 3
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage3Contains64 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 77:33)
+PASS: HashTableInsertTest::TestStage3Contains64 (in ./no_brainers/08_lp_hash_table/test_cases.h at 77:33)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(64) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage3DoesntContain13 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 78:38)
+PASS: HashTableInsertTest::TestStage3DoesntContain13 (in ./no_brainers/08_lp_hash_table/test_cases.h at 78:38)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(13) == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage4Contains13 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 80:33)
+PASS: HashTableInsertTest::TestStage4Contains13 (in ./no_brainers/08_lp_hash_table/test_cases.h at 80:33)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(13) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage4Contains64 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 81:33)
+PASS: HashTableInsertTest::TestStage4Contains64 (in ./no_brainers/08_lp_hash_table/test_cases.h at 81:33)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(64) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage5Contains30 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 83:33)
+PASS: HashTableInsertTest::TestStage5Contains30 (in ./no_brainers/08_lp_hash_table/test_cases.h at 83:33)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(30) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage6Contains47 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 85:33)
+PASS: HashTableInsertTest::TestStage6Contains47 (in ./no_brainers/08_lp_hash_table/test_cases.h at 85:33)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(47) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage6Contains13 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 86:33)
+PASS: HashTableInsertTest::TestStage6Contains13 (in ./no_brainers/08_lp_hash_table/test_cases.h at 86:33)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(13) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage6Contains64 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 87:33)
+PASS: HashTableInsertTest::TestStage6Contains64 (in ./no_brainers/08_lp_hash_table/test_cases.h at 87:33)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(64) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage1Size (in ../../no_brainers/08_lp_hash_table/test_cases.h at 128:27)
+PASS: HashTableRemoveTest::TestStage1Size (in ./no_brainers/08_lp_hash_table/test_cases.h at 128:27)
 ----------------------------------------------------------------------------------------------------
 	assert table_.size() == size_t{0}
 	==> 0 == 0
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage1Empty (in ../../no_brainers/08_lp_hash_table/test_cases.h at 129:28)
+PASS: HashTableRemoveTest::TestStage1Empty (in ./no_brainers/08_lp_hash_table/test_cases.h at 129:28)
 ----------------------------------------------------------------------------------------------------
 	assert table_.empty() == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage1DoesntContain3 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 130:37)
+PASS: HashTableRemoveTest::TestStage1DoesntContain3 (in ./no_brainers/08_lp_hash_table/test_cases.h at 130:37)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(3) == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage2Contains6 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 132:32)
+PASS: HashTableRemoveTest::TestStage2Contains6 (in ./no_brainers/08_lp_hash_table/test_cases.h at 132:32)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(6) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage2Contains1 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 133:32)
+PASS: HashTableRemoveTest::TestStage2Contains1 (in ./no_brainers/08_lp_hash_table/test_cases.h at 133:32)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(1) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage2Contains20 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 134:33)
+PASS: HashTableRemoveTest::TestStage2Contains20 (in ./no_brainers/08_lp_hash_table/test_cases.h at 134:33)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(20) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage3DoesntContain6 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 136:37)
+PASS: HashTableRemoveTest::TestStage3DoesntContain6 (in ./no_brainers/08_lp_hash_table/test_cases.h at 136:37)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(6) == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage3DoesntContain1 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 137:37)
+PASS: HashTableRemoveTest::TestStage3DoesntContain1 (in ./no_brainers/08_lp_hash_table/test_cases.h at 137:37)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(1) == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage3DoesntContain20 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 138:38)
+PASS: HashTableRemoveTest::TestStage3DoesntContain20 (in ./no_brainers/08_lp_hash_table/test_cases.h at 138:38)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(20) == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage3Size (in ../../no_brainers/08_lp_hash_table/test_cases.h at 139:27)
+PASS: HashTableRemoveTest::TestStage3Size (in ./no_brainers/08_lp_hash_table/test_cases.h at 139:27)
 ----------------------------------------------------------------------------------------------------
 	assert table_.size() == size_t{0}
 	==> 0 == 0
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage3Empty (in ../../no_brainers/08_lp_hash_table/test_cases.h at 140:28)
+PASS: HashTableRemoveTest::TestStage3Empty (in ./no_brainers/08_lp_hash_table/test_cases.h at 140:28)
 ----------------------------------------------------------------------------------------------------
 	assert table_.empty() == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage4Contains4 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 142:32)
+PASS: HashTableRemoveTest::TestStage4Contains4 (in ./no_brainers/08_lp_hash_table/test_cases.h at 142:32)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(4) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage4Contains38 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 143:33)
+PASS: HashTableRemoveTest::TestStage4Contains38 (in ./no_brainers/08_lp_hash_table/test_cases.h at 143:33)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(38) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage4Contains55 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 144:33)
+PASS: HashTableRemoveTest::TestStage4Contains55 (in ./no_brainers/08_lp_hash_table/test_cases.h at 144:33)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(55) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage4DoesntContain21 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 145:38)
+PASS: HashTableRemoveTest::TestStage4DoesntContain21 (in ./no_brainers/08_lp_hash_table/test_cases.h at 145:38)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(21) == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableClearTest::TestStage1Size (in ../../no_brainers/08_lp_hash_table/test_cases.h at 176:27)
+PASS: HashTableClearTest::TestStage1Size (in ./no_brainers/08_lp_hash_table/test_cases.h at 176:27)
 ----------------------------------------------------------------------------------------------------
 	assert table_.size() == size_t{0}
 	==> 0 == 0
 ====================================================================================================
-PASS: HashTableClearTest::TestStage1Empty (in ../../no_brainers/08_lp_hash_table/test_cases.h at 177:28)
+PASS: HashTableClearTest::TestStage1Empty (in ./no_brainers/08_lp_hash_table/test_cases.h at 177:28)
 ----------------------------------------------------------------------------------------------------
 	assert table_.empty() == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableClearTest::TestStage2Size (in ../../no_brainers/08_lp_hash_table/test_cases.h at 179:27)
+PASS: HashTableClearTest::TestStage2Size (in ./no_brainers/08_lp_hash_table/test_cases.h at 179:27)
 ----------------------------------------------------------------------------------------------------
 	assert table_.size() == size_t{0}
 	==> 0 == 0
 ====================================================================================================
-PASS: HashTableClearTest::TestStage2Empty (in ../../no_brainers/08_lp_hash_table/test_cases.h at 180:28)
+PASS: HashTableClearTest::TestStage2Empty (in ./no_brainers/08_lp_hash_table/test_cases.h at 180:28)
 ----------------------------------------------------------------------------------------------------
 	assert table_.empty() == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableClearTest::TestStage3Size (in ../../no_brainers/08_lp_hash_table/test_cases.h at 182:27)
+PASS: HashTableClearTest::TestStage3Size (in ./no_brainers/08_lp_hash_table/test_cases.h at 182:27)
 ----------------------------------------------------------------------------------------------------
 	assert table_.size() == size_t{0}
 	==> 0 == 0
 ====================================================================================================
-PASS: HashTableClearTest::TestStage3Empty (in ../../no_brainers/08_lp_hash_table/test_cases.h at 183:28)
+PASS: HashTableClearTest::TestStage3Empty (in ./no_brainers/08_lp_hash_table/test_cases.h at 183:28)
 ----------------------------------------------------------------------------------------------------
 	assert table_.empty() == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableClearTest::TestStage3DoesntContain4 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 184:37)
+PASS: HashTableClearTest::TestStage3DoesntContain4 (in ./no_brainers/08_lp_hash_table/test_cases.h at 184:37)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(4) == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableClearTest::TestStage3DoesntContain5 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 185:37)
+PASS: HashTableClearTest::TestStage3DoesntContain5 (in ./no_brainers/08_lp_hash_table/test_cases.h at 185:37)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(5) == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableClearTest::TestStage3DoesntContain374 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 186:39)
+PASS: HashTableClearTest::TestStage3DoesntContain374 (in ./no_brainers/08_lp_hash_table/test_cases.h at 186:39)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(374) == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableDeepCopyTest::TestStage1OriginalSize (in ../../no_brainers/08_lp_hash_table/test_cases.h at 230:35)
+PASS: HashTableDeepCopyTest::TestStage1OriginalSize (in ./no_brainers/08_lp_hash_table/test_cases.h at 230:35)
 ----------------------------------------------------------------------------------------------------
 	assert table_.size() == size_t{3}
 	==> 3 == 3
 ====================================================================================================
-PASS: HashTableDeepCopyTest::TestStage1DeepCopySize (in ../../no_brainers/08_lp_hash_table/test_cases.h at 231:35)
+PASS: HashTableDeepCopyTest::TestStage1DeepCopySize (in ./no_brainers/08_lp_hash_table/test_cases.h at 231:35)
 ----------------------------------------------------------------------------------------------------
 	assert copy_->size() == size_t{3}
 	==> 3 == 3
 ====================================================================================================
-PASS: HashTableDeepCopyTest::TestStage1DeepCopyContains12 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 232:41)
+PASS: HashTableDeepCopyTest::TestStage1DeepCopyContains12 (in ./no_brainers/08_lp_hash_table/test_cases.h at 232:41)
 ----------------------------------------------------------------------------------------------------
 	assert copy_->Contains(12) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableDeepCopyTest::TestStage2DeepCopyDoesntContain8 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 234:45)
+PASS: HashTableDeepCopyTest::TestStage2DeepCopyDoesntContain8 (in ./no_brainers/08_lp_hash_table/test_cases.h at 234:45)
 ----------------------------------------------------------------------------------------------------
 	assert copy_->Contains(8) == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableDeepCopyTest::TestStage3DeepCopyContains18 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 236:41)
+PASS: HashTableDeepCopyTest::TestStage3DeepCopyContains18 (in ./no_brainers/08_lp_hash_table/test_cases.h at 236:41)
 ----------------------------------------------------------------------------------------------------
 	assert copy_->Contains(18) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableDeepCopyTest::TestStage3OriginalSize (in ../../no_brainers/08_lp_hash_table/test_cases.h at 237:35)
+PASS: HashTableDeepCopyTest::TestStage3OriginalSize (in ./no_brainers/08_lp_hash_table/test_cases.h at 237:35)
 ----------------------------------------------------------------------------------------------------
 	assert table_.size() == size_t{5}
 	==> 5 == 5
 ====================================================================================================
-PASS: HashTableDeepCopyTest::TestStage3DeepCopySize (in ../../no_brainers/08_lp_hash_table/test_cases.h at 238:35)
+PASS: HashTableDeepCopyTest::TestStage3DeepCopySize (in ./no_brainers/08_lp_hash_table/test_cases.h at 238:35)
 ----------------------------------------------------------------------------------------------------
 	assert copy_->size() == size_t{5}
 	==> 5 == 5
 ====================================================================================================
-PASS: HashTableDeepCopyTest::TestStage4OriginalContains18 (in ../../no_brainers/08_lp_hash_table/test_cases.h at 240:41)
+PASS: HashTableDeepCopyTest::TestStage4OriginalContains18 (in ./no_brainers/08_lp_hash_table/test_cases.h at 240:41)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(18) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableErrorTest::TestDefaultCapacityFilled (in ../../no_brainers/08_lp_hash_table/test_cases.h at 266:5)
+PASS: HashTableErrorTest::TestDefaultCapacityFilled (in ./no_brainers/08_lp_hash_table/test_cases.h at 266:5)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Insert(16) ↛ std::exception
 	==> null ↛ std::exception
 ====================================================================================================
-PASS: HashTableErrorTest::TestDefaultCapacityOverfilled (in ../../no_brainers/08_lp_hash_table/test_cases.h at 272:5)
+PASS: HashTableErrorTest::TestDefaultCapacityOverfilled (in ./no_brainers/08_lp_hash_table/test_cases.h at 272:5)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Insert(17) → OutOfSpaceError
 	==> rose::OutOfSpaceError → OutOfSpaceError
 ====================================================================================================
-PASS: HashTableErrorTest::TestExplicitCapacityFilled (in ../../no_brainers/08_lp_hash_table/test_cases.h at 277:5)
+PASS: HashTableErrorTest::TestExplicitCapacityFilled (in ./no_brainers/08_lp_hash_table/test_cases.h at 277:5)
 ----------------------------------------------------------------------------------------------------
 	assert table1_.Insert(6) ↛ std::exception
 	==> null ↛ std::exception
 ====================================================================================================
-PASS: HashTableErrorTest::TestExplicitCapacityOverfilled (in ../../no_brainers/08_lp_hash_table/test_cases.h at 283:5)
+PASS: HashTableErrorTest::TestExplicitCapacityOverfilled (in ./no_brainers/08_lp_hash_table/test_cases.h at 283:5)
 ----------------------------------------------------------------------------------------------------
 	assert table1_.Insert(7) → OutOfSpaceError
 	==> rose::OutOfSpaceError → OutOfSpaceError
---------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 Ran 57 tests with 0 fails.
 
 PASSED

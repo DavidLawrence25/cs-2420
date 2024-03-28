@@ -33,7 +33,7 @@ void TestResult::Log(std::ostream &out, bool verbose = false) const {
     out << assertion;
   }
 
-  out << std::string(80, '-') << '\n';
+  out << std::string(kOutWidth, '-') << '\n';
   out << "Ran " << tests_ << " test" << ((tests_ == 1) ? " " : "s ") << "with "
       << fails_ << " fail" << ((fails_ == 1) ? ".\n" : "s.\n");
   out << '\n' << (fails_ ? "FAILED\n" : "PASSED\n");

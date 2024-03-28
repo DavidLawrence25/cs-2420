@@ -19,6 +19,8 @@
 
 namespace rose {
 
+const size_t kOutWidth = 100;
+
 // Contains flags for various testing features.
 struct CommandLineFlags {
   CommandLineFlags(int argc, const char *argv[]) {

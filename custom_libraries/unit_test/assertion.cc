@@ -193,14 +193,12 @@ void Assertion::WriteTo(JsonWriter &writer) const {
 }
 
 std::ostream &operator<<(std::ostream &out, const Assertion &assertion) {
-  static constexpr size_t out_width = 100;
-
-  out << std::string(out_width, '=') << '\n';
+  out << std::string(kOutWidth, '=') << '\n';
   out << (assertion.passed() ? "PASS: " : "FAIL: ") << assertion.case_name()
       << "::" << assertion.func_name() << " (in "
       << assertion.source_file_name() << " at " << assertion.line() << ':'
       << assertion.column() << ")\n";
-  out << std::string(out_width, '-') << '\n';
+  out << std::string(kOutWidth, '-') << '\n';
   out << "\tassert " << assertion.repr0()
       << Assertion::GetOperationRepr(assertion.type()) << assertion.repr1()
       << '\n';

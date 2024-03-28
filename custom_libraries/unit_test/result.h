@@ -10,6 +10,7 @@
 
 namespace rose {
 
+extern const size_t kOutWidth;
 class Assertion;  // Defined in "custom_libraries/unit_test/assertion.h"
 
 // Contains metadata about the results of a TestSuite.

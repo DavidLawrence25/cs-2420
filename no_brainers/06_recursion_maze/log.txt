@@ -239,7 +239,7 @@ PASS: DonutMazeTest::TestPrintSuccess (in ./no_brainers/06_recursion_maze/test_c
 ----------------------------------------------------------------------------------------------------
 	assert sout.str() == std::string("Could not be solved")
 	==> Could not be solved == Could not be solved
---------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 Ran 27 tests with 0 fails.
 
 PASSED

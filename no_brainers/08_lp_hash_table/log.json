@@ -8,7 +8,7 @@
     "HashTableClearTest": [
       {
         "name": "TestStage1Size",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 176,
         "column": 27,
         "assertion_type": "equal",
@@ -24,7 +24,7 @@
       },
       {
         "name": "TestStage1Empty",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 177,
         "column": 28,
         "assertion_type": "true",
@@ -34,7 +34,7 @@
       },
       {
         "name": "TestStage2Size",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 179,
         "column": 27,
         "assertion_type": "equal",
@@ -50,7 +50,7 @@
       },
       {
         "name": "TestStage2Empty",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 180,
         "column": 28,
         "assertion_type": "true",
@@ -60,7 +60,7 @@
       },
       {
         "name": "TestStage3Size",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 182,
         "column": 27,
         "assertion_type": "equal",
@@ -76,7 +76,7 @@
       },
       {
         "name": "TestStage3Empty",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 183,
         "column": 28,
         "assertion_type": "true",
@@ -86,7 +86,7 @@
       },
       {
         "name": "TestStage3DoesntContain4",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 184,
         "column": 37,
         "assertion_type": "false",
@@ -96,7 +96,7 @@
       },
       {
         "name": "TestStage3DoesntContain5",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 185,
         "column": 37,
         "assertion_type": "false",
@@ -106,7 +106,7 @@
       },
       {
         "name": "TestStage3DoesntContain374",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 186,
         "column": 39,
         "assertion_type": "false",
@@ -118,7 +118,7 @@
     "HashTableConstructorTest": [
       {
         "name": "TestDefaultSize",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 27,
         "column": 28,
         "assertion_type": "equal",
@@ -134,7 +134,7 @@
       },
       {
         "name": "TestDefaultCapacity",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 28,
         "column": 32,
         "assertion_type": "equal",
@@ -150,7 +150,7 @@
       },
       {
         "name": "TestDefaultEmpty",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 29,
         "column": 29,
         "assertion_type": "true",
@@ -160,7 +160,7 @@
       },
       {
         "name": "TestExplicitCapacitySize",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 31,
         "column": 37,
         "assertion_type": "equal",
@@ -176,7 +176,7 @@
       },
       {
         "name": "TestExplicitCapacity",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 32,
         "column": 33,
         "assertion_type": "equal",
@@ -192,7 +192,7 @@
       },
       {
         "name": "TestExplicitCapacityEmpty",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 33,
         "column": 38,
         "assertion_type": "true",
@@ -204,7 +204,7 @@
     "HashTableDeepCopyTest": [
       {
         "name": "TestStage1OriginalSize",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 230,
         "column": 35,
         "assertion_type": "equal",
@@ -220,7 +220,7 @@
       },
       {
         "name": "TestStage1DeepCopySize",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 231,
         "column": 35,
         "assertion_type": "equal",
@@ -236,7 +236,7 @@
       },
       {
         "name": "TestStage1DeepCopyContains12",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 232,
         "column": 41,
         "assertion_type": "true",
@@ -246,7 +246,7 @@
       },
       {
         "name": "TestStage2DeepCopyDoesntContain8",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 234,
         "column": 45,
         "assertion_type": "false",
@@ -256,7 +256,7 @@
       },
       {
         "name": "TestStage3DeepCopyContains18",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 236,
         "column": 41,
         "assertion_type": "true",
@@ -266,7 +266,7 @@
       },
       {
         "name": "TestStage3OriginalSize",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 237,
         "column": 35,
         "assertion_type": "equal",
@@ -282,7 +282,7 @@
       },
       {
         "name": "TestStage3DeepCopySize",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 238,
         "column": 35,
         "assertion_type": "equal",
@@ -298,7 +298,7 @@
       },
       {
         "name": "TestStage4OriginalContains18",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 240,
         "column": 41,
         "assertion_type": "true",
@@ -310,7 +310,7 @@
     "HashTableErrorTest": [
       {
         "name": "TestDefaultCapacityFilled",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 266,
         "column": 5,
         "assertion_type": "doesnt_throw",
@@ -326,7 +326,7 @@
       },
       {
         "name": "TestDefaultCapacityOverfilled",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 272,
         "column": 5,
         "assertion_type": "throws_as",
@@ -342,7 +342,7 @@
       },
       {
         "name": "TestExplicitCapacityFilled",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 277,
         "column": 5,
         "assertion_type": "doesnt_throw",
@@ -358,7 +358,7 @@
       },
       {
         "name": "TestExplicitCapacityOverfilled",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 283,
         "column": 5,
         "assertion_type": "throws_as",
@@ -376,7 +376,7 @@
     "HashTableInsertTest": [
       {
         "name": "TestStage1Size",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 68,
         "column": 27,
         "assertion_type": "equal",
@@ -392,7 +392,7 @@
       },
       {
         "name": "TestStage1Contains2",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 69,
         "column": 32,
         "assertion_type": "true",
@@ -402,7 +402,7 @@
       },
       {
         "name": "TestStage1DoesntContain12",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 70,
         "column": 38,
         "assertion_type": "false",
@@ -412,7 +412,7 @@
       },
       {
         "name": "TestStage1NotEmpty",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 71,
         "column": 31,
         "assertion_type": "false",
@@ -422,7 +422,7 @@
       },
       {
         "name": "TestStage2Size",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 73,
         "column": 27,
         "assertion_type": "equal",
@@ -438,7 +438,7 @@
       },
       {
         "name": "TestStage2Contains5",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 74,
         "column": 32,
         "assertion_type": "true",
@@ -448,7 +448,7 @@
       },
       {
         "name": "TestStage3Size",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 76,
         "column": 27,
         "assertion_type": "equal",
@@ -464,7 +464,7 @@
       },
       {
         "name": "TestStage3Contains64",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 77,
         "column": 33,
         "assertion_type": "true",
@@ -474,7 +474,7 @@
       },
       {
         "name": "TestStage3DoesntContain13",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 78,
         "column": 38,
         "assertion_type": "false",
@@ -484,7 +484,7 @@
       },
       {
         "name": "TestStage4Contains13",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 80,
         "column": 33,
         "assertion_type": "true",
@@ -494,7 +494,7 @@
       },
       {
         "name": "TestStage4Contains64",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 81,
         "column": 33,
         "assertion_type": "true",
@@ -504,7 +504,7 @@
       },
       {
         "name": "TestStage5Contains30",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 83,
         "column": 33,
         "assertion_type": "true",
@@ -514,7 +514,7 @@
       },
       {
         "name": "TestStage6Contains47",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 85,
         "column": 33,
         "assertion_type": "true",
@@ -524,7 +524,7 @@
       },
       {
         "name": "TestStage6Contains13",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 86,
         "column": 33,
         "assertion_type": "true",
@@ -534,7 +534,7 @@
       },
       {
         "name": "TestStage6Contains64",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 87,
         "column": 33,
         "assertion_type": "true",
@@ -546,7 +546,7 @@
     "HashTableRemoveTest": [
       {
         "name": "TestStage1Size",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 128,
         "column": 27,
         "assertion_type": "equal",
@@ -562,7 +562,7 @@
       },
       {
         "name": "TestStage1Empty",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 129,
         "column": 28,
         "assertion_type": "true",
@@ -572,7 +572,7 @@
       },
       {
         "name": "TestStage1DoesntContain3",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 130,
         "column": 37,
         "assertion_type": "false",
@@ -582,7 +582,7 @@
       },
       {
         "name": "TestStage2Contains6",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 132,
         "column": 32,
         "assertion_type": "true",
@@ -592,7 +592,7 @@
       },
       {
         "name": "TestStage2Contains1",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 133,
         "column": 32,
         "assertion_type": "true",
@@ -602,7 +602,7 @@
       },
       {
         "name": "TestStage2Contains20",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 134,
         "column": 33,
         "assertion_type": "true",
@@ -612,7 +612,7 @@
       },
       {
         "name": "TestStage3DoesntContain6",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 136,
         "column": 37,
         "assertion_type": "false",
@@ -622,7 +622,7 @@
       },
       {
         "name": "TestStage3DoesntContain1",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 137,
         "column": 37,
         "assertion_type": "false",
@@ -632,7 +632,7 @@
       },
       {
         "name": "TestStage3DoesntContain20",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 138,
         "column": 38,
         "assertion_type": "false",
@@ -642,7 +642,7 @@
       },
       {
         "name": "TestStage3Size",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 139,
         "column": 27,
         "assertion_type": "equal",
@@ -658,7 +658,7 @@
       },
       {
         "name": "TestStage3Empty",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 140,
         "column": 28,
         "assertion_type": "true",
@@ -668,7 +668,7 @@
       },
       {
         "name": "TestStage4Contains4",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 142,
         "column": 32,
         "assertion_type": "true",
@@ -678,7 +678,7 @@
       },
       {
         "name": "TestStage4Contains38",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 143,
         "column": 33,
         "assertion_type": "true",
@@ -688,7 +688,7 @@
       },
       {
         "name": "TestStage4Contains55",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 144,
         "column": 33,
         "assertion_type": "true",
@@ -698,7 +698,7 @@
       },
       {
         "name": "TestStage4DoesntContain21",
-        "file": "../../no_brainers/08_lp_hash_table/test_cases.h",
+        "file": "./no_brainers/08_lp_hash_table/test_cases.h",
         "line": 145,
         "column": 38,
         "assertion_type": "false",

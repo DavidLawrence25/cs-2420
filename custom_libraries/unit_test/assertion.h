@@ -12,6 +12,8 @@
 
 namespace rose {
 
+extern const size_t kOutWidth;
+
 enum class AssertionType {
   kNull,  // Used to keep the compiler from complaining in switch statements.
   kEqual,

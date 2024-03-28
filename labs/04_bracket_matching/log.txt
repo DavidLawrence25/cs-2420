@@ -68,7 +68,7 @@ PASS: BracketTest::TestInvalidStreamExtraction (in ./labs/04_bracket_matching/te
 ----------------------------------------------------------------------------------------------------
 	assert sout.str() == std::string("Not Balanced")
 	==> Not Balanced == Not Balanced
---------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 Ran 14 tests with 0 fails.
 
 PASSED
