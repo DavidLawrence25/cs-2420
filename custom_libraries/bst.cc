@@ -70,14 +70,20 @@ BST<T>::pointer BST<T>::FindParent(pointer ptr) const {
 
 template <Orderable T>
 void BST<T>::Insert(const T &data, pointer ptr) {
-  if (!ptr) {
-    if (root_) {
-      ptr = std::make_shared<BSTNode<T>>(data, nullptr, nullptr);
+  if (!ptr && !root_) {
+    root_ = std::make_shared<BSTNode<T>>(data, nullptr, nullptr);
+  } else if (data < ptr->data) {
+    if (ptr->left) {
+      Insert(data, ptr->left);
     } else {
-      root_ = std::make_shared<BSTNode<T>>(data, nullptr, nullptr);
+      ptr->left = std::make_shared<BSTNode<T>>(data, nullptr, nullptr);
     }
   } else {
-    Insert(data, data < ptr->data ? ptr->left : ptr->right);
+    if (ptr->right) {
+      Insert(data, ptr->right);
+    } else {
+      ptr->right = std::make_shared<BSTNode<T>>(data, nullptr, nullptr);
+    }
   }
 }
 
@@ -154,7 +160,7 @@ std::ostream &BST<T>::ExtractPostOrder(std::ostream &out) const {
 }
 
 template <Orderable T>
-BSTIterator<T> &BSTPreOrderIterator<T>::operator++() {
+BSTPreOrderIterator<T> &BSTPreOrderIterator<T>::operator++() {
   if (this->stack_.empty()) {
     this->ptr_ = nullptr;
   } else {
@@ -165,11 +171,11 @@ BSTIterator<T> &BSTPreOrderIterator<T>::operator++() {
 }
 
 template <Orderable T>
-BSTIterator<T> &BSTInOrderIterator<T>::operator++() {
+BSTInOrderIterator<T> &BSTInOrderIterator<T>::operator++() {
   if (this->ptr_->right) {
     this->stack_.push(this->ptr_->right);
     this->NavigateToLeftmostNode();
-  } else if (stack_.empty()) {
+  } else if (this->stack_.empty()) {
     this->ptr_ = nullptr;
     return *this;
   }
@@ -178,7 +184,7 @@ BSTIterator<T> &BSTInOrderIterator<T>::operator++() {
 }
 
 template <Orderable T>
-BSTIterator<T> &BSTPostOrderIterator<T>::operator++() {
+BSTPostOrderIterator<T> &BSTPostOrderIterator<T>::operator++() {
   if (this->stack_.empty()) {
     this->ptr_ = nullptr;
     return *this;

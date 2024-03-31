@@ -137,13 +137,11 @@ class BSTIterator {
       : tree_(tree), ptr_(ptr) {}
 
   BST<T>::pointer ptr() const { return ptr_; }
-  BSTIterator begin() const { return BSTIterator(tree_); }
-  BSTIterator end() const { return BSTIterator(tree_, nullptr); }
 
   reference operator*() const { return ptr_->data; }
   pointer operator->() const { return &operator*(); }
-  virtual BSTIterator &operator++() = 0;
-  bool operator==(const BSTIterator &other) {
+  // virtual BSTIterator &operator++() = 0;
+  bool operator==(const BSTIterator &other) const {
     // Doesn't compare stacks for the sake of speed, but it might matter.
     return tree_ == other.tree_ && ptr_ == other.ptr_;
   }
@@ -172,7 +170,7 @@ class BSTIterator {
 // 2. Traverse the left branch.
 // 3. Traverse the right branch.
 template <Orderable T>
-class BSTPreOrderIterator : public BSTIterator {
+class BSTPreOrderIterator : public BSTIterator<T> {
  public:
   BSTPreOrderIterator(
       const BST<T> *tree,
@@ -181,13 +179,18 @@ class BSTPreOrderIterator : public BSTIterator {
     if (this->ptr_) AddChildrenToStack();
   }
 
-  BSTIterator<T> &operator++() override;
+  BSTPreOrderIterator begin() const { return BSTPreOrderIterator(this->tree_); }
+  BSTPreOrderIterator end() const {
+    return BSTPreOrderIterator(this->tree_, nullptr);
+  }
+
+  BSTPreOrderIterator<T> &operator++();
 
  private:
   void AddChildrenToStack() {
     // The order is reversed because a stack is a LIFO data structure.
-    if (this->ptr_->right) stack_.push(this->ptr_->right);
-    if (this->ptr_->left) stack_.push(this->ptr_->left);
+    if (this->ptr_->right) this->stack_.push(this->ptr_->right);
+    if (this->ptr_->left) this->stack_.push(this->ptr_->left);
   }
 };
 
@@ -197,7 +200,7 @@ class BSTPreOrderIterator : public BSTIterator {
 // 2. Get the root node.
 // 3. Traverse the right branch.
 template <Orderable T>
-class BSTInOrderIterator : public BSTIterator {
+class BSTInOrderIterator : public BSTIterator<T> {
  public:
   BSTInOrderIterator(const BST<T> *tree,
                      std::optional<typename BST<T>::pointer> ptr = std::nullopt)
@@ -209,7 +212,12 @@ class BSTInOrderIterator : public BSTIterator {
     }
   }
 
-  BSTIterator<T> &operator++() override;
+  BSTInOrderIterator begin() const { return BSTInOrderIterator(this->tree_); }
+  BSTInOrderIterator end() const {
+    return BSTInOrderIterator(this->tree_, nullptr);
+  }
+
+  BSTInOrderIterator<T> &operator++();
 };
 
 // An iterator that iterates over a binary search tree via post-order traversal.
@@ -218,7 +226,7 @@ class BSTInOrderIterator : public BSTIterator {
 // 2. Traverse the right branch.
 // 3. Get the root node.
 template <Orderable T>
-class BSTPostOrderIterator : public BSTIterator {
+class BSTPostOrderIterator : public BSTIterator<T> {
  public:
   BSTPostOrderIterator(
       const BST<T> *tree,
@@ -231,9 +239,19 @@ class BSTPostOrderIterator : public BSTIterator {
     }
   }
 
-  BSTIterator<T> &operator++() override;
+  BSTPostOrderIterator begin() const {
+    return BSTPostOrderIterator(this->tree_);
+  }
+
+  BSTPostOrderIterator end() const {
+    return BSTPostOrderIterator(this->tree_, nullptr);
+  }
+
+  BSTPostOrderIterator<T> &operator++();
 };
 
 }  // namespace rose
+
+#include "custom_libraries/bst.cc"
 
 #endif  // CS2420_CUSTOMLIBRARIES_BST_H_
