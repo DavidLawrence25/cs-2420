@@ -2,9 +2,9 @@
 
 #include <stdlib.h>
 
-#include "bst.h"
 #include <memory>
 #include <ostream>
+#include <ranges>
 
 namespace rose {
 
@@ -143,19 +143,31 @@ void BST<T>::RemoveParentOfBoth(BSTParentChildPair<T> pair) {
 
 template <Orderable T>
 std::ostream &BST<T>::ExtractPreOrder(std::ostream &out) const {
-  for (T data : BSTPreOrderIterator<T>(this)) out << data << ' ';
+  if (root_) {
+    BSTPreOrderIterator<T> it = {this};
+    for (; !it.IsAtLastNode(); ++it) out << *it << ' ';
+    out << *it;
+  }
   return out;
 }
 
 template <Orderable T>
 std::ostream &BST<T>::ExtractInOrder(std::ostream &out) const {
-  for (T data : BSTInOrderIterator<T>(this)) out << data << ' ';
+  if (root_) {
+    BSTInOrderIterator<T> it = {this};
+    for (; !it.IsAtLastNode(); ++it) out << *it << ' ';
+    out << *it;
+  }
   return out;
 }
 
 template <Orderable T>
 std::ostream &BST<T>::ExtractPostOrder(std::ostream &out) const {
-  for (T data : BSTPostOrderIterator<T>(this)) out << data << ' ';
+  if (root_) {
+    BSTPostOrderIterator<T> it = {this};
+    for (; !it.IsAtLastNode(); ++it) out << *it << ' ';
+    out << *it;
+  }
   return out;
 }
 
@@ -190,10 +202,7 @@ BSTPostOrderIterator<T> &BSTPostOrderIterator<T>::operator++() {
     return *this;
   }
   if (this->stack_.top()->left == this->ptr_) {
-    while (this->stack_.top()->right) {
-      this->stack_.push(this->stack_.top()->right);
-      this->NavigateToLeftmostNode();
-    }
+    NavigateRightToLeftmostLeaf();
   }
   this->SetPointerToTop();
   return *this;

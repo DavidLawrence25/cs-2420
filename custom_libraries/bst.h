@@ -76,13 +76,13 @@ class BST {
   void Remove(const T &data) { Remove(FindWithParent(data)); }
 
   // Extracts the binary tree into `out` via pre-order traversal.
-  // Space-delimits nodes and adds a trailing space at the end.
+  // Space-delimits nodes.
   std::ostream &ExtractPreOrder(std::ostream &out) const;
   // Extracts the binary tree into `out` via in-order traversal.
-  // Space-delimits nodes and adds a trailing space at the end.
+  // Space-delimits nodes.
   std::ostream &ExtractInOrder(std::ostream &out) const;
   // Extracts the binary tree into `out` via post-order traversal.
-  // Space-delimits nodes and adds a trailing space at the end.
+  // Space-delimits nodes.
   std::ostream &ExtractPostOrder(std::ostream &out) const;
 
  private:
@@ -138,6 +138,9 @@ class BSTIterator {
 
   BST<T>::pointer ptr() const { return ptr_; }
 
+  // Returns true if the pointer is at the last node in the traversal.
+  virtual bool IsAtLastNode() const = 0;
+
   reference operator*() const { return ptr_->data; }
   pointer operator->() const { return &operator*(); }
   // virtual BSTIterator &operator++() = 0;
@@ -184,6 +187,10 @@ class BSTPreOrderIterator : public BSTIterator<T> {
     return BSTPreOrderIterator(this->tree_, nullptr);
   }
 
+  bool IsAtLastNode() const override {
+    return this->stack_.empty() && this->ptr_;
+  }
+
   BSTPreOrderIterator<T> &operator++();
 
  private:
@@ -217,6 +224,10 @@ class BSTInOrderIterator : public BSTIterator<T> {
     return BSTInOrderIterator(this->tree_, nullptr);
   }
 
+  bool IsAtLastNode() const override {
+    return this->ptr_ && !this->ptr_->right && this->stack_.empty();
+  }
+
   BSTInOrderIterator<T> &operator++();
 };
 
@@ -235,6 +246,7 @@ class BSTPostOrderIterator : public BSTIterator<T> {
     if (this->ptr_) {
       this->stack_.push(this->ptr_);
       this->NavigateToLeftmostNode();
+      NavigateRightToLeftmostLeaf();
       this->SetPointerToTop();
     }
   }
@@ -247,7 +259,21 @@ class BSTPostOrderIterator : public BSTIterator<T> {
     return BSTPostOrderIterator(this->tree_, nullptr);
   }
 
+  bool IsAtLastNode() const override {
+    return this->stack_.empty() && this->ptr_;
+  }
+
   BSTPostOrderIterator<T> &operator++();
+
+ private:
+  // Navigates down the tree by going right once, then going left as much as
+  // possible, and repeating until it reaches a leaf.
+  void NavigateRightToLeftmostLeaf() {
+    while (this->stack_.top()->right) {
+      this->stack_.push(this->stack_.top()->right);
+      this->NavigateToLeftmostNode();
+    }
+  }
 };
 
 }  // namespace rose
