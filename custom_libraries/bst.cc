@@ -45,9 +45,11 @@ BSTParentChildPair<T> BST<T>::FindWithParent(const T &data) const {
   BSTParentChildPair<T> pair = {.parent = nullptr, .child = root_};
   while (pair.child) {
     if (data == pair.child->data) break;
-    pointer new_parent = pair.child;
-    pair.child = data < new_parent->data ? new_parent->left : new_parent->right;
-    pair.parent = new_parent;
+    if (data < pair.child->data) {
+      pair.AdvanceGenerationLeftward();
+    } else {
+      pair.AdvanceGenerationRightward();
+    }
   }
   return pair;
 }
@@ -55,17 +57,13 @@ BSTParentChildPair<T> BST<T>::FindWithParent(const T &data) const {
 template <Orderable T>
 BSTParentChildPair<T> BST<T>::FindRightWithParent(
     BSTParentChildPair<T> pair) const {
-  while (pair.child && pair.child->right) {
-    pointer new_parent = pair.child;
-    pair.child = new_parent->right;
-    pair.parent = new_parent;
-  }
+  while (pair.child && pair.child->right) pair.AdvanceGenerationRightward();
   return pair;
 }
 
 template <Orderable T>
 BST<T>::pointer BST<T>::FindParent(pointer ptr) const {
-  return FindWithParent(ptr->data).parent;
+  return ptr ? FindWithParent(ptr->data).parent : nullptr;
 }
 
 template <Orderable T>
@@ -136,8 +134,10 @@ void BST<T>::RemoveParentOfRight(BSTParentChildPair<T> pair) {
 
 template <Orderable T>
 void BST<T>::RemoveParentOfBoth(BSTParentChildPair<T> pair) {
-  BSTParentChildPair<T> remove_pair = FindRightWithParent(pair.child->left);
-  pair.child->data = remove_pair.child->data;
+  BST<T>::pointer to_overwrite = pair.child;
+  pair.AdvanceGenerationLeftward();
+  BSTParentChildPair<T> remove_pair = FindRightWithParent(pair);
+  to_overwrite->data = remove_pair.child->data;
   Remove(remove_pair);
 }
 

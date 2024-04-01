@@ -31,6 +31,22 @@ template <Orderable T>
 struct BSTParentChildPair {
   std::shared_ptr<BSTNode<T>> parent;
   std::shared_ptr<BSTNode<T>> child;
+
+  // Makes the current child the new parent
+  // and the new parent's left child the new child.
+  void AdvanceGenerationLeftward() {
+    std::shared_ptr<BSTNode<T>> new_parent = child;
+    if (child) child = child->left;
+    parent = new_parent;
+  }
+
+  // Makes the current child the new parent
+  // and the new parent's right child the new child.
+  void AdvanceGenerationRightward() {
+    std::shared_ptr<BSTNode<T>> new_parent = child;
+    if (child) child = child->right;
+    parent = new_parent;
+  }
 };
 
 // A binary search tree: a tree structure in which...
