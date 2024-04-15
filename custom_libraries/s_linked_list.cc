@@ -2,11 +2,10 @@
 
 #include <stdlib.h>
 
-#include <memory>
-#include <optional>
 #include <ostream>
 #include <ranges>
-#include <vector>
+
+#include "custom_libraries/aliases.h"
 
 namespace rose {
 
@@ -15,7 +14,7 @@ SLinkedList<T>::SLinkedList(const SLinkedList<T> &other) : size_(other.size_) {
   if (other.empty()) return;
 
   front_ = std::make_shared<SNode<T>>(other.PeekFront(), /*next=*/nullptr);
-  std::shared_ptr<SNode<T>> back = front_;
+  sptr<SNode<T>> back = front_;
   for (T data : other) {
     auto new_back = std::make_shared<SNode<T>>(data, /*next=*/nullptr);
     back->next = new_back;
@@ -30,7 +29,7 @@ SLinkedList<T> &SLinkedList<T>::operator=(const SLinkedList<T> &other) {
   if (other.empty()) return *this;
 
   front_ = std::make_shared<SNode<T>>(other.PeekFront(), /*next=*/nullptr);
-  std::shared_ptr<SNode<T>> back = front_;
+  sptr<SNode<T>> back = front_;
   for (T data : other) {
     auto new_back = std::make_shared<SNode<T>>(data, /*next=*/nullptr);
     back->next = new_back;
@@ -50,19 +49,19 @@ SLinkedListIterator<T> SLinkedList<T>::end() const {
 }
 
 template <typename T>
-std::optional<T> SLinkedList<T>::PeekFront() const {
-  return front_ ? std::optional<T>(front_->data) : std::nullopt;
+opt<T> SLinkedList<T>::PeekFront() const {
+  return front_ ? opt<T>(front_->data) : std::nullopt;
 }
 
 template <typename T>
-std::optional<T> SLinkedList<T>::PeekBack() const {
+opt<T> SLinkedList<T>::PeekBack() const {
   return Peek(size_ - 1);
 }
 
 template <typename T>
-std::optional<T> SLinkedList<T>::Peek(int i) const {
-  std::shared_ptr<SNode<T>> ptr = GetNodePointer(i);
-  return ptr ? std::optional<T>(ptr->data) : std::nullopt;
+opt<T> SLinkedList<T>::Peek(uindex_t i) const {
+  sptr<SNode<T>> ptr = GetNodePointer(i);
+  return ptr ? opt<T>(ptr->data) : std::nullopt;
 }
 
 template <typename T>
@@ -77,7 +76,7 @@ void SLinkedList<T>::PushBack(T data) {
   if (size_ == 0) {
     PushFront(data);
   } else {
-    std::shared_ptr<SNode<T>> back = GetNodePointer(size_ - 1);
+    sptr<SNode<T>> back = GetNodePointer(size_ - 1);
     auto new_back = std::make_shared<SNode<T>>(data, /*next=*/nullptr);
     if (back) back->next = new_back;
     ++size_;
@@ -85,13 +84,13 @@ void SLinkedList<T>::PushBack(T data) {
 }
 
 template <typename T>
-void SLinkedList<T>::Insert(int i, T data) {
+void SLinkedList<T>::Insert(uindex_t i, T data) {
   if (i == 0) {
     PushFront(data);
   } else if (i == size_) {
     PushBack(data);
   } else {
-    std::shared_ptr<SNode<T>> before = GetNodePointer(i - 1);
+    sptr<SNode<T>> before = GetNodePointer(i - 1);
     // If `before` doesn't exist, we would have called PushFront earlier had `i`
     // been a valid index.
     if (before == nullptr) return;
@@ -113,7 +112,7 @@ template <typename T>
 void SLinkedList<T>::PopBack() {
   if (empty()) return;
   // `new_back` will point to the second-to-last node.
-  std::shared_ptr<SNode<T>> new_back = GetNodePointer(size_ - 2);
+  sptr<SNode<T>> new_back = GetNodePointer(size_ - 2);
   if (new_back == nullptr) {
     PopFront();  // ? not sure about this
   } else {
@@ -123,14 +122,14 @@ void SLinkedList<T>::PopBack() {
 }
 
 template <typename T>
-void SLinkedList<T>::Erase(int i) {
+void SLinkedList<T>::Erase(uindex_t i) {
   if (i == 0) {
     PopFront();
   } else if (i == size_ - 1) {
     PopBack();
   } else {
-    std::shared_ptr<SNode<T>> before_erase = GetNodePointer(i - 1);
-    std::shared_ptr<SNode<T>> to_erase = GetNodePointer(i);
+    sptr<SNode<T>> before_erase = GetNodePointer(i - 1);
+    sptr<SNode<T>> to_erase = GetNodePointer(i);
     // Existence of before_erase is guaranteed by the existence of to_erase.
     if (to_erase == nullptr) return;
     before_erase->next = to_erase->next;
@@ -140,7 +139,7 @@ void SLinkedList<T>::Erase(int i) {
 
 template <typename T>
 void SLinkedList<T>::Remove(T data) {
-  std::vector<int> indices_to_delete;
+  vector<int> indices_to_delete;
   for (const auto [i, x] : std::views::enumerate(*this)) {
     if (x == data) indices_to_delete.push_back(i);
   }
@@ -160,17 +159,17 @@ std::ostream &operator<<(std::ostream &out, const SLinkedList<_T> &list) {
 }
 
 template <typename T>
-std::shared_ptr<SNode<T>> SLinkedList<T>::GetNodePointer(int i) const {
-  if (i < 0 || i >= size_) return nullptr;
+sptr<SNode<T>> SLinkedList<T>::GetNodePointer(uindex_t i) const {
+  if (i >= size_) return nullptr;
 
-  std::shared_ptr<SNode<T>> ptr = front_;
-  for (int j = 0; j < i; ++j) ptr = ptr->next;
+  sptr<SNode<T>> ptr = front_;
+  for (uindex_t j = 0; j < i; ++j) ptr = ptr->next;
 
   return ptr;
 }
 
 template <typename T>
-std::shared_ptr<SNode<T>> SLinkedListIterator<T>::ptr() const {
+sptr<SNode<T>> SLinkedListIterator<T>::ptr() const {
   return ptr_;
 }
 

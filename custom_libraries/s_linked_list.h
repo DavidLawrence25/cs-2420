@@ -1,9 +1,9 @@
 #include <stdlib.h>
 
 #include <iterator>
-#include <memory>
-#include <optional>
 #include <ostream>
+
+#include "custom_libraries/aliases.h"
 
 #ifndef CS2420_CUSTOMLIBRARIES_SLINKEDLIST_H_
 #define CS2420_CUSTOMLIBRARIES_SLINKEDLIST_H_
@@ -14,7 +14,7 @@ namespace rose {
 template <typename T>
 struct SNode {
   T data;
-  std::shared_ptr<SNode<T>> next;
+  sptr<SNode<T>> next;
 };
 
 template <typename T>
@@ -35,31 +35,29 @@ class SLinkedList {
   SLinkedListIterator<T> end() const;
 
   // Returns the value stored at the front of the list.
-  // If the list is empty, returns std::nullopt.
-  std::optional<T> PeekFront() const;
+  // Returns std::nullopt if list is empty.
+  opt<T> PeekFront() const;
   // Returns the value stored at the back of the list.
-  // If the list is empty, returns std::nullopt.
-  std::optional<T> PeekBack() const;
+  // Returns std::nullopt if list is empty.
+  opt<T> PeekBack() const;
   // Returns the value stored at index `i`.
-  // If `i` is not on the interval `[0, size_)`, returns std::nullopt.
-  std::optional<T> Peek(int i) const;
+  // Returns std::nullopt if `i >= size_`.
+  opt<T> Peek(uindex_t i) const;
 
   // Pushes `data` to the front of the list.
   void PushFront(T data);
   // Pushes `data` to the back of the list.
   void PushBack(T data);
-  // Inserts `data` at index `i`.
-  // If `i` is not on the interval `[0, size_]`, does nothing.
-  void Insert(int i, T data);
+  // Inserts `data` at index `i`. Does nothing if `i > size_`.
+  void Insert(uindex_t i, T data);
   // Pops the front off the list.
   // If the list is empty, does nothing.
   void PopFront();
   // Pops the back off the list.
   // If the list is empty, does nothing.
   void PopBack();
-  // Erases the node at index `i`.
-  // If `i` is not on the interval `[0, size_)`, does nothing.
-  void Erase(int i);
+  // Erases the node at index `i`. Does nothing if `i >= size_`.
+  void Erase(uindex_t i);
   // Removes all nodes containing `data`.
   void Remove(T data);
 
@@ -70,9 +68,9 @@ class SLinkedList {
  private:
   // Returns a pointer to the node at index `i`.
   // If `i` is not on the interval `[0, size_)`, returns nullptr.
-  std::shared_ptr<SNode<T>> GetNodePointer(int i) const;
+  sptr<SNode<T>> GetNodePointer(uindex_t i) const;
 
-  std::shared_ptr<SNode<T>> front_ = nullptr;
+  sptr<SNode<T>> front_ = nullptr;
   size_t size_ = 0;
 };
 
@@ -87,10 +85,10 @@ class SLinkedListIterator {
   using difference_type = std::ptrdiff_t;
 
   SLinkedListIterator() = default;
-  SLinkedListIterator(const SLinkedList<T> *list, std::shared_ptr<SNode<T>> ptr)
+  SLinkedListIterator(const SLinkedList<T> *list, sptr<SNode<T>> ptr)
       : list_(list), ptr_(ptr) {}
 
-  std::shared_ptr<SNode<T>> ptr() const;
+  sptr<SNode<T>> ptr() const;
 
   reference operator*() const;
   pointer operator->() const;
@@ -100,7 +98,7 @@ class SLinkedListIterator {
 
  private:
   const SLinkedList<T> *list_;
-  std::shared_ptr<SNode<T>> ptr_;
+  sptr<SNode<T>> ptr_;
 };
 
 }  // namespace rose
