@@ -5,7 +5,6 @@
 #include <ostream>
 
 #include "custom_libraries/aliases.h"
-#include "custom_libraries/d_linked_list.h"
 #include "no_brainers/11_graph/edge_table.h"
 
 namespace rose {
