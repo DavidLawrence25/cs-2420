@@ -6,3 +6,4 @@ bin/
 *.code-workspace
 Makefile
 .clang-format
+.vs/
