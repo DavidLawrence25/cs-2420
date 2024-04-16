@@ -8,7 +8,7 @@
     "PalindromeTest": [
       {
         "name": "TestEasy",
-        "file": "./no_brainers/04_palindrome/test_cases.h",
+        "file": "../../no_brainers/04_palindrome/test_cases.h",
         "line": 21,
         "column": 5,
         "assertion_type": "true",
@@ -18,7 +18,7 @@
       },
       {
         "name": "TestSpaces",
-        "file": "./no_brainers/04_palindrome/test_cases.h",
+        "file": "../../no_brainers/04_palindrome/test_cases.h",
         "line": 26,
         "column": 5,
         "assertion_type": "true",
@@ -28,7 +28,7 @@
       },
       {
         "name": "TestMixedCase",
-        "file": "./no_brainers/04_palindrome/test_cases.h",
+        "file": "../../no_brainers/04_palindrome/test_cases.h",
         "line": 31,
         "column": 5,
         "assertion_type": "true",
@@ -38,7 +38,7 @@
       },
       {
         "name": "TestPunctuation",
-        "file": "./no_brainers/04_palindrome/test_cases.h",
+        "file": "../../no_brainers/04_palindrome/test_cases.h",
         "line": 36,
         "column": 5,
         "assertion_type": "true",
@@ -48,7 +48,7 @@
       },
       {
         "name": "TestNotPalindrome",
-        "file": "./no_brainers/04_palindrome/test_cases.h",
+        "file": "../../no_brainers/04_palindrome/test_cases.h",
         "line": 41,
         "column": 5,
         "assertion_type": "false",

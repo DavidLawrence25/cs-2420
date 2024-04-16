@@ -1,90 +1,90 @@
 ====================================================================================================
-PASS: PointIntTest::TestAdd (in ./no_brainers/02_point_revisited/test_cases.h at 21:20)
+PASS: PointIntTest::TestAdd (in ../../no_brainers/02_point_revisited/test_cases.h at 21:20)
 ----------------------------------------------------------------------------------------------------
 	assert point_ + Point(-5, 2) == Point(-15, 5)
 	==> (-15, 5) == (-15, 5)
 ====================================================================================================
-PASS: PointIntTest::TestIAdd (in ./no_brainers/02_point_revisited/test_cases.h at 25:5)
+PASS: PointIntTest::TestIAdd (in ../../no_brainers/02_point_revisited/test_cases.h at 25:5)
 ----------------------------------------------------------------------------------------------------
 	assert point_ == Point(-15, 4)
 	==> (-15, 4) == (-15, 4)
 ====================================================================================================
-PASS: PointIntTest::TestSub (in ./no_brainers/02_point_revisited/test_cases.h at 29:20)
+PASS: PointIntTest::TestSub (in ../../no_brainers/02_point_revisited/test_cases.h at 29:20)
 ----------------------------------------------------------------------------------------------------
 	assert point_ - Point(-9, -5) == Point(-1, 8)
 	==> (-1, 8) == (-1, 8)
 ====================================================================================================
-PASS: PointIntTest::TestISub (in ./no_brainers/02_point_revisited/test_cases.h at 33:5)
+PASS: PointIntTest::TestISub (in ../../no_brainers/02_point_revisited/test_cases.h at 33:5)
 ----------------------------------------------------------------------------------------------------
 	assert point_ == Point(-17, 12)
 	==> (-17, 12) == (-17, 12)
 ====================================================================================================
-PASS: PointIntTest::TestStreamInsertion (in ./no_brainers/02_point_revisited/test_cases.h at 42:5)
+PASS: PointIntTest::TestStreamInsertion (in ../../no_brainers/02_point_revisited/test_cases.h at 42:5)
 ----------------------------------------------------------------------------------------------------
 	assert temp == Point(-3, 5)
 	==> (-3, 5) == (-3, 5)
 ====================================================================================================
-PASS: PointIntTest::TestStreamExtraction (in ./no_brainers/02_point_revisited/test_cases.h at 48:5)
+PASS: PointIntTest::TestStreamExtraction (in ../../no_brainers/02_point_revisited/test_cases.h at 48:5)
 ----------------------------------------------------------------------------------------------------
 	assert sout.str() == std::string("(-10, 3)")
 	==> (-10, 3) == (-10, 3)
 ====================================================================================================
-PASS: PointFloatTest::TestAdd (in ./no_brainers/02_point_revisited/test_cases.h at 68:5)
+PASS: PointFloatTest::TestAdd (in ../../no_brainers/02_point_revisited/test_cases.h at 68:5)
 ----------------------------------------------------------------------------------------------------
 	assert point_ + Point(-7.39939f, -9.96624f) == Point(-3.11067f, -12.82526f)
 	==> (-3.11067, -12.8253) == (-3.11067, -12.8253)
 ====================================================================================================
-PASS: PointFloatTest::TestIAdd (in ./no_brainers/02_point_revisited/test_cases.h at 74:5)
+PASS: PointFloatTest::TestIAdd (in ../../no_brainers/02_point_revisited/test_cases.h at 74:5)
 ----------------------------------------------------------------------------------------------------
 	assert point_ == Point(3.14272f, 5.38867f)
 	==> (3.14272, 5.38867) == (3.14272, 5.38867)
 ====================================================================================================
-PASS: PointFloatTest::TestSub (in ./no_brainers/02_point_revisited/test_cases.h at 79:5)
+PASS: PointFloatTest::TestSub (in ../../no_brainers/02_point_revisited/test_cases.h at 79:5)
 ----------------------------------------------------------------------------------------------------
 	assert point_ - Point(-2.11476f, 4.44554f) == Point(6.40348f, -7.30456f)
 	==> (6.40348, -7.30456) == (6.40348, -7.30456)
 ====================================================================================================
-PASS: PointFloatTest::TestISub (in ./no_brainers/02_point_revisited/test_cases.h at 85:5)
+PASS: PointFloatTest::TestISub (in ../../no_brainers/02_point_revisited/test_cases.h at 85:5)
 ----------------------------------------------------------------------------------------------------
 	assert point_ == Point(-2.28465f, -2.98265f)
 	==> (-2.28465, -2.98265) == (-2.28465, -2.98265)
 ====================================================================================================
-PASS: PointFloatTest::TestStreamInsertion (in ./no_brainers/02_point_revisited/test_cases.h at 94:5)
+PASS: PointFloatTest::TestStreamInsertion (in ../../no_brainers/02_point_revisited/test_cases.h at 94:5)
 ----------------------------------------------------------------------------------------------------
 	assert temp == Point(6.87687f, -2.87384f)
 	==> (6.87687, -2.87384) == (6.87687, -2.87384)
 ====================================================================================================
-PASS: PointFloatTest::TestStreamExtraction (in ./no_brainers/02_point_revisited/test_cases.h at 100:5)
+PASS: PointFloatTest::TestStreamExtraction (in ../../no_brainers/02_point_revisited/test_cases.h at 100:5)
 ----------------------------------------------------------------------------------------------------
 	assert sout.str() == std::string("(4.28872, -2.85902)")
 	==> (4.28872, -2.85902) == (4.28872, -2.85902)
 ====================================================================================================
-PASS: PointDoubleTest::TestAdd (in ./no_brainers/02_point_revisited/test_cases.h at 120:5)
+PASS: PointDoubleTest::TestAdd (in ../../no_brainers/02_point_revisited/test_cases.h at 120:5)
 ----------------------------------------------------------------------------------------------------
 	assert point_ + Point(-7.62866, 7.13692) == Point(-8.22329, 4.19757)
 	==> (-8.22329, 4.19757) == (-8.22329, 4.19757)
 ====================================================================================================
-PASS: PointDoubleTest::TestIAdd (in ./no_brainers/02_point_revisited/test_cases.h at 125:5)
+PASS: PointDoubleTest::TestIAdd (in ../../no_brainers/02_point_revisited/test_cases.h at 125:5)
 ----------------------------------------------------------------------------------------------------
 	assert point_ == Point(3.58799, -7.14145)
 	==> (3.58799, -7.14145) == (3.58799, -7.14145)
 ====================================================================================================
-PASS: PointDoubleTest::TestSub (in ./no_brainers/02_point_revisited/test_cases.h at 130:5)
+PASS: PointDoubleTest::TestSub (in ../../no_brainers/02_point_revisited/test_cases.h at 130:5)
 ----------------------------------------------------------------------------------------------------
 	assert point_ - Point(4.26669, 9.23233) == Point(-4.86132, -12.17168)
 	==> (-4.86132, -12.1717) == (-4.86132, -12.1717)
 ====================================================================================================
-PASS: PointDoubleTest::TestISub (in ./no_brainers/02_point_revisited/test_cases.h at 135:5)
+PASS: PointDoubleTest::TestISub (in ../../no_brainers/02_point_revisited/test_cases.h at 135:5)
 ----------------------------------------------------------------------------------------------------
 	assert point_ == Point(8.39881, -9.30592)
 	==> (8.39881, -9.30592) == (8.39881, -9.30592)
 ====================================================================================================
-PASS: PointDoubleTest::TestStreamInsertion (in ./no_brainers/02_point_revisited/test_cases.h at 144:5)
+PASS: PointDoubleTest::TestStreamInsertion (in ../../no_brainers/02_point_revisited/test_cases.h at 144:5)
 ----------------------------------------------------------------------------------------------------
 	assert temp == Point(6.75038, -6.85373)
 	==> (6.75038, -6.85373) == (6.75038, -6.85373)
 ====================================================================================================
-PASS: PointDoubleTest::TestStreamExtraction (in ./no_brainers/02_point_revisited/test_cases.h at 150:5)
+PASS: PointDoubleTest::TestStreamExtraction (in ../../no_brainers/02_point_revisited/test_cases.h at 150:5)
 ----------------------------------------------------------------------------------------------------
 	assert sout.str() == std::string("(-0.59463, -2.93935)")
 	==> (-0.59463, -2.93935) == (-0.59463, -2.93935)

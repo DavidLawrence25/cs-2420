@@ -1,150 +1,150 @@
 ====================================================================================================
-PASS: PlainIntRangeTest::TestLength (in ./labs/02_range/test_cases.h at 23:23)
+PASS: PlainIntRangeTest::TestLength (in ../../labs/02_range/test_cases.h at 23:23)
 ----------------------------------------------------------------------------------------------------
 	assert range_.length() == size_t{9}
 	==> 9 == 9
 ====================================================================================================
-PASS: PlainIntRangeTest::TestSum (in ./labs/02_range/test_cases.h at 24:20)
+PASS: PlainIntRangeTest::TestSum (in ../../labs/02_range/test_cases.h at 24:20)
 ----------------------------------------------------------------------------------------------------
 	assert range_.sum() == 63
 	==> 63 == 63
 ====================================================================================================
-PASS: PlainIntRangeTest::TestAverage (in ./labs/02_range/test_cases.h at 25:24)
+PASS: PlainIntRangeTest::TestAverage (in ../../labs/02_range/test_cases.h at 25:24)
 ----------------------------------------------------------------------------------------------------
 	assert range_.average() == 7
 	==> 7 == 7
 ====================================================================================================
-PASS: PlainIntRangeTest::TestMin (in ./labs/02_range/test_cases.h at 26:20)
+PASS: PlainIntRangeTest::TestMin (in ../../labs/02_range/test_cases.h at 26:20)
 ----------------------------------------------------------------------------------------------------
 	assert range_.min() == 3
 	==> 3 == 3
 ====================================================================================================
-PASS: PlainIntRangeTest::TestMax (in ./labs/02_range/test_cases.h at 27:20)
+PASS: PlainIntRangeTest::TestMax (in ../../labs/02_range/test_cases.h at 27:20)
 ----------------------------------------------------------------------------------------------------
 	assert range_.max() == 11
 	==> 11 == 11
 ====================================================================================================
-PASS: PlainIntRangeTest::TestStreamExtraction (in ./labs/02_range/test_cases.h at 32:5)
+PASS: PlainIntRangeTest::TestStreamExtraction (in ../../labs/02_range/test_cases.h at 32:5)
 ----------------------------------------------------------------------------------------------------
 	assert sout.str() == std::string("3, 4, 5, 6, 7, 8, 9, 10, 11")
 	==> 3, 4, 5, 6, 7, 8, 9, 10, 11 == 3, 4, 5, 6, 7, 8, 9, 10, 11
 ====================================================================================================
-PASS: IntRangeStepTest::TestLength (in ./labs/02_range/test_cases.h at 51:23)
+PASS: IntRangeStepTest::TestLength (in ../../labs/02_range/test_cases.h at 51:23)
 ----------------------------------------------------------------------------------------------------
 	assert range_.length() == size_t{5}
 	==> 5 == 5
 ====================================================================================================
-PASS: IntRangeStepTest::TestSum (in ./labs/02_range/test_cases.h at 52:20)
+PASS: IntRangeStepTest::TestSum (in ../../labs/02_range/test_cases.h at 52:20)
 ----------------------------------------------------------------------------------------------------
 	assert range_.sum() == 35
 	==> 35 == 35
 ====================================================================================================
-PASS: IntRangeStepTest::TestAverage (in ./labs/02_range/test_cases.h at 53:24)
+PASS: IntRangeStepTest::TestAverage (in ../../labs/02_range/test_cases.h at 53:24)
 ----------------------------------------------------------------------------------------------------
 	assert range_.average() == 7
 	==> 7 == 7
 ====================================================================================================
-PASS: IntRangeStepTest::TestMin (in ./labs/02_range/test_cases.h at 54:20)
+PASS: IntRangeStepTest::TestMin (in ../../labs/02_range/test_cases.h at 54:20)
 ----------------------------------------------------------------------------------------------------
 	assert range_.min() == 3
 	==> 3 == 3
 ====================================================================================================
-PASS: IntRangeStepTest::TestMax (in ./labs/02_range/test_cases.h at 55:20)
+PASS: IntRangeStepTest::TestMax (in ../../labs/02_range/test_cases.h at 55:20)
 ----------------------------------------------------------------------------------------------------
 	assert range_.max() == 11
 	==> 11 == 11
 ====================================================================================================
-PASS: IntRangeStepTest::TestStreamExtraction (in ./labs/02_range/test_cases.h at 60:5)
+PASS: IntRangeStepTest::TestStreamExtraction (in ../../labs/02_range/test_cases.h at 60:5)
 ----------------------------------------------------------------------------------------------------
 	assert sout.str() == std::string("3, 5, 7, 9, 11")
 	==> 3, 5, 7, 9, 11 == 3, 5, 7, 9, 11
 ====================================================================================================
-PASS: DoubleRangeStepTest::TestLength (in ./labs/02_range/test_cases.h at 79:23)
+PASS: DoubleRangeStepTest::TestLength (in ../../labs/02_range/test_cases.h at 79:23)
 ----------------------------------------------------------------------------------------------------
 	assert range_.length() == size_t{6}
 	==> 6 == 6
 ====================================================================================================
-PASS: DoubleRangeStepTest::TestSum (in ./labs/02_range/test_cases.h at 80:20)
+PASS: DoubleRangeStepTest::TestSum (in ../../labs/02_range/test_cases.h at 80:20)
 ----------------------------------------------------------------------------------------------------
 	assert range_.sum() == 82.5
 	==> 82.5 == 82.5
 ====================================================================================================
-PASS: DoubleRangeStepTest::TestAverage (in ./labs/02_range/test_cases.h at 81:24)
+PASS: DoubleRangeStepTest::TestAverage (in ../../labs/02_range/test_cases.h at 81:24)
 ----------------------------------------------------------------------------------------------------
 	assert range_.average() == 13.75
 	==> 13.75 == 13.75
 ====================================================================================================
-PASS: DoubleRangeStepTest::TestMin (in ./labs/02_range/test_cases.h at 82:20)
+PASS: DoubleRangeStepTest::TestMin (in ../../labs/02_range/test_cases.h at 82:20)
 ----------------------------------------------------------------------------------------------------
 	assert range_.min() == 7.5
 	==> 7.5 == 7.5
 ====================================================================================================
-PASS: DoubleRangeStepTest::TestMax (in ./labs/02_range/test_cases.h at 83:20)
+PASS: DoubleRangeStepTest::TestMax (in ../../labs/02_range/test_cases.h at 83:20)
 ----------------------------------------------------------------------------------------------------
 	assert range_.max() == 20.0
 	==> 20 == 20
 ====================================================================================================
-PASS: DoubleRangeStepTest::TestStreamExtraction (in ./labs/02_range/test_cases.h at 88:5)
+PASS: DoubleRangeStepTest::TestStreamExtraction (in ../../labs/02_range/test_cases.h at 88:5)
 ----------------------------------------------------------------------------------------------------
 	assert sout.str() == std::string("7.5, 10, 12.5, 15, 17.5, 20")
 	==> 7.5, 10, 12.5, 15, 17.5, 20 == 7.5, 10, 12.5, 15, 17.5, 20
 ====================================================================================================
-PASS: BackwardsIntRangeTest::TestLength (in ./labs/02_range/test_cases.h at 107:23)
+PASS: BackwardsIntRangeTest::TestLength (in ../../labs/02_range/test_cases.h at 107:23)
 ----------------------------------------------------------------------------------------------------
 	assert range_.length() == size_t{5}
 	==> 5 == 5
 ====================================================================================================
-PASS: BackwardsIntRangeTest::TestSum (in ./labs/02_range/test_cases.h at 108:20)
+PASS: BackwardsIntRangeTest::TestSum (in ../../labs/02_range/test_cases.h at 108:20)
 ----------------------------------------------------------------------------------------------------
 	assert range_.sum() == 40
 	==> 40 == 40
 ====================================================================================================
-PASS: BackwardsIntRangeTest::TestAverage (in ./labs/02_range/test_cases.h at 109:24)
+PASS: BackwardsIntRangeTest::TestAverage (in ../../labs/02_range/test_cases.h at 109:24)
 ----------------------------------------------------------------------------------------------------
 	assert range_.average() == 8
 	==> 8 == 8
 ====================================================================================================
-PASS: BackwardsIntRangeTest::TestMin (in ./labs/02_range/test_cases.h at 110:20)
+PASS: BackwardsIntRangeTest::TestMin (in ../../labs/02_range/test_cases.h at 110:20)
 ----------------------------------------------------------------------------------------------------
 	assert range_.min() == 4
 	==> 4 == 4
 ====================================================================================================
-PASS: BackwardsIntRangeTest::TestMax (in ./labs/02_range/test_cases.h at 111:20)
+PASS: BackwardsIntRangeTest::TestMax (in ../../labs/02_range/test_cases.h at 111:20)
 ----------------------------------------------------------------------------------------------------
 	assert range_.max() == 12
 	==> 12 == 12
 ====================================================================================================
-PASS: BackwardsIntRangeTest::TestStreamExtraction (in ./labs/02_range/test_cases.h at 116:5)
+PASS: BackwardsIntRangeTest::TestStreamExtraction (in ../../labs/02_range/test_cases.h at 116:5)
 ----------------------------------------------------------------------------------------------------
 	assert sout.str() == std::string("12, 10, 8, 6, 4")
 	==> 12, 10, 8, 6, 4 == 12, 10, 8, 6, 4
 ====================================================================================================
-PASS: BackwardsDoubleRangeTest::TestLength (in ./labs/02_range/test_cases.h at 135:23)
+PASS: BackwardsDoubleRangeTest::TestLength (in ../../labs/02_range/test_cases.h at 135:23)
 ----------------------------------------------------------------------------------------------------
 	assert range_.length() == size_t{7}
 	==> 7 == 7
 ====================================================================================================
-PASS: BackwardsDoubleRangeTest::TestSum (in ./labs/02_range/test_cases.h at 136:20)
+PASS: BackwardsDoubleRangeTest::TestSum (in ../../labs/02_range/test_cases.h at 136:20)
 ----------------------------------------------------------------------------------------------------
 	assert range_.sum() == 87.5
 	==> 87.5 == 87.5
 ====================================================================================================
-PASS: BackwardsDoubleRangeTest::TestAverage (in ./labs/02_range/test_cases.h at 137:24)
+PASS: BackwardsDoubleRangeTest::TestAverage (in ../../labs/02_range/test_cases.h at 137:24)
 ----------------------------------------------------------------------------------------------------
 	assert range_.average() == 12.5
 	==> 12.5 == 12.5
 ====================================================================================================
-PASS: BackwardsDoubleRangeTest::TestMin (in ./labs/02_range/test_cases.h at 138:20)
+PASS: BackwardsDoubleRangeTest::TestMin (in ../../labs/02_range/test_cases.h at 138:20)
 ----------------------------------------------------------------------------------------------------
 	assert range_.min() == 5.0
 	==> 5 == 5
 ====================================================================================================
-PASS: BackwardsDoubleRangeTest::TestMax (in ./labs/02_range/test_cases.h at 139:20)
+PASS: BackwardsDoubleRangeTest::TestMax (in ../../labs/02_range/test_cases.h at 139:20)
 ----------------------------------------------------------------------------------------------------
 	assert range_.max() == 20.0
 	==> 20 == 20
 ====================================================================================================
-PASS: BackwardsDoubleRangeTest::TestStreamExtraction (in ./labs/02_range/test_cases.h at 144:5)
+PASS: BackwardsDoubleRangeTest::TestStreamExtraction (in ../../labs/02_range/test_cases.h at 144:5)
 ----------------------------------------------------------------------------------------------------
 	assert sout.str() == std::string("20, 17.5, 15, 12.5, 10, 7.5, 5")
 	==> 20, 17.5, 15, 12.5, 10, 7.5, 5 == 20, 17.5, 15, 12.5, 10, 7.5, 5

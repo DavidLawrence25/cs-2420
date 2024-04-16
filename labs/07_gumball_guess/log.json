@@ -8,7 +8,7 @@
     "GumballGuessTest": [
       {
         "name": "TestRound1",
-        "file": "./labs/07_gumball_guess/test_cases.h",
+        "file": "../../labs/07_gumball_guess/test_cases.h",
         "line": 97,
         "column": 5,
         "assertion_type": "equal",
@@ -24,7 +24,7 @@
       },
       {
         "name": "TestRound2",
-        "file": "./labs/07_gumball_guess/test_cases.h",
+        "file": "../../labs/07_gumball_guess/test_cases.h",
         "line": 112,
         "column": 5,
         "assertion_type": "equal",
@@ -42,7 +42,7 @@
     "QueueTest": [
       {
         "name": "TestCopyConstructor",
-        "file": "./labs/07_gumball_guess/test_cases.h",
+        "file": "../../labs/07_gumball_guess/test_cases.h",
         "line": 31,
         "column": 5,
         "assertion_type": "equal",
@@ -58,7 +58,7 @@
       },
       {
         "name": "TestCopyConstructorIsDeep",
-        "file": "./labs/07_gumball_guess/test_cases.h",
+        "file": "../../labs/07_gumball_guess/test_cases.h",
         "line": 37,
         "column": 5,
         "assertion_type": "not_equal",
@@ -74,7 +74,7 @@
       },
       {
         "name": "TestAssignOperatorIsDeep",
-        "file": "./labs/07_gumball_guess/test_cases.h",
+        "file": "../../labs/07_gumball_guess/test_cases.h",
         "line": 45,
         "column": 5,
         "assertion_type": "not_equal",
@@ -90,7 +90,7 @@
       },
       {
         "name": "TestEnqueue",
-        "file": "./labs/07_gumball_guess/test_cases.h",
+        "file": "../../labs/07_gumball_guess/test_cases.h",
         "line": 51,
         "column": 5,
         "assertion_type": "equal",
@@ -106,7 +106,7 @@
       },
       {
         "name": "TestDequeue",
-        "file": "./labs/07_gumball_guess/test_cases.h",
+        "file": "../../labs/07_gumball_guess/test_cases.h",
         "line": 56,
         "column": 5,
         "assertion_type": "equal",
@@ -122,7 +122,7 @@
       },
       {
         "name": "TestClear",
-        "file": "./labs/07_gumball_guess/test_cases.h",
+        "file": "../../labs/07_gumball_guess/test_cases.h",
         "line": 62,
         "column": 5,
         "assertion_type": "true",
@@ -132,7 +132,7 @@
       },
       {
         "name": "TestRedundantDequeue",
-        "file": "./labs/07_gumball_guess/test_cases.h",
+        "file": "../../labs/07_gumball_guess/test_cases.h",
         "line": 70,
         "column": 5,
         "assertion_type": "doesnt_throw",

@@ -8,7 +8,7 @@
     "SortedCollectionCharTest": [
       {
         "name": "TestAdd5Times",
-        "file": "./labs/03_sorted_collection/test_cases.h",
+        "file": "../../labs/03_sorted_collection/test_cases.h",
         "line": 119,
         "column": 5,
         "assertion_type": "equal",
@@ -24,7 +24,7 @@
       },
       {
         "name": "TestItemAt4",
-        "file": "./labs/03_sorted_collection/test_cases.h",
+        "file": "../../labs/03_sorted_collection/test_cases.h",
         "line": 128,
         "column": 5,
         "assertion_type": "equal",
@@ -40,7 +40,7 @@
       },
       {
         "name": "TestRemoveEnd1Time",
-        "file": "./labs/03_sorted_collection/test_cases.h",
+        "file": "../../labs/03_sorted_collection/test_cases.h",
         "line": 138,
         "column": 5,
         "assertion_type": "equal",
@@ -56,7 +56,7 @@
       },
       {
         "name": "TestExpand2Times",
-        "file": "./labs/03_sorted_collection/test_cases.h",
+        "file": "../../labs/03_sorted_collection/test_cases.h",
         "line": 147,
         "column": 5,
         "assertion_type": "equal",
@@ -72,7 +72,7 @@
       },
       {
         "name": "TestStreamExtraction",
-        "file": "./labs/03_sorted_collection/test_cases.h",
+        "file": "../../labs/03_sorted_collection/test_cases.h",
         "line": 166,
         "column": 5,
         "assertion_type": "equal",
@@ -88,7 +88,7 @@
       },
       {
         "name": "TestStreamExtractionOnEmpty",
-        "file": "./labs/03_sorted_collection/test_cases.h",
+        "file": "../../labs/03_sorted_collection/test_cases.h",
         "line": 173,
         "column": 5,
         "assertion_type": "equal",
@@ -106,7 +106,7 @@
     "SortedCollectionIntTest": [
       {
         "name": "TestAdd1Time",
-        "file": "./labs/03_sorted_collection/test_cases.h",
+        "file": "../../labs/03_sorted_collection/test_cases.h",
         "line": 29,
         "column": 5,
         "assertion_type": "equal",
@@ -122,7 +122,7 @@
       },
       {
         "name": "TestAdd4Times",
-        "file": "./labs/03_sorted_collection/test_cases.h",
+        "file": "../../labs/03_sorted_collection/test_cases.h",
         "line": 35,
         "column": 5,
         "assertion_type": "equal",
@@ -138,7 +138,7 @@
       },
       {
         "name": "TestItemAt0",
-        "file": "./labs/03_sorted_collection/test_cases.h",
+        "file": "../../labs/03_sorted_collection/test_cases.h",
         "line": 41,
         "column": 5,
         "assertion_type": "equal",
@@ -154,7 +154,7 @@
       },
       {
         "name": "TestItemAtNegative1",
-        "file": "./labs/03_sorted_collection/test_cases.h",
+        "file": "../../labs/03_sorted_collection/test_cases.h",
         "line": 47,
         "column": 5,
         "assertion_type": "equal",
@@ -170,7 +170,7 @@
       },
       {
         "name": "TestRemoveEnd1Time",
-        "file": "./labs/03_sorted_collection/test_cases.h",
+        "file": "../../labs/03_sorted_collection/test_cases.h",
         "line": 54,
         "column": 5,
         "assertion_type": "equal",
@@ -186,7 +186,7 @@
       },
       {
         "name": "TestRemoveEnd3Times",
-        "file": "./labs/03_sorted_collection/test_cases.h",
+        "file": "../../labs/03_sorted_collection/test_cases.h",
         "line": 61,
         "column": 5,
         "assertion_type": "equal",
@@ -202,7 +202,7 @@
       },
       {
         "name": "TestRemoveEndOfEmpty",
-        "file": "./labs/03_sorted_collection/test_cases.h",
+        "file": "../../labs/03_sorted_collection/test_cases.h",
         "line": 67,
         "column": 5,
         "assertion_type": "equal",
@@ -218,7 +218,7 @@
       },
       {
         "name": "TestExpand1Time",
-        "file": "./labs/03_sorted_collection/test_cases.h",
+        "file": "../../labs/03_sorted_collection/test_cases.h",
         "line": 73,
         "column": 5,
         "assertion_type": "equal",
@@ -234,7 +234,7 @@
       },
       {
         "name": "TestExpand4Times",
-        "file": "./labs/03_sorted_collection/test_cases.h",
+        "file": "../../labs/03_sorted_collection/test_cases.h",
         "line": 79,
         "column": 5,
         "assertion_type": "equal",
@@ -250,7 +250,7 @@
       },
       {
         "name": "TestStreamExtraction",
-        "file": "./labs/03_sorted_collection/test_cases.h",
+        "file": "../../labs/03_sorted_collection/test_cases.h",
         "line": 94,
         "column": 5,
         "assertion_type": "equal",
