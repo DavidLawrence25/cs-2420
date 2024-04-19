@@ -8,7 +8,7 @@
     "PointDoubleTest": [
       {
         "name": "TestAdd",
-        "file": "../../no_brainers/02_point_revisited/test_cases.h",
+        "file": "./no_brainers/02_point_revisited/test_cases.h",
         "line": 120,
         "column": 5,
         "assertion_type": "equal",
@@ -24,7 +24,7 @@
       },
       {
         "name": "TestIAdd",
-        "file": "../../no_brainers/02_point_revisited/test_cases.h",
+        "file": "./no_brainers/02_point_revisited/test_cases.h",
         "line": 125,
         "column": 5,
         "assertion_type": "equal",
@@ -40,7 +40,7 @@
       },
       {
         "name": "TestSub",
-        "file": "../../no_brainers/02_point_revisited/test_cases.h",
+        "file": "./no_brainers/02_point_revisited/test_cases.h",
         "line": 130,
         "column": 5,
         "assertion_type": "equal",
@@ -56,7 +56,7 @@
       },
       {
         "name": "TestISub",
-        "file": "../../no_brainers/02_point_revisited/test_cases.h",
+        "file": "./no_brainers/02_point_revisited/test_cases.h",
         "line": 135,
         "column": 5,
         "assertion_type": "equal",
@@ -72,7 +72,7 @@
       },
       {
         "name": "TestStreamInsertion",
-        "file": "../../no_brainers/02_point_revisited/test_cases.h",
+        "file": "./no_brainers/02_point_revisited/test_cases.h",
         "line": 144,
         "column": 5,
         "assertion_type": "equal",
@@ -88,7 +88,7 @@
       },
       {
         "name": "TestStreamExtraction",
-        "file": "../../no_brainers/02_point_revisited/test_cases.h",
+        "file": "./no_brainers/02_point_revisited/test_cases.h",
         "line": 150,
         "column": 5,
         "assertion_type": "equal",
@@ -106,7 +106,7 @@
     "PointFloatTest": [
       {
         "name": "TestAdd",
-        "file": "../../no_brainers/02_point_revisited/test_cases.h",
+        "file": "./no_brainers/02_point_revisited/test_cases.h",
         "line": 68,
         "column": 5,
         "assertion_type": "equal",
@@ -122,7 +122,7 @@
       },
       {
         "name": "TestIAdd",
-        "file": "../../no_brainers/02_point_revisited/test_cases.h",
+        "file": "./no_brainers/02_point_revisited/test_cases.h",
         "line": 74,
         "column": 5,
         "assertion_type": "equal",
@@ -138,7 +138,7 @@
       },
       {
         "name": "TestSub",
-        "file": "../../no_brainers/02_point_revisited/test_cases.h",
+        "file": "./no_brainers/02_point_revisited/test_cases.h",
         "line": 79,
         "column": 5,
         "assertion_type": "equal",
@@ -154,7 +154,7 @@
       },
       {
         "name": "TestISub",
-        "file": "../../no_brainers/02_point_revisited/test_cases.h",
+        "file": "./no_brainers/02_point_revisited/test_cases.h",
         "line": 85,
         "column": 5,
         "assertion_type": "equal",
@@ -170,7 +170,7 @@
       },
       {
         "name": "TestStreamInsertion",
-        "file": "../../no_brainers/02_point_revisited/test_cases.h",
+        "file": "./no_brainers/02_point_revisited/test_cases.h",
         "line": 94,
         "column": 5,
         "assertion_type": "equal",
@@ -186,7 +186,7 @@
       },
       {
         "name": "TestStreamExtraction",
-        "file": "../../no_brainers/02_point_revisited/test_cases.h",
+        "file": "./no_brainers/02_point_revisited/test_cases.h",
         "line": 100,
         "column": 5,
         "assertion_type": "equal",
@@ -204,7 +204,7 @@
     "PointIntTest": [
       {
         "name": "TestAdd",
-        "file": "../../no_brainers/02_point_revisited/test_cases.h",
+        "file": "./no_brainers/02_point_revisited/test_cases.h",
         "line": 21,
         "column": 20,
         "assertion_type": "equal",
@@ -220,7 +220,7 @@
       },
       {
         "name": "TestIAdd",
-        "file": "../../no_brainers/02_point_revisited/test_cases.h",
+        "file": "./no_brainers/02_point_revisited/test_cases.h",
         "line": 25,
         "column": 5,
         "assertion_type": "equal",
@@ -236,7 +236,7 @@
       },
       {
         "name": "TestSub",
-        "file": "../../no_brainers/02_point_revisited/test_cases.h",
+        "file": "./no_brainers/02_point_revisited/test_cases.h",
         "line": 29,
         "column": 20,
         "assertion_type": "equal",
@@ -252,7 +252,7 @@
       },
       {
         "name": "TestISub",
-        "file": "../../no_brainers/02_point_revisited/test_cases.h",
+        "file": "./no_brainers/02_point_revisited/test_cases.h",
         "line": 33,
         "column": 5,
         "assertion_type": "equal",
@@ -268,7 +268,7 @@
       },
       {
         "name": "TestStreamInsertion",
-        "file": "../../no_brainers/02_point_revisited/test_cases.h",
+        "file": "./no_brainers/02_point_revisited/test_cases.h",
         "line": 42,
         "column": 5,
         "assertion_type": "equal",
@@ -284,7 +284,7 @@
       },
       {
         "name": "TestStreamExtraction",
-        "file": "../../no_brainers/02_point_revisited/test_cases.h",
+        "file": "./no_brainers/02_point_revisited/test_cases.h",
         "line": 48,
         "column": 5,
         "assertion_type": "equal",

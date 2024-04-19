@@ -1,25 +1,25 @@
 ====================================================================================================
-PASS: PalindromeTest::TestEasy (in ../../no_brainers/04_palindrome/test_cases.h at 21:5)
+PASS: PalindromeTest::TestEasy (in ./no_brainers/04_palindrome/test_cases.h at 21:5)
 ----------------------------------------------------------------------------------------------------
 	assert palindrome.is_palindrome() == true
 	==> true == true
 ====================================================================================================
-PASS: PalindromeTest::TestSpaces (in ../../no_brainers/04_palindrome/test_cases.h at 26:5)
+PASS: PalindromeTest::TestSpaces (in ./no_brainers/04_palindrome/test_cases.h at 26:5)
 ----------------------------------------------------------------------------------------------------
 	assert palindrome.is_palindrome() == true
 	==> true == true
 ====================================================================================================
-PASS: PalindromeTest::TestMixedCase (in ../../no_brainers/04_palindrome/test_cases.h at 31:5)
+PASS: PalindromeTest::TestMixedCase (in ./no_brainers/04_palindrome/test_cases.h at 31:5)
 ----------------------------------------------------------------------------------------------------
 	assert palindrome.is_palindrome() == true
 	==> true == true
 ====================================================================================================
-PASS: PalindromeTest::TestPunctuation (in ../../no_brainers/04_palindrome/test_cases.h at 36:5)
+PASS: PalindromeTest::TestPunctuation (in ./no_brainers/04_palindrome/test_cases.h at 36:5)
 ----------------------------------------------------------------------------------------------------
 	assert palindrome.is_palindrome() == true
 	==> true == true
 ====================================================================================================
-PASS: PalindromeTest::TestNotPalindrome (in ../../no_brainers/04_palindrome/test_cases.h at 41:5)
+PASS: PalindromeTest::TestNotPalindrome (in ./no_brainers/04_palindrome/test_cases.h at 41:5)
 ----------------------------------------------------------------------------------------------------
 	assert not_palindrome.is_palindrome() == false
 	==> false == false

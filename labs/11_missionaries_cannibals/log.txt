@@ -1,79 +1,74 @@
 ====================================================================================================
-PASS: StackSizeTest::TestEmpty (in ./no_brainers/07_stack/test_cases.h at 25:22)
+PASS: MissionariesCannibalsTest::TestNoSolution2PairsWithBoatFor1 (in ./labs/11_missionaries_cannibals/test_cases.h at 38:5)
 ----------------------------------------------------------------------------------------------------
-	assert stack_.empty() == true
-	==> true == true
-====================================================================================================
-PASS: StackSizeTest::TestNotEmpty (in ./no_brainers/07_stack/test_cases.h at 29:5)
-----------------------------------------------------------------------------------------------------
-	assert stack_.empty() == false
+	assert simulation_2_pairs_with_boat_for_1_.IsSolvable() == false
 	==> false == false
 ====================================================================================================
-PASS: StackSizeTest::TestWasntEmptyBefore (in ./no_brainers/07_stack/test_cases.h at 36:5)
+PASS: MissionariesCannibalsTest::TestSolutionLength2PairsWithBoatFor2 (in ./labs/11_missionaries_cannibals/test_cases.h at 42:5)
 ----------------------------------------------------------------------------------------------------
-	assert stack_.empty() == true
+	assert solution_.size() == size_t{6}
+	==> 6 == 6
+====================================================================================================
+PASS: MissionariesCannibalsTest::TestSolutionStart2PairsWithBoatFor2 (in ./labs/11_missionaries_cannibals/test_cases.h at 50:5)
+----------------------------------------------------------------------------------------------------
+	assert *solution_.front() == State(2, 2, true, 2)
+	==> MM CC |B~~| __ __ == MM CC |B~~| __ __
+====================================================================================================
+PASS: MissionariesCannibalsTest::TestSolutionEnd2PairsWithBoatFor2 (in ./labs/11_missionaries_cannibals/test_cases.h at 58:5)
+----------------------------------------------------------------------------------------------------
+	assert *solution_.back() == State::Goal( 2)
+	==> __ __ |~~B| MM CC == __ __ |~~B| MM CC
+====================================================================================================
+PASS: MissionariesCannibalsTest::TestSolutionValidity2PairsWithBoatFor2 (in ./labs/11_missionaries_cannibals/test_cases.h at 71:5)
+----------------------------------------------------------------------------------------------------
+	assert is_valid_solution == true
 	==> true == true
 ====================================================================================================
-PASS: StackSizeTest::TestSizeOf0 (in ./no_brainers/07_stack/test_cases.h at 40:24)
+PASS: MissionariesCannibalsTest::TestSolutionLength3PairsWithBoatFor2 (in ./labs/11_missionaries_cannibals/test_cases.h at 75:5)
 ----------------------------------------------------------------------------------------------------
-	assert stack_.size() == size_t{0}
-	==> 0 == 0
+	assert solution_.size() == size_t{12}
+	==> 12 == 12
 ====================================================================================================
-PASS: StackSizeTest::TestSizeOf2 (in ./no_brainers/07_stack/test_cases.h at 45:5)
+PASS: MissionariesCannibalsTest::TestSolutionStart3PairsWithBoatFor2 (in ./labs/11_missionaries_cannibals/test_cases.h at 83:5)
 ----------------------------------------------------------------------------------------------------
-	assert stack_.size() == size_t{2}
-	==> 2 == 2
+	assert *solution_.front() == State(3, 3, true, 3)
+	==> MMM CCC |B~~| ___ ___ == MMM CCC |B~~| ___ ___
 ====================================================================================================
-PASS: StackSizeTest::TestSizeOf5 (in ./no_brainers/07_stack/test_cases.h at 55:5)
+PASS: MissionariesCannibalsTest::TestSolutionEnd3PairsWithBoatFor2 (in ./labs/11_missionaries_cannibals/test_cases.h at 91:5)
 ----------------------------------------------------------------------------------------------------
-	assert stack_.size() == size_t{5}
-	==> 5 == 5
+	assert *solution_.back() == State::Goal( 3)
+	==> ___ ___ |~~B| MMM CCC == ___ ___ |~~B| MMM CCC
 ====================================================================================================
-PASS: BasicStackTest::TestPush1 (in ./no_brainers/07_stack/test_cases.h at 75:5)
+PASS: MissionariesCannibalsTest::TestSolutionValidity3PairsWithBoatFor2 (in ./labs/11_missionaries_cannibals/test_cases.h at 104:5)
 ----------------------------------------------------------------------------------------------------
-	assert stack_.top().value_or(-1) == 1
-	==> 1 == 1
-====================================================================================================
-PASS: BasicStackTest::TestPush5 (in ./no_brainers/07_stack/test_cases.h at 81:5)
-----------------------------------------------------------------------------------------------------
-	assert stack_.top().value_or(-1) == 5
-	==> 5 == 5
-====================================================================================================
-PASS: BasicStackTest::TestPush16AndPop12 (in ./no_brainers/07_stack/test_cases.h at 88:5)
-----------------------------------------------------------------------------------------------------
-	assert stack_.top().value_or(-1) == 4
-	==> 4 == 4
-====================================================================================================
-PASS: BasicStackTest::TestStreamExtraction (in ./no_brainers/07_stack/test_cases.h at 96:5)
-----------------------------------------------------------------------------------------------------
-	assert sout.str() == std::string("16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1")
-	==> 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 == 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1
-====================================================================================================
-PASS: StringStackTest::TestSizeOf3 (in ./no_brainers/07_stack/test_cases.h at 123:24)
-----------------------------------------------------------------------------------------------------
-	assert stack_.size() == size_t{3}
-	==> 3 == 3
-====================================================================================================
-PASS: StringStackTest::TestPopPopReplace (in ./no_brainers/07_stack/test_cases.h at 130:5)
-----------------------------------------------------------------------------------------------------
-	assert stack_.top().value_or("you messed up") == marker
-	==> marker == marker
-====================================================================================================
-PASS: StringStackTest::TestPopPopReplacePop (in ./no_brainers/07_stack/test_cases.h at 140:5)
-----------------------------------------------------------------------------------------------------
-	assert stack_.top().value_or("you messed up") == std::string("pencil")
-	==> pencil == pencil
-====================================================================================================
-PASS: StringStackTest::TestClear (in ./no_brainers/07_stack/test_cases.h at 146:5)
-----------------------------------------------------------------------------------------------------
-	assert stack_.empty() == true
+	assert is_valid_solution == true
 	==> true == true
 ====================================================================================================
-PASS: BadStackUseTest::TestReadEmpty (in ./no_brainers/07_stack/test_cases.h at 159:26)
+PASS: MissionariesCannibalsTest::TestNoSolution4PairsWithBoatFor2 (in ./labs/11_missionaries_cannibals/test_cases.h at 108:5)
 ----------------------------------------------------------------------------------------------------
-	assert stack_.top().has_value() == false
+	assert simulation_4_pairs_with_boat_for_2_.IsSolvable() == false
 	==> false == false
+====================================================================================================
+PASS: MissionariesCannibalsTest::TestSolutionLength5PairsWithBoatFor3 (in ./labs/11_missionaries_cannibals/test_cases.h at 112:5)
 ----------------------------------------------------------------------------------------------------
-Ran 15 tests with 0 fails.
+	assert solution_.size() == size_t{12}
+	==> 12 == 12
+====================================================================================================
+PASS: MissionariesCannibalsTest::TestSolutionStart5PairsWithBoatFor3 (in ./labs/11_missionaries_cannibals/test_cases.h at 120:5)
+----------------------------------------------------------------------------------------------------
+	assert *solution_.front() == State(5, 5, true, 5)
+	==> MMMMM CCCCC |B~~| _____ _____ == MMMMM CCCCC |B~~| _____ _____
+====================================================================================================
+PASS: MissionariesCannibalsTest::TestSolutionEnd5PairsWithBoatFor3 (in ./labs/11_missionaries_cannibals/test_cases.h at 128:5)
+----------------------------------------------------------------------------------------------------
+	assert *solution_.back() == State::Goal(5)
+	==> _____ _____ |~~B| MMMMM CCCCC == _____ _____ |~~B| MMMMM CCCCC
+====================================================================================================
+PASS: MissionariesCannibalsTest::TestSolutionValidity5PairsWithBoatFor3 (in ./labs/11_missionaries_cannibals/test_cases.h at 141:5)
+----------------------------------------------------------------------------------------------------
+	assert is_valid_solution == true
+	==> true == true
+----------------------------------------------------------------------------------------------------
+Ran 14 tests with 0 fails.
 
 PASSED

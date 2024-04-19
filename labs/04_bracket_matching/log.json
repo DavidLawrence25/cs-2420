@@ -8,7 +8,7 @@
     "BracketTest": [
       {
         "name": "Test1Pair",
-        "file": "../../labs/04_bracket_matching/test_cases.h",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 31,
         "column": 5,
         "assertion_type": "true",
@@ -18,7 +18,7 @@
       },
       {
         "name": "TestMismatchedPair",
-        "file": "../../labs/04_bracket_matching/test_cases.h",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 36,
         "column": 5,
         "assertion_type": "false",
@@ -28,7 +28,7 @@
       },
       {
         "name": "TestBackwards",
-        "file": "../../labs/04_bracket_matching/test_cases.h",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 41,
         "column": 5,
         "assertion_type": "false",
@@ -38,7 +38,7 @@
       },
       {
         "name": "TestValidMix",
-        "file": "../../labs/04_bracket_matching/test_cases.h",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 46,
         "column": 5,
         "assertion_type": "true",
@@ -48,7 +48,7 @@
       },
       {
         "name": "TestExtraClosing",
-        "file": "../../labs/04_bracket_matching/test_cases.h",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 51,
         "column": 5,
         "assertion_type": "false",
@@ -58,7 +58,7 @@
       },
       {
         "name": "TestPulledApart",
-        "file": "../../labs/04_bracket_matching/test_cases.h",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 56,
         "column": 5,
         "assertion_type": "false",
@@ -68,7 +68,7 @@
       },
       {
         "name": "TestExtraOpening",
-        "file": "../../labs/04_bracket_matching/test_cases.h",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 61,
         "column": 5,
         "assertion_type": "false",
@@ -78,7 +78,7 @@
       },
       {
         "name": "TestValidCode",
-        "file": "../../labs/04_bracket_matching/test_cases.h",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 66,
         "column": 5,
         "assertion_type": "true",
@@ -88,7 +88,7 @@
       },
       {
         "name": "TestInvalidCode",
-        "file": "../../labs/04_bracket_matching/test_cases.h",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 71,
         "column": 5,
         "assertion_type": "false",
@@ -98,7 +98,7 @@
       },
       {
         "name": "TestHugeYetValidMess",
-        "file": "../../labs/04_bracket_matching/test_cases.h",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 76,
         "column": 5,
         "assertion_type": "true",
@@ -108,7 +108,7 @@
       },
       {
         "name": "TestCount3IndependentPairs",
-        "file": "../../labs/04_bracket_matching/test_cases.h",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 81,
         "column": 5,
         "assertion_type": "equal",
@@ -124,7 +124,7 @@
       },
       {
         "name": "TestCount4NestedPairs",
-        "file": "../../labs/04_bracket_matching/test_cases.h",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 86,
         "column": 5,
         "assertion_type": "equal",
@@ -140,7 +140,7 @@
       },
       {
         "name": "TestValidStreamExtraction",
-        "file": "../../labs/04_bracket_matching/test_cases.h",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 93,
         "column": 5,
         "assertion_type": "equal",
@@ -156,7 +156,7 @@
       },
       {
         "name": "TestInvalidStreamExtraction",
-        "file": "../../labs/04_bracket_matching/test_cases.h",
+        "file": "./labs/04_bracket_matching/test_cases.h",
         "line": 100,
         "column": 5,
         "assertion_type": "equal",

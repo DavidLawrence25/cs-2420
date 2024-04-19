@@ -1,30 +1,30 @@
 ====================================================================================================
-PASS: GraphTest::TestOrder (in ../../no_brainers/11_graph/test_cases.h at 47:22)
+PASS: GraphTest::TestOrder (in ./no_brainers/11_graph/test_cases.h at 47:22)
 ----------------------------------------------------------------------------------------------------
 	assert graph_.order() == size_t{10}
 	==> 10 == 10
 ====================================================================================================
-PASS: GraphTest::TestIndexOf7 (in ../../no_brainers/11_graph/test_cases.h at 50:5)
+PASS: GraphTest::TestIndexOf7 (in ./no_brainers/11_graph/test_cases.h at 50:5)
 ----------------------------------------------------------------------------------------------------
 	assert graph_.IndexOf(7).value_or(kU64Max) == uindex_t{3}
 	==> 3 == 3
 ====================================================================================================
-PASS: GraphTest::Test1AdjacentTo4 (in ../../no_brainers/11_graph/test_cases.h at 53:29)
+PASS: GraphTest::Test1AdjacentTo4 (in ./no_brainers/11_graph/test_cases.h at 53:29)
 ----------------------------------------------------------------------------------------------------
 	assert graph_.Adjacent(1, 4) == true
 	==> true == true
 ====================================================================================================
-PASS: GraphTest::Test1AdjacentTo0 (in ../../no_brainers/11_graph/test_cases.h at 54:29)
+PASS: GraphTest::Test1AdjacentTo0 (in ./no_brainers/11_graph/test_cases.h at 54:29)
 ----------------------------------------------------------------------------------------------------
 	assert graph_.Adjacent(1, 0) == true
 	==> true == true
 ====================================================================================================
-PASS: GraphTest::Test0NotAdjacentTo4 (in ../../no_brainers/11_graph/test_cases.h at 55:32)
+PASS: GraphTest::Test0NotAdjacentTo4 (in ./no_brainers/11_graph/test_cases.h at 55:32)
 ----------------------------------------------------------------------------------------------------
 	assert graph_.Adjacent(0, 4) == false
 	==> false == false
 ====================================================================================================
-PASS: GraphTest::TestStreamExtraction (in ../../no_brainers/11_graph/test_cases.h at 71:5)
+PASS: GraphTest::TestStreamExtraction (in ./no_brainers/11_graph/test_cases.h at 71:5)
 ----------------------------------------------------------------------------------------------------
 	assert sout.str() == expected
 	==> 9: <8, 1> <5, 1> 

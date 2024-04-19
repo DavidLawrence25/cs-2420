@@ -8,7 +8,7 @@
     "AbcdeSubsequenceTest": [
       {
         "name": "TestAce",
-        "file": "../../labs/06_recursion/test_cases.h",
+        "file": "./labs/06_recursion/test_cases.h",
         "line": 50,
         "column": 20,
         "assertion_type": "true",
@@ -18,7 +18,7 @@
       },
       {
         "name": "TestBad",
-        "file": "../../labs/06_recursion/test_cases.h",
+        "file": "./labs/06_recursion/test_cases.h",
         "line": 51,
         "column": 20,
         "assertion_type": "false",
@@ -28,7 +28,7 @@
       },
       {
         "name": "TestAxe",
-        "file": "../../labs/06_recursion/test_cases.h",
+        "file": "./labs/06_recursion/test_cases.h",
         "line": 52,
         "column": 20,
         "assertion_type": "false",
@@ -38,7 +38,7 @@
       },
       {
         "name": "TestTooLong",
-        "file": "../../labs/06_recursion/test_cases.h",
+        "file": "./labs/06_recursion/test_cases.h",
         "line": 53,
         "column": 24,
         "assertion_type": "false",
@@ -50,7 +50,7 @@
     "EmptySubsequenceTest": [
       {
         "name": "TestEmpty",
-        "file": "../../labs/06_recursion/test_cases.h",
+        "file": "./labs/06_recursion/test_cases.h",
         "line": 16,
         "column": 22,
         "assertion_type": "true",
@@ -60,7 +60,7 @@
       },
       {
         "name": "TestChar",
-        "file": "../../labs/06_recursion/test_cases.h",
+        "file": "./labs/06_recursion/test_cases.h",
         "line": 17,
         "column": 21,
         "assertion_type": "false",
@@ -70,7 +70,7 @@
       },
       {
         "name": "TestWord",
-        "file": "../../labs/06_recursion/test_cases.h",
+        "file": "./labs/06_recursion/test_cases.h",
         "line": 18,
         "column": 21,
         "assertion_type": "false",
@@ -80,7 +80,7 @@
       },
       {
         "name": "TestSentence",
-        "file": "../../labs/06_recursion/test_cases.h",
+        "file": "./labs/06_recursion/test_cases.h",
         "line": 19,
         "column": 25,
         "assertion_type": "false",
@@ -92,7 +92,7 @@
     "ProgrammingSubsequenceTest": [
       {
         "name": "TestUppercasePin",
-        "file": "../../labs/06_recursion/test_cases.h",
+        "file": "./labs/06_recursion/test_cases.h",
         "line": 33,
         "column": 29,
         "assertion_type": "true",
@@ -102,7 +102,7 @@
       },
       {
         "name": "TestLowercasePin",
-        "file": "../../labs/06_recursion/test_cases.h",
+        "file": "./labs/06_recursion/test_cases.h",
         "line": 34,
         "column": 29,
         "assertion_type": "false",

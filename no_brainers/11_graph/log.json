@@ -8,7 +8,7 @@
     "GraphTest": [
       {
         "name": "TestOrder",
-        "file": "../../no_brainers/11_graph/test_cases.h",
+        "file": "./no_brainers/11_graph/test_cases.h",
         "line": 47,
         "column": 22,
         "assertion_type": "equal",
@@ -24,7 +24,7 @@
       },
       {
         "name": "TestIndexOf7",
-        "file": "../../no_brainers/11_graph/test_cases.h",
+        "file": "./no_brainers/11_graph/test_cases.h",
         "line": 50,
         "column": 5,
         "assertion_type": "equal",
@@ -40,7 +40,7 @@
       },
       {
         "name": "Test1AdjacentTo4",
-        "file": "../../no_brainers/11_graph/test_cases.h",
+        "file": "./no_brainers/11_graph/test_cases.h",
         "line": 53,
         "column": 29,
         "assertion_type": "true",
@@ -50,7 +50,7 @@
       },
       {
         "name": "Test1AdjacentTo0",
-        "file": "../../no_brainers/11_graph/test_cases.h",
+        "file": "./no_brainers/11_graph/test_cases.h",
         "line": 54,
         "column": 29,
         "assertion_type": "true",
@@ -60,7 +60,7 @@
       },
       {
         "name": "Test0NotAdjacentTo4",
-        "file": "../../no_brainers/11_graph/test_cases.h",
+        "file": "./no_brainers/11_graph/test_cases.h",
         "line": 55,
         "column": 32,
         "assertion_type": "false",
@@ -70,7 +70,7 @@
       },
       {
         "name": "TestStreamExtraction",
-        "file": "../../no_brainers/11_graph/test_cases.h",
+        "file": "./no_brainers/11_graph/test_cases.h",
         "line": 71,
         "column": 5,
         "assertion_type": "equal",

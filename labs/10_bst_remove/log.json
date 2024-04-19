@@ -8,7 +8,7 @@
     "HardBSTTest": [
       {
         "name": "TestContains49",
-        "file": "../../labs/10_bst_remove/test_cases.h",
+        "file": "./labs/10_bst_remove/test_cases.h",
         "line": 53,
         "column": 27,
         "assertion_type": "true",
@@ -18,7 +18,7 @@
       },
       {
         "name": "TestDoesntContain200",
-        "file": "../../labs/10_bst_remove/test_cases.h",
+        "file": "./labs/10_bst_remove/test_cases.h",
         "line": 54,
         "column": 33,
         "assertion_type": "false",
@@ -28,7 +28,7 @@
       },
       {
         "name": "TestRightmostDescendantOf49",
-        "file": "../../labs/10_bst_remove/test_cases.h",
+        "file": "./labs/10_bst_remove/test_cases.h",
         "line": 60,
         "column": 5,
         "assertion_type": "equal",
@@ -44,7 +44,7 @@
       },
       {
         "name": "TestFindParentOf25",
-        "file": "../../labs/10_bst_remove/test_cases.h",
+        "file": "./labs/10_bst_remove/test_cases.h",
         "line": 68,
         "column": 5,
         "assertion_type": "equal",
@@ -60,7 +60,7 @@
       },
       {
         "name": "TestFindParentOf15",
-        "file": "../../labs/10_bst_remove/test_cases.h",
+        "file": "./labs/10_bst_remove/test_cases.h",
         "line": 73,
         "column": 5,
         "assertion_type": "equal",
@@ -76,7 +76,7 @@
       },
       {
         "name": "TestRemoveLeaf",
-        "file": "../../labs/10_bst_remove/test_cases.h",
+        "file": "./labs/10_bst_remove/test_cases.h",
         "line": 76,
         "column": 27,
         "assertion_type": "false",
@@ -86,7 +86,7 @@
       },
       {
         "name": "TestOrderAfterRemoveLeaf",
-        "file": "../../labs/10_bst_remove/test_cases.h",
+        "file": "./labs/10_bst_remove/test_cases.h",
         "line": 81,
         "column": 5,
         "assertion_type": "equal",
@@ -102,7 +102,7 @@
       },
       {
         "name": "TestRemoveParentOfLeft",
-        "file": "../../labs/10_bst_remove/test_cases.h",
+        "file": "./labs/10_bst_remove/test_cases.h",
         "line": 87,
         "column": 35,
         "assertion_type": "false",
@@ -112,7 +112,7 @@
       },
       {
         "name": "TestOrderAfterRemoveParentOfLeft",
-        "file": "../../labs/10_bst_remove/test_cases.h",
+        "file": "./labs/10_bst_remove/test_cases.h",
         "line": 92,
         "column": 5,
         "assertion_type": "equal",
@@ -128,7 +128,7 @@
       },
       {
         "name": "TestContains55AfterRemoveParentOfLeft",
-        "file": "../../labs/10_bst_remove/test_cases.h",
+        "file": "./labs/10_bst_remove/test_cases.h",
         "line": 99,
         "column": 5,
         "assertion_type": "true",
@@ -138,7 +138,7 @@
       },
       {
         "name": "TestRemoveParentOfRight",
-        "file": "../../labs/10_bst_remove/test_cases.h",
+        "file": "./labs/10_bst_remove/test_cases.h",
         "line": 102,
         "column": 36,
         "assertion_type": "false",
@@ -148,7 +148,7 @@
       },
       {
         "name": "TestOrderAfterRemoveParentOfRight",
-        "file": "../../labs/10_bst_remove/test_cases.h",
+        "file": "./labs/10_bst_remove/test_cases.h",
         "line": 107,
         "column": 5,
         "assertion_type": "equal",
@@ -164,7 +164,7 @@
       },
       {
         "name": "TestContains55AfterRemoveParentOfRight",
-        "file": "../../labs/10_bst_remove/test_cases.h",
+        "file": "./labs/10_bst_remove/test_cases.h",
         "line": 114,
         "column": 5,
         "assertion_type": "true",
@@ -174,7 +174,7 @@
       },
       {
         "name": "TestRemoveParentOfBoth",
-        "file": "../../labs/10_bst_remove/test_cases.h",
+        "file": "./labs/10_bst_remove/test_cases.h",
         "line": 117,
         "column": 35,
         "assertion_type": "false",
@@ -184,7 +184,7 @@
       },
       {
         "name": "TestOrderAfterRemoveParentOfBoth",
-        "file": "../../labs/10_bst_remove/test_cases.h",
+        "file": "./labs/10_bst_remove/test_cases.h",
         "line": 122,
         "column": 5,
         "assertion_type": "equal",
@@ -200,7 +200,7 @@
       },
       {
         "name": "TestContains49AfterRemoveParentOfBoth",
-        "file": "../../labs/10_bst_remove/test_cases.h",
+        "file": "./labs/10_bst_remove/test_cases.h",
         "line": 129,
         "column": 5,
         "assertion_type": "true",
@@ -210,7 +210,7 @@
       },
       {
         "name": "TestContains95AfterRemoveParentOfBoth",
-        "file": "../../labs/10_bst_remove/test_cases.h",
+        "file": "./labs/10_bst_remove/test_cases.h",
         "line": 133,
         "column": 5,
         "assertion_type": "true",
@@ -220,7 +220,7 @@
       },
       {
         "name": "TestContains63AfterRemoveParentOfBoth",
-        "file": "../../labs/10_bst_remove/test_cases.h",
+        "file": "./labs/10_bst_remove/test_cases.h",
         "line": 137,
         "column": 5,
         "assertion_type": "true",
@@ -230,7 +230,7 @@
       },
       {
         "name": "TestRemoveRoot",
-        "file": "../../labs/10_bst_remove/test_cases.h",
+        "file": "./labs/10_bst_remove/test_cases.h",
         "line": 140,
         "column": 27,
         "assertion_type": "false",
@@ -240,7 +240,7 @@
       },
       {
         "name": "TestOrderAfterRemoveRoot",
-        "file": "../../labs/10_bst_remove/test_cases.h",
+        "file": "./labs/10_bst_remove/test_cases.h",
         "line": 145,
         "column": 5,
         "assertion_type": "equal",
@@ -256,7 +256,7 @@
       },
       {
         "name": "TestContains32AfterRemoveRoot",
-        "file": "../../labs/10_bst_remove/test_cases.h",
+        "file": "./labs/10_bst_remove/test_cases.h",
         "line": 151,
         "column": 42,
         "assertion_type": "true",
@@ -266,7 +266,7 @@
       },
       {
         "name": "TestContains95AfterRemoveRoot",
-        "file": "../../labs/10_bst_remove/test_cases.h",
+        "file": "./labs/10_bst_remove/test_cases.h",
         "line": 152,
         "column": 42,
         "assertion_type": "true",

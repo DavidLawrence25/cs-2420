@@ -8,7 +8,7 @@
     "BasicBSTTest": [
       {
         "name": "TestNumNodes",
-        "file": "../../no_brainers/10_bst/test_cases.h",
+        "file": "./no_brainers/10_bst/test_cases.h",
         "line": 29,
         "column": 25,
         "assertion_type": "equal",
@@ -24,7 +24,7 @@
       },
       {
         "name": "TestNumLeaves",
-        "file": "../../no_brainers/10_bst/test_cases.h",
+        "file": "./no_brainers/10_bst/test_cases.h",
         "line": 30,
         "column": 26,
         "assertion_type": "equal",
@@ -40,7 +40,7 @@
       },
       {
         "name": "TestExtractPreOrder",
-        "file": "../../no_brainers/10_bst/test_cases.h",
+        "file": "./no_brainers/10_bst/test_cases.h",
         "line": 35,
         "column": 5,
         "assertion_type": "equal",
@@ -56,7 +56,7 @@
       },
       {
         "name": "TestExtractInOrder",
-        "file": "../../no_brainers/10_bst/test_cases.h",
+        "file": "./no_brainers/10_bst/test_cases.h",
         "line": 45,
         "column": 5,
         "assertion_type": "equal",
@@ -72,7 +72,7 @@
       },
       {
         "name": "TestExtractPostOrder",
-        "file": "../../no_brainers/10_bst/test_cases.h",
+        "file": "./no_brainers/10_bst/test_cases.h",
         "line": 54,
         "column": 5,
         "assertion_type": "equal",

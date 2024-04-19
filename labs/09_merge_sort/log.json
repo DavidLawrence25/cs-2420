@@ -8,7 +8,7 @@
     "MergeSortTest": [
       {
         "name": "TestFindMidOdd",
-        "file": "../../labs/09_merge_sort/test_cases.h",
+        "file": "./labs/09_merge_sort/test_cases.h",
         "line": 29,
         "column": 5,
         "assertion_type": "equal",
@@ -24,7 +24,7 @@
       },
       {
         "name": "TestFindMidEven",
-        "file": "../../labs/09_merge_sort/test_cases.h",
+        "file": "./labs/09_merge_sort/test_cases.h",
         "line": 36,
         "column": 5,
         "assertion_type": "equal",
@@ -40,7 +40,7 @@
       },
       {
         "name": "TestMerge",
-        "file": "../../labs/09_merge_sort/test_cases.h",
+        "file": "./labs/09_merge_sort/test_cases.h",
         "line": 47,
         "column": 5,
         "assertion_type": "equal",
@@ -56,7 +56,7 @@
       },
       {
         "name": "TestMergeSort",
-        "file": "../../labs/09_merge_sort/test_cases.h",
+        "file": "./labs/09_merge_sort/test_cases.h",
         "line": 56,
         "column": 5,
         "assertion_type": "equal",

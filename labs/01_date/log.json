@@ -8,7 +8,7 @@
     "DateTest": [
       {
         "name": "TestDefaultConstructor",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 23,
         "column": 35,
         "assertion_type": "equal",
@@ -24,7 +24,7 @@
       },
       {
         "name": "TestYearConstructor",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 24,
         "column": 32,
         "assertion_type": "equal",
@@ -40,7 +40,7 @@
       },
       {
         "name": "TestYearMonthConstructor",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 27,
         "column": 5,
         "assertion_type": "equal",
@@ -56,7 +56,7 @@
       },
       {
         "name": "TestFullConstructor",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 31,
         "column": 5,
         "assertion_type": "equal",
@@ -72,7 +72,7 @@
       },
       {
         "name": "TestIs1900LeapYear",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 34,
         "column": 31,
         "assertion_type": "false",
@@ -82,7 +82,7 @@
       },
       {
         "name": "TestIs1995LeapYear",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 35,
         "column": 31,
         "assertion_type": "false",
@@ -92,7 +92,7 @@
       },
       {
         "name": "TestIs1996LeapYear",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 36,
         "column": 31,
         "assertion_type": "true",
@@ -102,7 +102,7 @@
       },
       {
         "name": "TestIs2000LeapYear",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 37,
         "column": 31,
         "assertion_type": "true",
@@ -114,7 +114,7 @@
     "Jul10Test": [
       {
         "name": "TestIAdd4Months",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 64,
         "column": 5,
         "assertion_type": "equal",
@@ -130,7 +130,7 @@
       },
       {
         "name": "TestIAdd5Months",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 70,
         "column": 5,
         "assertion_type": "equal",
@@ -146,7 +146,7 @@
       },
       {
         "name": "TestIAdd6Months",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 76,
         "column": 5,
         "assertion_type": "equal",
@@ -162,7 +162,7 @@
       },
       {
         "name": "TestIAdd16Days",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 82,
         "column": 5,
         "assertion_type": "equal",
@@ -178,7 +178,7 @@
       },
       {
         "name": "TestIAdd21Days",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 88,
         "column": 5,
         "assertion_type": "equal",
@@ -194,7 +194,7 @@
       },
       {
         "name": "TestIAdd31Days",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 94,
         "column": 5,
         "assertion_type": "equal",
@@ -210,7 +210,7 @@
       },
       {
         "name": "TestDayOfYear",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 98,
         "column": 26,
         "assertion_type": "equal",
@@ -226,7 +226,7 @@
       },
       {
         "name": "TestAdd18Days",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 99,
         "column": 26,
         "assertion_type": "equal",
@@ -242,7 +242,7 @@
       },
       {
         "name": "TestAdd21Days",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 100,
         "column": 26,
         "assertion_type": "equal",
@@ -258,7 +258,7 @@
       },
       {
         "name": "TestAdd22Days",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 101,
         "column": 26,
         "assertion_type": "equal",
@@ -274,7 +274,7 @@
       },
       {
         "name": "TestAdd91Days",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 102,
         "column": 26,
         "assertion_type": "equal",
@@ -290,7 +290,7 @@
       },
       {
         "name": "TestAdd234Days",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 103,
         "column": 27,
         "assertion_type": "equal",
@@ -306,7 +306,7 @@
       },
       {
         "name": "TestStreamExtraction",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 108,
         "column": 5,
         "assertion_type": "equal",
@@ -324,7 +324,7 @@
     "Sep10Test": [
       {
         "name": "TestIAdd2Months",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 139,
         "column": 5,
         "assertion_type": "equal",
@@ -340,7 +340,7 @@
       },
       {
         "name": "TestIAdd3Months",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 145,
         "column": 5,
         "assertion_type": "equal",
@@ -356,7 +356,7 @@
       },
       {
         "name": "TestIAdd4Months",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 151,
         "column": 5,
         "assertion_type": "equal",
@@ -372,7 +372,7 @@
       },
       {
         "name": "TestIAdd16Days",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 157,
         "column": 5,
         "assertion_type": "equal",
@@ -388,7 +388,7 @@
       },
       {
         "name": "TestIAdd20Days",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 163,
         "column": 5,
         "assertion_type": "equal",
@@ -404,7 +404,7 @@
       },
       {
         "name": "TestIAdd30Days",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 169,
         "column": 5,
         "assertion_type": "equal",
@@ -420,7 +420,7 @@
       },
       {
         "name": "TestDayOfYear",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 173,
         "column": 26,
         "assertion_type": "equal",
@@ -436,7 +436,7 @@
       },
       {
         "name": "TestAdd16Days",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 174,
         "column": 26,
         "assertion_type": "equal",
@@ -452,7 +452,7 @@
       },
       {
         "name": "TestAdd20Days",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 175,
         "column": 26,
         "assertion_type": "equal",
@@ -468,7 +468,7 @@
       },
       {
         "name": "TestAdd21Days",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 176,
         "column": 26,
         "assertion_type": "equal",
@@ -484,7 +484,7 @@
       },
       {
         "name": "TestAdd75Days",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 177,
         "column": 26,
         "assertion_type": "equal",
@@ -500,7 +500,7 @@
       },
       {
         "name": "TestAdd117Days",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 178,
         "column": 27,
         "assertion_type": "equal",
@@ -516,7 +516,7 @@
       },
       {
         "name": "TestStreamExtraction",
-        "file": "../../labs/01_date/test_cases.h",
+        "file": "./labs/01_date/test_cases.h",
         "line": 183,
         "column": 5,
         "assertion_type": "equal",

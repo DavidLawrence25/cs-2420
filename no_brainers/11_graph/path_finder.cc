@@ -10,16 +10,16 @@ std::list<sptr<V>> PathFinder<V>::ShortestPath(sptr<V> from, sptr<V> to) {
   // Helps prevent segfaults if users are incompetent.
   if (from == nullptr || to == nullptr) return path;
 
-  unvisited_[from].min_weight = 0;  // Doing nothing is free.
+  unvisited_.at(from).min_weight = 0;  // Doing nothing is free.
   sptr<V> current = from;
   Visit(from);
   while (!unvisited_.empty() && current != to) {
     for (const auto &[neighbor, weight] : table_->GetAdjacent(*current)) {
       if (visited_.contains(neighbor)) continue;
-      weight_t new_weight = weight + unvisited_[current].min_weight;
-      if (new_weight < unvisited_[neighbor].min_weight) {
-        unvisited_[neighbor].previous = current;
-        unvisited_[neighbor].min_weight = new_weight;
+      weight_t new_weight = weight + visited_[current].min_weight;
+      if (new_weight < unvisited_.at(neighbor).min_weight) {
+        unvisited_.at(neighbor).previous = current;
+        unvisited_.at(neighbor).min_weight = new_weight;
       }
     }
     current = CheapestUnvisitedVertex();
@@ -32,7 +32,7 @@ std::list<sptr<V>> PathFinder<V>::ShortestPath(sptr<V> from, sptr<V> to) {
     // the vertices in the intended order of `from` -> ... -> `to`. This is the
     // entire reason why this method returns a linked list instead of a vector.
     path.push_front(current);
-    current = visited_[current].previous;
+    current = visited_.at(current).previous;
   }
   return path;
 }
@@ -49,7 +49,7 @@ void PathFinder<V>::Reset() {
 
 template <typename V>
 sptr<V> PathFinder<V>::CheapestUnvisitedVertex() const {
-  EdgeData<V> best_candidate{nullptr, EdgeTable<V>::kWeightMax};
+  EdgeData<V> best_candidate{nullptr, kWeightMax};
   for (const auto &[vertex, data] : unvisited_) {
     if (data.min_weight < best_candidate.weight) {
       best_candidate.vertex = vertex;

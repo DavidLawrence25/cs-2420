@@ -33,11 +33,10 @@ class PathFinder {
   // Stores data about a vertex in a path.
   struct VertexData {
     sptr<V> previous = nullptr;
-    typename EdgeTable<V>::weight_t min_weight = EdgeTable<V>::kWeightMax;
+    weight_t min_weight = kWeightMax;
   };
 
   using VertexMap = std::unordered_map<sptr<V>, VertexData>;
-  using weight_t = typename EdgeTable<V>::weight_t;
 
   // Returns a pointer to a vertex in the unvisited map that has the smallest
   // minimum weight so far.

@@ -1,640 +1,640 @@
 ====================================================================================================
-PASS: HashTableConstructorTest::TestDefaultSize (in ../../labs/08_dynamic_hash_table/test_cases.h at 33:28)
+PASS: HashTableConstructorTest::TestDefaultSize (in ./labs/08_dynamic_hash_table/test_cases.h at 33:28)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.size() == size_t{0}
 	==> 0 == 0
 ====================================================================================================
-PASS: HashTableConstructorTest::TestDefaultCapacity (in ../../labs/08_dynamic_hash_table/test_cases.h at 34:32)
+PASS: HashTableConstructorTest::TestDefaultCapacity (in ./labs/08_dynamic_hash_table/test_cases.h at 34:32)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.capacity() == size_t{17}
 	==> 17 == 17
 ====================================================================================================
-PASS: HashTableConstructorTest::TestDefaultEmpty (in ../../labs/08_dynamic_hash_table/test_cases.h at 35:29)
+PASS: HashTableConstructorTest::TestDefaultEmpty (in ./labs/08_dynamic_hash_table/test_cases.h at 35:29)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.empty() == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableConstructorTest::TestDefaultLFT (in ../../labs/08_dynamic_hash_table/test_cases.h at 36:27)
+PASS: HashTableConstructorTest::TestDefaultLFT (in ./labs/08_dynamic_hash_table/test_cases.h at 36:27)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.load_factor_threshold() == 0.65
 	==> 0.65 == 0.65
 ====================================================================================================
-PASS: HashTableConstructorTest::TestExplicitCapacitySize (in ../../labs/08_dynamic_hash_table/test_cases.h at 38:37)
+PASS: HashTableConstructorTest::TestExplicitCapacitySize (in ./labs/08_dynamic_hash_table/test_cases.h at 38:37)
 ----------------------------------------------------------------------------------------------------
 	assert table1_.size() == size_t{0}
 	==> 0 == 0
 ====================================================================================================
-PASS: HashTableConstructorTest::TestExplicitCapacity (in ../../labs/08_dynamic_hash_table/test_cases.h at 39:33)
+PASS: HashTableConstructorTest::TestExplicitCapacity (in ./labs/08_dynamic_hash_table/test_cases.h at 39:33)
 ----------------------------------------------------------------------------------------------------
 	assert table1_.capacity() == size_t{13}
 	==> 13 == 13
 ====================================================================================================
-PASS: HashTableConstructorTest::TestExplicitCapacityEmpty (in ../../labs/08_dynamic_hash_table/test_cases.h at 40:38)
+PASS: HashTableConstructorTest::TestExplicitCapacityEmpty (in ./labs/08_dynamic_hash_table/test_cases.h at 40:38)
 ----------------------------------------------------------------------------------------------------
 	assert table1_.empty() == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableConstructorTest::TestExplicitCapacityLFT (in ../../labs/08_dynamic_hash_table/test_cases.h at 42:5)
+PASS: HashTableConstructorTest::TestExplicitCapacityLFT (in ./labs/08_dynamic_hash_table/test_cases.h at 42:5)
 ----------------------------------------------------------------------------------------------------
 	assert table1_.load_factor_threshold() == 0.65
 	==> 0.65 == 0.65
 ====================================================================================================
-PASS: HashTableConstructorTest::TestAllExplicitSize (in ../../labs/08_dynamic_hash_table/test_cases.h at 45:32)
+PASS: HashTableConstructorTest::TestAllExplicitSize (in ./labs/08_dynamic_hash_table/test_cases.h at 45:32)
 ----------------------------------------------------------------------------------------------------
 	assert table2_.size() == size_t{0}
 	==> 0 == 0
 ====================================================================================================
-PASS: HashTableConstructorTest::TestAllExplicitCapacity (in ../../labs/08_dynamic_hash_table/test_cases.h at 47:5)
+PASS: HashTableConstructorTest::TestAllExplicitCapacity (in ./labs/08_dynamic_hash_table/test_cases.h at 47:5)
 ----------------------------------------------------------------------------------------------------
 	assert table2_.capacity() == size_t{19}
 	==> 19 == 19
 ====================================================================================================
-PASS: HashTableConstructorTest::TestAllExplicitEmpty (in ../../labs/08_dynamic_hash_table/test_cases.h at 49:33)
+PASS: HashTableConstructorTest::TestAllExplicitEmpty (in ./labs/08_dynamic_hash_table/test_cases.h at 49:33)
 ----------------------------------------------------------------------------------------------------
 	assert table2_.empty() == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableConstructorTest::TestAllExplicitLFT (in ../../labs/08_dynamic_hash_table/test_cases.h at 51:5)
+PASS: HashTableConstructorTest::TestAllExplicitLFT (in ./labs/08_dynamic_hash_table/test_cases.h at 51:5)
 ----------------------------------------------------------------------------------------------------
 	assert table2_.load_factor_threshold() == 0.5
 	==> 0.5 == 0.5
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage1Size (in ../../labs/08_dynamic_hash_table/test_cases.h at 88:27)
+PASS: HashTableInsertTest::TestStage1Size (in ./labs/08_dynamic_hash_table/test_cases.h at 88:27)
 ----------------------------------------------------------------------------------------------------
 	assert table_.size() == size_t{1}
 	==> 1 == 1
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage1Contains2 (in ../../labs/08_dynamic_hash_table/test_cases.h at 89:32)
+PASS: HashTableInsertTest::TestStage1Contains2 (in ./labs/08_dynamic_hash_table/test_cases.h at 89:32)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(2) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage1DoesntContain12 (in ../../labs/08_dynamic_hash_table/test_cases.h at 90:38)
+PASS: HashTableInsertTest::TestStage1DoesntContain12 (in ./labs/08_dynamic_hash_table/test_cases.h at 90:38)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(12) == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage1IsntEmpty (in ../../labs/08_dynamic_hash_table/test_cases.h at 91:32)
+PASS: HashTableInsertTest::TestStage1IsntEmpty (in ./labs/08_dynamic_hash_table/test_cases.h at 91:32)
 ----------------------------------------------------------------------------------------------------
 	assert table_.empty() == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage2Size (in ../../labs/08_dynamic_hash_table/test_cases.h at 93:27)
+PASS: HashTableInsertTest::TestStage2Size (in ./labs/08_dynamic_hash_table/test_cases.h at 93:27)
 ----------------------------------------------------------------------------------------------------
 	assert table_.size() == size_t{2}
 	==> 2 == 2
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage2Contains5 (in ../../labs/08_dynamic_hash_table/test_cases.h at 94:32)
+PASS: HashTableInsertTest::TestStage2Contains5 (in ./labs/08_dynamic_hash_table/test_cases.h at 94:32)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(5) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage3Size (in ../../labs/08_dynamic_hash_table/test_cases.h at 96:27)
+PASS: HashTableInsertTest::TestStage3Size (in ./labs/08_dynamic_hash_table/test_cases.h at 96:27)
 ----------------------------------------------------------------------------------------------------
 	assert table_.size() == size_t{3}
 	==> 3 == 3
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage3Contains64 (in ../../labs/08_dynamic_hash_table/test_cases.h at 97:33)
+PASS: HashTableInsertTest::TestStage3Contains64 (in ./labs/08_dynamic_hash_table/test_cases.h at 97:33)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(64) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage3DoesntContain13 (in ../../labs/08_dynamic_hash_table/test_cases.h at 98:38)
+PASS: HashTableInsertTest::TestStage3DoesntContain13 (in ./labs/08_dynamic_hash_table/test_cases.h at 98:38)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(13) == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage4Contains13 (in ../../labs/08_dynamic_hash_table/test_cases.h at 100:33)
+PASS: HashTableInsertTest::TestStage4Contains13 (in ./labs/08_dynamic_hash_table/test_cases.h at 100:33)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(13) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage4Contains64 (in ../../labs/08_dynamic_hash_table/test_cases.h at 101:33)
+PASS: HashTableInsertTest::TestStage4Contains64 (in ./labs/08_dynamic_hash_table/test_cases.h at 101:33)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(64) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage5Contains30 (in ../../labs/08_dynamic_hash_table/test_cases.h at 103:33)
+PASS: HashTableInsertTest::TestStage5Contains30 (in ./labs/08_dynamic_hash_table/test_cases.h at 103:33)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(30) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage6Contains47 (in ../../labs/08_dynamic_hash_table/test_cases.h at 105:33)
+PASS: HashTableInsertTest::TestStage6Contains47 (in ./labs/08_dynamic_hash_table/test_cases.h at 105:33)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(47) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage6Contains13 (in ../../labs/08_dynamic_hash_table/test_cases.h at 106:33)
+PASS: HashTableInsertTest::TestStage6Contains13 (in ./labs/08_dynamic_hash_table/test_cases.h at 106:33)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(13) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableInsertTest::TestStage6Contains64 (in ../../labs/08_dynamic_hash_table/test_cases.h at 107:33)
+PASS: HashTableInsertTest::TestStage6Contains64 (in ./labs/08_dynamic_hash_table/test_cases.h at 107:33)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(64) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage1Size (in ../../labs/08_dynamic_hash_table/test_cases.h at 148:27)
+PASS: HashTableRemoveTest::TestStage1Size (in ./labs/08_dynamic_hash_table/test_cases.h at 148:27)
 ----------------------------------------------------------------------------------------------------
 	assert table_.size() == size_t{0}
 	==> 0 == 0
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage1Empty (in ../../labs/08_dynamic_hash_table/test_cases.h at 149:28)
+PASS: HashTableRemoveTest::TestStage1Empty (in ./labs/08_dynamic_hash_table/test_cases.h at 149:28)
 ----------------------------------------------------------------------------------------------------
 	assert table_.empty() == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage1DoesntContain3 (in ../../labs/08_dynamic_hash_table/test_cases.h at 150:37)
+PASS: HashTableRemoveTest::TestStage1DoesntContain3 (in ./labs/08_dynamic_hash_table/test_cases.h at 150:37)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(3) == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage2Contains6 (in ../../labs/08_dynamic_hash_table/test_cases.h at 152:32)
+PASS: HashTableRemoveTest::TestStage2Contains6 (in ./labs/08_dynamic_hash_table/test_cases.h at 152:32)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(6) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage2Contains1 (in ../../labs/08_dynamic_hash_table/test_cases.h at 153:32)
+PASS: HashTableRemoveTest::TestStage2Contains1 (in ./labs/08_dynamic_hash_table/test_cases.h at 153:32)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(1) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage2Contains20 (in ../../labs/08_dynamic_hash_table/test_cases.h at 154:33)
+PASS: HashTableRemoveTest::TestStage2Contains20 (in ./labs/08_dynamic_hash_table/test_cases.h at 154:33)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(20) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage3DoesntContain6 (in ../../labs/08_dynamic_hash_table/test_cases.h at 156:37)
+PASS: HashTableRemoveTest::TestStage3DoesntContain6 (in ./labs/08_dynamic_hash_table/test_cases.h at 156:37)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(6) == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage3DoesntContain1 (in ../../labs/08_dynamic_hash_table/test_cases.h at 157:37)
+PASS: HashTableRemoveTest::TestStage3DoesntContain1 (in ./labs/08_dynamic_hash_table/test_cases.h at 157:37)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(1) == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage3DoesntContain20 (in ../../labs/08_dynamic_hash_table/test_cases.h at 158:38)
+PASS: HashTableRemoveTest::TestStage3DoesntContain20 (in ./labs/08_dynamic_hash_table/test_cases.h at 158:38)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(20) == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage3Size (in ../../labs/08_dynamic_hash_table/test_cases.h at 159:27)
+PASS: HashTableRemoveTest::TestStage3Size (in ./labs/08_dynamic_hash_table/test_cases.h at 159:27)
 ----------------------------------------------------------------------------------------------------
 	assert table_.size() == size_t{0}
 	==> 0 == 0
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage3Empty (in ../../labs/08_dynamic_hash_table/test_cases.h at 160:28)
+PASS: HashTableRemoveTest::TestStage3Empty (in ./labs/08_dynamic_hash_table/test_cases.h at 160:28)
 ----------------------------------------------------------------------------------------------------
 	assert table_.empty() == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage4Contains4 (in ../../labs/08_dynamic_hash_table/test_cases.h at 162:32)
+PASS: HashTableRemoveTest::TestStage4Contains4 (in ./labs/08_dynamic_hash_table/test_cases.h at 162:32)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(4) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage4Contains38 (in ../../labs/08_dynamic_hash_table/test_cases.h at 163:33)
+PASS: HashTableRemoveTest::TestStage4Contains38 (in ./labs/08_dynamic_hash_table/test_cases.h at 163:33)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(38) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage4Contains55 (in ../../labs/08_dynamic_hash_table/test_cases.h at 164:33)
+PASS: HashTableRemoveTest::TestStage4Contains55 (in ./labs/08_dynamic_hash_table/test_cases.h at 164:33)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(55) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableRemoveTest::TestStage4DoesntContain21 (in ../../labs/08_dynamic_hash_table/test_cases.h at 165:38)
+PASS: HashTableRemoveTest::TestStage4DoesntContain21 (in ./labs/08_dynamic_hash_table/test_cases.h at 165:38)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(21) == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableClearTest::TestStage1Size (in ../../labs/08_dynamic_hash_table/test_cases.h at 196:27)
+PASS: HashTableClearTest::TestStage1Size (in ./labs/08_dynamic_hash_table/test_cases.h at 196:27)
 ----------------------------------------------------------------------------------------------------
 	assert table_.size() == size_t{0}
 	==> 0 == 0
 ====================================================================================================
-PASS: HashTableClearTest::TestStage1Empty (in ../../labs/08_dynamic_hash_table/test_cases.h at 197:28)
+PASS: HashTableClearTest::TestStage1Empty (in ./labs/08_dynamic_hash_table/test_cases.h at 197:28)
 ----------------------------------------------------------------------------------------------------
 	assert table_.empty() == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableClearTest::TestStage2Size (in ../../labs/08_dynamic_hash_table/test_cases.h at 199:27)
+PASS: HashTableClearTest::TestStage2Size (in ./labs/08_dynamic_hash_table/test_cases.h at 199:27)
 ----------------------------------------------------------------------------------------------------
 	assert table_.size() == size_t{0}
 	==> 0 == 0
 ====================================================================================================
-PASS: HashTableClearTest::TestStage2Empty (in ../../labs/08_dynamic_hash_table/test_cases.h at 200:28)
+PASS: HashTableClearTest::TestStage2Empty (in ./labs/08_dynamic_hash_table/test_cases.h at 200:28)
 ----------------------------------------------------------------------------------------------------
 	assert table_.empty() == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableClearTest::TestStage3Size (in ../../labs/08_dynamic_hash_table/test_cases.h at 202:27)
+PASS: HashTableClearTest::TestStage3Size (in ./labs/08_dynamic_hash_table/test_cases.h at 202:27)
 ----------------------------------------------------------------------------------------------------
 	assert table_.size() == size_t{0}
 	==> 0 == 0
 ====================================================================================================
-PASS: HashTableClearTest::TestStage3Empty (in ../../labs/08_dynamic_hash_table/test_cases.h at 203:28)
+PASS: HashTableClearTest::TestStage3Empty (in ./labs/08_dynamic_hash_table/test_cases.h at 203:28)
 ----------------------------------------------------------------------------------------------------
 	assert table_.empty() == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableClearTest::TestStage3DoesntContain4 (in ../../labs/08_dynamic_hash_table/test_cases.h at 204:37)
+PASS: HashTableClearTest::TestStage3DoesntContain4 (in ./labs/08_dynamic_hash_table/test_cases.h at 204:37)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(4) == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableClearTest::TestStage3DoesntContain5 (in ../../labs/08_dynamic_hash_table/test_cases.h at 205:37)
+PASS: HashTableClearTest::TestStage3DoesntContain5 (in ./labs/08_dynamic_hash_table/test_cases.h at 205:37)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(5) == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableClearTest::TestStage3DoesntContain374 (in ../../labs/08_dynamic_hash_table/test_cases.h at 206:39)
+PASS: HashTableClearTest::TestStage3DoesntContain374 (in ./labs/08_dynamic_hash_table/test_cases.h at 206:39)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(374) == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage1Capacity (in ../../labs/08_dynamic_hash_table/test_cases.h at 275:31)
+PASS: HashTableResizeTest::TestStage1Capacity (in ./labs/08_dynamic_hash_table/test_cases.h at 275:31)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.capacity() == size_t{7}
 	==> 7 == 7
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage2Capacity (in ../../labs/08_dynamic_hash_table/test_cases.h at 277:31)
+PASS: HashTableResizeTest::TestStage2Capacity (in ./labs/08_dynamic_hash_table/test_cases.h at 277:31)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.capacity() == size_t{17}
 	==> 17 == 17
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage2IndexOf5 (in ../../labs/08_dynamic_hash_table/test_cases.h at 278:31)
+PASS: HashTableResizeTest::TestStage2IndexOf5 (in ./labs/08_dynamic_hash_table/test_cases.h at 278:31)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Index(5).value_or(-1) == 5
 	==> 5 == 5
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage2IndexOf15 (in ../../labs/08_dynamic_hash_table/test_cases.h at 280:5)
+PASS: HashTableResizeTest::TestStage2IndexOf15 (in ./labs/08_dynamic_hash_table/test_cases.h at 280:5)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Index(15).value_or(-1) == 15
 	==> 15 == 15
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage2IndexOf34 (in ../../labs/08_dynamic_hash_table/test_cases.h at 283:5)
+PASS: HashTableResizeTest::TestStage2IndexOf34 (in ./labs/08_dynamic_hash_table/test_cases.h at 283:5)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Index(34).value_or(-1) == 0
 	==> 0 == 0
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage2IndexOf18 (in ../../labs/08_dynamic_hash_table/test_cases.h at 286:5)
+PASS: HashTableResizeTest::TestStage2IndexOf18 (in ./labs/08_dynamic_hash_table/test_cases.h at 286:5)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Index(18).value_or(-1) == 1
 	==> 1 == 1
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage3Capacity (in ../../labs/08_dynamic_hash_table/test_cases.h at 289:31)
+PASS: HashTableResizeTest::TestStage3Capacity (in ./labs/08_dynamic_hash_table/test_cases.h at 289:31)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.capacity() == size_t{37}
 	==> 37 == 37
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage3Contains50 (in ../../labs/08_dynamic_hash_table/test_cases.h at 290:33)
+PASS: HashTableResizeTest::TestStage3Contains50 (in ./labs/08_dynamic_hash_table/test_cases.h at 290:33)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(50) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage3Contains51 (in ../../labs/08_dynamic_hash_table/test_cases.h at 291:33)
+PASS: HashTableResizeTest::TestStage3Contains51 (in ./labs/08_dynamic_hash_table/test_cases.h at 291:33)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(51) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage3Contains52 (in ../../labs/08_dynamic_hash_table/test_cases.h at 292:33)
+PASS: HashTableResizeTest::TestStage3Contains52 (in ./labs/08_dynamic_hash_table/test_cases.h at 292:33)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(52) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage3Contains53 (in ../../labs/08_dynamic_hash_table/test_cases.h at 293:33)
+PASS: HashTableResizeTest::TestStage3Contains53 (in ./labs/08_dynamic_hash_table/test_cases.h at 293:33)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(53) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage3Contains54 (in ../../labs/08_dynamic_hash_table/test_cases.h at 294:33)
+PASS: HashTableResizeTest::TestStage3Contains54 (in ./labs/08_dynamic_hash_table/test_cases.h at 294:33)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(54) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage3Contains55 (in ../../labs/08_dynamic_hash_table/test_cases.h at 295:33)
+PASS: HashTableResizeTest::TestStage3Contains55 (in ./labs/08_dynamic_hash_table/test_cases.h at 295:33)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(55) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage3Contains56 (in ../../labs/08_dynamic_hash_table/test_cases.h at 296:33)
+PASS: HashTableResizeTest::TestStage3Contains56 (in ./labs/08_dynamic_hash_table/test_cases.h at 296:33)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(56) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage3Contains57 (in ../../labs/08_dynamic_hash_table/test_cases.h at 297:33)
+PASS: HashTableResizeTest::TestStage3Contains57 (in ./labs/08_dynamic_hash_table/test_cases.h at 297:33)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(57) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage3Contains58 (in ../../labs/08_dynamic_hash_table/test_cases.h at 298:33)
+PASS: HashTableResizeTest::TestStage3Contains58 (in ./labs/08_dynamic_hash_table/test_cases.h at 298:33)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(58) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage3Contains59 (in ../../labs/08_dynamic_hash_table/test_cases.h at 299:33)
+PASS: HashTableResizeTest::TestStage3Contains59 (in ./labs/08_dynamic_hash_table/test_cases.h at 299:33)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(59) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage4Capacity (in ../../labs/08_dynamic_hash_table/test_cases.h at 301:31)
+PASS: HashTableResizeTest::TestStage4Capacity (in ./labs/08_dynamic_hash_table/test_cases.h at 301:31)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.capacity() == size_t{79}
 	==> 79 == 79
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage4Contains150 (in ../../labs/08_dynamic_hash_table/test_cases.h at 302:34)
+PASS: HashTableResizeTest::TestStage4Contains150 (in ./labs/08_dynamic_hash_table/test_cases.h at 302:34)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(150) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage4Contains151 (in ../../labs/08_dynamic_hash_table/test_cases.h at 303:34)
+PASS: HashTableResizeTest::TestStage4Contains151 (in ./labs/08_dynamic_hash_table/test_cases.h at 303:34)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(151) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage4Contains152 (in ../../labs/08_dynamic_hash_table/test_cases.h at 304:34)
+PASS: HashTableResizeTest::TestStage4Contains152 (in ./labs/08_dynamic_hash_table/test_cases.h at 304:34)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(152) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage4Contains153 (in ../../labs/08_dynamic_hash_table/test_cases.h at 305:34)
+PASS: HashTableResizeTest::TestStage4Contains153 (in ./labs/08_dynamic_hash_table/test_cases.h at 305:34)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(153) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage4Contains154 (in ../../labs/08_dynamic_hash_table/test_cases.h at 306:34)
+PASS: HashTableResizeTest::TestStage4Contains154 (in ./labs/08_dynamic_hash_table/test_cases.h at 306:34)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(154) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage4Contains155 (in ../../labs/08_dynamic_hash_table/test_cases.h at 307:34)
+PASS: HashTableResizeTest::TestStage4Contains155 (in ./labs/08_dynamic_hash_table/test_cases.h at 307:34)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(155) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage4Contains156 (in ../../labs/08_dynamic_hash_table/test_cases.h at 308:34)
+PASS: HashTableResizeTest::TestStage4Contains156 (in ./labs/08_dynamic_hash_table/test_cases.h at 308:34)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(156) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage4Contains157 (in ../../labs/08_dynamic_hash_table/test_cases.h at 309:34)
+PASS: HashTableResizeTest::TestStage4Contains157 (in ./labs/08_dynamic_hash_table/test_cases.h at 309:34)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(157) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage4Contains158 (in ../../labs/08_dynamic_hash_table/test_cases.h at 310:34)
+PASS: HashTableResizeTest::TestStage4Contains158 (in ./labs/08_dynamic_hash_table/test_cases.h at 310:34)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(158) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage4Contains159 (in ../../labs/08_dynamic_hash_table/test_cases.h at 311:34)
+PASS: HashTableResizeTest::TestStage4Contains159 (in ./labs/08_dynamic_hash_table/test_cases.h at 311:34)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(159) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage4Contains160 (in ../../labs/08_dynamic_hash_table/test_cases.h at 312:34)
+PASS: HashTableResizeTest::TestStage4Contains160 (in ./labs/08_dynamic_hash_table/test_cases.h at 312:34)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(160) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage4Contains161 (in ../../labs/08_dynamic_hash_table/test_cases.h at 313:34)
+PASS: HashTableResizeTest::TestStage4Contains161 (in ./labs/08_dynamic_hash_table/test_cases.h at 313:34)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(161) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage4Contains162 (in ../../labs/08_dynamic_hash_table/test_cases.h at 314:34)
+PASS: HashTableResizeTest::TestStage4Contains162 (in ./labs/08_dynamic_hash_table/test_cases.h at 314:34)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(162) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage4Contains163 (in ../../labs/08_dynamic_hash_table/test_cases.h at 315:34)
+PASS: HashTableResizeTest::TestStage4Contains163 (in ./labs/08_dynamic_hash_table/test_cases.h at 315:34)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(163) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage4Contains164 (in ../../labs/08_dynamic_hash_table/test_cases.h at 316:34)
+PASS: HashTableResizeTest::TestStage4Contains164 (in ./labs/08_dynamic_hash_table/test_cases.h at 316:34)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(164) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage4Contains165 (in ../../labs/08_dynamic_hash_table/test_cases.h at 317:34)
+PASS: HashTableResizeTest::TestStage4Contains165 (in ./labs/08_dynamic_hash_table/test_cases.h at 317:34)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(165) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage4Contains166 (in ../../labs/08_dynamic_hash_table/test_cases.h at 318:34)
+PASS: HashTableResizeTest::TestStage4Contains166 (in ./labs/08_dynamic_hash_table/test_cases.h at 318:34)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(166) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage4Contains167 (in ../../labs/08_dynamic_hash_table/test_cases.h at 319:34)
+PASS: HashTableResizeTest::TestStage4Contains167 (in ./labs/08_dynamic_hash_table/test_cases.h at 319:34)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(167) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage4Contains168 (in ../../labs/08_dynamic_hash_table/test_cases.h at 320:34)
+PASS: HashTableResizeTest::TestStage4Contains168 (in ./labs/08_dynamic_hash_table/test_cases.h at 320:34)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(168) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage4Contains169 (in ../../labs/08_dynamic_hash_table/test_cases.h at 321:34)
+PASS: HashTableResizeTest::TestStage4Contains169 (in ./labs/08_dynamic_hash_table/test_cases.h at 321:34)
 ----------------------------------------------------------------------------------------------------
 	assert table0_.Contains(169) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage5Capacity (in ../../labs/08_dynamic_hash_table/test_cases.h at 323:31)
+PASS: HashTableResizeTest::TestStage5Capacity (in ./labs/08_dynamic_hash_table/test_cases.h at 323:31)
 ----------------------------------------------------------------------------------------------------
 	assert table1_.capacity() == size_t{7}
 	==> 7 == 7
 ====================================================================================================
-PASS: HashTableResizeTest::TestStage6Capacity (in ../../labs/08_dynamic_hash_table/test_cases.h at 325:31)
+PASS: HashTableResizeTest::TestStage6Capacity (in ./labs/08_dynamic_hash_table/test_cases.h at 325:31)
 ----------------------------------------------------------------------------------------------------
 	assert table1_.capacity() == size_t{17}
 	==> 17 == 17
 ====================================================================================================
-PASS: HashTableIndexTest::TestStage1IndexOf5 (in ../../labs/08_dynamic_hash_table/test_cases.h at 346:31)
+PASS: HashTableIndexTest::TestStage1IndexOf5 (in ./labs/08_dynamic_hash_table/test_cases.h at 346:31)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Index(5).value_or(-1) == 5
 	==> 5 == 5
 ====================================================================================================
-PASS: HashTableIndexTest::TestStage1IndexOf3 (in ../../labs/08_dynamic_hash_table/test_cases.h at 347:31)
+PASS: HashTableIndexTest::TestStage1IndexOf3 (in ./labs/08_dynamic_hash_table/test_cases.h at 347:31)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Index(3).has_value() == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableIndexTest::TestStage2IndexOf18 (in ../../labs/08_dynamic_hash_table/test_cases.h at 349:32)
+PASS: HashTableIndexTest::TestStage2IndexOf18 (in ./labs/08_dynamic_hash_table/test_cases.h at 349:32)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Index(18).value_or(-1) == 1
 	==> 1 == 1
 ====================================================================================================
-PASS: HashTableIndexTest::TestStage3IndexOf1 (in ../../labs/08_dynamic_hash_table/test_cases.h at 351:31)
+PASS: HashTableIndexTest::TestStage3IndexOf1 (in ./labs/08_dynamic_hash_table/test_cases.h at 351:31)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Index(1).value_or(-1) == 2
 	==> 2 == 2
 ====================================================================================================
-PASS: HashTableQuadProbeTest::TestIndexOf4 (in ../../labs/08_dynamic_hash_table/test_cases.h at 377:25)
+PASS: HashTableQuadProbeTest::TestIndexOf4 (in ./labs/08_dynamic_hash_table/test_cases.h at 377:25)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Index(4).value_or(-1) == 4
 	==> 4 == 4
 ====================================================================================================
-PASS: HashTableQuadProbeTest::TestIndexOf21 (in ../../labs/08_dynamic_hash_table/test_cases.h at 378:26)
+PASS: HashTableQuadProbeTest::TestIndexOf21 (in ./labs/08_dynamic_hash_table/test_cases.h at 378:26)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Index(21).value_or(-1) == 5
 	==> 5 == 5
 ====================================================================================================
-PASS: HashTableQuadProbeTest::TestIndexOf38 (in ../../labs/08_dynamic_hash_table/test_cases.h at 379:26)
+PASS: HashTableQuadProbeTest::TestIndexOf38 (in ./labs/08_dynamic_hash_table/test_cases.h at 379:26)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Index(38).value_or(-1) == 8
 	==> 8 == 8
 ====================================================================================================
-PASS: HashTableQuadProbeTest::TestIndexOf55 (in ../../labs/08_dynamic_hash_table/test_cases.h at 380:26)
+PASS: HashTableQuadProbeTest::TestIndexOf55 (in ./labs/08_dynamic_hash_table/test_cases.h at 380:26)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Index(55).value_or(-1) == 13
 	==> 13 == 13
 ====================================================================================================
-PASS: HashTableQuadProbeTest::TestIndexOf72 (in ../../labs/08_dynamic_hash_table/test_cases.h at 381:26)
+PASS: HashTableQuadProbeTest::TestIndexOf72 (in ./labs/08_dynamic_hash_table/test_cases.h at 381:26)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Index(72).value_or(-1) == 3
 	==> 3 == 3
 ====================================================================================================
-PASS: HashTableDeepCopyTest::TestStage1OriginalSize (in ../../labs/08_dynamic_hash_table/test_cases.h at 427:35)
+PASS: HashTableDeepCopyTest::TestStage1OriginalSize (in ./labs/08_dynamic_hash_table/test_cases.h at 427:35)
 ----------------------------------------------------------------------------------------------------
 	assert table_.size() == size_t{3}
 	==> 3 == 3
 ====================================================================================================
-PASS: HashTableDeepCopyTest::TestStage1DeepCopySize (in ../../labs/08_dynamic_hash_table/test_cases.h at 428:35)
+PASS: HashTableDeepCopyTest::TestStage1DeepCopySize (in ./labs/08_dynamic_hash_table/test_cases.h at 428:35)
 ----------------------------------------------------------------------------------------------------
 	assert copy_->size() == size_t{3}
 	==> 3 == 3
 ====================================================================================================
-PASS: HashTableDeepCopyTest::TestStage1DeepCopyContains12 (in ../../labs/08_dynamic_hash_table/test_cases.h at 429:41)
+PASS: HashTableDeepCopyTest::TestStage1DeepCopyContains12 (in ./labs/08_dynamic_hash_table/test_cases.h at 429:41)
 ----------------------------------------------------------------------------------------------------
 	assert copy_->Contains(12) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableDeepCopyTest::TestStage2DeepCopyDoesntContain8 (in ../../labs/08_dynamic_hash_table/test_cases.h at 431:45)
+PASS: HashTableDeepCopyTest::TestStage2DeepCopyDoesntContain8 (in ./labs/08_dynamic_hash_table/test_cases.h at 431:45)
 ----------------------------------------------------------------------------------------------------
 	assert copy_->Contains(8) == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableDeepCopyTest::TestStage3DeepCopyContains18 (in ../../labs/08_dynamic_hash_table/test_cases.h at 433:41)
+PASS: HashTableDeepCopyTest::TestStage3DeepCopyContains18 (in ./labs/08_dynamic_hash_table/test_cases.h at 433:41)
 ----------------------------------------------------------------------------------------------------
 	assert copy_->Contains(18) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableDeepCopyTest::TestStage3OriginalSize (in ../../labs/08_dynamic_hash_table/test_cases.h at 434:35)
+PASS: HashTableDeepCopyTest::TestStage3OriginalSize (in ./labs/08_dynamic_hash_table/test_cases.h at 434:35)
 ----------------------------------------------------------------------------------------------------
 	assert table_.size() == size_t{5}
 	==> 5 == 5
 ====================================================================================================
-PASS: HashTableDeepCopyTest::TestStage3DeepCopySize (in ../../labs/08_dynamic_hash_table/test_cases.h at 435:35)
+PASS: HashTableDeepCopyTest::TestStage3DeepCopySize (in ./labs/08_dynamic_hash_table/test_cases.h at 435:35)
 ----------------------------------------------------------------------------------------------------
 	assert copy_->size() == size_t{5}
 	==> 5 == 5
 ====================================================================================================
-PASS: HashTableDeepCopyTest::TestStage4OriginalContains18 (in ../../labs/08_dynamic_hash_table/test_cases.h at 437:41)
+PASS: HashTableDeepCopyTest::TestStage4OriginalContains18 (in ./labs/08_dynamic_hash_table/test_cases.h at 437:41)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(18) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableErrorTest::TestStage1NoErrorOnRemove (in ../../labs/08_dynamic_hash_table/test_cases.h at 463:38)
+PASS: HashTableErrorTest::TestStage1NoErrorOnRemove (in ./labs/08_dynamic_hash_table/test_cases.h at 463:38)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Remove(8) ↛ std::exception
 	==> null ↛ std::exception
 ====================================================================================================
-PASS: HashTableErrorTest::TestStage1Size (in ../../labs/08_dynamic_hash_table/test_cases.h at 464:27)
+PASS: HashTableErrorTest::TestStage1Size (in ./labs/08_dynamic_hash_table/test_cases.h at 464:27)
 ----------------------------------------------------------------------------------------------------
 	assert table_.size() == size_t{1}
 	==> 1 == 1
 ====================================================================================================
-PASS: HashTableErrorTest::TestStage1IsntEmpty (in ../../labs/08_dynamic_hash_table/test_cases.h at 465:32)
+PASS: HashTableErrorTest::TestStage1IsntEmpty (in ./labs/08_dynamic_hash_table/test_cases.h at 465:32)
 ----------------------------------------------------------------------------------------------------
 	assert table_.empty() == false
 	==> false == false
 ====================================================================================================
-PASS: HashTableErrorTest::TestStage2NoErrorOnRemove (in ../../labs/08_dynamic_hash_table/test_cases.h at 467:38)
+PASS: HashTableErrorTest::TestStage2NoErrorOnRemove (in ./labs/08_dynamic_hash_table/test_cases.h at 467:38)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Remove(26) ↛ std::exception
 	==> null ↛ std::exception
 ====================================================================================================
-PASS: HashTableErrorTest::TestStage2Contains9 (in ../../labs/08_dynamic_hash_table/test_cases.h at 468:32)
+PASS: HashTableErrorTest::TestStage2Contains9 (in ./labs/08_dynamic_hash_table/test_cases.h at 468:32)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Contains(9) == true
 	==> true == true
 ====================================================================================================
-PASS: HashTableErrorTest::TestStage2Size (in ../../labs/08_dynamic_hash_table/test_cases.h at 469:27)
+PASS: HashTableErrorTest::TestStage2Size (in ./labs/08_dynamic_hash_table/test_cases.h at 469:27)
 ----------------------------------------------------------------------------------------------------
 	assert table_.size() == size_t{1}
 	==> 1 == 1
 ====================================================================================================
-PASS: HashTableErrorTest::TestStage3NoErrorOnClear (in ../../labs/08_dynamic_hash_table/test_cases.h at 471:37)
+PASS: HashTableErrorTest::TestStage3NoErrorOnClear (in ./labs/08_dynamic_hash_table/test_cases.h at 471:37)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Clear() ↛ std::exception
 	==> null ↛ std::exception
 ====================================================================================================
-PASS: HashTableErrorTest::TestStage3NoErrorOnRemove (in ../../labs/08_dynamic_hash_table/test_cases.h at 472:38)
+PASS: HashTableErrorTest::TestStage3NoErrorOnRemove (in ./labs/08_dynamic_hash_table/test_cases.h at 472:38)
 ----------------------------------------------------------------------------------------------------
 	assert table_.Remove(15) ↛ std::exception
 	==> null ↛ std::exception
 ====================================================================================================
-PASS: HashTableErrorTest::TestStage3Size (in ../../labs/08_dynamic_hash_table/test_cases.h at 473:27)
+PASS: HashTableErrorTest::TestStage3Size (in ./labs/08_dynamic_hash_table/test_cases.h at 473:27)
 ----------------------------------------------------------------------------------------------------
 	assert table_.size() == size_t{0}
 	==> 0 == 0
 ====================================================================================================
-PASS: HashTableErrorTest::TestStage3Empty (in ../../labs/08_dynamic_hash_table/test_cases.h at 474:28)
+PASS: HashTableErrorTest::TestStage3Empty (in ./labs/08_dynamic_hash_table/test_cases.h at 474:28)
 ----------------------------------------------------------------------------------------------------
 	assert table_.empty() == true
 	==> true == true
 ====================================================================================================
-PASS: PrimeFunctionsTest::Test349IsPrime (in ../../labs/08_dynamic_hash_table/test_cases.h at 496:27)
+PASS: PrimeFunctionsTest::Test349IsPrime (in ./labs/08_dynamic_hash_table/test_cases.h at 496:27)
 ----------------------------------------------------------------------------------------------------
 	assert rose::IsPrime(349) == true
 	==> true == true
 ====================================================================================================
-PASS: PrimeFunctionsTest::Test343IsntPrime (in ../../labs/08_dynamic_hash_table/test_cases.h at 497:29)
+PASS: PrimeFunctionsTest::Test343IsntPrime (in ./labs/08_dynamic_hash_table/test_cases.h at 497:29)
 ----------------------------------------------------------------------------------------------------
 	assert rose::IsPrime(343) == false
 	==> false == false
 ====================================================================================================
-PASS: PrimeFunctionsTest::Test5IsPrime (in ../../labs/08_dynamic_hash_table/test_cases.h at 498:25)
+PASS: PrimeFunctionsTest::Test5IsPrime (in ./labs/08_dynamic_hash_table/test_cases.h at 498:25)
 ----------------------------------------------------------------------------------------------------
 	assert rose::IsPrime(5) == true
 	==> true == true
 ====================================================================================================
-PASS: PrimeFunctionsTest::Test2017IsPrime (in ../../labs/08_dynamic_hash_table/test_cases.h at 499:28)
+PASS: PrimeFunctionsTest::Test2017IsPrime (in ./labs/08_dynamic_hash_table/test_cases.h at 499:28)
 ----------------------------------------------------------------------------------------------------
 	assert rose::IsPrime(2017) == true
 	==> true == true
 ====================================================================================================
-PASS: PrimeFunctionsTest::Test993IsntPrime (in ../../labs/08_dynamic_hash_table/test_cases.h at 500:29)
+PASS: PrimeFunctionsTest::Test993IsntPrime (in ./labs/08_dynamic_hash_table/test_cases.h at 500:29)
 ----------------------------------------------------------------------------------------------------
 	assert rose::IsPrime(993) == false
 	==> false == false
 ====================================================================================================
-PASS: PrimeFunctionsTest::Test101IsPrime (in ../../labs/08_dynamic_hash_table/test_cases.h at 501:27)
+PASS: PrimeFunctionsTest::Test101IsPrime (in ./labs/08_dynamic_hash_table/test_cases.h at 501:27)
 ----------------------------------------------------------------------------------------------------
 	assert rose::IsPrime(101) == true
 	==> true == true
 ====================================================================================================
-PASS: PrimeFunctionsTest::Test93NextPrime (in ../../labs/08_dynamic_hash_table/test_cases.h at 503:28)
+PASS: PrimeFunctionsTest::Test93NextPrime (in ./labs/08_dynamic_hash_table/test_cases.h at 503:28)
 ----------------------------------------------------------------------------------------------------
 	assert rose::NextPrime(93) == 97
 	==> 97 == 97
 ====================================================================================================
-PASS: PrimeFunctionsTest::Test102NextPrime (in ../../labs/08_dynamic_hash_table/test_cases.h at 504:29)
+PASS: PrimeFunctionsTest::Test102NextPrime (in ./labs/08_dynamic_hash_table/test_cases.h at 504:29)
 ----------------------------------------------------------------------------------------------------
 	assert rose::NextPrime(102) == 103
 	==> 103 == 103
 ====================================================================================================
-PASS: PrimeFunctionsTest::Test984NextPrime (in ../../labs/08_dynamic_hash_table/test_cases.h at 505:29)
+PASS: PrimeFunctionsTest::Test984NextPrime (in ./labs/08_dynamic_hash_table/test_cases.h at 505:29)
 ----------------------------------------------------------------------------------------------------
 	assert rose::NextPrime(984) == 991
 	==> 991 == 991
 ====================================================================================================
-PASS: PrimeFunctionsTest::Test258NextPrime (in ../../labs/08_dynamic_hash_table/test_cases.h at 506:29)
+PASS: PrimeFunctionsTest::Test258NextPrime (in ./labs/08_dynamic_hash_table/test_cases.h at 506:29)
 ----------------------------------------------------------------------------------------------------
 	assert rose::NextPrime(258) == 263
 	==> 263 == 263

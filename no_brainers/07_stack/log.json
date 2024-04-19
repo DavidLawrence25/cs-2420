@@ -8,7 +8,7 @@
     "BadStackUseTest": [
       {
         "name": "TestReadEmpty",
-        "file": "../../no_brainers/07_stack/test_cases.h",
+        "file": "./no_brainers/07_stack/test_cases.h",
         "line": 159,
         "column": 26,
         "assertion_type": "false",
@@ -20,7 +20,7 @@
     "BasicStackTest": [
       {
         "name": "TestPush1",
-        "file": "../../no_brainers/07_stack/test_cases.h",
+        "file": "./no_brainers/07_stack/test_cases.h",
         "line": 75,
         "column": 5,
         "assertion_type": "equal",
@@ -36,7 +36,7 @@
       },
       {
         "name": "TestPush5",
-        "file": "../../no_brainers/07_stack/test_cases.h",
+        "file": "./no_brainers/07_stack/test_cases.h",
         "line": 81,
         "column": 5,
         "assertion_type": "equal",
@@ -52,7 +52,7 @@
       },
       {
         "name": "TestPush16AndPop12",
-        "file": "../../no_brainers/07_stack/test_cases.h",
+        "file": "./no_brainers/07_stack/test_cases.h",
         "line": 88,
         "column": 5,
         "assertion_type": "equal",
@@ -68,7 +68,7 @@
       },
       {
         "name": "TestStreamExtraction",
-        "file": "../../no_brainers/07_stack/test_cases.h",
+        "file": "./no_brainers/07_stack/test_cases.h",
         "line": 96,
         "column": 5,
         "assertion_type": "equal",
@@ -86,7 +86,7 @@
     "StackSizeTest": [
       {
         "name": "TestEmpty",
-        "file": "../../no_brainers/07_stack/test_cases.h",
+        "file": "./no_brainers/07_stack/test_cases.h",
         "line": 25,
         "column": 22,
         "assertion_type": "true",
@@ -96,7 +96,7 @@
       },
       {
         "name": "TestNotEmpty",
-        "file": "../../no_brainers/07_stack/test_cases.h",
+        "file": "./no_brainers/07_stack/test_cases.h",
         "line": 29,
         "column": 5,
         "assertion_type": "false",
@@ -106,7 +106,7 @@
       },
       {
         "name": "TestWasntEmptyBefore",
-        "file": "../../no_brainers/07_stack/test_cases.h",
+        "file": "./no_brainers/07_stack/test_cases.h",
         "line": 36,
         "column": 5,
         "assertion_type": "true",
@@ -116,7 +116,7 @@
       },
       {
         "name": "TestSizeOf0",
-        "file": "../../no_brainers/07_stack/test_cases.h",
+        "file": "./no_brainers/07_stack/test_cases.h",
         "line": 40,
         "column": 24,
         "assertion_type": "equal",
@@ -132,7 +132,7 @@
       },
       {
         "name": "TestSizeOf2",
-        "file": "../../no_brainers/07_stack/test_cases.h",
+        "file": "./no_brainers/07_stack/test_cases.h",
         "line": 45,
         "column": 5,
         "assertion_type": "equal",
@@ -148,7 +148,7 @@
       },
       {
         "name": "TestSizeOf5",
-        "file": "../../no_brainers/07_stack/test_cases.h",
+        "file": "./no_brainers/07_stack/test_cases.h",
         "line": 55,
         "column": 5,
         "assertion_type": "equal",
@@ -166,7 +166,7 @@
     "StringStackTest": [
       {
         "name": "TestSizeOf3",
-        "file": "../../no_brainers/07_stack/test_cases.h",
+        "file": "./no_brainers/07_stack/test_cases.h",
         "line": 123,
         "column": 24,
         "assertion_type": "equal",
@@ -182,7 +182,7 @@
       },
       {
         "name": "TestPopPopReplace",
-        "file": "../../no_brainers/07_stack/test_cases.h",
+        "file": "./no_brainers/07_stack/test_cases.h",
         "line": 130,
         "column": 5,
         "assertion_type": "equal",
@@ -198,7 +198,7 @@
       },
       {
         "name": "TestPopPopReplacePop",
-        "file": "../../no_brainers/07_stack/test_cases.h",
+        "file": "./no_brainers/07_stack/test_cases.h",
         "line": 140,
         "column": 5,
         "assertion_type": "equal",
@@ -214,7 +214,7 @@
       },
       {
         "name": "TestClear",
-        "file": "../../no_brainers/07_stack/test_cases.h",
+        "file": "./no_brainers/07_stack/test_cases.h",
         "line": 146,
         "column": 5,
         "assertion_type": "true",
