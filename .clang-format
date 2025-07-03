@@ -1,0 +1,21 @@
+BasedOnStyle: Google
+
+# eg. `int &x` instead of `int& x`
+DerivePointerAlignment: false
+PointerAlignment: Right
+
+# eg. `const int` instead of `int const`
+QualifierAlignment: Left
+
+IncludeBlocks: Preserve
+IncludeCategories:
+    # Related Headers (handled by google, i think)
+    # C System Headers
+    - Regex: '<(?:\w+\/*)+\.h>'
+      Priority: 5
+    # C++ STL Headers
+    - Regex: '<(?:\w+\/*)+>'
+      Priority: 3
+    # Project Headers
+    - Regex: '\"(?:\w+\/*)+\.(h|cc)\"'
+      Priority: 1

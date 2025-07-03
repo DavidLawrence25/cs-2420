@@ -4,7 +4,6 @@ bin/
 .classpath
 .project
 *.code-workspace
-.clang-format
 .vs/
 .idea/
 **/log.json
