@@ -4,7 +4,9 @@ bin/
 .classpath
 .project
 *.code-workspace
-Makefile
 .clang-format
 .vs/
 .idea/
+**/log.json
+**/log.txt
+**/main.exe
